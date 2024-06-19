@@ -73,7 +73,7 @@ links__item:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Hi, I'm <span class="highlighted-name">Priyaranjan KS</span> (goes by the shorter name <span class="familiar-name">Priyan</span>😊).
+  hero__title: Hi, I'm <span>Priyan</span>.
   hero__job: An Independent Consultant and Solution Architect
   hero__description: I spend a lot of my time working with Azure, Microsoft 365 and Power Platform
   hero__button__text: Read More
