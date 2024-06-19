@@ -161,6 +161,10 @@
       background: var(--brand-color);
     }
   }
+  
+  .hero__button__arrow i.ion-ios-arrow-forward {
+  transform: rotate(90deg);
+}
 
   @media (max-width: $tablet) {
     padding-right: 0;
