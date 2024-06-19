@@ -125,7 +125,8 @@ social:
 # Example of adding a new link to the author section and footer: - {icon: "ion-logo-dribbble", name: "Dribbble", link: "https://dribbble.com"}
 # Other icons can be found at https://ionicons.com/v4/
 
-
+   
+   
 #-------------------------------
 # Contact Settings
 contact:
