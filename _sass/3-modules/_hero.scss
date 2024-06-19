@@ -75,7 +75,7 @@
   .hero__title,
   .hero__job {
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: -2px;
     color: var(--heading-font-color);
 
@@ -99,7 +99,7 @@
     span {
       position: relative;
       z-index: 1;
-      font-weight: 400;
+      font-weight: 700;
 
       &::after {
         content: "";
