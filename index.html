@@ -5,11 +5,11 @@ image: '/images/PriyanPhoto.png'
 
 {% include hero.html %}
 
-{% if page.url == "/" %}
+<!-- {% if page.url == "/" %}
   {% include section-featured-posts.html %}
 {% endif %}
-
-<div class="container animate">
+ -->
+<div id="previous-posts" class="container animate">
   {% if page.url == "/" %}
   <div class="section__head">
     <h3 class="section__title">Previous posts</h3>
@@ -26,4 +26,4 @@ image: '/images/PriyanPhoto.png'
 
 {% include pagination.html %}
 
-{% include section-tags.html %}
+<!-- {% include section-tags.html %} -->
