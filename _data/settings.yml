@@ -10,18 +10,18 @@ color_scheme: auto # You can choose three modes auto, light, and dark. By defaul
 # Navigation Settings
 menu__settings:
   menu__items:
-    - title: "About"
-      url: "/about/"
-    - title: "Contact"
-      url: "/contact/"
-    - title: "Elements"
-      url: "/elements/"
-    - title: "Pages"
-      submenu:
-      - url: "/if-you-cannot-do-great-things-do-small-things-in-a-great-way/"
-        title: "Lifestyle"
-      - url: "/you-must-be-the-change-you-wish-to-see-in-the-world/"
-        title: "Workflow"
+    # - title: "About"
+      # url: "/about/"
+    # - title: "Contact"
+      # url: "/contact/"
+    # - title: "Elements"
+      # url: "/elements/"
+    # - title: "Pages"
+      # submenu:
+      # - url: "/if-you-cannot-do-great-things-do-small-things-in-a-great-way/"
+        # title: "Lifestyle"
+      # - url: "/you-must-be-the-change-you-wish-to-see-in-the-world/"
+        # title: "Workflow"
 
 
 #-------------------------------
