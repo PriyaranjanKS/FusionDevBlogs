@@ -113,6 +113,19 @@
         background-color: var(--brand-color);
       }
     }
+	  span.highlighted-name {
+      font-weight: 900; /* Extra bold for the full name */
+      color: var(--brand-color); /* Optional: Different color */
+    }
+
+    /* Styling for the familiar name and smiley */
+    span.familiar-name {
+      font-weight: 700; /* Bold for the familiar name */
+      color: var(--text-color); /* Optional: Standard text color */
+      font-style: italic; /* Optional: Italics for a friendly feel */
+      white-space: nowrap; /* Ensure the text and smiley stay together */
+      margin-left: 5px; /* Small spacing before the smiley */
+    }
   }
 
   .hero__job {
