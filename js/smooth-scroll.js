@@ -1,5 +1,3 @@
-// _includes/smooth-scroll.js
-
 document.addEventListener('DOMContentLoaded', function() {
   const scrollLink = document.querySelector('.hero__button');
 
