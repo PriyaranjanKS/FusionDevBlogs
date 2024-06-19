@@ -5,16 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollLink.addEventListener('click', function(event) {
       event.preventDefault();
       let href = scrollLink.getAttribute('href');
-      console.log('Button href:', href);  // Debug: Log the href value
+      
+      // Log the initial href value for debugging
+      console.log('Original Button href:', href);
 
-      // Remove backslash if present and check if href starts with '#'
-      href = href.replace(/\\/g, '');
-      if (href && href.startsWith('#')) {
-        const targetId = href.substring(1);
-        console.log('Target ID:', targetId);  // Debug: Log the target ID
+      // Replace backslashes if present
+      href = href.replace(/\\/g, '');  // This should remove all backslashes
 
+      // Log the modified href value after removing backslashes
+      console.log('Modified href after removing backslashes:', href);
+
+      // Check if href starts with '#'
+      if (href.startsWith('#')) {
+        const targetId = href.substring(1);  // Remove the leading '#'
+        
+        // Log the target ID for debugging
+        console.log('Target ID:', targetId);
+
+        // Fetch the target element by ID
         const targetElement = document.getElementById(targetId);
-        console.log('Target Element:', targetElement);  // Debug: Log the found target element
+        
+        // Log the target element for debugging
+        console.log('Target Element:', targetElement);
 
         if (targetElement) {
           window.scrollTo({
