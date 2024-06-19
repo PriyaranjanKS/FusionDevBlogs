@@ -2,11 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const scrollLink = document.querySelector('.hero__button');
   const additionalContent = document.getElementById('additionalContent');
 
-  if (scrollLink) {
-	  alert("Hello");
+  if (scrollLink) {	  
     scrollLink.addEventListener('click', function(event) {
       event.preventDefault();
-
+alert("Hello");
       // Toggle the visibility of additional content
       if (additionalContent) {
         additionalContent.classList.toggle('expanded');
