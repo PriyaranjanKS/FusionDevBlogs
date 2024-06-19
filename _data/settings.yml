@@ -39,35 +39,35 @@ links:
   links__title: "Useful links"
 
 links__item:
-  - title: 10 Inspirational Books Every Creative Should Read
-    description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
-    image_url: "/images/110.jpg"
-    image_alt: Inspirational books
-    link: "https://twitter.com"
+  # - title: 10 Inspirational Books Every Creative Should Read
+    # description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+    # image_url: "/images/110.jpg"
+    # image_alt: Inspirational books
+    # link: "https://twitter.com"
 
-  - title: Creating stylised images from a photo
-    description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
-    image_url: "/images/111.jpg"
-    image_alt: Illustrator
-    link: "https://google.com"
+  # - title: Creating stylised images from a photo
+    # description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+    # image_url: "/images/111.jpg"
+    # image_alt: Illustrator
+    # link: "https://google.com"
 
-  - title: Chill Movies for Couples to Watch on Date Night
-    description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
-    image_url: "/images/112.jpg"
-    image_alt: Movies
-    link: "https://www.netflix.com"
+  # - title: Chill Movies for Couples to Watch on Date Night
+    # description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+    # image_url: "/images/112.jpg"
+    # image_alt: Movies
+    # link: "https://www.netflix.com"
 
-  - title: The 8 Best Exercises for Weight Loss
-    description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
-    image_url: "/images/114.jpg"
-    image_alt: Best exercises
-    link: "https://google.com"
+  # - title: The 8 Best Exercises for Weight Loss
+    # description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+    # image_url: "/images/114.jpg"
+    # image_alt: Best exercises
+    # link: "https://google.com"
 
-  - title: Ask Me A Question On Instagram
-    description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
-    image_url: "/images/115.jpg"
-    image_alt: Ask Me A Question
-    link: "https://instagram.com"
+  # - title: Ask Me A Question On Instagram
+    # description: Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+    # image_url: "/images/115.jpg"
+    # image_alt: Ask Me A Question
+    # link: "https://instagram.com"
 
 
 #-------------------------------
@@ -115,12 +115,12 @@ mailchimp:
 #-------------------------------
 # Social Icons Settings
 social:
-- {icon: "ion-logo-twitter", name: "Twitter", link: "https://twitter.com"}
-- {icon: "ion-logo-github", name: "Github", link: "https://github.com"}
-- {icon: "ion-logo-youtube", name: "Youtube", link: "https://youtube.com"}
-- {icon: "ion-logo-pinterest", name: "Pinterest", link: "https://pinterest.com"}
-- {icon: "ion-logo-codepen", name: "Codepen", link: "https://codepen.io"}
-- {icon: "ion-logo-vimeo", name: "Vimeo", link: "https://vimeo.com"}
+- {icon: "ion-logo-twitter", name: "Twitter", link: "https://twitter.com/AIFusionDev"}
+- {icon: "ion-logo-github", name: "Github", link: "https://github.com/PriyaranjanKS"}
+# - {icon: "ion-logo-youtube", name: "Youtube", link: "https://youtube.com"}
+# - {icon: "ion-logo-pinterest", name: "Pinterest", link: "https://pinterest.com"}
+# - {icon: "ion-logo-codepen", name: "Codepen", link: "https://codepen.io"}
+# - {icon: "ion-logo-vimeo", name: "Vimeo", link: "https://vimeo.com"}
 
 # Example of adding a new link to the author section and footer: - {icon: "ion-logo-dribbble", name: "Dribbble", link: "https://dribbble.com"}
 # Other icons can be found at https://ionicons.com/v4/
@@ -129,8 +129,8 @@ social:
 #-------------------------------
 # Contact Settings
 contact:
-  email: your@email.com # Add your email for contant form
-  description: Atega comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want. # Add a description of your form
+  email: kspriyaranjan@gmail.com # Add your email for contant form
+  description: Do you have a technical question to which you need my attention, Drop me a note ! # Add a description of your form
 
 # NOTE
 # Atega theme comes with a contact form built-in. You can use this form with Formspree (https://formspree.io/) service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
