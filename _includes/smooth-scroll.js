@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // Smooth scroll to the target element
-      smoothScrollTo(additionalContent, 800);
+      if (additionalContent.classList.contains('expanded')) {
+        smoothScrollTo(additionalContent, 800);
+      }
     });
   }
 });

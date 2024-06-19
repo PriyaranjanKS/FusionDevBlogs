@@ -260,13 +260,10 @@
   }
 }
 
-/* New styles for smooth scroll effect */
 .hidden-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.8s ease;
+  display: none;
 }
 
 .hidden-content.expanded {
-    max-height: 500px; /* Adjust as needed for your content */
+  display: block;
 }

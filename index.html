@@ -5,10 +5,11 @@ image: '/images/PriyanPhoto.png'
 
 {% include hero.html %}
 
+<!-- Hide the Featured Posts and Popular Tags by commenting them out -->
 <!-- {% if page.url == "/" %}
   {% include section-featured-posts.html %}
-{% endif %}
- -->
+{% endif %} -->
+
 <div id="previous-posts" class="container animate">
   {% if page.url == "/" %}
   <div class="section__head">
@@ -27,3 +28,14 @@ image: '/images/PriyanPhoto.png'
 {% include pagination.html %}
 
 <!-- {% include section-tags.html %} -->
+
+<!-- Hidden section for additional content -->
+<section id="additionalContent" class="hidden-content">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <p>Here is the additional content that will be revealed when the "Read More" button is clicked. This content can be expanded with more details, images, or any other information relevant to your page.</p>
+      </div>
+    </div>
+  </div>
+</section>
