@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (scrollLink) {	  
     scrollLink.addEventListener('click', function(event) {
       event.preventDefault();
-alert("Hello");
+ 
       // Toggle the visibility of additional content
       if (additionalContent) {
         additionalContent.classList.toggle('expanded');
