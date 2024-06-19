@@ -9,39 +9,30 @@ document.addEventListener('DOMContentLoaded', function() {
       // Log the initial href value for debugging
       console.log('Original Button href:', href);
 
-    if (href.startsWith('/')) {
+      // Remove leading '/' and '#'
+      if (href.startsWith('/')) {
         href = href.slice(1);  // Remove the leading '/'
       }
       if (href.startsWith('#')) {
         href = href.slice(1);  // Remove the leading '#'
       }
 
-      // Log the modified href value after removing backslashes
-      console.log('Modified href after removing backslashes:', href);
+      // Log the modified href value
+      console.log('Modified href:', href);
 
-      // Check if href starts with '#'
-      if (href.startsWith('#')) {
-        const targetId = href.substring(1);  // Remove the leading '#'
-        
-        // Log the target ID for debugging
-        console.log('Target ID:', targetId);
+      // Get the target element by the cleaned ID
+      const targetElement = document.getElementById(href);
 
-        // Fetch the target element by ID
-        const targetElement = document.getElementById(targetId);
-        
-        // Log the target element for debugging
-        console.log('Target Element:', targetElement);
+      // Log the target element for debugging
+      console.log('Target Element:', targetElement);
 
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: 'smooth'
-          });
-        } else {
-          console.error(`Element with ID '${targetId}' not found.`);
-        }
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        });
       } else {
-        console.error('Href attribute is not valid or does not start with #');
+        console.error(`Element with ID '${href}' not found.`);
       }
     });
   }
