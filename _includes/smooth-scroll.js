@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const additionalContent = document.getElementById('additionalContent');
 
   if (scrollLink) {
+	  alert("Hello");
     scrollLink.addEventListener('click', function(event) {
       event.preventDefault();
 
