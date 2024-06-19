@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // Log the initial href value for debugging
       console.log('Original Button href:', href);
 
-         href = href.replace(/^\/|^#/, '');
+    if (href.startsWith('/')) {
+        href = href.slice(1);  // Remove the leading '/'
+      }
+      if (href.startsWith('#')) {
+        href = href.slice(1);  // Remove the leading '#'
+      }
 
       // Log the modified href value after removing backslashes
       console.log('Modified href after removing backslashes:', href);
