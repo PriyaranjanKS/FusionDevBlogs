@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Log the initial href value for debugging
       console.log('Original Button href:', href);
 
-      // Replace backslashes if present
-      href = href.replace(/\\/g, '');  // This should remove all backslashes
+         href = href.replace(/^\/|^#/, '');
 
       // Log the modified href value after removing backslashes
       console.log('Modified href after removing backslashes:', href);
