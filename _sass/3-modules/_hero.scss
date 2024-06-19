@@ -142,7 +142,7 @@
     color: var(--heading-font-color);
     outline: none;
     cursor: pointer;
-    transition: $global-transition;
+    transition: background-color 0.3s ease, color 0.3s ease;
 
     &:hover {
       color: var(--white);
@@ -258,4 +258,15 @@
       }
     }
   }
+}
+
+/* New styles for smooth scroll effect */
+.hidden-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease;
+}
+
+.hidden-content.expanded {
+    max-height: 500px; /* Adjust as needed for your content */
 }

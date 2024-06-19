@@ -16,7 +16,7 @@
             <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
             {% endif %}
             {% if site.data.settings.hero.hero__button__text %}
-            <a class="hero__button" href="{{ site.data.settings.hero.hero__button__link | relative_url }}">
+            <a id="readMoreBtn" class="hero__button" href="javascript:void(0);">
               <span class="hero__button__arrow"><i class="ion ion-ios-arrow-forward"></i></span>
               <span>{{ site.data.settings.hero.hero__button__text }}</span>
             </a>
@@ -37,3 +37,14 @@
   </div>
 </section>
 <!-- end hero -->
+
+<!-- Hidden section for additional content -->
+<section id="additionalContent" class="hidden-content">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <p>Here is the additional content that will be revealed when the "Read More" button is clicked. This content can be expanded with more details, images, or any other information relevant to your page.</p>
+      </div>
+    </div>
+  </div>
+</section>
