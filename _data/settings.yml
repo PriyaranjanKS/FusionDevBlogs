@@ -115,6 +115,7 @@ mailchimp:
 #-------------------------------
 # Social Icons Settings
 social:
+- {icon: "ion-logo-linkedin", name: "Twitter", link: "https://www.linkedin.com/in/priyaranjanks/"}
 - {icon: "ion-logo-twitter", name: "Twitter", link: "https://twitter.com/AIFusionDev"}
 - {icon: "ion-logo-github", name: "Github", link: "https://github.com/PriyaranjanKS"}
 # - {icon: "ion-logo-youtube", name: "Youtube", link: "https://youtube.com"}
