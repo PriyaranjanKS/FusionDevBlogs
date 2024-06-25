@@ -4,9 +4,40 @@
   margin-bottom: 70px;
   background-color: var(--background-alt-color);
 
+  &.hero-video {
+    .hero__inner {
+      flex-direction: column;
+    }
+
+    .hero__left {
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto 40px;
+      padding-right: 0;
+    }
+
+    .hero__right {
+      width: 100%;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
   @media (max-width: $tablet) {
     padding: 60px 0;
     margin-bottom: 60px;
+
+    &.hero-video {
+      .hero__left {
+        margin: 0 auto 20px;
+      }
+
+      .hero__right {
+        order: 0;
+      }
+    }
   }
 
   @media (max-width: $mobile) {
@@ -17,7 +48,11 @@
 .hero__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  &.hero__without__media {
+    max-width: 780px;
+    margin: 0 auto;
+  }
 
   @media (max-width: $tablet) {
     flex-direction: column;
@@ -62,7 +97,7 @@
     margin-bottom: 10px;
 
     span {
-      color: var(--brand-color);
+	 color: var(--brand-color);
       position: relative;
       z-index: 1;
       font-weight: 700;
@@ -79,12 +114,12 @@
         background-color: var(--brand-color);
       }
     }
-
-    span.highlighted-name {
+	  span.highlighted-name {
       font-weight: 900; /* Extra bold for the full name */
       color: var(--brand-color); /* Optional: Different color */
     }
 
+    /* Styling for the familiar name and smiley */
     span.familiar-name {
       font-weight: 700; /* Bold for the familiar name */
       color: var(--brand-color); /* Optional: Standard text color */
@@ -105,7 +140,7 @@
 
     @media (max-width: $desktop) {
       font-size: 16px;
-      line-height: 26px;
+      line-height: 26px
     }
   }
 
@@ -139,11 +174,11 @@
       color: var(--white);
       background: var(--brand-color);
     }
-
-    .hero__button__arrow i.ion-ios-arrow-forward {
-      transform: rotate(90deg);
-    }
   }
+  
+  .hero__button__arrow i.ion-ios-arrow-forward {
+  transform: rotate(90deg);
+}
 
   @media (max-width: $tablet) {
     padding-right: 0;
@@ -151,9 +186,6 @@
 }
 
 .hero__right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 
   &::after {
@@ -171,12 +203,10 @@
   .hero__image {
     position: relative;
     z-index: 10;
-    width: 100%;
-    max-width: 370px;
-    aspect-ratio: 1 / 1.3;
+    width: 370px;
+    aspect-ratio: 1/1.3;
     margin: 0 auto;
     user-select: none;
-    overflow: hidden;
 
     &::before {
       content: "";
@@ -193,7 +223,6 @@
     img {
       position: absolute;
       top: 0;
-      left: 0;
       z-index: 1;
       height: 100%;
       width: 100%;
@@ -203,20 +232,20 @@
       background: var(--background-color);
     }
 
-    @supports not (aspect-ratio: 1 / 1.3) {
+    @supports not (aspect-ratio: 1/1.3) {
       padding-bottom: 78%;
     }
   }
 
   @media (max-width: 1130px) {
     .hero__image {
-      max-width: 270px;
+      width: 270px;
     }
   }
 
   @media (max-width: $desktop) {
     .hero__image {
-      max-width: 230px;
+      width: 230px;
     }
   }
 
@@ -225,11 +254,10 @@
 
     .hero__image {
       width: 100%;
-      max-width: none;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1/1;
       margin-bottom: 40px;
 
-      @supports not (aspect-ratio: 1 / 1) {
+      @supports not (aspect-ratio: 1/1) {
         padding-bottom: 100%;
       }
     }
