@@ -12,27 +12,27 @@ We will leverage Generative Answers and Generative Topic Routing (previously kno
 
 1. Head over to the [Copilot Studio](https://copilotstudio.microsoft.com/) and **click** on **Create**.
 
-   <img src="images/01_CopilotUsingWebsites/1.png" width="75%">
+   <img src="images/01_CopilotUsingWebsites/1.png" width="85%">
 
 2. Choose to start with a pre-existing copilot template or **create a new Copilot from scratch**. We will create a new one.
 
-   <img src="images/01_CopilotUsingWebsites/2.png" width="75%">
+   <img src="images/01_CopilotUsingWebsites/2.png" width="85%">
 
 3. Specify the Copilot description.
 
-   <img src="images/01_CopilotUsingWebsites/3.png" width="75%">
+   <img src="images/01_CopilotUsingWebsites/3.png" width="85%">
 
    - Provide instructions on how the copilot should assist.
 
-   <img src="images/01_CopilotUsingWebsites/4.png" width="75%">
+   <img src="images/01_CopilotUsingWebsites/4.png" width="85%">
 
 4. For the subsequent question, mention that the website information will be added later when configuring the **Knowledge** section. **Click** on **Create** to provision the Copilot.
 
-   <img src="images/01_CopilotUsingWebsites/5.png" width="75%">
+   <img src="images/01_CopilotUsingWebsites/5.png" width="85%">
 
    - The Copilot will be created. **Edit** details like name, description, and add a logo by **clicking** on the **Edit** button.
 
-   <img src="images/01_CopilotUsingWebsites/6.png" width="75%">
+   <img src="images/01_CopilotUsingWebsites/6.png" width="85%">
 
 ## Add Topics
 
@@ -46,47 +46,47 @@ In Microsoft Copilot Studio, topics are the fundamental building blocks that def
 
 1. **Select** **Topics** from the navigation bar.
 
-   ![Select Topics](images/01_CopilotUsingWebsites/7.png)
+   <img src="images/01_CopilotUsingWebsites/74.png" width="85%">
 
 2. **Create a topic** by selecting **From blank** or **Create from description with Copilot**.
 
-   ![Create Topic](images/01_CopilotUsingWebsites/8.png)
+   <img src="images/01_CopilotUsingWebsites/8.png" width="85%">
 
    - Name the topic and provide a description of what it should do.
 
-   ![Name Topic](images/01_CopilotUsingWebsites/9.png)
+   <img src="images/01_CopilotUsingWebsites/9.png" width="85%">
 
 3. Clicking on **Create**, the Topic will be created with the potential trigger phrases and the question node which will be used to accept the question from the User.
 
-   ![Topic Created](images/01_CopilotUsingWebsites/10.png)
+   <img src="images/01_CopilotUsingWebsites/10.png" width="85%">
 
 4. The question provided as user input for the question node will be stored in the **FarmingQuery** variable. **Add a Generative Answers** node and pass in this question as the input.
 
    - **Click** on the **+** sign, **select** **Advanced**, and then **click** on **Generative Answers**.
 
-     ![Generative Answers](images/01_CopilotUsingWebsites/11.png)
+     <img src="images/01_CopilotUsingWebsites/11.png" width="85%">
 
    - Provide the input to the Generative Answers node by **selecting** the **FarmingQuery** variable.
 
-     ![Select Variable](images/01_CopilotUsingWebsites/12.png)
+     <img src="images/01_CopilotUsingWebsites/12.png" width="85%">
 
 5. **Configure the data source**:
 
    - **Click** on **Edit** in the Data Sources section.
    - **Select** **Add Knowledge**
 
-     ![Add Knowledge](images/01_CopilotUsingWebsites/13.png)
+    <img src="images/01_CopilotUsingWebsites/13.png" width="85%">
 
    - It will open up a pop-up from which we can select any of the sources. In this demo, we will select the **Public websites** option to fetch the contextual answers.
 
-     ![Public Websites](images/01_CopilotUsingWebsites/14.png)
+    <img src="images/01_CopilotUsingWebsites/14.png" width="85%">
 
    - Clicking on Public Websites will provide us the option to add single or multiple websites from which we can fetch the data. In our case, the Farming related information is present on the site: `https://www.nass.usda.gov/`. So, let’s add that to the **Webpage link** section and **Click** on **Add**
 
-     ![Add Webpage Link](images/01_CopilotUsingWebsites/15.png)
+    <img src="images/01_CopilotUsingWebsites/15.png" width="85%">
    - If we have more websites from which we need to pick information, we can add it in the webpages link section else click on **Add**
    
-     ![Add Webpage Link](images/01_CopilotUsingWebsites/16.png)
+     <img src="images/01_CopilotUsingWebsites/16.png" width="85%">
 	 
 6. Ensure that this topic fetches only from the mentioned sites:
 
@@ -95,7 +95,7 @@ In Microsoft Copilot Studio, topics are the fundamental building blocks that def
    - **Check** the site that we added
    - **Finally click on Save**
 
-     ![Select Sources](images/01_CopilotUsingWebsites/17.png)
+     <img src="images/01_CopilotUsingWebsites/17.png" width="85%">
 
 ## Test Farming Queries Topic
 
@@ -104,38 +104,38 @@ In Microsoft Copilot Studio, topics are the fundamental building blocks that def
 3. As a response, the Copilot asks the Question for the user to provide a response.
 4. In the Canvas, we can in real-time see which node is being executed currently which helps in debugging the Copilot flow.
 
-   ![Debugging](images/01_CopilotUsingWebsites/18.png)
+   <img src="images/01_CopilotUsingWebsites/18.png" width="85%">
 
 5. Continue the conversation by providing a response to the question, e.g., **I am starting corn farming, help me with the ideal soil and climate conditions required**.
 6. The Copilot will now invoke the generative answers node and use the user query along with the data fetched from the website we mentioned earlier to provide a detailed contextual answer related to the favorable conditions for Corn Farming. It also gives citations from that website for detailed viewing.
 7. Finally, we can see in the canvas that the Generative Answers node has successfully completed running.
 
-   ![Node Completion](images/01_CopilotUsingWebsites/19.png)
+   <img src="images/01_CopilotUsingWebsites/19.png" width="85%">
 
 8. If we want to view the citations in detail, we can click on one of the links and it will take us to the USDA (United States Department of Agriculture) site.
 
-   ![Citations](images/01_CopilotUsingWebsites/20.png)
+   <img src="images/01_CopilotUsingWebsites/20.png" width="85%">
 
 ## Enable Generative Conversation Routing (Dynamic Chaining)
 
 Before we move on to the creation of subsequent topics, lets enable Generative Conversation routing (previously known as Dynamic Chaining) to ensure that based on your query, the appropriate topic will be auto selected, and the conversation flow will be routed dynamically to those topics. 
 If we go to the Topics section, we can see that the Trigger is Phrases that we defined at the beginning of the topic. 
 
- ![Settings](images/01_CopilotUsingWebsites/21.png)
+ <img src="images/01_CopilotUsingWebsites/21.png" width="85%">
 
 To change this and ensure that Generative AI can route the topics based on user interaction, we will go to **Settings** of the Copilot. 
 
 1. **Go** to **Settings** of the Copilot.
 
-   ![Settings](images/01_CopilotUsingWebsites/22.png)
+   <img src="images/01_CopilotUsingWebsites/22.png" width="85%">
 
 2. **Click** on **Generative AI** and **select** **Generative (preview)** to enable the dynamic routing of topics. **Finally Click on Save**
 
-   ![Save Settings](images/01_CopilotUsingWebsites/23.png)
+   <img src="images/01_CopilotUsingWebsites/23.png" width="85%">
 
 4. Now, if we head back to the Topics page, we can see that the Trigger is not the phrases rather it is automatically triggered by the copilot based on the description given during the topic creation.
 
-   ![Automatic Trigger](images/01_CopilotUsingWebsites/24.png)
+   <img src="images/01_CopilotUsingWebsites/24.png" width="85%">
 
 ## Add Topic 2 - Farming Location Weather
 
