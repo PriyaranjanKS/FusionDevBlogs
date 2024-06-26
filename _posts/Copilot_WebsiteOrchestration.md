@@ -12,27 +12,27 @@ We will leverage Generative Answers and Generative Topic Routing (previously kno
 
 1. Head over to the [Copilot Studio](https://copilotstudio.microsoft.com/) and **click** on **Create**.
 
-   <img src="images/01_CopilotUsingWebsites/1.png" width="50%">
+   <img src="images/01_CopilotUsingWebsites/1.png" width="75%">
 
 2. Choose to start with a pre-existing copilot template or **create a new Copilot from scratch**. We will create a new one.
 
-   <img src="images/01_CopilotUsingWebsites/2.png" width="50%">
+   <img src="images/01_CopilotUsingWebsites/2.png" width="75%">
 
 3. Specify the Copilot description.
 
-   <img src="images/01_CopilotUsingWebsites/3.png" width="50%">
+   <img src="images/01_CopilotUsingWebsites/3.png" width="75%">
 
    - Provide instructions on how the copilot should assist.
 
-   <img src="images/01_CopilotUsingWebsites/4.png" width="50%">
+   <img src="images/01_CopilotUsingWebsites/4.png" width="75%">
 
 4. For the subsequent question, mention that the website information will be added later when configuring the **Knowledge** section. **Click** on **Create** to provision the Copilot.
 
-   <img src="images/01_CopilotUsingWebsites/5.png" width="50%">
+   <img src="images/01_CopilotUsingWebsites/5.png" width="75%">
 
    - The Copilot will be created. **Edit** details like name, description, and add a logo by **clicking** on the **Edit** button.
 
-   <img src="images/01_CopilotUsingWebsites/6.png" width="50%">
+   <img src="images/01_CopilotUsingWebsites/6.png" width="75%">
 
 ## Add Topics
 
