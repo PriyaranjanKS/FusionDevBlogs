@@ -1,3 +1,13 @@
+---
+layout: post
+title: "Building a Farming Copilot Assistant using Generative Answers and Generative Topic Orchestration"
+description: "In this guide, we will walk through the steps to create a Farming Assistant chatbot using Microsoft Copilot Studio. This Copilot assistant will help farmers by providing information across three scenarios where specific information resides on three different websites."
+date: 2024-07-02
+image: '/images/00.png'
+tags: [Copilot-Studio]
+---
+
+
 # Building a Farming Copilot Assistant using Generative Answers and Generative Topic Orchestration
 
 In this guide, we will walk through the steps to create a Farming Assistant chatbot using Microsoft Copilot Studio. This Copilot assistant will help farmers by providing information across three scenarios where specific information resides on three different websites:
@@ -106,7 +116,7 @@ Within the Settings page:
 ![Save Settings](images/01_CopilotUsingWebsites/22.png)
 
 Now, if we head back to the Topics page, we can see that the Trigger is not the phrases rather it is automatically triggered by the copilot based on the description you will give during the topic creation.
-![Auto Trigger](images/01_CopilotUsingWebsites/22.5.png)
+![Auto Trigger](images/01_CopilotUsingWebsites/22_5.png)
 
 ## Step 5: Add Topic 2 – Farming Location Weather
 Now that we have received the information regarding the adequate conditions needed for Corn Farming through our first topic, we will create a second topic to understand the current weather of the farming location to decide if it matches the mandated conditions by USDA.
@@ -124,7 +134,7 @@ The question that the user inputs as a response to the Question node will be sav
 ![Basic Card](images/01_CopilotUsingWebsites/26.png)
 
 Clicking on **Basic Card** will open up the pane where we can provide the card details and the image URL which will be shown in the card in the copilot.
-![Card Details](images/01_CopilotUsingWebsites/26.5png)
+![Card Details](images/01_CopilotUsingWebsites/26_5.png)
 
 Now let's add the **Generative Answer** node by:
 1. **Click on the + Sign** to add the new node.
