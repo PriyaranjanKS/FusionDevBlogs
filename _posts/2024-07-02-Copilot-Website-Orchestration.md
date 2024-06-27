@@ -188,24 +188,24 @@ Now that we have configured the topics for farming information and location weat
 3. **Clicking on Create** will generate the topic for us with the trigger and question derived from the description.
    ![Create Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/36.png)
 
-4. The question provided by the user as a response to the question node is saved in the **LoanQuery variable**. Let's update the message node and add the **basic card** with an image to provide a better user experience.
+4. The question provided by the user as a response to the question node is saved in the **LoanQuery** variable. Let's update the message node and add the **basic card** with an image to provide a better user experience.
    ![Basic Card]({{ site.baseurl }}/images/01_CopilotUsingWebsites/37.png)
 
-5. We will update the card with details like title and image URL which will be reflected in the message node in the canvas.
+5. Update the card with details like title and image URL.
    ![Card Details]({{ site.baseurl }}/images/01_CopilotUsingWebsites/38.png)
 
-6. Finally, let's add the **Generative Answers** node to fetch the answer to the user query from the farmers.gov site by:
+6. Add the **Generative Answers** node to fetch the answer to the user query from the farmers.gov site by:
     1. **Clicking on the + sign** to add a new node.
     2. Click on **Advanced option**.
     3. Select **Generative Answers**.
        ![Add Generative Answers]({{ site.baseurl }}/images/01_CopilotUsingWebsites/39.png)
 
-7. Now let's update the input to the Generative Answers node by:
+7. Update the input to the Generative Answers node by:
     1. **Clicking on the >** in the Input field.
-    2. Select the **LoanQuery variable** and assign it to the input field.
+    2. Select the **LoanQuery** variable and assign it to the input field.
        ![Input LoanQuery]({{ site.baseurl }}/images/01_CopilotUsingWebsites/40.png)
 
-8. We can now edit the datasource and add the external site URL by:
+8. Edit the datasource and add the external site URL by:
     1. **Click on Edit** in the data source.
     2. Select **Add Knowledge**.
        ![Add Knowledge]({{ site.baseurl }}/images/01_CopilotUsingWebsites/41.png)
@@ -226,7 +226,7 @@ Now that we have configured the topics for farming information and location weat
     4. **Click on Save**.
        ![Save Data Source]({{ site.baseurl }}/images/01_CopilotUsingWebsites/45.png)
 
-Thus we have configured all three topics and have also enabled dynamic routing of topics using Generative AI.
+This completes the configuration of all three topics and enables dynamic routing of topics using Generative AI
 
 ## Test the Copilot
 Now let's test the Copilot end to end.
