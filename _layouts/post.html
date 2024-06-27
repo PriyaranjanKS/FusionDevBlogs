@@ -64,8 +64,8 @@ layout: default
 <!-- begin post -->
 <div class="container animate">
   <article class="post">
-  <div class="post-meta">
-      <p>Reading time: <span class="reading-time">calculating...</span></p>
+   <div class="post-meta">
+      <p class="reading-time"><i class="fas fa-hourglass-half"></i> <span class="time-text">calculating...</span></p>
     </div>
     <div class="post__content">
       {{ content }}
@@ -83,14 +83,4 @@ layout: default
 
 {% include related-posts.html %}
 
-<!-- Add the JavaScript for calculating reading time -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    var words = document.body.innerText.split(/\s+/).length;
-    var readingTime = Math.ceil(words / 200); // Average reading speed: 200 words per minute
-    var readingTimeElem = document.querySelector('.reading-time');
-    if (readingTimeElem) {
-        readingTimeElem.textContent = "Reading time: " + readingTime + " min";
-    }
-});
-</script>
+ 

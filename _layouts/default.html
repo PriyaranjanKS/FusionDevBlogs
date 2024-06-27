@@ -24,6 +24,29 @@
     {% include footer.html %}
   </div>
   <!-- end global wrap -->
+   <!-- Add the necessary CSS for styling the reading time text and icon -->
+  <style>
+    .reading-time {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    .reading-time i {
+      margin-right: 5px;
+    }
+  </style>
+
+  <!-- Add the JavaScript for calculating reading time -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var words = document.body.innerText.split(/\s+/).length;
+      var readingTime = Math.ceil(words / 250); // Average reading speed: 200 words per minute
+      var readingTimeElem = document.querySelector('.time-text');
+      if (readingTimeElem) {
+          readingTimeElem.textContent = readingTime + " min";
+      }
+  });
+  </script>
 <script src="{{ site.baseurl }}/js/smooth-scroll.js"></script>
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
   <script src="{{ site.baseurl }}/js/common.js"></script>  
