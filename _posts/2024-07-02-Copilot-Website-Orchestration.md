@@ -136,10 +136,10 @@ This time we will name the topic as **Farming Location Weather** and the descrip
 1. **Click on Create** to create the topic for us along with the trigger and the conversation starter question.
    ![Create Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/25.png)
 
-2. The question that the user inputs as a response to the Question node will be saved in the **Place variable** which we will be using down the line. We will now edit the Message node and remove the text and add a **basic card** to provide a better UX.
+2. The question that the user inputs as a response to the Question node will be saved in the **Place** variable which we will be using down the line. We will now edit the Message node and remove the text and add a **basic card** to provide a better UX.
    ![Basic Card]({{ site.baseurl }}/images/01_CopilotUsingWebsites/26.png)
 
-3. Clicking on **Basic Card** will open up the pane where we can provide the card details and the image URL which will be shown in the card in the copilot.
+3. Clicking on **Basic Card** will open up the pane where we can provide the card details and the image URL .
    ![Card Details]({{ site.baseurl }}/images/01_CopilotUsingWebsites/26_5.png)
 
 4. Now let's add the **Generative Answer** node by:
@@ -148,9 +148,9 @@ This time we will name the topic as **Farming Location Weather** and the descrip
     3. **Click on Generative Answers**.
        ![Add Generative Answers]({{ site.baseurl }}/images/01_CopilotUsingWebsites/27.png)
 
-5. First, let’s provide the input to the **Generative Answers** node by:
+5. Provide the input to the **Generative Answers** node by:
     1. **Selecting the > arrow** next to the input field.
-    2. Assigning the **Place variable** to the input field which will contain the question which the user has asked about the weather at a particular place.
+    2. Assigning the **Place** variable to the input field which will contain the question which the user has asked about the weather at a particular place.
        ![Input Place]({{ site.baseurl }}/images/01_CopilotUsingWebsites/28.png)
 
 6. Next, we will edit the Data source for the node by:
@@ -176,52 +176,55 @@ This time we will name the topic as **Farming Location Weather** and the descrip
 
 
 ## Add Topic 3 – Farming Loans
-Now we have configured the topics for getting farming information and the farming location weather. Now we would like to have one final topic to see if we can get any loan assistance from USDA. Let's create the last topic from the Topics section.
-![Create Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/34.png)
 
-Ensure that we give a proper description for the topic so that the trigger and questions conversation nodes can be created with accuracy. We have named the topic as **Farming Loans** and used the description **Ask the user about their loan query and search for the answer on the site: https://www.farmers.gov/ and share the results with the user** for our topic.
-![Topic Description]({{ site.baseurl }}/images/01_CopilotUsingWebsites/35.png)
+Now that we have configured the topics for farming information and location weather, let’s add a final topic to explore loan assistance from Farmers.Gov site.
 
-**Clicking on Create** will generate the topic for us with the trigger and question derived from the description.
-![Create Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/36.png)
+1. Let’s add a new topic from the Topics tab.
+   ![Create Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/34.png)
 
-The question provided by the user as a response to the question node is saved in the **LoanQuery variable**. Let's update the message node and add the **basic card** with an image to provide a better user experience.
-![Basic Card]({{ site.baseurl }}/images/01_CopilotUsingWebsites/37.png)
+2. Ensure that we give a proper description for the topic so that the trigger and questions conversation nodes can be created with accuracy. We have named the topic as **Farming Loans** and used the description **Ask the user about their loan query and search for the answer on the site: https://www.farmers.gov/ and share the results with the user** for our topic.
+   ![Topic Description]({{ site.baseurl }}/images/01_CopilotUsingWebsites/35.png)
 
-We will update the card with details like title and image URL which will be reflected in the message node in the canvas.
-![Card Details]({{ site.baseurl }}/images/01_CopilotUsingWebsites/38.png)
+3. **Clicking on Create** will generate the topic for us with the trigger and question derived from the description.
+   ![Create Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/36.png)
 
-Finally, let's add the **Generative Answers** node to fetch the answer to the user query from the farmers.gov site by:
-1. **Clicking on the + sign** to add a new node.
-2. Click on **Advanced option** and.
-3. Select **Generative Answers**.
-![Add Generative Answers]({{ site.baseurl }}/images/01_CopilotUsingWebsites/39.png)
+4. The question provided by the user as a response to the question node is saved in the **LoanQuery variable**. Let's update the message node and add the **basic card** with an image to provide a better user experience.
+   ![Basic Card]({{ site.baseurl }}/images/01_CopilotUsingWebsites/37.png)
 
-Now let's update the input to the Generative Answers node by:
-1. **Clicking on the >** in the Input field.
-2. Select the **LoanQuery variable** and assign it to the input field.
-![Input LoanQuery]({{ site.baseurl }}/images/01_CopilotUsingWebsites/40.png)
+5. We will update the card with details like title and image URL which will be reflected in the message node in the canvas.
+   ![Card Details]({{ site.baseurl }}/images/01_CopilotUsingWebsites/38.png)
 
-We can now edit the datasource and add the external site URL by:
-1. **Click on Edit** in the data source.
-2. Select **Add Knowledge**.
-![Add Knowledge]({{ site.baseurl }}/images/01_CopilotUsingWebsites/41.png)
+6. Finally, let's add the **Generative Answers** node to fetch the answer to the user query from the farmers.gov site by:
+    1. **Clicking on the + sign** to add a new node.
+    2. Click on **Advanced option**.
+    3. Select **Generative Answers**.
+       ![Add Generative Answers]({{ site.baseurl }}/images/01_CopilotUsingWebsites/39.png)
 
-This will open up the pop-up where we can select the type of Knowledge base. We will go with **Public Websites**.
-![Select Public Websites]({{ site.baseurl }}/images/01_CopilotUsingWebsites/42.png)
+7. Now let's update the input to the Generative Answers node by:
+    1. **Clicking on the >** in the Input field.
+    2. Select the **LoanQuery variable** and assign it to the input field.
+       ![Input LoanQuery]({{ site.baseurl }}/images/01_CopilotUsingWebsites/40.png)
 
-Mention the external site URL: https://www.farmers.gov in the **webpages link** and **click on Add**.
-![Webpage Link]({{ site.baseurl }}/images/01_CopilotUsingWebsites/43.png)
+8. We can now edit the datasource and add the external site URL by:
+    1. **Click on Edit** in the data source.
+    2. Select **Add Knowledge**.
+       ![Add Knowledge]({{ site.baseurl }}/images/01_CopilotUsingWebsites/41.png)
 
-**Click on Add** to finalize the knowledge for this topic.
-![Add URL]({{ site.baseurl }}/images/01_CopilotUsingWebsites/44.png)
+9. This will open up the pop-up where we can select the type of Knowledge base. We will go with **Public Websites**.
+   ![Select Public Websites]({{ site.baseurl }}/images/01_CopilotUsingWebsites/42.png)
 
-Finally, to ensure that the Farming Loans topic relies only on the recently added knowledge site, we will:
-1. **Click on Edit** in the Data source section.
-2. **Toggle on the Search only selected sources** and.
-3. **Check the Farmers site URL**.
-4. **Finally, Click on Save**.
-![Save Data Source]({{ site.baseurl }}/images/01_CopilotUsingWebsites/45.png)
+10. Mention the external site URL: https://www.farmers.gov in the **webpages link** and **click on Add**.
+    ![Webpage Link]({{ site.baseurl }}/images/01_CopilotUsingWebsites/43.png)
+
+11. **Click on Add** to finalize the knowledge for this topic.
+    ![Add URL]({{ site.baseurl }}/images/01_CopilotUsingWebsites/44.png)
+
+12. Finally, to ensure that the Farming Loans topic relies only on the recently added knowledge site, we will:
+    1. **Click on Edit** in the Data source section.
+    2. **Toggle on the Search only selected sources**.
+    3. **Check the Farmers site URL**.
+    4. **Click on Save**.
+       ![Save Data Source]({{ site.baseurl }}/images/01_CopilotUsingWebsites/45.png)
 
 Thus we have configured all three topics and have also enabled dynamic routing of topics using Generative AI.
 
