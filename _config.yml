@@ -7,6 +7,7 @@ baseurl: ""
 
 #-------------------------------
 # Build Settings
+future: true
 markdown: kramdown
 permalink: /:title/
 plugins:
