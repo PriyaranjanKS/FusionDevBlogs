@@ -14,7 +14,7 @@ In this guide, we will walk through the steps to create a Farming Assistant chat
 
 We will leverage Generative Answers and Generative Topic Routing (previously known as Dynamic Chaining) to ensure a seamless and efficient user experience.
 
-![Create]({{ site.baseurl }}/images/01_CopilotUsingWebsites/50.svg)
+<img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/50.svg" alt="Copilot Flow">
 
 ## Step 1: Create the Copilot
 1. Head over to the Copilot Studio (https://copilotstudio.microsoft.com/) and **click on Create**.
