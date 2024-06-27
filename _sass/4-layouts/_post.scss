@@ -23,6 +23,15 @@
   }
 }
 
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: teal; /* Change to your desired color */
+  z-index: 1000;
+}
 .post-tags {
   display: flex;
   align-items: center;
