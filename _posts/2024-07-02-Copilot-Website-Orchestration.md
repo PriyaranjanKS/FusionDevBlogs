@@ -16,8 +16,11 @@ We will leverage Generative Answers and Generative Topic Routing (previously kno
 
 <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/50.svg" alt="Copilot Flow">
 
+## Table of Contents
+{: .no_toc}
+
 * TOC
-{:toc}
+{: toc}
 
 ## Step 1: Create the Copilot
 1. Head over to the Copilot Studio (https://copilotstudio.microsoft.com/) and **click on Create**.
