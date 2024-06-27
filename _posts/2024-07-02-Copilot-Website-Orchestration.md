@@ -3,7 +3,7 @@ layout: post
 title: Building a Farming Copilot Assistant using Generative Answers and Generative Topic Orchestration
 description: In this guide, we will walk through the steps to create a Farming Assistant chatbot using Microsoft Copilot Studio.
 date: 2024-07-02 15:01:35 +0300
-image: '/images/00.png'
+image: '/images/06.jpg'
 tags: [workflow, story, rest]
 ---
 # Building a Farming Copilot Assistant using Generative Answers and Generative Topic Orchestration
