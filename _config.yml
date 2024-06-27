@@ -13,7 +13,8 @@ permalink: /:title/
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-
+  - jekyll-reading-time
+  - jekyll-toc
 paginate: 6
 paginate_path: "/page/:num"
 
