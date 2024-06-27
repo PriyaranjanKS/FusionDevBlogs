@@ -36,7 +36,7 @@
       margin-right: 5px;
 	   color: #066;
     }
-	.hero__title, .article__title,.post-title, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+	.hero__title, .article__title a,.post-title, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
       color: #066!important; /* Teal color */
     }
   </style>
@@ -45,7 +45,7 @@
   <script>
   document.addEventListener("DOMContentLoaded", function() {
       var words = document.body.innerText.split(/\s+/).length;
-      var readingTime = Math.ceil(words / 250); // Average reading speed: 200 words per minute
+      var readingTime = Math.ceil(words / 250); // Average reading speed: 250 words per minute
       var readingTimeElem = document.querySelector('.time-text');
       if (readingTimeElem) {
           readingTimeElem.textContent = readingTime + " min";
