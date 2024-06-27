@@ -240,7 +240,7 @@ Now let's test the Copilot end to end.
    ![Soil and Climate]({{ site.baseurl }}/images/01_CopilotUsingWebsites/47.png)
 
 3. Now that we know the climate condition needed for Corn Farming, let's try to get the **current climate conditions** using the below query. It will leverage generative AI to fetch the details from the **Weather.com site** and even show a citation link to the page where the current climate condition of the farming location will be provided.
-   ![Weather Query]({{ site.baseurl }}/images/01_CopilotUsingWebsites/48.png)
+   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/48.png" alt="Current Weather Query" style="display: block;">
 
 4. Finally, let's see if we can get information about the **available loan options** to proceed with the farming. We can see that it successfully orchestrates the conversation to the appropriate topic and uses generative answers to fetch the details from the **farmers.gov site**.
    <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/49.png" alt="Loan Query" style="display: block;">
