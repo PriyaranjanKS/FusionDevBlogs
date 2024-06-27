@@ -94,19 +94,19 @@ Now let's test the topic that we created just now by using one of the trigger ph
 4. In the Canvas, we can in real-time see which node is being executed currently, which helps in debugging the Copilot flow.
 ![Test Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/17.png)
 
-Now let's continue the conversation by:
-1. I have provided my response to the question, which is **I am starting corn farming, help me with the ideal soil and climate conditions required**.
-2. The Copilot will now invoke the **Generative Answers** node and use the user query along with the data fetched from the website, which we had mentioned earlier, and provide us with a detailed contextual answer related to the favorable conditions for Corn Farming. It also gives us citations from that website for detailed viewing.
-3. Finally, we can see in the canvas that the Generative Answers node has successfully completed running.
+Next Steps :
+5. Provide the response to the question, e.g., **I am starting corn farming, help me with the ideal soil and climate conditions required**.
+6. The Copilot will now invoke the **Generative Answers** node and use the user query along with the data fetched from the website, which we had mentioned earlier, and provide us with a detailed contextual answer related to the favorable conditions for Corn Farming. It also gives us citations from that website for detailed viewing.
+7. The canvas will show that the Generative Answers node has successfully completed running.
 ![Generative Answer Completed]({{ site.baseurl }}/images/01_CopilotUsingWebsites/18.png)
 
-If we want to view the citations in detail, we can click on one of the links, and it will take us to the USDA (United States Department of Agriculture) site.
+To view the citations in detail, click on one of the links to be taken to the USDA (United States Department of Agriculture) site.
 ![Citations]({{ site.baseurl }}/images/01_CopilotUsingWebsites/19.png)
 
-With this, we come to the end of our first topic creation.
+This concludes the creation of the first topic.
 
 ## Generative Conversation Routing (Dynamic Chaining)
-Before we move on to the creation of subsequent topics, let's enable Generative Conversation routing (previously known as Dynamic Chaining) to ensure that based on your query, the appropriate topic will be auto-selected, and the conversation flow will be routed dynamically to those topics.
+Before creating subsequent topics, let’s enable Generative Conversation routing (previously known as Dynamic Chaining) to ensure the appropriate topic is auto-selected based on the query, and the conversation flow is routed dynamically.
 
 Before we make this change, if we go to the Topics section, we can see that the Trigger is Phrases that we defined at the beginning of the topic.
 ![Initial Trigger]({{ site.baseurl }}/images/01_CopilotUsingWebsites/20.png)
@@ -124,6 +124,7 @@ Now, if we head back to the Topics page, we can see that the Trigger is not the 
 ![Auto Trigger]({{ site.baseurl }}/images/01_CopilotUsingWebsites/22_5.png)
 
 ## Add Topic 2 – Farming Location Weather
+
 Now that we have received the information regarding the adequate conditions needed for Corn Farming through our first topic, we will create a second topic to understand the current weather of the farming location to decide if it matches the mandated conditions by USDA.
 
 Let's head to the Topics section and use Copilot to create the topic for us by describing what we intend to achieve with this topic.
@@ -132,46 +133,47 @@ Let's head to the Topics section and use Copilot to create the topic for us by d
 This time we will name the topic as **Farming Location Weather** and the description as **Let the user search for weather at a particular place and search for the weather details on the site https://weather.com/ and share back the results**. Ensure that a clear description is given as the Copilot will use this description to create the potential phrases for automatic topic routing as well as the conversational nodes within the topic.
 ![Topic Description]({{ site.baseurl }}/images/01_CopilotUsingWebsites/24.png)
 
-**Clicking on Create** will create the topic for us along with the trigger and the conversation starter question.
-![Create Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/25.png)
+1. **Click on Create** to create the topic for us along with the trigger and the conversation starter question.
+   ![Create Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/25.png)
 
-The question that the user inputs as a response to the Question node will be saved in the **Place variable** which we will be using down the line. We will now edit the Message node and remove the text and add a **basic card** to provide a better UX.
-![Basic Card]({{ site.baseurl }}/images/01_CopilotUsingWebsites/26.png)
+2. The question that the user inputs as a response to the Question node will be saved in the **Place variable** which we will be using down the line. We will now edit the Message node and remove the text and add a **basic card** to provide a better UX.
+   ![Basic Card]({{ site.baseurl }}/images/01_CopilotUsingWebsites/26.png)
 
-Clicking on **Basic Card** will open up the pane where we can provide the card details and the image URL which will be shown in the card in the copilot.
-![Card Details]({{ site.baseurl }}/images/01_CopilotUsingWebsites/26_5.png)
+3. Clicking on **Basic Card** will open up the pane where we can provide the card details and the image URL which will be shown in the card in the copilot.
+   ![Card Details]({{ site.baseurl }}/images/01_CopilotUsingWebsites/26_5.png)
 
-Now let's add the **Generative Answer** node by:
-1. **Click on the + Sign** to add the new node.
-2. Select **Advanced**.
-3. **Click on Generative Answers**.
-![Add Generative Answers]({{ site.baseurl }}/images/01_CopilotUsingWebsites/27.png)
+4. Now let's add the **Generative Answer** node by:
+    1. **Click on the + Sign** to add the new node.
+    2. Select **Advanced**.
+    3. **Click on Generative Answers**.
+       ![Add Generative Answers]({{ site.baseurl }}/images/01_CopilotUsingWebsites/27.png)
 
-First, let’s provide the input to the **Generative Answers** node by:
-1. **Selecting the > arrow** next to the input field.
-2. Assigning the **Place variable** to the input field which will contain the question which the user has asked about the weather at a particular place.
-![Input Place]({{ site.baseurl }}/images/01_CopilotUsingWebsites/28.png)
+5. First, let’s provide the input to the **Generative Answers** node by:
+    1. **Selecting the > arrow** next to the input field.
+    2. Assigning the **Place variable** to the input field which will contain the question which the user has asked about the weather at a particular place.
+       ![Input Place]({{ site.baseurl }}/images/01_CopilotUsingWebsites/28.png)
 
-Next, we will edit the Data source for the node by:
-1. **Clicking on Edit** button of the Data sources section.
-2. Select **Add Knowledge**.
-![Add Knowledge]({{ site.baseurl }}/images/01_CopilotUsingWebsites/29.png)
+6. Next, we will edit the Data source for the node by:
+    1. **Clicking on Edit** button of the Data sources section.
+    2. Select **Add Knowledge**.
+       ![Add Knowledge]({{ site.baseurl }}/images/01_CopilotUsingWebsites/29.png)
 
-This will open the pop-up where we will select the **Public websites** as the knowledge source.
-![Select Public Websites]({{ site.baseurl }}/images/01_CopilotUsingWebsites/30.png)
+7. This will open the pop-up where we will select the **Public websites** as the knowledge source.
+   ![Select Public Websites]({{ site.baseurl }}/images/01_CopilotUsingWebsites/30.png)
 
-Specify the weather site URL in the **webpage link** and **click on Add**.
-![Webpage Link]({{ site.baseurl }}/images/01_CopilotUsingWebsites/31.png)
+8. Specify the weather site URL in the **webpage link** and **click on Add**.
+   ![Webpage Link]({{ site.baseurl }}/images/01_CopilotUsingWebsites/31.png)
 
-Since we don’t have any more URLs to add, let's **click on Add** to finalize the knowledge base for this topic.
-![Add URL]({{ site.baseurl }}/images/01_CopilotUsingWebsites/32.png)
+9. Since we don’t have any more URLs to add, let's **click on Add** to finalize the knowledge base for this topic.
+   ![Add URL]({{ site.baseurl }}/images/01_CopilotUsingWebsites/32.png)
 
-To ensure that this specific topic will only use the Weather Generative Knowledge Base, we will once again edit the Data source by:
-1. **Click on Edit** in the Data source section.
-2. **Toggle on the Search only selected sources** and.
-3. **Check the Weather site URL**.
-4. **Finally, Click on Save**.
-![Save Data Source]({{ site.baseurl }}/images/01_CopilotUsingWebsites/33.png)
+10. To ensure that this specific topic will only use the Weather Generative Knowledge Base, we will once again edit the Data source by:
+    1. **Click on Edit** in the Data source section.
+    2. **Toggle on the Search only selected sources**.
+    3. **Check the Weather site URL**.
+    4. **Click on Save**.
+       ![Save Data Source]({{ site.baseurl }}/images/01_CopilotUsingWebsites/33.png)
+
 
 ## Add Topic 3 – Farming Loans
 Now we have configured the topics for getting farming information and the farming location weather. Now we would like to have one final topic to see if we can get any loan assistance from USDA. Let's create the last topic from the Topics section.
