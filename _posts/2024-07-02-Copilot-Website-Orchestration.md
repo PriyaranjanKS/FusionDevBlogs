@@ -22,7 +22,7 @@ We will leverage Generative Answers and Generative Topic Routing (previously kno
 * TOC
 {: toc}
 
-## Step 1: Create the Copilot
+## Create the Copilot
 1. Head over to the Copilot Studio (https://copilotstudio.microsoft.com/) and **click on Create**.
 ![Create]({{ site.baseurl }}/images/01_CopilotUsingWebsites/1.png)
 2. It provides the option to start with a pre-existing copilot template or **create a new Copilot from scratch**, which is what we will be doing.
@@ -34,14 +34,14 @@ We will leverage Generative Answers and Generative Topic Routing (previously kno
 5. It will create the Copilot. We can edit the Copilot details like name, description, and add a logo by **clicking on the Edit button**.
 ![Edit Copilot]({{ site.baseurl }}/images/01_CopilotUsingWebsites/6.png)
 
-## Step 2: Add Topics
+## Add Topics
 In Microsoft Copilot Studio, topics are the fundamental building blocks that define how a conversation with a copilot progresses. They represent discrete conversation paths that, when combined, allow users to have natural and flowing interactions with the copilot. Here are the key aspects of topics in Copilot Studio:
 
 ### Core Components of Topics
 - **Trigger Phrases**: These are phrases, keywords, or questions that a user is likely to use, which are related to the topic. When a user's input matches or is close to these trigger phrases, the corresponding topic is activated. For example, a topic about store hours might be triggered by the phrase check store hours or similar variations.
 - **Conversation Nodes**: These are the action steps within a topic that define what the copilot should do once the topic is triggered. Actions can include asking questions, sending messages, triggering cloud flows, setting variable values, or using conditions for branching logic.
 
-## Step 3: Add Topic 1 - Farming Queries
+## Add Topic 1 - Farming Queries
 1. Let's add the first topic of our Copilot by **selecting Topics from the navigation bar**.
 ![Select Topics]({{ site.baseurl }}/images/01_CopilotUsingWebsites/7.png)
 2. This will open the Topics creation section, and we can either select **From blank to create the trigger phrase and subsequent actions manually** or use **Create from description with Copilot** to utilize the Copilot generative AI capabilities to create a Copilot bot for us.
@@ -105,7 +105,7 @@ If we want to view the citations in detail, we can click on one of the links, an
 
 With this, we come to the end of our first topic creation.
 
-## Step 4: Generative Conversation Routing (Dynamic Chaining)
+## Generative Conversation Routing (Dynamic Chaining)
 Before we move on to the creation of subsequent topics, let's enable Generative Conversation routing (previously known as Dynamic Chaining) to ensure that based on your query, the appropriate topic will be auto-selected, and the conversation flow will be routed dynamically to those topics.
 
 Before we make this change, if we go to the Topics section, we can see that the Trigger is Phrases that we defined at the beginning of the topic.
@@ -123,7 +123,7 @@ Within the Settings page:
 Now, if we head back to the Topics page, we can see that the Trigger is not the phrases rather it is automatically triggered by the copilot based on the description you will give during the topic creation.
 ![Auto Trigger]({{ site.baseurl }}/images/01_CopilotUsingWebsites/22_5.png)
 
-## Step 5: Add Topic 2 – Farming Location Weather
+## Add Topic 2 – Farming Location Weather
 Now that we have received the information regarding the adequate conditions needed for Corn Farming through our first topic, we will create a second topic to understand the current weather of the farming location to decide if it matches the mandated conditions by USDA.
 
 Let's head to the Topics section and use Copilot to create the topic for us by describing what we intend to achieve with this topic.
@@ -173,7 +173,7 @@ To ensure that this specific topic will only use the Weather Generative Knowledg
 4. **Finally, Click on Save**.
 ![Save Data Source]({{ site.baseurl }}/images/01_CopilotUsingWebsites/33.png)
 
-## Step 6: Add Topic 4 – Farming Loans
+## Add Topic 3 – Farming Loans
 Now we have configured the topics for getting farming information and the farming location weather. Now we would like to have one final topic to see if we can get any loan assistance from USDA. Let's create the last topic from the Topics section.
 ![Create Topic]({{ site.baseurl }}/images/01_CopilotUsingWebsites/34.png)
 
@@ -223,7 +223,7 @@ Finally, to ensure that the Farming Loans topic relies only on the recently adde
 
 Thus we have configured all three topics and have also enabled dynamic routing of topics using Generative AI.
 
-## Step 7: Test the Copilot
+## Test the Copilot
 Now let's test the Copilot end to end.
 1. We will first want to get information about the farming query related to the ideal conditions for corn farming and the Copilot has taken the user query to fetch the generative results from the USDA site.
 
