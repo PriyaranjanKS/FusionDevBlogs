@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Building a Farming Copilot Assistant using Generative Answers and Generative Topic Orchestration
-description: In this guide, we will walk through the steps to create a Farming Assistant chatbot using Microsoft Copilot Studio.
+description: In this guide, we will walk through the steps to create a Farming Assistant Copilot using Microsoft Copilot Studio.
 date: 2024-07-09 15:01:35 +0300
 image: '/images/01_CopilotUsingWebsites/00.png'
 tags: [Copilot Studio]
 ---
 
-In this guide, we will walk through the steps to create a Farming Assistant Copilot using Microsoft Copilot Studio. This Copilot assistant will **help farmers by providing information across three scenarios where specific information resides on three different websites.**
+This Copilot assistant will **help farmers by providing information across three scenarios where specific information resides on three different websites.**
 The Copilot will :
 - Provide information on **farming queries** by searching the public website of the United States Department of Agriculture (USDA) and providing contextual answers to farmer queries.
 - Generate the current **climate conditions** from Weather.com so that the farmer can plan his crop season.
