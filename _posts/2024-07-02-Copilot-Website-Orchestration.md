@@ -226,7 +226,7 @@ Now let's test the Copilot end to end.
 ![Weather Query]({{ site.baseurl }}/images/01_CopilotUsingWebsites/48.png)
 4. Finally, let's see if we can get information about the available loan options to proceed with the farming. We can see that it successfully orchestrates the conversation to the appropriate topic and uses generative answers to fetch the details from the farmers.gov site.
 ![Loan Query]({{ site.baseurl }}/images/01_CopilotUsingWebsites/49.png)
- 
+<img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/49.png" alt="Loan Query" style="display: block;">
 ## Conclusion
 In this guide, we've walked through the process of creating a powerful Farming Assistant chatbot using Microsoft Copilot Studio. By leveraging Generative Answers and Generative Topic Orchestration, we've enabled the Farming Assistant to provide seamless, contextually accurate information across various farming-related queries. This assistant integrates data from three distinct public websites, ensuring comprehensive support for farmers:
 1. USDA for detailed farming information and best practices.
