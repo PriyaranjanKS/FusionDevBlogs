@@ -94,13 +94,12 @@ document.addEventListener("DOMContentLoaded", function() {
         readingTimeElem.textContent = readingTime + " min";
     }
 
-    // Progress bar script
-    document.addEventListener("scroll", function() {
+     document.addEventListener("scroll", function() {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
         var clientHeight = document.documentElement.clientHeight;
         var progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-        document.getElementById("reading-progress").style.width = progress + "%";
+        document.getElementById("reading-progress").style.height = progress + "%";
     });
 });
 </script>
