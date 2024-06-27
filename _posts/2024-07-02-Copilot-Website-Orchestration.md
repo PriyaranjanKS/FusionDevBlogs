@@ -231,7 +231,7 @@ This completes the configuration of all three topics and enables dynamic routing
 ## Test the Copilot
 Now let's test the Copilot end to end.
 1. We will first want to get information about the farming query related to the ideal conditions for corn farming and the Copilot has taken the user query to fetch the generative results from the USDA site.
-![Test Farming Query]({{ site.baseurl }}/images/01_CopilotUsingWebsites/46.png)
+<img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/46.png" alt="Loan Query" style="display: block;">
 2. It displays back the Soil and Climate condition response to the user query as below:
 ![Soil and Climate]({{ site.baseurl }}/images/01_CopilotUsingWebsites/47.png)
 3. Now that we know the climate condition needed for Corn Farming, let's try to get the current climate conditions using the below query. It will leverage generative AI to fetch the details from the Weather.com site and even show a citation link to the page where the current climate condition of the farming location will be provided.
