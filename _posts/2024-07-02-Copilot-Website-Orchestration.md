@@ -7,7 +7,7 @@ image: '/images/01_CopilotUsingWebsites/00.png'
 tags: [Copilot Studio]
 ---
 
-In this guide, we will walk through the steps to create a Farming Assistant chatbot using Microsoft Copilot Studio. This Copilot assistant will **help farmers by providing information across three scenarios where specific information resides on three different websites:**
+In this guide, we will walk through the steps to create a Farming Assistant Copilot using Microsoft Copilot Studio. This Copilot assistant will **help farmers by providing information across three scenarios where specific information resides on three different websites:**
 - Providing specific information on **farming queries** by searching the public website of the United States Department of Agriculture (USDA) and providing contextual answers to farmer queries.
 - Based on the query answer on appropriate farming conditions, the farmer can further ask for current **climate conditions** from Weather.com to get a detailed weather report.
 - In addition to this, we provide additional details about **loan facilities** by querying the farmers.gov site.
