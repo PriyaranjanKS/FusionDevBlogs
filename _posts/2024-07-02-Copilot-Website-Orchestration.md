@@ -231,7 +231,6 @@ This completes the configuration of all three topics and enables dynamic routing
 ## Test the Copilot
 Now let's test the Copilot end to end.
 1. We will first want to get information about the farming query related to the ideal conditions for corn farming and the Copilot has taken the user query to fetch the generative results from the USDA site.
-
 ![Test Farming Query]({{ site.baseurl }}/images/01_CopilotUsingWebsites/46.png)
 2. It displays back the Soil and Climate condition response to the user query as below:
 ![Soil and Climate]({{ site.baseurl }}/images/01_CopilotUsingWebsites/47.png)
