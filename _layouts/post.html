@@ -83,4 +83,23 @@ layout: default
 
 {% include related-posts.html %}
 
- 
+ <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Calculate reading time
+    var words = document.body.innerText.split(/\s+/).length;
+    var readingTime = Math.ceil(words / 200); // Average reading speed: 200 words per minute
+    var readingTimeElem = document.querySelector('.time-text');
+    if (readingTimeElem) {
+        readingTimeElem.textContent = readingTime + " min";
+    }
+
+    // Progress bar script
+    document.addEventListener("scroll", function() {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        var clientHeight = document.documentElement.clientHeight;
+        var progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+        document.getElementById("reading-progress").style.width = progress + "%";
+    });
+});
+</script>

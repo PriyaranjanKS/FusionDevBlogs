@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #066; /* Teal color */
+  z-index: 9999;
+}
+
+
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
