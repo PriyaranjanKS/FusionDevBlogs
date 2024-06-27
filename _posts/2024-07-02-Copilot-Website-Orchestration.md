@@ -229,23 +229,29 @@ Now that we have configured the topics for farming information and location weat
 This completes the configuration of all three topics and enables dynamic routing of topics using Generative AI
 
 ## Test the Copilot
+
 Now let's test the Copilot end to end.
-1. We will first want to get information about the farming query related to the ideal conditions for corn farming and the Copilot has taken the user query to fetch the generative results from the USDA site.
-<img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/46.png" alt="Loan Query" style="display: block;">
-2. It displays back the Soil and Climate condition response to the user query as below:
-![Soil and Climate]({{ site.baseurl }}/images/01_CopilotUsingWebsites/47.png)
-3. Now that we know the climate condition needed for Corn Farming, let's try to get the current climate conditions using the below query. It will leverage generative AI to fetch the details from the Weather.com site and even show a citation link to the page where the current climate condition of the farming location will be provided.
-![Weather Query]({{ site.baseurl }}/images/01_CopilotUsingWebsites/48.png)
-4. Finally, let's see if we can get information about the available loan options to proceed with the farming. We can see that it successfully orchestrates the conversation to the appropriate topic and uses generative answers to fetch the details from the farmers.gov site.
 
-<img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/49.png" alt="Loan Query" style="display: block;">
+1. We will first want to get information about the **farming query related to the ideal conditions for corn farming** and the Copilot has taken the user query to fetch the generative results from the USDA site.
+   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/46.png" alt="Loan Query" style="display: block;">
+
+2. It displays back the **Soil and Climate condition** response to the user query as below:
+   ![Soil and Climate]({{ site.baseurl }}/images/01_CopilotUsingWebsites/47.png)
+
+3. Now that we know the climate condition needed for Corn Farming, let's try to get the **current climate conditions** using the below query. It will leverage generative AI to fetch the details from the **Weather.com site** and even show a citation link to the page where the current climate condition of the farming location will be provided.
+   ![Weather Query]({{ site.baseurl }}/images/01_CopilotUsingWebsites/48.png)
+
+4. Finally, let's see if we can get information about the **available loan options** to proceed with the farming. We can see that it successfully orchestrates the conversation to the appropriate topic and uses generative answers to fetch the details from the **farmers.gov site**.
+   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/49.png" alt="Loan Query" style="display: block;">
+
 ## Conclusion
-In this guide, we've walked through the process of creating a powerful Farming Assistant chatbot using Microsoft Copilot Studio. By leveraging Generative Answers and Generative Topic Orchestration, we've enabled the Farming Assistant to provide seamless, contextually accurate information across various farming-related queries. This assistant integrates data from three distinct public websites, ensuring comprehensive support for farmers:
-1. USDA for detailed farming information and best practices.
-2. Weather.com for real-time weather updates pertinent to farming locations.
-3. Farmers.gov for information on available loan options and financial assistance.
 
-By enabling dynamic topic routing and configuring targeted data sources, we've created a robust and intelligent Copilot that can dynamically handle user queries and provide precise answers grounded in reliable information. This Farming Assistant not only simplifies the decision-making process for farmers but also demonstrates the potential of Microsoft Copilot Studio in creating sophisticated AI solutions.
+In this guide, we've walked through the process of creating a powerful **Farming Assistant chatbot** using Microsoft Copilot Studio. By leveraging **Generative Answers** and **Generative Topic Orchestration**, we've enabled the Farming Assistant to provide seamless, contextually accurate information across various farming-related queries. This assistant integrates data from three distinct public websites, ensuring comprehensive support for farmers:
 
-This project highlights the effectiveness of combining generative AI with well-structured topic orchestration, setting a precedent for developing other domain-specific assistants.
+1. **USDA** for detailed farming information and best practices.
+2. **Weather.com** for real-time weather updates pertinent to farming locations.
+3. **Farmers.gov** for information on available loan options and financial assistance.
 
+By enabling **dynamic topic routing** and configuring targeted data sources, we've created a robust and intelligent Copilot that can dynamically handle user queries and provide precise answers grounded in reliable information. This Farming Assistant not only simplifies the decision-making process for farmers but also demonstrates the potential of Microsoft Copilot Studio in creating sophisticated AI solutions.
+
+This project highlights the effectiveness of combining **generative AI** with well-structured **topic orchestration**, setting a precedent for developing other domain-specific assistants.
