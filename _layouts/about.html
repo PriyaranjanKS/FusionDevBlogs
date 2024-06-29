@@ -23,6 +23,11 @@ layout: default
           <p class="author-profile__desc">{{ site.data.settings.author.author__bio }}</p>
           {% endif %}
 
+          <div class="logos">
+            <img src="/images/mvp_logo.png" alt="Microsoft MVP" class="logo">
+            <img src="/images/mct_logo.png" alt="Microsoft MCT" class="logo">
+          </div>
+
           {% include social-links.html %}
 
           <div class="scroll-more">
@@ -50,10 +55,6 @@ layout: default
       <div class="about-me-header">
         <span class="about-me-icon">💼</span>
         <h2>About Me</h2>
-      </div>
-      <div class="logos">
-        <img src="/images/mvp_logo.png" alt="Microsoft MVP" class="logo">
-        <img src="/images/mct_logo.png" alt="Microsoft MCT" class="logo">
       </div>
       <p class="left-align">👋 Hey there! My name is <span class="highlight">Priyaranjan</span>, but my friends call me <span class="highlight">Priyan</span>. I hail from India and have journeyed through the tech world from SharePoint Portal Server 2003 to Office 365, and now I'm diving deep into Azure, Power Platform, and Generative AI. I've worn many hats – from developer to architect, eventually leading the Global Technology Incubation group at a multinational corporation.</p>
       <p>In <span class="highlight">February 2024</span>, I took a leap of faith, leaving my full-time job to become an independent consultant and starting my own venture in the UAE. Embracing the uncertainty and excitement of being a beginner again has sparked my creativity and passion for technology like never before.</p>
@@ -118,6 +119,18 @@ body {
   margin-top: 10px;
 }
 
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.logo {
+  width: auto;
+  height: 40px; /* Adjust as needed */
+}
+
 .scroll-more {
   display: flex;
   justify-content: center;
@@ -175,18 +188,6 @@ body {
   margin-right: 10px;
   display: flex;
   align-items: center;
-}
-
-.logos {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.logo {
-  width: 100px;
-  height: auto;
 }
 
 .about-me h2 {
