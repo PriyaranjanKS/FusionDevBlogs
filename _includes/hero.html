@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col col-12">
-        <div class="hero__inner">
+        <div class="hero__inner" style="display: flex; align-items: flex-start; justify-content: space-between;">
 
           <div class="hero__left" style="flex: 0 0 40%;">
             {% if site.data.settings.hero.hero__title %}
@@ -23,17 +23,17 @@
             {% endif %}
           </div>
 
-          {% if site.data.settings.hero.hero__image %}
-          <div class="hero__right" style="flex: 0 0 60%; display: flex; flex-direction: column; align-items: center;">
-            <div class="hero__image">
+          <div class="hero__right" style="flex: 0 0 60%; position: relative;">
+            {% if site.data.settings.hero.hero__image %}
+            <div class="hero__image" style="position: relative;">
               <img class="lazy" data-src="{{ site.data.settings.hero.hero__image }}" alt="{{ site.data.settings.author.name }}'s Picture">
+              <div class="hero__logos" style="position: absolute; bottom: 0; right: -130px; display: flex; flex-direction: column; align-items: center;">
+                <img src="/images/mvp_logo.png" alt="Microsoft MVP" style="height: 100px; width: auto; display: block; margin-bottom: 10px;">
+                <img src="/images/mct_logo.png" alt="Microsoft MCT" style="height: 100px; width: auto; display: block;">
+              </div>
             </div>
-            <div class="hero__logos" style="margin-top: 20px;">
-              <img src="/images/mvp_logo.png" alt="Microsoft MVP" style="height: 100px; width: auto; display: block; margin-bottom: 10px;">
-              <img src="/images/mct_logo.png" alt="Microsoft MCT" style="height: 100px; width: auto; display: block;">
-            </div>
+            {% endif %}
           </div>
-          {% endif %}
 
         </div>
       </div>
@@ -98,9 +98,10 @@
 
 .hero__right {
   flex: 0 0 60%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero__image {
@@ -109,7 +110,9 @@
 }
 
 .hero__logos {
-  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  right: -130px;
   display: flex;
   flex-direction: column;
   align-items: center;
