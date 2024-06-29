@@ -22,7 +22,6 @@
         <nav class="main-nav">
           <div class="main-nav__box">
             <ul class="nav__list list-reset">
-
               {% for item in site.data.settings.menu__settings.menu__items %}
               {% if item.submenu %}
               <li class="nav__item dropdown">
@@ -39,7 +38,6 @@
               </li>
               {% endif %}
               {% endfor %}
-
             </ul>
           </div>
 
@@ -67,6 +65,20 @@
 <!-- end header -->
 
 {% include search.html %}
+
+<style>
+/* Default styles for desktop view */
+.nav__link {
+  color: teal;
+}
+
+/* Styles for mobile and tablet views */
+@media (max-width: 768px) {
+  .nav__link {
+    color: white;
+  }
+}
+</style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
