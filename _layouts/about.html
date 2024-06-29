@@ -24,8 +24,8 @@ layout: default
           {% endif %}
 
           <div class="logos">
-            <img src="/images/mvp_logo.png" alt="Microsoft MVP" class="logo">
-            <img src="/images/mct_logo.png" alt="Microsoft MCT" class="logo">
+            <img src="/images/mvp_logo.png" alt="Microsoft MVP" class="mvp_mct_logo">
+            <img src="/images/mct_logo.png" alt="Microsoft MCT" class="mvp_mct_logo">
           </div>
 
           {% include social-links.html %}
@@ -127,6 +127,10 @@ body {
 }
 
 .logo {
+  width: auto;
+  height: 40px; /* Keeping height as requested */
+}
+.mvp_mct_logo {
   width: auto;
   height: 120px; /* Keeping height as requested */
 }
