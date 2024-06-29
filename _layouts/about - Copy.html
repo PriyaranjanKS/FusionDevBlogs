@@ -23,6 +23,11 @@ layout: default
           <p class="author-profile__desc">{{ site.data.settings.author.author__bio }}</p>
           {% endif %}
 
+          <div class="logos">
+            <img src="/images/mvp_logo.png" alt="Microsoft MVP" class="mvp_mct_logo">
+            <img src="/images/mct_logo.png" alt="Microsoft MCT" class="mvp_mct_logo">
+          </div>
+
           {% include social-links.html %}
 
           <div class="scroll-more">
@@ -71,28 +76,28 @@ layout: default
 </div>
 <!-- end page -->
 
-{% include section-links.html %}
+
 
 <style>
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  font-family: 'Aptos', sans-serif;
+  background-color: var(--background-color, #ffffff);
+  color: var(--text-color, #333);
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
 
 .hero {
-  padding: 20px 0;
-  background-color: #ffffff;
+  padding: 10px 0; /* Adjusted padding to reduce wasted space */
+  background-color: var(--background-color, #ffffff);
   color: #066;
   position: relative;
 }
 
 .author-profile {
   text-align: center;
-  margin: 20px 0;
+  margin: 0 auto;
 }
 
 .author-profile__avatar img {
@@ -114,24 +119,36 @@ body {
   margin-top: 10px;
 }
 
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.mvp_mct_logo {
+  width: auto;
+  height: 120px; /* Keeping height as requested */
+}
+
 .scroll-more {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .scroll-down img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
 .more-button .btn {
   display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 5px 15px;
+  font-size: 14px;
   color: #ffffff;
   background-color: #066;
   border: none;
@@ -145,17 +162,17 @@ body {
 }
 
 .about-me-section {
-  background-color: #ffffff;
-  padding: 40px 0;
+  background-color: var(--background-color, #ffffff);
+  padding: 30px 0;
 }
 
 .about-me {
-  background-color: #ffffff;
+  background-color: var(--background-color, #ffffff);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
   border-left: 5px solid #066;
 }
 
@@ -163,7 +180,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .about-me-icon {
@@ -186,13 +203,13 @@ body {
   width: 50px;
   height: 3px;
   background-color: #066;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 
 .about-me p {
   font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-align: left;
 }
 
@@ -228,11 +245,11 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px; /* Adjusted padding */
 }
 
 .header, .footer {
-  background-color: #ffffff;
+  background-color: var(--background-color, #ffffff);
   color: #066;
   text-align: center;
   padding: 10px 0;
@@ -265,6 +282,17 @@ body {
 .recent-posts .post-date {
   font-size: 14px;
   color: #666;
+}
+
+/* Dark mode adjustments */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333;
+}
+
+[data-theme='dark'] {
+  --background-color: #1a1a1a;
+  --text-color: #e5e5e5;
 }
 </style>
 
