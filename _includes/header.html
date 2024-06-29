@@ -75,25 +75,36 @@
     const lightLogo = document.querySelector('.light-logo');
     const darkLogo = document.querySelector('.dark-logo');
 
-    themeToggleButton.addEventListener('click', function() {
-      if (body.getAttribute('data-theme') === 'dark') {
-        body.setAttribute('data-theme', 'light');
-        lightLogo.style.display = 'block';
-        darkLogo.style.display = 'none';
-      } else {
-        body.setAttribute('data-theme', 'dark');
+    // Function to set the theme
+    function setTheme(theme) {
+      body.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
         lightLogo.style.display = 'none';
         darkLogo.style.display = 'block';
+      } else {
+        lightLogo.style.display = 'block';
+        darkLogo.style.display = 'none';
       }
-    });
-
-    // Initial check for theme
-    if (body.getAttribute('data-theme') === 'dark') {
-      lightLogo.style.display = 'none';
-      darkLogo.style.display = 'block';
-    } else {
-      lightLogo.style.display = 'block';
-      darkLogo.style.display = 'none';
     }
+
+    // Get the stored theme from localStorage
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
+    } else {
+      // Default to light theme
+      setTheme('light');
+    }
+
+    themeToggleButton.addEventListener('click', function() {
+      let newTheme = 'light';
+      if (body.getAttribute('data-theme') === 'dark') {
+        newTheme = 'light';
+      } else {
+        newTheme = 'dark';
+      }
+      setTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
   });
 </script>
