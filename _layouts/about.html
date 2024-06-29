@@ -79,19 +79,37 @@ layout: default
 {% include section-links.html %}
 
 <style>
+:root {
+  --background-color: #ffffff;
+  --text-color: #333;
+  --highlight-color: #066;
+  --card-background-color: #ffffff;
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --link-color: #066;
+}
+
+[data-theme="dark"] {
+  --background-color: #333;
+  --text-color: #ffffff;
+  --highlight-color: #5cdb95;
+  --card-background-color: #444;
+  --box-shadow-color: rgba(255, 255, 255, 0.1);
+  --link-color: #5cdb95;
+}
+
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
 
 .hero {
-  padding: 10px 0; /* Adjusted padding to reduce wasted space */
-  background-color: #ffffff;
-  color: #066;
+  padding: 10px 0;
+  background-color: var(--background-color);
+  color: var(--highlight-color);
   position: relative;
 }
 
@@ -111,7 +129,7 @@ body {
   font-size: 32px;
   margin-top: 10px;
   letter-spacing: 1px !important;
-  color: #066 !important;
+  color: var(--highlight-color) !important;
 }
 
 .author-profile__desc {
@@ -126,13 +144,9 @@ body {
   margin-top: 10px;
 }
 
-.logo {
-  width: auto;
-  height: 40px; /* Keeping height as requested */
-}
 .mvp_mct_logo {
   width: auto;
-  height: 120px; /* Keeping height as requested */
+  height: 120px;
 }
 
 .scroll-more {
@@ -154,7 +168,7 @@ body {
   padding: 5px 15px;
   font-size: 14px;
   color: #ffffff;
-  background-color: #066;
+  background-color: var(--highlight-color);
   border: none;
   border-radius: 4px;
   text-decoration: none;
@@ -166,18 +180,18 @@ body {
 }
 
 .about-me-section {
-  background-color: #ffffff;
+  background-color: var(--background-color);
   padding: 30px 0;
 }
 
 .about-me {
-  background-color: #ffffff;
+  background-color: var(--card-background-color);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--box-shadow-color);
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  border-left: 5px solid #066;
+  border-left: 5px solid var(--highlight-color);
 }
 
 .about-me-header {
@@ -195,7 +209,7 @@ body {
 }
 
 .about-me h2 {
-  color: #066;
+  color: var(--highlight-color);
   font-size: 28px;
   line-height: 1;
   margin: 0;
@@ -206,7 +220,7 @@ body {
   display: block;
   width: 50px;
   height: 3px;
-  background-color: #066;
+  background-color: var(--highlight-color);
   margin: 5px auto;
 }
 
@@ -237,24 +251,24 @@ body {
 
 .about-me p::first-letter {
   font-size: 1.4em;
-  color: #066;
+  color: var(--highlight-color);
   font-weight: bold;
 }
 
 .about-me p span.highlight {
-  color: #066;
+  color: var(--highlight-color);
   font-weight: bold;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 10px; /* Adjusted padding */
+  padding: 10px;
 }
 
 .header, .footer {
-  background-color: #ffffff;
-  color: #066;
+  background-color: var(--background-color);
+  color: var(--highlight-color);
   text-align: center;
   padding: 10px 0;
 }
@@ -269,7 +283,7 @@ body {
 }
 
 .recent-posts h2 {
-  color: #066;
+  color: var(--highlight-color);
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -280,16 +294,26 @@ body {
 
 .recent-posts .post-title {
   font-size: 18px;
-  color: #333;
+  color: var(--text-color);
 }
 
 .recent-posts .post-date {
   font-size: 14px;
-  color: #666;
+  color: var(--text-color);
 }
 </style>
 
 <script>
+  const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    document.documentElement.setAttribute(
+      'data-theme',
+      currentTheme === 'dark' ? 'light' : 'dark'
+    );
+  };
+
+  document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+
   document.querySelectorAll('.scroll-link').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
