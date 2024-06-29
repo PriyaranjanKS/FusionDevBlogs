@@ -25,10 +25,10 @@
 
           <div class="hero__right" style="flex: 0 0 60%; display: flex; align-items: flex-start; justify-content: flex-start; gap: 20px;">
             {% if site.data.settings.hero.hero__image %}
-            <div class="hero__image">
+            <div class="hero__image" style="flex: 0 0 70%;">
               <img class="lazy" data-src="{{ site.data.settings.hero.hero__image }}" alt="{{ site.data.settings.author.name }}'s Picture">
             </div>
-            <div class="hero__logos" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="hero__logos" style="flex: 0 0 30%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
               <img src="/images/mvp_logo.png" alt="Microsoft MVP" style="height: 100px; width: auto; display: block; margin-bottom: 10px;">
               <img src="/images/mct_logo.png" alt="Microsoft MCT" style="height: 100px; width: auto; display: block;">
             </div>
@@ -51,7 +51,7 @@
 
 .hero__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -105,10 +105,12 @@
 }
 
 .hero__image {
+  flex: 0 0 70%;
   display: inline-block;
 }
 
 .hero__logos {
+  flex: 0 0 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
