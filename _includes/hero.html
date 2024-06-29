@@ -5,7 +5,7 @@
       <div class="col col-12">
         <div class="hero__inner">
 
-          <div class="hero__left">
+          <div class="hero__left" style="flex: 0 0 40%;">
             {% if site.data.settings.hero.hero__title %}
             <h1 class="hero__title">{{ site.data.settings.hero.hero__title }}</h1>
             {% endif %}
@@ -15,10 +15,6 @@
             {% if site.data.settings.hero.hero__description %}
             <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
             {% endif %}
-            <div class="hero__logos">
-              <img src="/images/mvp_logo.png" alt="Microsoft MVP" style="height: 100px; width: auto; display: block; margin-bottom: 10px;">
-              <img src="/images/mct_logo.png" alt="Microsoft MCT" style="height: 100px; width: auto; display: block;">
-            </div>
             {% if site.data.settings.hero.hero__button__text %}
             <a class="hero__button" href="{{ site.data.settings.hero.hero__button__link | relative_url }}">
               <span class="hero__button__arrow"><i class="ion ion-ios-arrow-forward"></i></span>
@@ -28,9 +24,13 @@
           </div>
 
           {% if site.data.settings.hero.hero__image %}
-          <div class="hero__right">
+          <div class="hero__right" style="flex: 0 0 60%; display: flex; flex-direction: column; align-items: center;">
             <div class="hero__image">
               <img class="lazy" data-src="{{ site.data.settings.hero.hero__image }}" alt="{{ site.data.settings.author.name }}'s Picture">
+            </div>
+            <div class="hero__logos" style="margin-top: 20px;">
+              <img src="/images/mvp_logo.png" alt="Microsoft MVP" style="height: 100px; width: auto; display: block; margin-bottom: 10px;">
+              <img src="/images/mct_logo.png" alt="Microsoft MCT" style="height: 100px; width: auto; display: block;">
             </div>
           </div>
           {% endif %}
@@ -41,3 +41,84 @@
   </div>
 </section>
 <!-- end hero -->
+
+<style>
+.hero {
+  padding: 20px 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__left {
+  flex: 0 0 40%;
+}
+
+.hero__title {
+  font-size: 36px;
+  color: #066;
+}
+
+.hero__job {
+  font-size: 24px;
+  color: #066;
+}
+
+.hero__description {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.hero__button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #066;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.hero__button:hover {
+  background-color: #044;
+}
+
+.hero__button__arrow {
+  margin-right: 10px;
+}
+
+.hero__right {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__image {
+  display: inline-block;
+  position: relative;
+}
+
+.hero__logos {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__logos img {
+  height: 100px;
+  width: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+</style>
