@@ -22,6 +22,7 @@
         <nav class="main-nav">
           <div class="main-nav__box">
             <ul class="nav__list list-reset">
+
               {% for item in site.data.settings.menu__settings.menu__items %}
               {% if item.submenu %}
               <li class="nav__item dropdown">
@@ -38,6 +39,7 @@
               </li>
               {% endif %}
               {% endfor %}
+
             </ul>
           </div>
 
@@ -58,21 +60,6 @@
           </div>
         </nav>
 
-        <div class="mobile-menu" style="display: none;">
-          <div class="mobile-menu__close"><i class="ion ion-md-close"></i></div>
-          <ul class="mobile-menu__list">
-            {% for item in site.data.settings.menu__settings.menu__items %}
-            <li class="mobile-menu__item">
-              <a href="{{ item.url | relative_url }}" class="mobile-menu__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-          <div class="mobile-menu__theme">
-            <div class="toggle-moon" title="Enable dark mode"><i class="ion ion-ios-moon"></i></div>
-            <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny"></i></div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
@@ -87,9 +74,6 @@
     const body = document.body;
     const lightLogo = document.querySelector('.light-logo');
     const darkLogo = document.querySelector('.dark-logo');
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileMenuClose = document.querySelector('.mobile-menu__close');
 
     // Function to set the theme
     function setTheme(theme) {
@@ -122,65 +106,5 @@
       setTheme(newTheme);
       localStorage.setItem('theme', newTheme);
     });
-
-    hamburger.addEventListener('click', function() {
-      mobileMenu.style.display = 'block';
-    });
-
-    mobileMenuClose.addEventListener('click', function() {
-      mobileMenu.style.display = 'none';
-    });
   });
 </script>
-
-<style>
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 80%;
-    max-width: 300px;
-    height: 100%;
-    background: #fff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .mobile-menu__close {
-    align-self: flex-end;
-    cursor: pointer;
-    font-size: 24px;
-  }
-
-  .mobile-menu__list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    flex-grow: 1;
-  }
-
-  .mobile-menu__item {
-    margin-bottom: 10px;
-  }
-
-  .mobile-menu__link {
-    color: #333;
-    text-decoration: none;
-    font-size: 18px;
-  }
-
-  .mobile-menu__theme {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-  }
-
-  .toggle-theme .toggle-moon,
-  .toggle-theme .toggle-sun {
-    cursor: pointer;
-    font-size: 24px;
-  }
-</style>
