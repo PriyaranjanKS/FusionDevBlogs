@@ -10,10 +10,10 @@ color_scheme: auto # You can choose three modes auto, light, and dark. By defaul
 # Navigation Settings
 menu__settings:
   menu__items:
-    # - title: "About"
-      # url: "/about/"
-    # - title: "Contact"
-      # url: "/contact/"
+    - title: "About"
+      url: "/about/"
+    - title: "Contact"
+      url: "/contact/"
     # - title: "Elements"
       # url: "/elements/"
     # - title: "Pages"
