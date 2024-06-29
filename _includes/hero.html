@@ -15,6 +15,12 @@
             {% if site.data.settings.hero.hero__description %}
             <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
             {% endif %}
+
+            <div class="hero__logos">
+              <img src="/images/mvp_logo.png" alt="Microsoft MVP" class="mvp_mct_logo">
+              <img src="/images/mct_logo.png" alt="Microsoft MCT" class="mvp_mct_logo">
+            </div>
+
             {% if site.data.settings.hero.hero__button__text %}
             <a class="hero__button" href="{{ site.data.settings.hero.hero__button__link | relative_url }}">
               <span class="hero__button__arrow"><i class="ion ion-ios-arrow-forward"></i></span>
@@ -37,3 +43,81 @@
   </div>
 </section>
 <!-- end hero -->
+
+<style>
+.hero {
+  padding: 20px 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__left {
+  flex: 1;
+}
+
+.hero__title {
+  font-size: 36px;
+  color: #066;
+}
+
+.hero__job {
+  font-size: 24px;
+  color: #066;
+}
+
+.hero__description {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.hero__logos {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.hero__logos .mvp_mct_logo {
+  width: auto;
+  height: 100px; /* Adjust as needed */
+}
+
+.hero__button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #066;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.hero__button:hover {
+  background-color: #044;
+}
+
+.hero__button__arrow {
+  margin-right: 10px;
+}
+
+.hero__right {
+  position: relative;
+  text-align: center;
+  flex: 1;
+}
+
+.hero__image {
+  display: inline-block;
+  position: relative;
+}
+</style>
