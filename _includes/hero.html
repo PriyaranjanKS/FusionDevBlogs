@@ -16,9 +16,9 @@
             <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
             {% endif %}
 
-            <div class="hero__logos" style="text-align: center; margin-top: 20px;">
-              <img src="/images/mvp_logo.png" alt="Microsoft MVP" style="height: 120px; width: auto; display: inline-block; margin: 0 10px;">
-              <img src="/images/mct_logo.png" alt="Microsoft MCT" style="height: 120px; width: auto; display: inline-block; margin: 0 10px;">
+            <div class="hero__logos" style="display: flex; justify-content: center; margin-top: 20px; flex-wrap: nowrap;">
+              <img src="/images/mvp_logo.png" alt="Microsoft MVP" style="height: 120px; width: auto; margin-right: 10px;">
+              <img src="/images/mct_logo.png" alt="Microsoft MCT" style="height: 120px; width: auto; margin-left: 10px;">
             </div>
 
             {% if site.data.settings.hero.hero__button__text %}
