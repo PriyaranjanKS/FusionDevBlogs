@@ -26,15 +26,10 @@ layout: default
           {% include social-links.html %}
 
         </div>
-        <div class="scroll-more">
-          <div class="scroll-down">
-            <a href="#about-me-section">
-              <img src="/images/about_arrow.png" alt="Scroll down">
-            </a>
-          </div>
-          <div class="more-button">
-            <a href="#about-me-section" class="btn">More</a>
-          </div>
+		 <div class="scroll-down">
+          <a href="#about-me-section">
+            <img src="/images/about_arrow.png" alt="Scroll down">
+          </a>
         </div>
       </div>
     </div>
@@ -43,7 +38,7 @@ layout: default
 <!-- end hero -->
 
 <!-- begin about-me section -->
-<section id="about-me-section" class="about-me-section">
+<section class="about-me-section">
   <div class="container">
     <div class="about-me">
       <h2>About Me</h2>
@@ -67,7 +62,19 @@ layout: default
 </div>
 <!-- end page -->
 
+
+
 <style>
+.scroll-down {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.scroll-down img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
 body {
   font-family: 'Arial', sans-serif;
   background-color: #ffffff;
@@ -80,7 +87,6 @@ body {
   padding: 20px 0;
   background-color: #ffffff;
   color: #066;
-  position: relative;
 }
 
 .author-profile {
@@ -103,39 +109,6 @@ body {
 .author-profile__desc {
   font-size: 18px;
   margin-top: 10px;
-}
-
-.scroll-more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.scroll-down {
-  margin-right: 20px;
-}
-
-.scroll-down img {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.more-button .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #066;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.more-button .btn:hover {
-  background-color: #044;
 }
 
 .about-me-section {
