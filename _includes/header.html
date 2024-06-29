@@ -39,23 +39,39 @@
               {% endif %}
               {% endfor %}
             </ul>
-            <div class="nav-buttons">
-              {% if site.data.settings.color_scheme == "auto" %}
-              <div class="toggle-theme">
-                <div class="toggle-moon" title="Enable dark mode" aria-hidden="true"><i class="ion ion-ios-moon"></i></div>
-                <div class="toggle-sun" title="Enable light mode" aria-hidden="true"><i class="ion ion-ios-sunny"></i></div>
-              </div>
-              {% elsif site.data.settings.color_scheme == "light" or site.data.settings.color_scheme == "dark" %}
-              {% else %}
-              <div class="toggle-theme">
-                <div class="toggle-moon" title="Enable dark mode"><i class="ion ion-ios-moon" aria-hidden="true"></i></div>
-                <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny" aria-hidden="true"></i></div>
-              </div>
-              {% endif %}
-              <i class="nav__icon icon__search ion ion-md-search"></i>
+          </div>
+
+          <div class="nav-buttons">
+            {% if site.data.settings.color_scheme == "auto" %}
+            <div class="toggle-theme">
+              <div class="toggle-moon" title="Enable dark mode" aria-hidden="true"><i class="ion ion-ios-moon"></i></div>
+              <div class="toggle-sun" title="Enable light mode" aria-hidden="true"><i class="ion ion-ios-sunny"></i></div>
             </div>
+            {% elsif site.data.settings.color_scheme == "light" or site.data.settings.color_scheme == "dark" %}
+            {% else %}
+            <div class="toggle-theme">
+              <div class="toggle-moon" title="Enable dark mode"><i class="ion ion-ios-moon" aria-hidden="true"></i></div>
+              <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny" aria-hidden="true"></i></div>
+            </div>
+            {% endif %}
+            <i class="nav__icon icon__search ion ion-md-search"></i>
           </div>
         </nav>
+
+        <div class="mobile-menu" style="display: none;">
+          <div class="mobile-menu__close"><i class="ion ion-md-close"></i></div>
+          <ul class="mobile-menu__list">
+            {% for item in site.data.settings.menu__settings.menu__items %}
+            <li class="mobile-menu__item">
+              <a href="{{ item.url | relative_url }}" class="mobile-menu__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="mobile-menu__theme">
+            <div class="toggle-moon" title="Enable dark mode"><i class="ion ion-ios-moon"></i></div>
+            <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny"></i></div>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -71,6 +87,9 @@
     const body = document.body;
     const lightLogo = document.querySelector('.light-logo');
     const darkLogo = document.querySelector('.dark-logo');
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu__close');
 
     // Function to set the theme
     function setTheme(theme) {
@@ -104,85 +123,64 @@
       localStorage.setItem('theme', newTheme);
     });
 
-    // Mobile menu toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navBox = document.querySelector('.main-nav__box');
-
     hamburger.addEventListener('click', function() {
-      navBox.classList.toggle('show');
+      mobileMenu.style.display = 'block';
+    });
+
+    mobileMenuClose.addEventListener('click', function() {
+      mobileMenu.style.display = 'none';
     });
   });
 </script>
 
 <style>
-  .main-nav__box.show {
-    display: block !important;
-    background-color: white; /* Ensure white background for visibility */
+  .mobile-menu {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 80%;
+    max-width: 300px;
     height: 100%;
-    z-index: 9999;
-    overflow: auto;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
 
-  .main-nav__box {
-    display: none;
-  }
-
-  .hamburger {
+  .mobile-menu__close {
+    align-self: flex-end;
     cursor: pointer;
+    font-size: 24px;
   }
 
-  @media (max-width: 768px) {
-    .main-nav__box.show {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .nav__list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-    }
-
-    .nav__item {
-      margin: 20px 0;
-    }
-
-    .toggle-theme {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
+  .mobile-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex-grow: 1;
   }
 
-  @media (max-width: 1024px) {
-    .main-nav__box.show {
-      padding-top: 60px; /* Adjust padding to avoid content overlap */
-    }
+  .mobile-menu__item {
+    margin-bottom: 10px;
+  }
 
-    .nav__list {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
+  .mobile-menu__link {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+  }
 
-    .nav__item {
-      margin: 20px 0;
-    }
+  .mobile-menu__theme {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
 
-    .toggle-theme {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
+  .toggle-theme .toggle-moon,
+  .toggle-theme .toggle-sun {
+    cursor: pointer;
+    font-size: 24px;
   }
 </style>
