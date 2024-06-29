@@ -79,26 +79,10 @@ layout: default
 {% include section-links.html %}
 
 <style>
-:root {
-  --background-color: #ffffff;
-  --text-color: #333333;
-  --highlight-color: #066;
-  --secondary-background-color: #f4f4f4;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-}
-
-[data-theme="dark"] {
-  --background-color: #1e1e1e;
-  --text-color: #ffffff;
-  --highlight-color: #0af;
-  --secondary-background-color: #333333;
-  --shadow-color: rgba(255, 255, 255, 0.1);
-}
-
 body {
   font-family: 'Arial', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: #ffffff;
+  color: #333;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -106,8 +90,8 @@ body {
 
 .hero {
   padding: 10px 0; /* Adjusted padding to reduce wasted space */
-  background-color: var(--background-color);
-  color: var(--highlight-color);
+  background-color: #ffffff;
+  color: #066;
   position: relative;
 }
 
@@ -127,7 +111,7 @@ body {
   font-size: 32px;
   margin-top: 10px;
   letter-spacing: 1px !important;
-  color: var(--highlight-color) !important;
+  color: #066 !important;
 }
 
 .author-profile__desc {
@@ -142,6 +126,10 @@ body {
   margin-top: 10px;
 }
 
+.logo {
+  width: auto;
+  height: 40px; /* Keeping height as requested */
+}
 .mvp_mct_logo {
   width: auto;
   height: 120px; /* Keeping height as requested */
@@ -166,15 +154,17 @@ body {
   padding: 5px 15px;
   font-size: 14px;
   color: #ffffff;
-  background-color: var(--highlight-color);
+  background-color: #066;
   border: none;
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .more-button .btn:hover {
-  background-color: var(--highlight-color-hover);
+  background-color: #044;
+  color: #ffffff; /* Ensure the text remains white */
 }
 
 .about-me-section {
@@ -185,11 +175,11 @@ body {
 .about-me {
   background-color: var(--background-color);
   border-radius: 8px;
-  box-shadow: 0 4px 8px var(--shadow-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  border-left: 5px solid var(--highlight-color);
+  border-left: 5px solid #066;
 }
 
 .about-me-header {
@@ -207,7 +197,7 @@ body {
 }
 
 .about-me h2 {
-  color: var(--highlight-color);
+  color: #066;
   font-size: 28px;
   line-height: 1;
   margin: 0;
@@ -218,7 +208,7 @@ body {
   display: block;
   width: 50px;
   height: 3px;
-  background-color: var(--highlight-color);
+  background-color: #066;
   margin: 5px auto;
 }
 
@@ -249,12 +239,12 @@ body {
 
 .about-me p::first-letter {
   font-size: 1.4em;
-  color: var(--highlight-color);
+  color: #066;
   font-weight: bold;
 }
 
 .about-me p span.highlight {
-  color: var(--highlight-color);
+  color: #066;
   font-weight: bold;
 }
 
@@ -265,8 +255,8 @@ body {
 }
 
 .header, .footer {
-  background-color: var(--background-color);
-  color: var(--highlight-color);
+  background-color: #ffffff;
+  color: #066;
   text-align: center;
   padding: 10px 0;
 }
@@ -281,7 +271,7 @@ body {
 }
 
 .recent-posts h2 {
-  color: var(--highlight-color);
+  color: #066;
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -292,12 +282,12 @@ body {
 
 .recent-posts .post-title {
   font-size: 18px;
-  color: var(--text-color);
+  color: #333;
 }
 
 .recent-posts .post-date {
   font-size: 14px;
-  color: var(--secondary-text-color);
+  color: #666;
 }
 </style>
 
