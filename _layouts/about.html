@@ -25,16 +25,17 @@ layout: default
 
           {% include social-links.html %}
 
-        </div>
-        <div class="scroll-more">
-          <div class="scroll-down">
-            <a href="#about-me-section">
-              <img src="/images/about_arrow.png" alt="Scroll down">
-            </a>
+          <div class="scroll-more">
+            <div class="scroll-down">
+              <a href="#about-me-section">
+                <img src="/images/about_arrow.png" alt="Scroll down">
+              </a>
+            </div>
+            <div class="more-button">
+              <a href="#about-me-section" class="btn">More</a>
+            </div>
           </div>
-          <div class="more-button">
-            <a href="#about-me-section" class="btn">More</a>
-          </div>
+
         </div>
       </div>
     </div>
@@ -114,11 +115,6 @@ body {
   align-items: center;
   gap: 20px;
   margin-top: 20px;
-}
-
-.scroll-down, .more-button {
-  display: flex;
-  justify-content: center;
 }
 
 .scroll-down img {
