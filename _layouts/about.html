@@ -27,12 +27,12 @@ layout: default
 
           <div class="scroll-more">
             <div class="scroll-down">
-              <a href="#about-me-section">
+              <a href="#about-me-section" class="scroll-link">
                 <img src="/images/about_arrow.png" alt="Scroll down">
               </a>
             </div>
             <div class="more-button">
-              <a href="#about-me-section" class="btn">More</a>
+              <a href="#about-me-section" class="btn scroll-link">More</a>
             </div>
           </div>
 
@@ -77,7 +77,6 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
 }
 
 .hero {
@@ -245,3 +244,17 @@ body {
   color: #666;
 }
 </style>
+
+<!-- Add this script at the bottom of the HTML file -->
+<script>
+  document.querySelectorAll('.scroll-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+</script>
