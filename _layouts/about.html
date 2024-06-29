@@ -32,12 +32,27 @@ layout: default
 </section>
 <!-- end hero -->
 
+<!-- begin about-me section -->
+<section class="about-me-section">
+  <div class="container">
+    <div class="about-me">
+      <h2>About Me</h2>
+      <p>👋 Hey there! My name is <span class="highlight">Priyaranjan</span>, but my friends call me <span class="highlight">Priyan</span>. I hail from India and have journeyed through the tech world from SharePoint Portal Server 2003 to Office 365, and now I'm diving deep into Azure, Power Platform, and Generative AI. I've worn many hats – from developer to architect, eventually leading the Global Technology Incubation group at a multinational corporation.</p>
+      <p>In <span class="highlight">February 2024</span>, I took a leap of faith, leaving my full-time job to become an independent consultant and starting my own venture in the UAE. Embracing the uncertainty and excitement of being a beginner again has sparked my creativity and passion for technology like never before.</p>
+      <p>Reflecting on my journey, as a fresh graduate, I initially doubted my place in tech and nearly quit. But with a determination to give it one last shot, I explored new technologies daily and blogged about them. This persistence paid off, and today, I've authored nearly <span class="highlight">600 blogs</span> and <span class="highlight">11 eBooks</span>, sharing my tech insights with the world.</p>
+      <p>Through this blog, I aim to share detailed, use-case-based content that connects with my audience on a practical level. I hope you find joy in my writings as much as I enjoy creating them. Feel free to reach out if you want to chat about tech!</p>
+      <p>🚀✨ Let's explore and innovate together!</p>
+    </div>
+  </div>
+</section>
+<!-- end about-me section -->
+
 <!-- begin page -->
 <div class="container animate">
 
   <article class="page">
     <div class="page__content">
-      {{ content }}
+	      {{ content }}
     </div>
   </article>
 
@@ -45,3 +60,117 @@ layout: default
 <!-- end page -->
 
 {% include section-links.html %}
+
+<style>
+body {
+  font-family: 'Aptos', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  padding: 20px 0;
+  background-color: #066;
+  color: #ffffff;
+}
+
+.author-profile {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.author-profile__avatar img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.author-profile__name {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.author-profile__desc {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.about-me-section {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+.about-me {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  border-left: 5px solid #066;
+}
+
+.about-me h2 {
+  color: #066;
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-me h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #066;
+  margin: 10px auto;
+}
+
+.about-me p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-me p:first-of-type::before {
+  content: "💼 ";
+  font-size: 20px;
+}
+
+.about-me p:last-of-type::after {
+  content: " 💡";
+  font-size: 20px;
+}
+
+.about-me p::first-letter {
+  font-size: 1.4em;
+  color: #066;
+  font-weight: bold;
+}
+
+.about-me p span.highlight {
+  color: #066;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header, .footer {
+  background-color: #066;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header h1, .footer p {
+  margin: 0;
+}
+</style>
