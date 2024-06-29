@@ -83,18 +83,16 @@ layout: default
   --background-color: #ffffff;
   --text-color: #333;
   --highlight-color: #066;
-  --card-background-color: #ffffff;
-  --box-shadow-color: rgba(0, 0, 0, 0.1);
-  --link-color: #066;
+  --secondary-background-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="dark"] {
-  --background-color: #333;
-  --text-color: #ffffff;
-  --highlight-color: #5cdb95;
-  --card-background-color: #444;
-  --box-shadow-color: rgba(255, 255, 255, 0.1);
-  --link-color: #5cdb95;
+[data-theme='dark'] {
+  --background-color: #222;
+  --text-color: #ddd;
+  --highlight-color: #00ff99;
+  --secondary-background-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -144,6 +142,11 @@ body {
   margin-top: 10px;
 }
 
+.logo {
+  width: auto;
+  height: 40px;
+}
+
 .mvp_mct_logo {
   width: auto;
   height: 120px;
@@ -180,14 +183,14 @@ body {
 }
 
 .about-me-section {
-  background-color: var(--background-color);
+  background-color: var(--secondary-background-color);
   padding: 30px 0;
 }
 
 .about-me {
-  background-color: var(--card-background-color);
+  background-color: var(--secondary-background-color);
   border-radius: 8px;
-  box-shadow: 0 4px 8px var(--box-shadow-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -305,19 +308,16 @@ body {
 
 <script>
   const toggleTheme = () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    document.documentElement.setAttribute(
-      'data-theme',
-      currentTheme === 'dark' ? 'light' : 'dark'
-    );
-  };
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", newTheme);
+  }
 
-  document.querySelector('.theme-toggle').addEventListener('click', toggleTheme);
+  document.querySelector('.theme-switcher').addEventListener('click', toggleTheme);
 
   document.querySelectorAll('.scroll-link').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
-
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth',
         block: 'start'
