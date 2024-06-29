@@ -6,11 +6,12 @@
 
         <div class="logo">
           <a class="logo__link" href="{{ site.baseurl }}/">
-          {% if site.data.settings.logo %}
-            <img class="logo__image" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
-          {% else %}
-            {{ site.data.settings.title }}
-          {% endif %}
+            {% if site.data.settings.logo %}
+              <img class="logo__image light-logo" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
+              <img class="logo__image dark-logo" src="{{ site.baseurl }}{{ site.data.settings.logo_dark }}" alt="{{ site.data.settings.title }}" style="display: none;">
+            {% else %}
+              {{ site.data.settings.title }}
+            {% endif %}
           </a>
         </div>
 
@@ -59,7 +60,6 @@
           </div>
         </nav>
 
-
       </div>
     </div>
   </div>
@@ -67,3 +67,44 @@
 <!-- end header -->
 
 {% include search.html %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleButton = document.querySelector('.toggle-theme');
+    const body = document.body;
+    const lightLogo = document.querySelector('.light-logo');
+    const darkLogo = document.querySelector('.dark-logo');
+
+    // Function to set the theme
+    function setTheme(theme) {
+      body.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
+        lightLogo.style.display = 'none';
+        darkLogo.style.display = 'block';
+      } else {
+        lightLogo.style.display = 'block';
+        darkLogo.style.display = 'none';
+      }
+    }
+
+    // Get the stored theme from localStorage
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setTheme(storedTheme);
+    } else {
+      // Default to light theme
+      setTheme('light');
+    }
+
+    themeToggleButton.addEventListener('click', function() {
+      let newTheme = 'light';
+      if (body.getAttribute('data-theme') === 'dark') {
+        newTheme = 'light';
+      } else {
+        newTheme = 'dark';
+      }
+      setTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  });
+</script>

@@ -106,5 +106,62 @@
       setTheme(newTheme);
       localStorage.setItem('theme', newTheme);
     });
+
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navBox = document.querySelector('.main-nav__box');
+
+    hamburger.addEventListener('click', function() {
+      navBox.classList.toggle('show');
+    });
   });
 </script>
+
+<style>
+  .main-nav__box.show {
+    display: block !important;
+  }
+
+  .main-nav__box {
+    display: none;
+  }
+
+  .hamburger {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .main-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 1000;
+      padding-top: 60px;
+    }
+
+    .main-nav__box {
+      display: block;
+    }
+
+    .nav__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .nav__item {
+      margin: 20px 0;
+    }
+
+    .toggle-theme {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+</style>
