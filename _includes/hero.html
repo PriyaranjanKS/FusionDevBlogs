@@ -27,10 +27,6 @@
           <div class="hero__right">
             <div class="hero__image">
               <img class="lazy" data-src="{{ site.data.settings.hero.hero__image }}" alt="{{ site.data.settings.author.name }}'s Picture">
-              <div class="hero__logos">
-                <img src="/images/mvp_logo.png" alt="Microsoft MVP" class="mvp_mct_logo">
-                <img src="/images/mct_logo.png" alt="Microsoft MCT" class="mvp_mct_logo">
-              </div>
             </div>
           </div>
           {% endif %}
@@ -41,82 +37,3 @@
   </div>
 </section>
 <!-- end hero -->
-
-<style>
-.hero {
-  padding: 20px 0;
-  background-color: #ffffff;
-  color: #333;
-}
-
-.hero__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero__left {
-  flex: 1;
-}
-
-.hero__title {
-  font-size: 36px;
-  color: #066;
-}
-
-.hero__job {
-  font-size: 24px;
-  color: #066;
-}
-
-.hero__description {
-  font-size: 18px;
-  color: #333;
-  margin-top: 10px;
-}
-
-.hero__button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #066;
-  border: none;
-  border-radius: 4px;
-  text-decoration: none;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.hero__button:hover {
-  background-color: #044;
-}
-
-.hero__button__arrow {
-  margin-right: 10px;
-}
-
-.hero__right {
-  position: relative;
-  text-align: center;
-  flex: 1;
-}
-
-.hero__image {
-  display: inline-block;
-  position: relative;
-}
-
-.hero__logos {
-  position: absolute;
-  bottom: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  display: flex;
-  gap: 10px;
-}
-
-.hero__logos .mvp_mct_logo {
-  width: auto;
-  height: 60px; /* Adjust as needed */
-}
-</style>
