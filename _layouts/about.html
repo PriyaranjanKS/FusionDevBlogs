@@ -76,13 +76,13 @@ layout: default
 </div>
 <!-- end page -->
 
- 
+
 
 <style>
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  background-color: var(--background-color, #ffffff);
+  color: var(--text-color, #333);
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -90,7 +90,7 @@ body {
 
 .hero {
   padding: 10px 0; /* Adjusted padding to reduce wasted space */
-  background-color: #ffffff;
+  background-color: var(--background-color, #ffffff);
   color: #066;
   position: relative;
 }
@@ -126,10 +126,6 @@ body {
   margin-top: 10px;
 }
 
-.logo {
-  width: auto;
-  height: 40px; /* Keeping height as requested */
-}
 .mvp_mct_logo {
   width: auto;
   height: 120px; /* Keeping height as requested */
@@ -159,21 +155,19 @@ body {
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .more-button .btn:hover {
   background-color: #044;
-  color: #ffffff; /* Ensure the text remains white */
 }
 
 .about-me-section {
-  background-color: var(--background-color);
+  background-color: var(--background-color, #ffffff);
   padding: 30px 0;
 }
 
 .about-me {
-  background-color: var(--background-color);
+  background-color: var(--background-color, #ffffff);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 800px;
@@ -255,7 +249,7 @@ body {
 }
 
 .header, .footer {
-  background-color: #ffffff;
+  background-color: var(--background-color, #ffffff);
   color: #066;
   text-align: center;
   padding: 10px 0;
@@ -288,6 +282,17 @@ body {
 .recent-posts .post-date {
   font-size: 14px;
   color: #666;
+}
+
+/* Dark mode adjustments */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333;
+}
+
+[data-theme='dark'] {
+  --background-color: #1a1a1a;
+  --text-color: #e5e5e5;
 }
 </style>
 
