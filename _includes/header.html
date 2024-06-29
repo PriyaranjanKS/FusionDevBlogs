@@ -22,7 +22,6 @@
         <nav class="main-nav">
           <div class="main-nav__box">
             <ul class="nav__list list-reset">
-
               {% for item in site.data.settings.menu__settings.menu__items %}
               {% if item.submenu %}
               <li class="nav__item dropdown">
@@ -39,24 +38,22 @@
               </li>
               {% endif %}
               {% endfor %}
-
             </ul>
-          </div>
-
-          <div class="nav-buttons">
-            {% if site.data.settings.color_scheme == "auto" %}
-            <div class="toggle-theme">
-              <div class="toggle-moon" title="Enable dark mode" aria-hidden="true"><i class="ion ion-ios-moon"></i></div>
-              <div class="toggle-sun" title="Enable light mode" aria-hidden="true"><i class="ion ion-ios-sunny"></i></div>
+            <div class="nav-buttons">
+              {% if site.data.settings.color_scheme == "auto" %}
+              <div class="toggle-theme">
+                <div class="toggle-moon" title="Enable dark mode" aria-hidden="true"><i class="ion ion-ios-moon"></i></div>
+                <div class="toggle-sun" title="Enable light mode" aria-hidden="true"><i class="ion ion-ios-sunny"></i></div>
+              </div>
+              {% elsif site.data.settings.color_scheme == "light" or site.data.settings.color_scheme == "dark" %}
+              {% else %}
+              <div class="toggle-theme">
+                <div class="toggle-moon" title="Enable dark mode"><i class="ion ion-ios-moon" aria-hidden="true"></i></div>
+                <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny" aria-hidden="true"></i></div>
+              </div>
+              {% endif %}
+              <i class="nav__icon icon__search ion ion-md-search"></i>
             </div>
-            {% elsif site.data.settings.color_scheme == "light" or site.data.settings.color_scheme == "dark" %}
-            {% else %}
-            <div class="toggle-theme">
-              <div class="toggle-moon" title="Enable dark mode"><i class="ion ion-ios-moon" aria-hidden="true"></i></div>
-              <div class="toggle-sun" title="Enable light mode"><i class="ion ion-ios-sunny" aria-hidden="true"></i></div>
-            </div>
-            {% endif %}
-            <i class="nav__icon icon__search ion ion-md-search"></i>
           </div>
         </nav>
 
@@ -120,6 +117,15 @@
 <style>
   .main-nav__box.show {
     display: block !important;
+    background-color: white; /* Ensure white background for visibility */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    overflow: auto;
+    padding: 20px;
   }
 
   .main-nav__box {
@@ -131,23 +137,38 @@
   }
 
   @media (max-width: 768px) {
-    .main-nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-      z-index: 1000;
-      padding-top: 60px;
-    }
-
-    .main-nav__box {
-      display: block;
+    .main-nav__box.show {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     .nav__list {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .nav__item {
+      margin: 20px 0;
+    }
+
+    .toggle-theme {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .main-nav__box.show {
+      padding-top: 60px; /* Adjust padding to avoid content overlap */
+    }
+
+    .nav__list {
       flex-direction: column;
       align-items: center;
       justify-content: center;
