@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+<!-- begin hero -->
+<section class="hero{% if page.video_embed %} hero-video{% endif %}">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="hero__inner{% if page.image or page.video_embed %}{% else %} hero__without__media{% endif %}">
+          <div class="hero__left">
+            <h1 class="hero__title">{{ page.title | escape }}</h1>
+            {% if page.description %}
+            <p class="post-description">{{ page.description }}</p>
+            {% endif %}
+            <div class="connect-section">
+              <div class="scroll-down">
+                <a href="#form-section" class="scroll-link">
+                  <img src="/images/about_arrow.png" alt="Scroll down">
+                </a>
+              </div>
+              <div class="connect-button">
+                <a href="#form-section" class="btn scroll-link">Connect with Me</a>
+              </div>
+            </div>
+          </div>
+
+          {% if page.image or page.video_embed %}
+          <div class="hero__right">
+            {% if page.video_embed %}
+            <div class="post-video">
+              <div class="post-video__wrap">
+                <iframe src="{{ page.video_embed }}" loading="lazy" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div>
+            </div>
+            {% else %}
+            {% if page.image %}
+            <div class="hero__image">
+              <img class="hero__image__primary lazy" data-src="{{site.baseurl}}{{page.image}}" alt="{{page.title}}">
+            </div>
+            {% endif %}
+            {% endif %}
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->
+
+<!-- begin page -->
+<div class="container animate">
+
+  <article class="page">
+    <div class="page__content" id="form-section">
+      {{ content }}
+    </div>
+  </article>
+
+</div>
+<!-- end page -->
+
+<style>
+.form-description {
+  font-weight: 700;
+}
+.hero__title {
+  font-weight: 700;
+  color: #066 !important;
+}
+.connect-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.scroll-down img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.connect-button .btn {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #066;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.connect-button .btn:hover {
+  background-color: #044;
+}
+</style>
+
+<script>
+  document.querySelectorAll('.scroll-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+</script>
