@@ -49,6 +49,34 @@
 	.post__title{
 	color: #066!important; 
 	}
+	
+	<!-- Center align the footer content -->
+	@media (max-width: 1024px) {
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .row {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer .col-12 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer .social, .footer .copyright {
+    margin-bottom: 10px;
+  }
+}
+
+	
   </style>
 
   <!-- Add the JavaScript for calculating reading time -->
