@@ -138,6 +138,10 @@ contact:
 # NOTE
 # Atega theme comes with a contact form built-in. You can use this form with Formspree (https://formspree.io/) service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.
 
+emailoctopus:
+  enable: true
+  emailoctopus__title: "Subscribe to our Newsletter"
+  emailoctopus__text: "Stay updated with the latest news and exclusive offers."
 
 #-------------------------------
 # Comment Section (Disqus)

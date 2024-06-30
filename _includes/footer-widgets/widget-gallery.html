@@ -1,20 +1,16 @@
-{% if site.data.settings.gallery.enable == true %}
+{% if site.data.settings.emailoctopus.enable == true %}
 <div class="col col-4 col-d-6 col-t-12">
-  <div class="widget widget-gallery">
+  <div class="widget widget-subscribe">
     <div class="widget__head">
-      <h3 class="widget__title">{{ site.data.settings.gallery.gallery__title }}</h3>
+      <h3 class="widget__title">{{ site.data.settings.emailoctopus.emailoctopus__title }}</h3>
     </div>
-
-    <div class="gallery-box gallery-footer">
-      <div class="gallery" style="grid-template-columns: repeat({{site.data.settings.gallery.gallery__columns}}, auto);">
-        {% for image in site.data.settings.gallery.gallery__images %}
-        <div class="gallery__image">
-          <img src="{{site.baseurl}}{{image.url}}" alt="{{image.alt}}" loading="lazy">
-        </div>
-        {% endfor %}
+    <div class="subscribe__inner">
+      <div class="subscribe__group">
+        <div class="subscribe__description">{{ site.data.settings.emailoctopus.emailoctopus__text }}</div>
       </div>
+      <!-- EmailOctopus Form Script -->
+      <script async src="https://eocampaign1.com/form/b40086aa-36b1-11ef-89c3-3b6e42ca06b5.js" data-form="b40086aa-36b1-11ef-89c3-3b6e42ca06b5"></script>
     </div>
-
   </div>
 </div>
 {% endif %}
