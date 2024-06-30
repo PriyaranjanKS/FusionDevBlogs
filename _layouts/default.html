@@ -51,30 +51,33 @@
 	}
 	
 	<!-- Center align the footer content -->
-	@media (max-width: 1024px) {
-  .footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer .row {
-    width: 100%;
+@media (max-width: 1024px) {
+  .footer__info {
     text-align: center;
   }
 
-  .footer .col-12 {
-    width: 100%;
-    display: flex;
+  .footer .row {
     justify-content: center;
-    align-items: center;
+  }
+
+  .footer .col-12 {
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .footer .social, .footer .copyright {
     margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .footer .social_list {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
+
 
 	
   </style>
