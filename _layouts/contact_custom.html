@@ -10,9 +10,9 @@ layout: default
         <div class="hero__inner{% if page.image or page.video_embed %}{% else %} hero__without__media{% endif %}">
           <div class="hero__left">
             <h1 class="hero__title">{{ page.title | escape }}</h1>
-            {% if page.description %}
+           <!--  {% if page.description %}
             <p class="post-description">{{ page.description }}</p>
-            {% endif %}
+            {% endif %} -->
             <div class="connect-section">
               <div class="scroll-down">
                 <a href="#form-section" class="scroll-link">
@@ -84,7 +84,7 @@ layout: default
 .connect-button .btn {
   display: inline-block;
   padding: 5px 15px;
-  font-size: 14px;
+  font-size: 20px;
   color: #ffffff;
   background-color: #066;
   border: none;
