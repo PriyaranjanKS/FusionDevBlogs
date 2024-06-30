@@ -140,8 +140,7 @@ contact:
 
 emailoctopus:
   enable: true
-  emailoctopus__title: "Subscribe to new posts"
-  emailoctopus__text: "Subscribe to our newsletter and we’ll send you the emails of latest posts."
+
 
 #-------------------------------
 # Comment Section (Disqus)
