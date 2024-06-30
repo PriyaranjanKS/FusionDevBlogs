@@ -5,39 +5,24 @@ permalink: /contact/
 image: '/images/PriyanPhoto2.png'
 ---
 
-<!-- begin hero -->
-<section class="hero">
-  <div class="container">
-    <div class="row">
-      <div class="col col-12">
-        <div class="author-profile">
-          {% if page.image %}
-          <div class="author-profile__avatar">
-            <img class="lazy" data-src="{{ page.image }}" alt="Contact Image" class="author-avatar__img">
-          </div>
-          {% endif %}
-          <h1 class="hero__title">{{ page.title }}</h1>
-          <div class="scroll-more">
-            <div class="scroll-down">
-              <a href="#contact-form" class="scroll-link">
-                <img src="/images/contact_arrow.png" alt="Scroll down">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="scroll-more">
+  <div class="scroll-down">
+    <a href="#form-section" class="scroll-link">
+      <img src="/images/about_arrow.png" alt="Scroll down">
+    </a>
   </div>
-</section>
-<!-- end hero -->
+  <div class="connect-button">
+    <a href="#form-section" class="btn scroll-link">Connect with Me</a>
+  </div>
+</div>
 
-<div id="contact-form" class="form-box">
+<div class="form-box" id="form-section">
   <div class="contact-head">
     {% if site.data.settings.contact.description %}
-    <p class="form-description">{{ site.data.settings.contact.description }}</p>
+    <p class="form-description">{{site.data.settings.contact.description}}</p>
     {% endif %}
   </div>
-  <form class="form" action="https://formspree.io/f/xeojqjqo" method="POST">
+  <form class="form" action="{% if site.data.settings.contact.email %}https://formspree.io/f/xeojqjqo{% else %}#{% endif %}" method="POST">
     <div class="form__group">
       <label class="form__label screen-reader-text" for="form-name">Your Name</label>
       <input class="form__input" id="form-name" type="text" name="name" placeholder="Name..." required>
@@ -57,26 +42,38 @@ image: '/images/PriyanPhoto2.png'
 </div>
 
 <style>
+.form-description {
+  font-weight: 700;
+}
 .hero__title {
   font-weight: 700;
   color: #066 !important;
 }
-
 .scroll-more {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 10px;
 }
-
 .scroll-down img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
-
-.form-description {
-  font-weight: 700;
+.connect-button .btn {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #066;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.connect-button .btn:hover {
+  background-color: #044;
 }
 </style>
 
@@ -84,6 +81,7 @@ image: '/images/PriyanPhoto2.png'
   document.querySelectorAll('.scroll-link').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
+
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth',
         block: 'start'
