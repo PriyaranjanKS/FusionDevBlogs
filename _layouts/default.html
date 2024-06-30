@@ -52,12 +52,14 @@
 	
 	<!-- Center align the footer content -->
 @media (max-width: 1024px) {
-  .footer__info {
+  .footer__info .row {
     text-align: center;
   }
 
-  .footer .row {
-    justify-content: center;
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer .col-12 {
@@ -66,15 +68,19 @@
     align-items: center;
   }
 
-  .footer .social, .footer .copyright {
-    margin-bottom: 10px;
+  .footer .social {
     text-align: center;
+    margin-bottom: 10px;
   }
 
   .footer .social_list {
-    justify-content: center;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer .copyright {
+    text-align: center;
+    margin-top: 10px;
   }
 }
 
