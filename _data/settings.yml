@@ -144,7 +144,7 @@ emailoctopus:
 
 #-------------------------------
 # Comment Section (Disqus)
-disqus-identifier: anvod-studio-test # Add your shortname for Disqus Comment. For example anvod-studio-test
+disqus-identifier: fusiondevblogs # Add your shortname for Disqus Comment. For example anvod-studio-test
 
 
 #-------------------------------
