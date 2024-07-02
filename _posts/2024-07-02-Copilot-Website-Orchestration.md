@@ -478,17 +478,28 @@ body {
 Now let's test the Copilot end to end.
 
 1. We will first want to get information about the **farming query related to the ideal conditions for corn farming** and the Copilot has taken the user query to fetch the generative results from the USDA site.
-   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/51.png" alt="Loan Query" style="display: block;">
+   <div class="center-image-container">
+     <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/51.png" alt="Loan Query">
+     <div class="zoom-message">Zoom in</div>
+   </div>
 
 2. It displays back the **Soil and Climate condition** response to the user query as below:
-   ![Soil and Climate]({{ site.baseurl }}/images/01_CopilotUsingWebsites/52.png)
+   <div class="center-image-container">
+     <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/52.png" alt="Soil and Climate">
+     <div class="zoom-message">Zoom in</div>
+   </div>
 
 3. Now that we know the climate condition needed for Corn Farming, let's try to get the **current climate conditions** using the below query. It will leverage generative AI to fetch the details from the **Weather.com site** and even show a citation link to the page where the current climate condition of the farming location will be provided.
-   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/53.png" alt="Current Weather Query" style="display: block;">
+   <div class="center-image-container">
+     <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/53.png" alt="Current Weather Query">
+     <div class="zoom-message">Zoom in</div>
+   </div>
 
 4. Finally, let's see if we can get information about the **available loan options** to proceed with the farming. We can see that it successfully orchestrates the conversation to the appropriate topic and uses generative answers to fetch the details from the **farmers.gov site**.
-   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/54.png" alt="Loan Query" style="display: block;">
-
+   <div class="center-image-container">
+     <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/54.png" alt="Loan Query">
+     <div class="zoom-message">Zoom in</div>
+   </div>
 ## Conclusion
 
 In this guide, we've walked through the process of creating a powerful **Farming Assistant chatbot** using Microsoft Copilot Studio. By leveraging **Generative Answers** and **Generative Topic Orchestration**, we've enabled the Farming Assistant to provide seamless, contextually accurate information across various farming-related queries. This assistant integrates data from three distinct public websites, ensuring comprehensive support for farmers:
@@ -499,3 +510,23 @@ In this guide, we've walked through the process of creating a powerful **Farming
 
 By enabling **dynamic topic orchestration** through **Generative AI** and configuring targeted data sources, we've created a robust and intelligent Copilot that can dynamically handle user queries and provide precise answers grounded in reliable information. This Farming Assistant not only simplifies the decision-making process for farmers but also demonstrates the potential of Microsoft Copilot Studio in creating sophisticated AI solutions.
 
+
+<style>
+.center-image-container {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.center-image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.zoom-message {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+</style>
