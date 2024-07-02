@@ -132,7 +132,7 @@
   <!-- Add the JavaScript for the copy button functionality -->
   <script>
   document.addEventListener('DOMContentLoaded', function() {
-      var codeBlocks = document.querySelectorAll('.highlight');
+      var codeBlocks = document.querySelectorAll('pre.highlight');
 
       codeBlocks.forEach(function(block) {
           // Check if a copy button already exists
@@ -140,6 +140,7 @@
               var button = document.createElement('button');
               button.innerText = 'Copy';
               button.className = 'copy-button';
+              block.style.position = 'relative'; // Ensure the parent is positioned
               block.appendChild(button);
 
               button.addEventListener('click', function() {
