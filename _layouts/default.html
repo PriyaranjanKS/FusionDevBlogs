@@ -140,8 +140,14 @@
       codeBlocks.forEach(function(block) {
           // Remove existing copy buttons inside pre elements to avoid duplication
           var preElement = block.querySelector('pre');
-          var existingButtons = preElement.querySelectorAll('.copy-button');
-          existingButtons.forEach(function(button) {
+          var existingButtonsInsidePre = preElement.querySelectorAll('.copy-button');
+          existingButtonsInsidePre.forEach(function(button) {
+              button.remove();
+          });
+
+          // Remove existing copy buttons in the block to avoid duplication
+          var existingButtonsInBlock = block.querySelectorAll('.copy-button');
+          existingButtonsInBlock.forEach(function(button) {
               button.remove();
           });
 
