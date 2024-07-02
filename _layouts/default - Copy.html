@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  {% if site.data.settings.google-analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+
+  <!-- begin global wrap -->
+  <div class="global-wrap">
+
+    {% include header.html %}
+  
+    <!-- begin content -->
+    <main class="content" aria-label="Content">
+      {{ content }}
+    </main>
+    <!-- end content -->
+
+    <div class="top" title="Top"><i class="ion ion-md-arrow-round-up"></i></div>
+
+    {% include footer.html %}
+  </div>
+  <!-- end global wrap -->
+   <!-- Add the necessary CSS for styling the reading time text and icon -->
+  <style>
+    .reading-time {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+	   color: #066;
+    }
+    .reading-time i {
+      margin-right: 5px;
+	   color: #066;
+    }
+	.section__title,.recent-posts__title, .article__title a,.post-title, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 , .form-description{
+      color: #066!important; /* Teal color */
+    }
+	.section__title{
+	font-size: 24px;
+	font-weight: 700;
+	}
+	.nav__link{
+	font-weight: 700!important;	 
+	}
+	.post__title{
+	color: #066!important; 
+	}
+	
+	<!-- Center align the footer content -->
+ @media (max-width: 768px) {
+  .footer__info .row {
+    text-align: center !important;
+  }
+
+  .footer .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .footer .col-12 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .footer .social {
+    text-align: center !important;
+    margin-bottom: 10px !important;
+  }
+
+  .footer .social_list {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .footer .copyright {
+    text-align: center !important;
+    margin-top: 10px !important;
+  }
+}
+
+
+	
+  </style>
+
+  <!-- Add the JavaScript for calculating reading time -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var words = document.body.innerText.split(/\s+/).length;
+      var readingTime = Math.ceil(words / 250); // Average reading speed: 250 words per minute
+      var readingTimeElem = document.querySelector('.time-text');
+      if (readingTimeElem) {
+          readingTimeElem.textContent = readingTime + " min";
+      }
+  });
+  </script>
+<script src="{{ site.baseurl }}/js/smooth-scroll.js"></script>
+  <script src="{{ site.baseurl }}/js/scripts.js"></script>
+  <script src="{{ site.baseurl }}/js/common.js"></script>  
+   
+</body>
+
+</html>

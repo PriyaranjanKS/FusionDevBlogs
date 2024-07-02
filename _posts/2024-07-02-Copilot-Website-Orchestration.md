@@ -253,16 +253,16 @@ We can 	get the URL that will be added to the IFrame of Power Pages by :
 3. Fetch the **iframe src** URL
  ![IframeURL]({{ site.baseurl }}/images/01_CopilotUsingWebsites/55.png)
 we will add this to the html code of power Pages by opening the page in Visual Studio Code. 
-     ```html
-        <div class="sidebar">
-            <div class="farmerAssistant">
-                <h2 class="farmerAssistant-title">Ask Farmer Assistant</h2>
-                <div class="copilot-container">
-                    <iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a57/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
-                </div>
-            </div>
-        </div>
-     ```
+```html
+<div class="sidebar">
+   <div class="farmerAssistant">
+      <h2 class="farmerAssistant-title">Ask Farmer Assistant</h2>
+      <div class="copilot-container">
+         <iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a57/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
+      </div>
+   </div>
+</div>       
+```
 
 **Full HTML Used**
 ```html
@@ -271,7 +271,7 @@ we will add this to the html code of power Pages by opening the page in Visual S
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>US Farming Information Hub</title>
+      <title>Farming Information Hub</title>
       <link rel="stylesheet" href="styles.css">
    </head>
    <body>
@@ -281,7 +281,7 @@ we will add this to the html code of power Pages by opening the page in Visual S
                <div class="header-content">
                   <img src="/farmer.png" alt="Header Image" class="header-img">
                   <div class="header-text">
-                     <h1>US Farming Information Hub</h1>
+                     <h1>Farming Information Hub</h1>
                      <p>Your one-stop destination for all farming-related information</p>
                   </div>
                </div>

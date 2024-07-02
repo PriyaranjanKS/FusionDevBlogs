@@ -24,68 +24,96 @@
     {% include footer.html %}
   </div>
   <!-- end global wrap -->
-   <!-- Add the necessary CSS for styling the reading time text and icon -->
+
+  <!-- Add the necessary CSS for styling the reading time text and icon -->
   <style>
+    .highlight {
+        position: relative;
+        background: #f5f5f5;
+        border-radius: 5px;
+        padding: 10px;
+        overflow-x: auto;
+        margin-bottom: 20px;
+    }
+
+    .highlight pre {
+        margin: 0;
+    }
+
+    .copy-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #333;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
     .reading-time {
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-	   color: #066;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        color: #066;
     }
+
     .reading-time i {
-      margin-right: 5px;
-	   color: #066;
+        margin-right: 5px;
+        color: #066;
     }
-	.section__title,.recent-posts__title, .article__title a,.post-title, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 , .form-description{
-      color: #066!important; /* Teal color */
+
+    .section__title, .recent-posts__title, .article__title a, .post-title, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .form-description {
+        color: #066 !important; /* Teal color */
     }
-	.section__title{
-	font-size: 24px;
-	font-weight: 700;
-	}
-	.nav__link{
-	font-weight: 700!important;	 
-	}
-	.post__title{
-	color: #066!important; 
-	}
-	
-	<!-- Center align the footer content -->
- @media (max-width: 768px) {
-  .footer__info .row {
-    text-align: center !important;
-  }
 
-  .footer .container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
+    .section__title {
+        font-size: 24px;
+        font-weight: 700;
+    }
 
-  .footer .col-12 {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
+    .nav__link {
+        font-weight: 700 !important;
+    }
 
-  .footer .social {
-    text-align: center !important;
-    margin-bottom: 10px !important;
-  }
+    .post__title {
+        color: #066 !important;
+    }
 
-  .footer .social_list {
-    display: flex !important;
-    justify-content: center !important;
-  }
+    @media (max-width: 768px) {
+        .footer__info .row {
+            text-align: center !important;
+        }
 
-  .footer .copyright {
-    text-align: center !important;
-    margin-top: 10px !important;
-  }
-}
+        .footer .container {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
 
+        .footer .col-12 {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+        }
 
-	
+        .footer .social {
+            text-align: center !important;
+            margin-bottom: 10px !important;
+        }
+
+        .footer .social_list {
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .footer .copyright {
+            text-align: center !important;
+            margin-top: 10px !important;
+        }
+    }
   </style>
 
   <!-- Add the JavaScript for calculating reading time -->
@@ -99,9 +127,36 @@
       }
   });
   </script>
-<script src="{{ site.baseurl }}/js/smooth-scroll.js"></script>
+
+  <!-- Add the JavaScript for the copy button functionality -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var codeBlocks = document.querySelectorAll('.highlight');
+
+      codeBlocks.forEach(function(block) {
+          var button = document.createElement('button');
+          button.innerText = 'Copy';
+          button.className = 'copy-button';
+          block.appendChild(button);
+
+          button.addEventListener('click', function() {
+              var code = block.querySelector('pre').innerText;
+              navigator.clipboard.writeText(code).then(function() {
+                  button.innerText = 'Copied!';
+                  setTimeout(function() {
+                      button.innerText = 'Copy';
+                  }, 2000);
+              }, function() {
+                  button.innerText = 'Error';
+              });
+          });
+      });
+  });
+  </script>
+
+  <script src="{{ site.baseurl }}/js/smooth-scroll.js"></script>
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
-  <script src="{{ site.baseurl }}/js/common.js"></script>  
+  <script src="{{ site.baseurl }}/js/common.js"></script>
    
 </body>
 
