@@ -147,7 +147,9 @@
           var button = document.createElement('button');
           button.innerText = 'Copy';
           button.className = 'copy-button';
-          block.appendChild(button); // Append to the block but outside the pre element
+
+          // Append to the block but outside the pre element
+          block.appendChild(button);
 
           button.addEventListener('click', function() {
               var code = block.querySelector('pre code').innerText;
