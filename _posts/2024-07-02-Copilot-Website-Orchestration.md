@@ -334,9 +334,9 @@ we will add this to the html code of power Pages by opening the page in Visual S
 		padding: 0;
 		display: flex;
 		justify-content: center;
-		align-items: stretch; /* Stretch to fill the full height */
+		align-items: stretch;  
 		min-height: 100vh;
-		height: 100vh; /* Ensure the body takes full height */
+		height: 100vh;  
 	}
 
 	.container {
@@ -407,7 +407,7 @@ we will add this to the html code of power Pages by opening the page in Visual S
 
 	.main-content {
 		width: 100%;
-		flex-grow: 1; /* Make sure the content takes the remaining space */
+		flex-grow: 1;  
 	}
 
 	.card-row {
@@ -461,7 +461,7 @@ we will add this to the html code of power Pages by opening the page in Visual S
 
 	.copilot-container {
 		width: 100%;
-		height: calc(100vh - 60px); /* Adjust height to fit within the sidebar */
+		height: calc(100vh - 60px);  
 		border-radius: 10px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}

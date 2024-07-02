@@ -15,6 +15,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-reading-time
   - jekyll-toc
+  - jekyll-syntax
 paginate: 6
 paginate_path: "/page/:num"
 
