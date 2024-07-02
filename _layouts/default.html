@@ -135,10 +135,10 @@
   <!-- Add the JavaScript for the copy button functionality -->
   <script>
   document.addEventListener('DOMContentLoaded', function() {
-      var codeBlocks = document.querySelectorAll('.highlight pre');
+      var codeBlocks = document.querySelectorAll('.highlight');
 
-      codeBlocks.forEach(function(pre) {
-          var block = pre.parentElement;
+      codeBlocks.forEach(function(block) {
+          // Remove existing copy buttons to avoid duplication
           var existingButton = block.querySelector('.copy-button');
           if (existingButton) {
               existingButton.remove();
@@ -147,10 +147,12 @@
           var button = document.createElement('button');
           button.innerText = 'Copy';
           button.className = 'copy-button';
-          block.appendChild(button);
+          
+          // Append the button just outside the pre element
+          block.insertBefore(button, block.firstChild);
 
           button.addEventListener('click', function() {
-              var code = pre.innerText;
+              var code = block.querySelector('pre code').innerText;
               navigator.clipboard.writeText(code).then(function() {
                   button.innerText = 'Copied!';
                   setTimeout(function() {
