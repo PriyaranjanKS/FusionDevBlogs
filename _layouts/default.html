@@ -38,6 +38,7 @@
 
     .highlight pre {
         margin: 0;
+        white-space: pre-wrap; /* Ensure long lines wrap instead of overflowing */
     }
 
     .copy-button {
@@ -134,22 +135,25 @@
       var codeBlocks = document.querySelectorAll('.highlight');
 
       codeBlocks.forEach(function(block) {
-          var button = document.createElement('button');
-          button.innerText = 'Copy';
-          button.className = 'copy-button';
-          block.appendChild(button);
+          // Check if a copy button already exists
+          if (!block.querySelector('.copy-button')) {
+              var button = document.createElement('button');
+              button.innerText = 'Copy';
+              button.className = 'copy-button';
+              block.appendChild(button);
 
-          button.addEventListener('click', function() {
-              var code = block.querySelector('pre').innerText;
-              navigator.clipboard.writeText(code).then(function() {
-                  button.innerText = 'Copied!';
-                  setTimeout(function() {
-                      button.innerText = 'Copy';
-                  }, 2000);
-              }, function() {
-                  button.innerText = 'Error';
+              button.addEventListener('click', function() {
+                  var code = block.querySelector('pre').innerText;
+                  navigator.clipboard.writeText(code).then(function() {
+                      button.innerText = 'Copied!';
+                      setTimeout(function() {
+                          button.innerText = 'Copy';
+                      }, 2000);
+                  }, function() {
+                      button.innerText = 'Error';
+                  });
               });
-          });
+          }
       });
   });
   </script>
