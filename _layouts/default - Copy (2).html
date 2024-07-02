@@ -40,7 +40,7 @@
         margin: 0;
         white-space: pre-wrap; /* Ensure long lines wrap instead of overflowing */
         overflow-x: auto; /* Add horizontal scroll for long lines */
-        max-height: 300px; /* Set a max height to enable vertical scrolling */
+        max-height: 200px; /* Set a max height to enable vertical scrolling */
         overflow-y: auto; /* Add vertical scroll if content exceeds max height */
     }
 
@@ -135,7 +135,7 @@
   <!-- Add the JavaScript for the copy button functionality -->
   <script>
   document.addEventListener('DOMContentLoaded', function() {
-      var codeBlocks = document.querySelectorAll('.highlight');
+      var codeBlocks = document.querySelectorAll('pre.highlight');
 
       codeBlocks.forEach(function(block) {
           // Check if a copy button already exists
