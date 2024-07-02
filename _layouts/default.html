@@ -147,8 +147,8 @@
           var button = document.createElement('button');
           button.innerText = 'Copy';
           button.className = 'copy-button';
-          
-          // Append the button just outside the pre element
+
+          // Append the button just inside the highlight block but outside the pre element
           block.insertBefore(button, block.firstChild);
 
           button.addEventListener('click', function() {
