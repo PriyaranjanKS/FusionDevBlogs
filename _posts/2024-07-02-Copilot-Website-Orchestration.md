@@ -259,13 +259,13 @@ we will add this to the html code of power Pages by opening the page in Visual S
    <div class="farmerAssistant">
       <h2 class="farmerAssistant-title">Ask Farmer Assistant</h2>
       <div class="copilot-container">
-         <iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a57/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
+         <iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5067/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
       </div>
    </div>
 </div>       
 ```
 
-**Full HTML Used**
+**Power Pages - Full HTML Used**
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -313,7 +313,7 @@ we will add this to the html code of power Pages by opening the page in Visual S
             <div class="farmerAssistant">
                <h2 class="farmerAssistant-title">Ask Farmer Assistant</h2>
                <div class="copilot-container">
-                  <iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
+                  <iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-506a/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
                </div>
             </div>
          </div>
@@ -322,7 +322,7 @@ we will add this to the html code of power Pages by opening the page in Visual S
 </html>
 ```
 
-**Full CSS Used**
+**Power Pages - Full CSS Used**
 ```css 
 body {
 	background-color: #f0f0f3;
