@@ -229,21 +229,268 @@ Now that we have configured the topics for farming information and location weat
 
 This completes the configuration of all three topics and enables dynamic routing of topics using Generative AI
 
+## Set Security to No Authentication
+
+Before we test the Copilot, we need to ensure that the Copilot's security settings are configured correctly. For this demo, we will set the security to "No Authentication" to simplify the testing process.
+
+1. Navigate to the **Settings** of your Copilot.
+
+2. In the Settings page, select **Security** from the left-hand navigation menu.
+   
+3. In the Security section, toggle the **Authentication** setting to **No Authentication**.
+   
+4. Click on **Save** to apply the changes.
+   ![Authentication]({{ site.baseurl }}/images/01_CopilotUsingWebsites/50.png)
+
+By setting the security to "No Authentication," we ensure that users can access and interact with the Copilot without needing to log in. This is especially useful during the development and testing phases.
+
+## Add the Copilot to Power Pages
+
+To enhance our Farming Information Hub, we will integrate the Copilot Assistant into our Power Pages site. This integration allows users to interact with the Copilot directly from the web page, providing a seamless and interactive experience.
+We can 	get the URL that will be added to the IFrame of Power Pages by : 
+1. Navigate to the **Channels** tab of the Copilot.
+2. Select **Custom website**
+3. Fetch the **iframe src** URL
+ ![IframeURL]({{ site.baseurl }}/images/01_CopilotUsingWebsites/55.png)
+we will add this to the html code of power Pages by opening the page in Visual Studio Code. 
+     ```html
+        <div class="sidebar">
+            <div class="farmerAssistant">
+                <h2 class="farmerAssistant-title">Ask Farmer Assistant</h2>
+                <div class="copilot-container">
+                    <iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a57/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
+                </div>
+            </div>
+        </div>
+     ```
+
+**Full HTML Used**
+    ```html
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Farming Information Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-column">
+            <header class="header">
+                <div class="header-content">
+                    <img src="/farmer.png" alt="Header Image" class="header-img">
+                    <div class="header-text">
+                        <h1>US Farming Information Hub</h1>
+                        <p>Your one-stop destination for all farming-related information</p>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <section class="card-row">
+                    <section id="farming-queries" class="card">
+                        <h2>Farming Queries</h2>
+                        <p>Get detailed farming information from the USDA. Our Copilot Assistant can help you find the best farming practices, crop management tips, and more.</p>
+                        <img src="/farming.png" alt="Farming Queries" class="responsive-img">
+                    </section>
+
+                    <section id="weather" class="card">
+                        <h2>Weather Updates</h2>
+                        <p>Check real-time weather updates for your farming location from Weather.com. Stay informed about the current weather conditions to plan your farming activities better.</p>
+                        <img src="/weather.png" alt="Weather" class="responsive-img">
+                    </section>
+                </section>
+
+                <section class="card-row single-card">
+                    <section id="loans" class="card">
+                        <h2>Loan Facilities</h2>
+                        <p>Explore available loan options from Farmers.gov. Our Copilot Assistant can guide you through the various loan facilities available to support your farming needs.</p>
+                        <img src="/bank.png" alt="Loans" class="responsive-img">
+                    </section>
+                </section>
+            </main>
+        </div>
+
+        <div class="sidebar">
+            <div class="farmerAssistant">
+                <h2 class="farmerAssistant-title">Ask Farmer Assistant</h2>
+                <div class="copilot-container">
+                    <iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ ```
+
+**Full CSS Used**
+   ```CSS 
+   body {
+    background-color: #f0f0f3;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Stretch to fill the full height */
+    min-height: 100vh;
+    height: 100vh; /* Ensure the body takes full height */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.main-column {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #e0e0e0;
+    padding: 20px;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: inset 10px 10px 20px #bebebe, inset -10px -10px 20px #ffffff;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-text {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.header-img {
+    width: 110px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.main-content {
+    width: 100%;
+    flex-grow: 1; /* Make sure the content takes the remaining space */
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.single-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    background: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 20px;
+    width: 48%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.single-card .card {
+    width: 50%;
+}
+
+.card h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.responsive-img {
+    width: 110px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.footer {
+    display: none;
+}
+
+.copilot-container {
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjust height to fit within the sidebar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.farmerAssistant-title {
+    font-size: 26px;
+    text-align: center;
+}
+
+.navbar {
+    display: none !important;
+}
+```
+
 ## Test the Copilot
 
 Now let's test the Copilot end to end.
 
 1. We will first want to get information about the **farming query related to the ideal conditions for corn farming** and the Copilot has taken the user query to fetch the generative results from the USDA site.
-   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/46.png" alt="Loan Query" style="display: block;">
+   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/51.png" alt="Loan Query" style="display: block;">
 
 2. It displays back the **Soil and Climate condition** response to the user query as below:
-   ![Soil and Climate]({{ site.baseurl }}/images/01_CopilotUsingWebsites/47.png)
+   ![Soil and Climate]({{ site.baseurl }}/images/01_CopilotUsingWebsites/52.png)
 
 3. Now that we know the climate condition needed for Corn Farming, let's try to get the **current climate conditions** using the below query. It will leverage generative AI to fetch the details from the **Weather.com site** and even show a citation link to the page where the current climate condition of the farming location will be provided.
-   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/48.png" alt="Current Weather Query" style="display: block;">
+   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/53.png" alt="Current Weather Query" style="display: block;">
 
 4. Finally, let's see if we can get information about the **available loan options** to proceed with the farming. We can see that it successfully orchestrates the conversation to the appropriate topic and uses generative answers to fetch the details from the **farmers.gov site**.
-   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/49.png" alt="Loan Query" style="display: block;">
+   <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/54.png" alt="Loan Query" style="display: block;">
 
 ## Conclusion
 
