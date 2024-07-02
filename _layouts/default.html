@@ -143,7 +143,7 @@
               block.appendChild(button);
 
               button.addEventListener('click', function() {
-                  var code = block.querySelector('pre').innerText;
+                  var code = block.querySelector('code').innerText;
                   navigator.clipboard.writeText(code).then(function() {
                       button.innerText = 'Copied!';
                       setTimeout(function() {
