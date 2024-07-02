@@ -138,6 +138,13 @@
       var codeBlocks = document.querySelectorAll('.highlight');
 
       codeBlocks.forEach(function(block) {
+          // Remove any copy buttons inside the pre element
+          var preElement = block.querySelector('pre');
+          var internalCopyButton = preElement.querySelector('.copy-button');
+          if (internalCopyButton) {
+              internalCopyButton.remove();
+          }
+
           // Remove existing copy buttons to avoid duplication
           var existingButton = block.querySelector('.copy-button');
           if (existingButton) {
