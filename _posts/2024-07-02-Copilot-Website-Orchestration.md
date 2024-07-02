@@ -265,216 +265,212 @@ we will add this to the html code of power Pages by opening the page in Visual S
      ```
 
 **Full HTML Used**
-   ```html
-	<!DOCTYPE html>
-		<html lang="en">
-		<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>US Farming Information Hub</title>
-			<link rel="stylesheet" href="styles.css">
-		</head>
-		<body>
-			<div class="container">
-				<div class="main-column">
-					<header class="header">
-						<div class="header-content">
-							<img src="/farmer.png" alt="Header Image" class="header-img">
-							<div class="header-text">
-								<h1>US Farming Information Hub</h1>
-								<p>Your one-stop destination for all farming-related information</p>
-							</div>
-						</div>
-					</header>
-
-					<main class="main-content">
-						<section class="card-row">
-							<section id="farming-queries" class="card">
-								<h2>Farming Queries</h2>
-								<p>Get detailed farming information from the USDA. Our Copilot Assistant can help you find the best farming practices, crop management tips, and more.</p>
-								<img src="/farming.png" alt="Farming Queries" class="responsive-img">
-							</section>
-
-							<section id="weather" class="card">
-								<h2>Weather Updates</h2>
-								<p>Check real-time weather updates for your farming location from Weather.com. Stay informed about the current weather conditions to plan your farming activities better.</p>
-								<img src="/weather.png" alt="Weather" class="responsive-img">
-							</section>
-						</section>
-
-						<section class="card-row single-card">
-							<section id="loans" class="card">
-								<h2>Loan Facilities</h2>
-								<p>Explore available loan options from Farmers.gov. Our Copilot Assistant can guide you through the various loan facilities available to support your farming needs.</p>
-								<img src="/bank.png" alt="Loans" class="responsive-img">
-							</section>
-						</section>
-					</main>
-				</div>
-
-				<div class="sidebar">
-					<div class="farmerAssistant">
-						<h2 class="farmerAssistant-title">Ask Farmer Assistant</h2>
-						<div class="copilot-container">
-							<iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
-						</div>
-					</div>
-				</div>
-			</div>
-		</body>
-	 </html>
-  ```
+```html
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>US Farming Information Hub</title>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="main-column">
+            <header class="header">
+               <div class="header-content">
+                  <img src="/farmer.png" alt="Header Image" class="header-img">
+                  <div class="header-text">
+                     <h1>US Farming Information Hub</h1>
+                     <p>Your one-stop destination for all farming-related information</p>
+                  </div>
+               </div>
+            </header>
+            <main class="main-content">
+               <section class="card-row">
+                  <section id="farming-queries" class="card">
+                     <h2>Farming Queries</h2>
+                     <p>Get detailed farming information from the USDA. Our Copilot Assistant can help you find the best farming practices, crop management tips, and more.</p>
+                     <img src="/farming.png" alt="Farming Queries" class="responsive-img">
+                  </section>
+                  <section id="weather" class="card">
+                     <h2>Weather Updates</h2>
+                     <p>Check real-time weather updates for your farming location from Weather.com. Stay informed about the current weather conditions to plan your farming activities better.</p>
+                     <img src="/weather.png" alt="Weather" class="responsive-img">
+                  </section>
+               </section>
+               <section class="card-row single-card">
+                  <section id="loans" class="card">
+                     <h2>Loan Facilities</h2>
+                     <p>Explore available loan options from Farmers.gov. Our Copilot Assistant can guide you through the various loan facilities available to support your farming needs.</p>
+                     <img src="/bank.png" alt="Loans" class="responsive-img">
+                  </section>
+               </section>
+            </main>
+         </div>
+         <div class="sidebar">
+            <div class="farmerAssistant">
+               <h2 class="farmerAssistant-title">Ask Farmer Assistant</h2>
+               <div class="copilot-container">
+                  <iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a/bots/cr06f_copilot1/webchat?__version__=2" style="width: 100%; height: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
+```
 
 **Full CSS Used**
-  ```css 
-	   body {
-		background-color: #f0f0f3;
-		font-family: 'Arial', sans-serif;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		justify-content: center;
-		align-items: stretch;  
-		min-height: 100vh;
-		height: 100vh;  
-	}
+```css 
+body {
+	background-color: #f0f0f3;
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	min-height: 100vh;
+	height: 100vh;
+}
 
-	.container {
-		display: flex;
-		width: 100%;
-		height: 100%;
-		background: #e0e0e0;
-		box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-	}
+.container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background: #e0e0e0;
+	box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
 
-	.main-column {
-		flex: 3;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 20px;
-	}
+.main-column {
+	flex: 3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+}
 
-	.sidebar {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		background: #e0e0e0;
-		padding: 20px;
-		height: 100%;
-	}
+.sidebar {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background: #e0e0e0;
+	padding: 20px;
+	height: 100%;
+}
 
-	.header {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-		background: #e0e0e0;
-		border-radius: 20px;
-		box-shadow: inset 10px 10px 20px #bebebe, inset -10px -10px 20px #ffffff;
-		width: 100%;
-		margin-bottom: 20px;
-	}
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background: #e0e0e0;
+	border-radius: 20px;
+	box-shadow: inset 10px 10px 20px #bebebe, inset -10px -10px 20px #ffffff;
+	width: 100%;
+	margin-bottom: 20px;
+}
 
-	.header-content {
-		display: flex;
-		align-items: center;
-	}
+.header-content {
+	display: flex;
+	align-items: center;
+}
 
-	.header-text {
-		text-align: center;
-		margin-left: 20px;
-	}
+.header-text {
+	text-align: center;
+	margin-left: 20px;
+}
 
-	.header h1 {
-		margin: 0;
-		font-size: 2.5em;
-		color: #333;
-	}
+.header h1 {
+	margin: 0;
+	font-size: 2.5em;
+	color: #333;
+}
 
-	.header p {
-		margin: 10px 0 0;
-		font-size: 1.2em;
-		color: #666;
-	}
+.header p {
+	margin: 10px 0 0;
+	font-size: 1.2em;
+	color: #666;
+}
 
-	.header-img {
-		width: 110px;
-		height: auto;
-		border-radius: 10px;
-	}
+.header-img {
+	width: 110px;
+	height: auto;
+	border-radius: 10px;
+}
 
-	.main-content {
-		width: 100%;
-		flex-grow: 1;  
-	}
+.main-content {
+	width: 100%;
+	flex-grow: 1;
+}
 
-	.card-row {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		margin-bottom: 10px;
-	}
+.card-row {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 10px;
+}
 
-	.single-card {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-	}
+.single-card {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
 
-	.card {
-		background: #e0e0e0;
-		border-radius: 20px;
-		box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-		padding: 20px;
-		width: 48%;
-		text-align: center;
-		margin-bottom: 10px;
-	}
+.card {
+	background: #e0e0e0;
+	border-radius: 20px;
+	box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+	padding: 20px;
+	width: 48%;
+	text-align: center;
+	margin-bottom: 10px;
+}
 
-	.single-card .card {
-		width: 50%;
-	}
+.single-card .card {
+	width: 50%;
+}
 
-	.card h2 {
-		font-size: 1.8em;
-		color: #333;
-		margin-top: 0;
-	}
+.card h2 {
+	font-size: 1.8em;
+	color: #333;
+	margin-top: 0;
+}
 
-	.card p {
-		font-size: 1.1em;
-		color: #666;
-	}
+.card p {
+	font-size: 1.1em;
+	color: #666;
+}
 
-	.responsive-img {
-		width: 110px;
-		height: auto;
-		border-radius: 10px;
-		margin-top: 20px;
-	}
+.responsive-img {
+	width: 110px;
+	height: auto;
+	border-radius: 10px;
+	margin-top: 20px;
+}
 
-	.footer {
-		display: none;
-	}
+.footer {
+	display: none;
+}
 
-	.copilot-container {
-		width: 100%;
-		height: calc(100vh - 60px);  
-		border-radius: 10px;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	}
+.copilot-container {
+	width: 100%;
+	height: calc(100vh - 60px);
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-	.farmerAssistant-title {
-		font-size: 26px;
-		text-align: center;
-	}
+.farmerAssistant-title {
+	font-size: 26px;
+	text-align: center;
+}
 
-	.navbar {
-		display: none !important;
-	}
- ```
+.navbar {
+	display: none !important;
+}
+```
 
 ## Test the Copilot
 
