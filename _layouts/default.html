@@ -138,9 +138,9 @@
       var codeBlocks = document.querySelectorAll('.highlight');
 
       codeBlocks.forEach(function(block) {
-          // Remove existing copy buttons to avoid duplication
-          var existingButton = block.querySelectorAll('.copy-button');
-          existingButton.forEach(function(button) {
+          // Remove existing copy buttons inside pre elements to avoid duplication
+          var existingButtons = block.querySelectorAll('pre .copy-button');
+          existingButtons.forEach(function(button) {
               button.remove();
           });
 
@@ -148,7 +148,7 @@
           button.innerText = 'Copy';
           button.className = 'copy-button';
 
-          // Append the button just inside the highlight block but outside the pre element
+          // Append the button to the block but outside the pre element
           block.appendChild(button);
 
           button.addEventListener('click', function() {
