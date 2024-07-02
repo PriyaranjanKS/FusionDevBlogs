@@ -253,6 +253,7 @@ We can 	get the URL that will be added to the IFrame of Power Pages by :
 3. Fetch the **iframe src** URL
  ![IframeURL]({{ site.baseurl }}/images/01_CopilotUsingWebsites/55.png)
 we will add this to the html code of power Pages by opening the page in Visual Studio Code. 
+
 ```html
 <div class="sidebar">
    <div class="farmerAssistant">
