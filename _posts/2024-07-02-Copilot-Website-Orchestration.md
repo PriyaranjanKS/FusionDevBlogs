@@ -511,6 +511,7 @@ In this guide, we've walked through the process of creating a powerful **Farming
 By enabling **dynamic topic orchestration** through **Generative AI** and configuring targeted data sources, we've created a robust and intelligent Copilot that can dynamically handle user queries and provide precise answers grounded in reliable information. This Farming Assistant not only simplifies the decision-making process for farmers but also demonstrates the potential of Microsoft Copilot Studio in creating sophisticated AI solutions.
 
 
+
 <style>
 .center-image-container {
     text-align: center;
