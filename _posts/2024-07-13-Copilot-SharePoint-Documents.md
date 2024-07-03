@@ -7,8 +7,7 @@ image: '/images/03_CopilotUsingSharePointDocuments/00.png'
 tags: [Copilot Studio]
 ---
 
-
-##Introduction 
+## Introduction 
 
 Having instant access to project information is crucial for effective project management and decision-making. Imagine having a copilot that can fetch detailed project estimates, milestones, and other key details stored in documents on SharePoint, and provide contextual answers to user queries. This blog will guide you through the process of creating such a copilot using Microsoft Copilot Studio, leveraging documents stored in SharePoint and utilizing manual authentication for secure access.
 
@@ -20,13 +19,13 @@ Having instant access to project information is crucial for effective project ma
     - [Collect and Organize Documents](#collect-and-organize-documents)
     - [Upload Documents to SharePoint](#upload-documents-to-sharepoint)
   - [Step 2: Create the Custom Copilot](#step-2-create-the-custom-copilot)
-  - [Step 4: Enable Generative Selection of Topics (Dynamic Chaining)](#step-4-enable-generative-selection-of-topics-dynamic-chaining)
-  - [Step 5: Create Topics](#step-5-create-topics)
-  - [Step 4: Configure Manual Authentication](#step-4-configure-manual-authentication)
+  - [Step 3: Enable Generative Selection of Topics (Dynamic Chaining)](#step-3-enable-generative-selection-of-topics-dynamic-chaining)
+  - [Step 4: Create Topics](#step-4-create-topics)
+  - [Step 5: Configure Manual Authentication](#step-5-configure-manual-authentication)
     - [Create App Registration](#create-app-registration)
     - [Add Client Secret](#add-client-secret)
-  - [Host the Copilot in SharePoint](#host-the-copilot-in-sharepoint)
-  - [Test the Copilot](#test-the-copilot)
+  - [Step 6: Host the Copilot in SharePoint](#step-6-host-the-copilot-in-sharepoint)
+  - [Step 7: Test the Copilot](#step-7-test-the-copilot)
 - [Conclusion](#conclusion)
 
 ## Why Use SharePoint with Copilot Studio?
@@ -34,14 +33,6 @@ SharePoint is a powerful platform for storing and managing documents, making it 
 
 ## What to Expect in the Demo
 ### Demo
-1. Collect and Organize Documents
-2. Upload Documents to SharePoint
-3. Create the Custom Copilot
-4. Enable Generative Selection of Topics (Dynamic Chaining)
-5. Create Topics
-6. Configure Manual Authentication
-7. Host the Copilot in SharePoint
-8. Test the Copilot
 
 ---
 
@@ -62,37 +53,37 @@ In our case, we have a software development project document which contains the 
 ![2](\images\03_CopilotUsingSharePointDocuments\2.png)
 
 ### Step 2: Create the Custom Copilot
-Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and click on **“Create”**.
+Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and click on **Create**.
 ![3](\images\03_CopilotUsingSharePointDocuments\3.png)
 
-This will provide us the option to create a copilot based on an existing template or create a blank copilot from scratch. Let's select **“New copilot”**.
+This will provide us the option to create a copilot based on an existing template or create a blank copilot from scratch. Let's select **New copilot**.
 ![4](\images\03_CopilotUsingSharePointDocuments\4.png)
 
 This will take us to the page where we can:
 1. Describe the copilot functionality and provide any specific instructions to the copilot.
-2. Once done, click on **“Create”** to provision the copilot.
+2. Once done, click on **Create** to provision the copilot.
 ![5](\images\03_CopilotUsingSharePointDocuments\5.png)
 
-### Step 4: Enable Generative Selection of Topics (Dynamic Chaining)
+### Step 3: Enable Generative Selection of Topics (Dynamic Chaining)
 The copilot is now created. We can then make the needed configuration changes:
-1. Click on **“Edit”**, edit the copilot details like name, icon, and description.
-2. Click on **“Settings”** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto-selected based on user conversation resulting in a much smoother user experience.
+1. Click on **Edit**, edit the copilot details like name, icon, and description.
+2. Click on **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto-selected based on user conversation resulting in a much smoother user experience.
 ![7](\images\03_CopilotUsingSharePointDocuments\7.png)
 
 To enable the automatic detection of topics from user interaction:
 1. Click on **Generative AI**.
-2. Select **“Generative (preview)”**.
-3. Click on **“Save”** to update the settings.
+2. Select **Generative (preview)**.
+3. Click on **Save** to update the settings.
 4. Click on the **Close** icon to go back to the home page of this custom copilot.
 ![8](\images\03_CopilotUsingSharePointDocuments\8.png)
 
-### Step 5: Create Topics
-Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts. Click on **“Topics”** from the navigation menu.
+### Step 4: Create Topics
+Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts. Click on **Topics** from the navigation menu.
 ![9](\images\03_CopilotUsingSharePointDocuments\9.png)
 
 To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with an initial set of prepopulated conversation nodes based on the topic description that we provide.
-1. Click on **“Add a Topic”** and
-2. Select **“Create from description with Copilot”**.
+1. Click on **Add a Topic** and
+2. Select **Create from description with Copilot**.
 ![10](\images\03_CopilotUsingSharePointDocuments\10.png)
 
 When the user asks questions regarding the project, we will need a topic that will take the user query and ground the Project information document to provide the contextual answer back to the user. 
@@ -116,13 +107,13 @@ We can now configure the Generative answers node by:
 
 Now let's configure the data source for the Generative answers node:
 - Click on **Edit**.
-- Select **“Add Knowledge”**.
+- Select **Add Knowledge**.
 ![15](\images\03_CopilotUsingSharePointDocuments\15.png)
 
-In the **“Add available knowledge sources”** pop-up, select **“SharePoint and OneDrive”**.
+In the **Add available knowledge sources** pop-up, select **SharePoint and OneDrive**.
 ![16](\images\03_CopilotUsingSharePointDocuments\16.png)
 
-Copy the Document Library URL of the SharePoint Site where the project documents are hosted and add it to the **“SharePoint or OneDrive link”**. Click on **Add**.
+Copy the Document Library URL of the SharePoint Site where the project documents are hosted and add it to the **SharePoint or OneDrive link**. Click on **Add**.
 ![17](\images\03_CopilotUsingSharePointDocuments\17.png)
 
 We can add more SharePoint document repository URLs, if needed, and click on **Add**.
@@ -130,7 +121,7 @@ We can add more SharePoint document repository URLs, if needed, and click on **A
 
 To ensure that the questions are grounded only with the configured SharePoint document, we can:
 1. Once again, click on **Edit data sources**.
-2. Toggle **“Search only selected sources”**.
+2. Toggle **Search only selected sources**.
 3. Check the SharePoint URL.
 4. Click on **Save**.
 ![19](\images\03_CopilotUsingSharePointDocuments\19.png)
@@ -140,55 +131,55 @@ Thus, we have created the topic. However, on Saving, we can see that it throws a
 
 This is because for accessing SharePoint documents, we need to configure Manual Authentication whereby we can use Microsoft Entra ID, or any other OAuth2-compatible identity provider to authenticate the user to access SharePoint with the predefined access scopes.
 
-### Step 4: Configure Manual Authentication
+### Step 5: Configure Manual Authentication
 As the first step in configuring manual authentication, let's create the App registration first.
 
 #### Create App Registration
-Head over to [Azure Portal](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade) which will open up the Microsoft Entra ID page from which we will select **“App registrations”** -> **“New registration”**.
+Head over to [Azure Portal](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade) which will open up the Microsoft Entra ID page from which we will select **App registrations** -> **New registration**.
 ![21](\images\03_CopilotUsingSharePointDocuments\21.png)
 
 This will open up the page where we can:
 1. Name the app registration.
-2. Specify who can access the app registration ie: whether it is users in the current tenant or external tenant. For this demo, We will mention it as **“Accounts in this organizational directory only”**.
+2. Specify who can access the app registration ie: whether it is users in the current tenant or external tenant. For this demo, We will mention it as **Accounts in this organizational directory only**.
 ![22](\images\03_CopilotUsingSharePointDocuments\22.png)
 
-Next, we need to update the **“Redirect URI”** in the same page. For this, we will head back to Copilot that we were building to fetch the needed information. Click on **“Settings”** of the copilot.
+Next, we need to update the **Redirect URI** in the same page. For this, we will head back to Copilot that we were building to fetch the needed information. Click on **Settings** of the copilot.
 ![23](\images\03_CopilotUsingSharePointDocuments\23.png)
 
-From the settings page, select **“Security”** and click on **“Authentication”**.
+From the settings page, select **Security** and click on **Authentication**.
 ![24](\images\03_CopilotUsingSharePointDocuments\24.png)
 
 In the Authentication page:
-1. Select **“Authenticate manually”** and
+1. Select **Authenticate manually** and
 2. Copy the **Redirect URL** as we will need this in the App Registration process.
 ![25](\images\03_CopilotUsingSharePointDocuments\25.png)
 
-Head back to the App Registration page, and paste the Redirect URL in the Redirect URI section. Also, select the platform as **“Web”**. Click on **“Register”**.
+Head back to the App Registration page, and paste the Redirect URL in the Redirect URI section. Also, select the platform as **Web**. Click on **Register**.
 ![26](\images\03_CopilotUsingSharePointDocuments\26.png)
 
-The app registration process has created the app object, but we need to do a few more things to ensure that this app can be used to authenticate the user to SharePoint. We can see that below, in the permissions section, **“User.Read”** is automatically added. But we need to add 2 more permissions as part of this demo.
+The app registration process has created the app object, but we need to do a few more things to ensure that this app can be used to authenticate the user to SharePoint. We can see that below, in the permissions section, **User.Read** is automatically added. But we need to add 2 more permissions as part of this demo.
 For this:
-1. Select **“API Permissions”**.
-2. Click on **“Add a Permission”** and
-3. Select **“Microsoft Graph”**.
+1. Select **API Permissions**.
+2. Click on **Add a Permission** and
+3. Select **Microsoft Graph**.
 ![27](\images\03_CopilotUsingSharePointDocuments\27.png)
 
 We will first add the permission to access the SharePoint Site. For this:
-1. Select **“Delegated permissions”**.
-2. Search for **“Sites.Read”**.
-3. Check the permission **“Sites.Read.All”**.
+1. Select **Delegated permissions**.
+2. Search for **Sites.Read**.
+3. Check the permission **Sites.Read.All**.
 ![28](\images\03_CopilotUsingSharePointDocuments\28.png)
 
 Next, let's add the permission for accessing the files within SharePoint:
-1. Select **“Delegated permissions”**.
-2. Search for **“Files.Read”**.
-3. Check the permission **“Files.Read”**.
-4. Click on **“Add Permissions”**.
+1. Select **Delegated permissions**.
+2. Search for **Files.Read**.
+3. Check the permission **Files.Read**.
+4. Click on **Add Permissions**.
 ![28_5](\images\03_CopilotUsingSharePointDocuments\28_5.png)
 
 The added permissions need to be consented for use with the application. For this:
-1. Click on **“Grant admin consent for <your tenant>”** and
-2. Select **“Yes”**.
+1. Click on **Grant admin consent for <your tenant>** and
+2. Select **Yes**.
 ![29](\images\03_CopilotUsingSharePointDocuments\29.png)
 
 #### Add Client Secret
@@ -204,29 +195,29 @@ Paste the Client Secret in the Authentication window of the copilot.
 You can see above that we also need the client ID of the Azure App that we recently created. Let's go back to the Azure App’s Overview page and copy the Client ID.
 ![33](\images\03_CopilotUsingSharePointDocuments\33.png)
 
-We will now finally head back to the Copilot studio and paste the Client ID as well in the Authentication page and Click on **“Save”**.
+We will now finally head back to the Copilot studio and paste the Client ID as well in the Authentication page and Click on **Save**.
 ![34](\images\03_CopilotUsingSharePointDocuments\34.png)
 
 Thus, we have completed the configuration of manual authentication. We can now publish the custom copilot. We will also see that the authentication errors which existed previously in the Generative Answers node have been resolved as we have successfully configured the manual authentication using Azure app registration.
 ![35](\images\03_CopilotUsingSharePointDocuments\35.png)
 
-### Host the Copilot in SharePoint
-Before we can host the copilot in SharePoint, let's head over to the SharePoint site and create a page where we will add the copilot. Click on **“Page”**.
+### Step 6: Host the Copilot in SharePoint
+Before we can host the copilot in SharePoint, let's head over to the SharePoint site and create a page where we will add the copilot. Click on **Page**.
 ![38](\images\03_CopilotUsingSharePointDocuments\38.png)
 
-We can provide a name for the page and click on **“Site Information”**.
+We can provide a name for the page and click on **Site Information**.
 ![39](\images\03_CopilotUsingSharePointDocuments\39.png)
 
-Click on **“View all site settings”**.
+Click on **View all site settings**.
 ![40](\images\03_CopilotUsingSharePointDocuments\40.png)
 
-Select **“HTML field security”**.
+Select **HTML field security**.
 ![41](\images\03_CopilotUsingSharePointDocuments\41.png)
 
-Add **“copilotstudio.microsoft.com”** to the HTML Field security so that iframes from this domain can be embedded in the SharePoint page.
+Add **copilotstudio.microsoft.com** to the HTML Field security so that iframes from this domain can be embedded in the SharePoint page.
 ![42](\images\03_CopilotUsingSharePointDocuments\42.png)
 
-Now let's go back to the page and add the **“Embed”** web part to the page.
+Now let's go back to the page and add the **Embed** web part to the page.
 ![43](\images\03_CopilotUsingSharePointDocuments\43.png)
 
 It gives us the option to add an iframe embed code into the page.
@@ -240,7 +231,7 @@ Let's paste the copied code to the embed section within the SharePoint Page. Cli
 
 Thus, the copilot is now available for use within the SharePoint page.
 
-### Test the Copilot
+### Step 7: Test the Copilot
 Before we proceed with the testing, ensure that the documents have been processed by going to the knowledge tab of the copilot.
 ![36](\images\03_CopilotUsingSharePointDocuments\36.png)
 
@@ -260,13 +251,3 @@ It will pick the information from the document hosted in SharePoint and provide 
 
 ## Conclusion
 Integrating SharePoint with Microsoft Copilot Studio to create a project management copilot can significantly enhance how project information is accessed and utilized. This setup allows for secure, real-time access to project documents, ensuring that stakeholders have the most up-to-date information at their fingertips. By following the steps outlined in this blog, you can create a powerful tool that streamlines project management and decision-making processes. Happy building!
-
-
-
-
-•	OS : Windows Server 2022
-•	VM Series: E Series
-•	vCPUS : 4
-•	RAM : 32 GB
-•	OS Storage Disk :  128GB Premium SSD
-•	Additional Data Disk : 3TB Premium SSD , 7500 IOPS
