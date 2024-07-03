@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a Copilot Studio Bot for Organizational and Insurance Policies using Policy Documents as Datasource
+title: Building an Organizational and Insurance Policy Copoilot using Policy Documents as Datasource
 description: Let's walk through the steps to create a Policy Hub Copilot using Microsoft Copilot Studio.
 date: 2024-07-09 15:01:35 +0300
 image: '/images/02_CopilotUsingLocalFiles/00.png'
@@ -15,7 +15,7 @@ tags: [Copilot Studio]
   - [Step 1: Setting Up Your Environment](#step-1-setting-up-your-environment)
   - [Step 2: Preparing Your Policy Documents](#step-2-preparing-your-policy-documents)
   - [Step 3: Create Custom Copilot from Copilot Studio](#step-3-create-custom-copilot-from-copilot-studio)
-  - [Step 4: Enable Generative Selection of Topics (Dynamic Chaining)](#step-4-enable-generative-selection-of-topics-dynamic-chaining)
+  - [Step 4: Enable Generative Selection of Topics ](#step-4-enable-generative-selection-of-topics-dynamic-chaining)
   - [Step 5: Create Topics](#step-5-create-topics)
   - [Step 6: Test the Copilot](#step-6-test-the-copilot)
   - [Step 7: Publish the Copilot](#step-7-publish-the-copilot)
