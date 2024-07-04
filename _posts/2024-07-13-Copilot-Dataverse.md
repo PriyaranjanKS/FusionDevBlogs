@@ -27,17 +27,17 @@ In this blog, we will walk through the process of building such a copilot using 
 ## Step 1: Setting Up Your Environment
 
 Before you start creating the copilot, ensure you have the following prerequisites:
-- Microsoft Copilot Studio access.
-- Dataverse environment with your enterprise data.
+- **Microsoft Copilot Studio** access.
+- **Dataverse** environment with your enterprise data.
 
 ## Step 2: Preparing Your Data in Dataverse
 
 Ensure your Dataverse instance contains all necessary information about medications, including unit prices, generic names, effects on pre-existing conditions, etc. We have created a Dataverse table with the below fields:
-- ProductName
-- ProductDescription
-- GenericName
-- EffectedPreConditions
-- UnitPrice
+- Medicine Name
+- Medicine Description
+- Generic Name
+- Medicine is FDA Approved
+- Unit Price
 
 ![Dataverse Table](\images\04_CopilotUsingDataverse\1.png)
 
@@ -239,7 +239,16 @@ Let’s publish the Copilot and select the embed code from **Channels** -> **Cus
 
 ![Publish Copilot](\images\04_CopilotUsingDataverse\40.png)
 
-1. Head over to the Power Pages site and add the above copied embed code to the HTML of the site.
+1. Head over to the Power Pages site and add the above copied iframe embed code to the HTML of the site using a div
+
+```html 
+  <div class="pharmagenie">
+      <h2>Ask PharmaGenie</h2>
+      <div class="copilot-container"><iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a5c5fa07/bots/cr06f_copilot8_2o/webchat?__version__=2" style="width: 100%; height: 500px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe></div>
+    </div>
+  </div>
+```
+The **Complete HTML used in the Power Pages** is given below in case you need to try it out : 
 
 ```html
 <!DOCTYPE html>
@@ -257,7 +266,218 @@ Let’s publish the Copilot and select the embed code from **Channels** -> **Cus
 2. The CSS used for the site is also given below in case you want to try it out.
 
 ```css
-/* Add your CSS here */
+/* styles.css */
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f0f0f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    background-color: #f0f0f3;
+    padding: 1em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;  
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.logo {
+    width: 100px;  
+    height: 100px;
+    margin-right: 15px;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    padding: 2em 0;
+    text-align: center;
+    background-color: #f0f0f3;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+    background: #e0e0e0;
+    box-shadow: 7px 7px 20px #bebebe, -7px -7px 20px #ffffff;
+    padding: 2em;
+    border-radius: 15px;
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #4a4a4a;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #4a4a4a;
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 7px 7px 20px #bebebe, -7px -7px 20px #ffffff;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Main Content Section */
+.main-content {
+    width: 100%;
+    padding: 2em 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f3;
+    gap: 20px;
+    align-items: stretch;  
+}
+
+/* Services Section */
+.services {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+}
+
+.services h2 {
+    font-size: 1.8em;
+    color: #4a4a4a;
+    margin-bottom: 1em;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;  
+}
+
+.service-item {
+    display: flex;  
+    align-items: center;
+    background: #e0e0e0;
+    box-shadow: 7px 7px 20px #bebebe, -7px -7px 20px #ffffff;
+    padding: 1.5em;
+    border-radius: 15px;
+    text-align: left;
+    gap: 20px;  
+}
+
+.service-image {
+    width: 75px;  
+    height: 75px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-description {
+    flex: 1;  
+}
+
+.service-item h3 {
+    font-size: 1.4em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #4a4a4a;
+}
+
+/* PharmaGenie Section */
+.pharmagenie {
+    flex: 1;
+    min-width: 300px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+
+.pharmagenie h2 {
+    font-size: 1.8em;
+    color: #4a4a4a;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.copilot-container {
+    width: 100%;
+    background: #e0e0e0;
+    box-shadow: 7px 7px 20px #bebebe, -7px -7px 20px #ffffff;
+    padding: 1em;
+    border-radius: 15px;
+    flex: 1;  
+}
+
 ```
 
 3. You can open the page in VSCode using the **Edit Code** option.
@@ -268,6 +488,7 @@ Let’s publish the Copilot and select the embed code from **Channels** -> **Cus
 
 5. Now head back to the Power Pages site and sync it for the changes to be reflected.
 ![Sync Changes](\images\04_CopilotUsingDataverse\43.png)
+
 ## Step 8: Test the Copilot
 
 1. Click on **Preview** -> **Desktop** to test the added copilot in the Power Pages site.
@@ -279,7 +500,7 @@ Let’s publish the Copilot and select the embed code from **Channels** -> **Cus
 3. Lets Log in first which will invoke the manual authentication where we will copy the token generated
 ![Token](\images\04_CopilotUsingDataverse\48.png)
 
-4. We will paste the token and press "Enter"
+4. We will paste the token and press **Enter**
 ![Add Token](\images\04_CopilotUsingDataverse\49.png)
 
 5. Let’s initiate the conversation and ask a few pharmacy-related questions. First lets ask which medicines have the **generic name** as **Aspirin**. It will fetch the 2 medicines that matches this query from dataverse and it will also provides the citation link to the view of the table where we can see the medicine details 
@@ -293,4 +514,4 @@ Let’s publish the Copilot and select the embed code from **Channels** -> **Cus
 
 ## Conclusion
 
-By following these steps, we’ve successfully built a robust Pharmacy Assistant Copilot that seamlessly integrates with Dataverse and delivers accurate, real-time medication information. Using Power Pages, we can easily embed this Copilot into a user-friendly website, making it accessible to healthcare professionals. This integration showcases the potential of combining generative AI with enterprise data and web platforms, enhancing decision-making and improving patient outcomes in the rapidly evolving healthcare industry.
+By following these steps, we’ve successfully built a robust Pharmacy Assistant Copilot that seamlessly integrates with Dataverse and delivers accurate, real-time medication information. Using Power Pages, we can easily embed this Copilot into a user-friendly website, making it accessible to healthcare professionals.
