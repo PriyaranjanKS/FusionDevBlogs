@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tags</title>
+  <style>
+    .is-hidden { display: none; }
+    .tags__inner { margin: 20px 0; }
+    .tag__title { font-size: 24px; margin-bottom: 10px; }
+    .tag__counter { font-size: 18px; color: grey; }
+    .tag__content { padding: 10px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+<!-- Jekyll front matter -->
 ---
 layout: default
 title: Tags
@@ -37,9 +54,18 @@ permalink: /tags/
 <!-- end tags -->
 
 <script>
-  var tag_name = window.location.search.replace("?tag=", "#");
-  if (tag_name) {
-    var el = document.querySelector(tag_name);
-    el.classList.remove("is-hidden");
-  }
+  document.addEventListener("DOMContentLoaded", function() {
+    var tag_name = window.location.search.replace("?tag=", "#");
+    if (tag_name) {
+      var el = document.querySelector(tag_name);
+      if (el) {
+        el.classList.remove("is-hidden");
+      } else {
+        console.log("Element not found for tag:", tag_name);
+      }
+    }
+  });
 </script>
+
+</body>
+</html>
