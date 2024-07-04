@@ -4,7 +4,7 @@ title: Building an Organizational and Insurance Policy Copoilot using Policy Doc
 description: Let's walk through the steps to create a Policy Hub Copilot using Microsoft Copilot Studio.
 date: 2024-07-09 15:01:35 +0300
 image: '/images/02_CopilotUsingLocalFiles/00.png'
-tags: [Copilot]
+tags: [copilot]
 ---
 
 
