@@ -3,11 +3,11 @@ layout: post
 title: Building a Pharmacy Assistant Copilot with Microsoft Copilot Studio and Dataverse
 description: Let's walk through the steps to create a Pharmacy Assistant Copilot with Dataverse.
 date: 2024-07-09 15:01:35 +0300
-image: '/images/04_CopilotUsingDataverse/00.png'
+image: '/\images\04_CopilotUsingDataverse\00.png'
 tags: [Copilot Studio]
 ---
 
-# 
+## Introduction 
 
 In the pharmacy domain, having instant access to detailed information about medications is crucial. A Pharmacy Assistant Copilot, capable of answering complex queries regarding drug pricing, effects on pre-existing conditions, and generic names, can significantly enhance efficiency and accuracy. This copilot leverages a secure Dataverse backend to access enterprise data directly, ensuring reliable and comprehensive information for every query.
 
@@ -39,23 +39,23 @@ Ensure your Dataverse instance contains all necessary information about medicati
 - EffectedPreConditions
 - UnitPrice
 
-![Dataverse Table](images/04_CopilotUsingDataverse/1.png)
+![Dataverse Table](\images\04_CopilotUsingDataverse\1.png)
 
 ## Step 3: Creating the Copilot in Copilot Studio
 
 Head over to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/) and click on **Create**.
 
-![Creating Copilot](images/04_CopilotUsingDataverse/1_5.png)
+![Creating Copilot](\images\04_CopilotUsingDataverse\1_5.png)
 
 This will provide the option to create a copilot based on an existing template or create a blank copilot from scratch. Let's select **New copilot**.
 
-![New Copilot](images/04_CopilotUsingDataverse/1_6.png)
+![New Copilot](\images\04_CopilotUsingDataverse\1_6.png)
 
 This will take you to the page where you can:
 1. Describe the copilot functionality and provide any specific instructions to the copilot.
 2. Once done, click on **Create** to provision the copilot.
 
-![Copilot Description](images/04_CopilotUsingDataverse/2.png)
+![Copilot Description](\images\04_CopilotUsingDataverse\2.png)
 
 ## Step 4: Enable Generative Selection of Topics (Dynamic Chaining)
 
@@ -63,7 +63,7 @@ The copilot is now created. You can then make the needed configuration changes.
 1. Click on **Edit** to edit the copilot details like name, icon, and description.
 2. Click on **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto-selected based on user conversation, resulting in a much smoother user experience.
 
-![Edit Copilot](images/04_CopilotUsingDataverse/3.png)
+![Edit Copilot](\images\04_CopilotUsingDataverse\3.png)
 
 To enable the automatic detection of topics from user interaction:
 1. Click on **Generative AI**.
@@ -71,87 +71,87 @@ To enable the automatic detection of topics from user interaction:
 3. Click on **Save** to update the settings.
 4. Click on the **Close icon** to go back to the home page of this custom copilot.
 
-![Generative AI](images/04_CopilotUsingDataverse/4.png)
+![Generative AI](\images\04_CopilotUsingDataverse\4.png)
 
 ## Step 5: Create Topics
 
 Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts. Click on **Topics** from the navigation menu.
 
-![Topics](images/04_CopilotUsingDataverse/5.png)
+![Topics](\images\04_CopilotUsingDataverse\5.png)
 
 To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with an initial set of prepopulated conversation nodes based on the topic description that we provide.
 1. Click on **Add a Topic**.
 2. Select **Create from description with Copilot**.
 
-![Add Topic](images/04_CopilotUsingDataverse/6.png)
+![Add Topic](\images\04_CopilotUsingDataverse\6.png)
 
 When the user asks questions regarding the medicine, we will need a topic that will take the user query and ground the medicine-related information in the Dataverse and provide the contextual answer back to the user.
 To do this, provide the below topic description details in the pop-up that opened when we clicked the Add topic button previously. Then, click on **Create**, which will provision the topic skeleton based on the provided description.
 
-![Topic Description](images/04_CopilotUsingDataverse/7.png)
+![Topic Description](\images\04_CopilotUsingDataverse\7.png)
 
 Thus, we have the basic topic created with an automatic trigger that is generated using the description provided. We can now add more conversation nodes.
 
-![Topic Nodes](images/04_CopilotUsingDataverse/8.png)
+![Topic Nodes](\images\04_CopilotUsingDataverse\8.png)
 
 Now let’s add the Generative Answers node by:
 1. Selecting the **+ Sign**.
 2. Click on **Advanced**.
 3. Select **Generative Answers**.
 
-![Generative Answers](images/04_CopilotUsingDataverse/9.png)
+![Generative Answers](\images\04_CopilotUsingDataverse\9.png)
 
 We can now configure the Generative Answers node by:
 1. Clicking the **Right Arrow**.
 2. Select **System** from the Select a variable pane.
 3. Select **Activity.Text** which will contain the text that the user had inputted to initiate the conversation which is most likely the question about a medicine.
 
-![Activity Text](images/04_CopilotUsingDataverse/10.png)
+![Activity Text](\images\04_CopilotUsingDataverse\10.png)
 
 Now let's configure the data source for the Generative answers node:
 - Click on **Edit**.
 - Select **Add Knowledge**.
 
-![Add Knowledge](images/04_CopilotUsingDataverse/11.png)
+![Add Knowledge](\images\04_CopilotUsingDataverse\11.png)
 
 In the Add available knowledge sources pop-up, select **Dataverse**.
 
-![Select Dataverse](images/04_CopilotUsingDataverse/12.png)
+![Select Dataverse](\images\04_CopilotUsingDataverse\12.png)
 
 In the next window, we can:
 1. Search for the Dataverse table from which we want the copilot to ground the data. In our case, it is **MedicineInformation**.
 2. Select the table.
 3. Click on **Next**.
 
-![Select Table](images/04_CopilotUsingDataverse/13.png)
+![Select Table](\images\04_CopilotUsingDataverse\13.png)
 
 It will preview the table data, click on **Next**.
 
-![Preview Table](images/04_CopilotUsingDataverse/14.png)
+![Preview Table](\images\04_CopilotUsingDataverse\14.png)
 
 To improve the data retrieval accuracy based on the user question, we have the option to provide synonyms or alternate names for the table columns. Click on **Edit**.
 
-![Edit Synonyms](images/04_CopilotUsingDataverse/15.png)
+![Edit Synonyms](\images\04_CopilotUsingDataverse\15.png)
 
 Here we can provide the column synonyms as well as the detailed description of what kind of data each column holds.
 
-![Column Details](images/04_CopilotUsingDataverse/16.png)
+![Column Details](\images\04_CopilotUsingDataverse\16.png)
 
 Once you have added the details, click on **Back**.
 
-![Back Button](images/04_CopilotUsingDataverse/17.png)
+![Back Button](\images\04_CopilotUsingDataverse\17.png)
 
 We can also add domain-specific terms and their meanings to make the grounding process more relevant by adding the information in the glossary section.
 
-![Glossary Section](images/04_CopilotUsingDataverse/18.png)
+![Glossary Section](\images\04_CopilotUsingDataverse\18.png)
 
 We added a few pharmacy-related glossary items. Once done, click on **Back**.
 
-![Glossary Items](images/04_CopilotUsingDataverse/19.png)
+![Glossary Items](\images\04_CopilotUsingDataverse\19.png)
 
 Finally, click on **Add** to finalize the data source.
 
-![Add Data Source](images/04_CopilotUsingDataverse/20.png)
+![Add Data Source](\images\04_CopilotUsingDataverse\20.png)
 
 Thus, the Generative answers node is configured. To ensure that the questions are grounded only with the configured Dataverse table, we can:
 1. Once again, click on **Edit** data sources.
@@ -159,7 +159,7 @@ Thus, the Generative answers node is configured. To ensure that the questions ar
 3. Check the Dataverse table which we added recently.
 4. Click on **Save**.
 
-![Save Data Source](images/04_CopilotUsingDataverse/21.png)
+![Save Data Source](\images\04_CopilotUsingDataverse\21.png)
 
 Thus, we have created the topic and the basic pharmacy assistant is all ready to be tested.
 
@@ -167,23 +167,23 @@ Thus, we have created the topic and the basic pharmacy assistant is all ready to
 
 We will embed the Copilot in the Power Pages Channel as part of an end-to-end integration. To do this, we need to enable manual authentication from the **Settings** section.
 
-![Settings](images/04_CopilotUsingDataverse/29.png)
+![Settings](\images\04_CopilotUsingDataverse\29.png)
 
 Select **Authentication** from the Security tab.
 
-![Authentication](images/04_CopilotUsingDataverse/30.png)
+![Authentication](\images\04_CopilotUsingDataverse\30.png)
 
 In the Authentication page:
 1. Select **Authenticate manually**.
 2. Copy the **Redirect URL** as we will need this when we create the app registration in Azure.
 
-![Redirect URL](images/04_CopilotUsingDataverse/31.png)
+![Redirect URL](\images\04_CopilotUsingDataverse\31.png)
 
 ### Create App Registration
 
 Head over to [Microsoft Entra ID](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade), which will open up the Microsoft Entra ID page. Select **App registrations** -> **New registration**.
 
-![App Registration](images/04_CopilotUsingDataverse/31_5.png)
+![App Registration](\images\04_CopilotUsingDataverse\31_5.png)
 
 This will open up the page where you can:
 1. Name the app registration.
@@ -191,7 +191,7 @@ This will open up the page where you can:
 3. In Redirect URI, select the platform as **Web** and paste the URL that we had copied from Copilot studio in the field next to it.
 4. Click on **Register**.
 
-![Register App](images/04_CopilotUsingDataverse/32.png)
+![Register App](\images\04_CopilotUsingDataverse\32.png)
 
 The app registration process has created the app object, but we need to do a few more things to ensure that this app can be used to authenticate the user to Dataverse.
 
@@ -202,11 +202,11 @@ To grant the Dataverse API permission to the app:
 4. Search for **Dataverse** in the search bar.
 5. Select the **Dataverse** API.
 
-![API Permissions](images/04_CopilotUsingDataverse/33.png)
+![API Permissions](\images\04_CopilotUsingDataverse\33.png)
 
 Select **user_impersonation** and click on **Add permissions**.
 
-![Add Permissions](images/04_CopilotUsingDataverse/34.png)
+![Add Permissions](\images\04_CopilotUsingDataverse\34.png)
 
 Next, we need to create a client secret by:
 1. Selecting **Certificates & secrets**.
@@ -214,29 +214,29 @@ Next, we need to create a client secret by:
 3. Specifying the description and expiry of the secret.
 4. Clicking on **Add** which will create a new secret value.
 
-![Client Secret](images/04_CopilotUsingDataverse/35.png)
+![Client Secret](\images\04_CopilotUsingDataverse\35.png)
 
 Copy the secret value and head over to the Authentication page of Copilot.
 
-![Copy Secret](images/04_CopilotUsingDataverse/36.png)
+![Copy Secret](\images\04_CopilotUsingDataverse\36.png)
 
 Paste the secret in the client secret field of the authentication page. We need to add the client ID as well.
 
-![Client Secret Field](images/04_CopilotUsingDataverse/37.png)
+![Client Secret Field](\images\04_CopilotUsingDataverse\37.png)
 
 Head back to the Overview page of the Azure app that we registered recently and copy the **Application ID**.
 
-![Application ID](images/04_CopilotUsingDataverse/38.png)
+![Application ID](\images\04_CopilotUsingDataverse\38.png)
 
 Finally, head back to the copilot and paste the client ID. Click on **Save** to complete the authentication configuration.
 
-![Save Authentication](images/04_CopilotUsingDataverse/39.png)
+![Save Authentication](\images\04_CopilotUsingDataverse\39.png)
 
 ## Step 7: Publish to Power Pages
 
 Let’s publish the Copilot and select the embed code from **Channels** -> **Custom Website** -> **Copy**.
 
-![Publish Copilot](images/04_CopilotUsingDataverse/40.png)
+![Publish Copilot](\images\04_CopilotUsingDataverse\40.png)
 
 Head over to the Power Pages site and add the above copied embed code to the HTML of the site.
 
