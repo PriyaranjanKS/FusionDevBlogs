@@ -11,23 +11,19 @@ permalink: /tags/
 <div class="tags">
 
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-  {% capture this_word %}{{ tag_words[item] | strip_newlines | replace: " ", "-" }}{% endcapture %}
+  {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
   <div class="tags__inner is-hidden" id="{{ this_word | cgi_escape }}">
     <div class="tags__box">
       <div class="tag__info">
-        <h1 class="tag__title">{{ this_word | replace: "-", " " }} <span class="tag__counter">{{ site.tags[this_word | replace: "-", " "]].size }}</span></h1>
+        <h1 class="tag__title">{{ this_word }} <span class="tag__counter">{{ site.tags[this_word].size }}</span></h1>
       </div>
     </div>
     <div class="tag__content animate">
       <div class="container">
         <div class="row">
-          {% assign posts = site.tags[this_word | replace: "-", " "] %}
-          {% for post in posts %}
+          {% for post in site.tags[this_word] %}
             {% if post.title != null %}
-              <article>
-                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                <p>{{ post.excerpt }}</p>
-              </article>
+              {% include article.html %}
             {% endif %}
           {% endfor %}
         </div>
@@ -41,11 +37,9 @@ permalink: /tags/
 <!-- end tags -->
 
 <script>
-  var tag_name = window.location.search.replace("?tag=", "#").replace(/%20/g, "-");
+  var tag_name = window.location.search.replace("?tag=", "#");
   if (tag_name) {
     var el = document.querySelector(tag_name);
-    if (el) {
-      el.classList.remove("is-hidden");
-    }
+    el.classList.remove("is-hidden");
   }
 </script>
