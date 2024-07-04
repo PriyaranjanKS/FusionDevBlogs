@@ -46,6 +46,7 @@ Ensure your Dataverse instance contains all necessary information about medicati
 Head over to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com/) and click on **Create**.
 
 ![New Copilot](\images\04_CopilotUsingDataverse\1_5.png)
+
 This will provide the option to create a copilot based on an existing template or create a blank copilot from scratch. Let's select **New copilot**.
 
 ![Blank Copilot](\images\04_CopilotUsingDataverse\1_6.png)
@@ -53,6 +54,7 @@ This will provide the option to create a copilot based on an existing template o
 This will take you to the page where you can:
 1. Describe the copilot functionality and provide any specific instructions to the copilot.
 2. Once done, click on **Create** to provision the copilot.
+
 <img src="\images\04_CopilotUsingDataverse\2.png" alt="Creating Copilot" width="80%">
 
 
