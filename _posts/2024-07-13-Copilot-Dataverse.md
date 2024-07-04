@@ -251,16 +251,80 @@ Let’s publish the Copilot and select the embed code from **Channels** -> **Cus
 The **Complete HTML used in the Power Pages** is given below in case you need to try it out : 
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Pharmacy Assistant Copilot</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <!-- Copilot embed code here -->
-</body>
-</html>
+ <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>PharmaGenie Apothecary</title><link rel="stylesheet" href="styles.css" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet" />
+<script>
+  // JavaScript to hide elements with the class 'footer-bottom'
+  document.addEventListener("DOMContentLoaded", function() {
+      const footerElements = document.querySelectorAll('.footer-bottom');
+      footerElements.forEach(element => {
+          element.style.display = 'none';
+      });
+  });
+</script>
+<header class="header">
+  <div class="container header-container">
+    <img src="/apothecaryrounded.png" alt="PharmaGenie Logo" class="logo" />
+    <div class="header-content">
+      <h1>PharmaGenie Apothecary</h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h2>Welcome to PharmaGenie Apothecary</h2>
+    <p>Your trusted source for comprehensive pharmacy assistance and medication information.</p>
+    <button onclick="scrollToServices()" class="cta-button">Explore Our Services</button>
+  </div>
+</section>
+<section id="main-content" class="main-content">
+  <div class="container">
+    <div class="services">
+      <h2>Our Services</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <img src="/medicalinfo.png" alt="Medication Information" class="service-image" />
+          <div class="service-description">
+            <h3>Medication Information</h3>
+            <p>Get detailed information about various medications, including their prices, effects, and alternatives.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <img src="/personalized.png" alt="Personalized Consultation" class="service-image" />
+          <div class="service-description">
+            <h3>Personalized Consultation</h3>
+            <p>Chat with PharmaGenie for personalized advice and get answers to your pharmaceutical queries based on your specific needs.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <img src="/wellness.png" alt="Health and Wellness Tips" class="service-image" />
+          <div class="service-description">
+            <h3>Health and Wellness Tips</h3>
+            <p>Receive valuable health tips and recommendations for managing your medication effectively and maintaining overall well-being.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pharmagenie">
+      <h2>Ask PharmaGenie</h2>
+      <div class="copilot-container"><iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a5c5fa07/bots/cr06f_copilot8_t6uG2o/webchat?__version__=2" style="width: 100%; height: 500px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe></div>
+    </div>
+  </div>
+</section>
+<script>
+  function scrollToServices() {
+      document.getElementById('main-content').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+<div class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"><div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"></div></div>
+</div>
+
 ```
 
 2. The CSS used for the site is also given below in case you want to try it out.
