@@ -312,7 +312,7 @@ The **Complete HTML used in the Power Pages** is given below in case you need to
     </div>
     <div class="pharmagenie">
       <h2>Ask PharmaGenie</h2>
-      <div class="copilot-container"><iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a5c5fa07/bots/cr06f_copilot8_t6uG2o/webchat?__version__=2" style="width: 100%; height: 500px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe></div>
+      <div class="copilot-container"><iframe frameborder="0" src="https://copilotstudio.microsoft.com/environments/Default-b3629ed1-3361-4ec4-a2b7-5066a5c5f7/bots/cr06f_copilot8_t6uG2o/webchat?__version__=2" style="width: 100%; height: 500px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></iframe></div>
     </div>
   </div>
 </section>
