@@ -45,12 +45,12 @@ SharePoint is a powerful platform for storing and managing documents, making it 
 2. Ensure that each document is well-structured, with clear sections and headings to facilitate easier parsing by the copilot.
 
 In our case, we have a software development project document which contains the estimates and key timelines for the project.
-![1](\images\03_CopilotUsingSharePointDocuments\1.png)
+![1](\images\03_CopilotUsingSharePointDocuments\1.jpg)
 
 #### Upload Documents to SharePoint:
 1. Create a dedicated document library in SharePoint for your project files.
 2. Upload the collected documents to this library.
-![2](\images\03_CopilotUsingSharePointDocuments\2.png)
+![2](\images\03_CopilotUsingSharePointDocuments\2.jpg)
 
 ### Step 2: Create the Custom Copilot
 Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and click on **Create**.
