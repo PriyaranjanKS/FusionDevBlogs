@@ -7,11 +7,8 @@ image: '/images/03_CopilotUsingSharePointDocuments/00.png'
 tags: [Copilot Studio]
 ---
 
-## Introduction 
-
-Having instant access to project information is crucial for effective project management and decision-making. Imagine having a copilot that can fetch detailed project estimates, milestones, and other key details stored in documents on SharePoint, and provide contextual answers to user queries. This blog will guide you through the process of creating such a copilot using Microsoft Copilot Studio, leveraging documents stored in SharePoint and utilizing manual authentication for secure access.
-
 ## Table of Contents
+- [Introduction](#introduction)
 - [Why Use SharePoint with Copilot Studio?](#why-use-sharepoint-with-copilot-studio)
 - [What to Expect in the Demo](#what-to-expect-in-the-demo)
 - [Step-by-Step to Create the Copilot](#step-by-step-to-create-the-copilot)
@@ -19,7 +16,7 @@ Having instant access to project information is crucial for effective project ma
     - [Collect and Organize Documents](#collect-and-organize-documents)
     - [Upload Documents to SharePoint](#upload-documents-to-sharepoint)
   - [Step 2: Create the Custom Copilot](#step-2-create-the-custom-copilot)
-  - [Step 3: Enable Generative Selection of Topics (Dynamic Chaining)](#step-3-enable-generative-selection-of-topics-dynamic-chaining)
+  - [Step 3: Enable Generative Selection of Topics](#step-3-enable-generative-selection-of-topics)
   - [Step 4: Create Topics](#step-4-create-topics)
   - [Step 5: Configure Manual Authentication](#step-5-configure-manual-authentication)
     - [Create App Registration](#create-app-registration)
@@ -27,6 +24,10 @@ Having instant access to project information is crucial for effective project ma
   - [Step 6: Host the Copilot in SharePoint](#step-6-host-the-copilot-in-sharepoint)
   - [Step 7: Test the Copilot](#step-7-test-the-copilot)
 - [Conclusion](#conclusion)
+
+## Introduction 
+
+Having instant access to project information is crucial for effective project management and decision-making. Imagine having a copilot that can fetch detailed project estimates, milestones, and other key details stored in documents on SharePoint, and provide contextual answers to user queries. This blog will guide you through the process of creating such a copilot using Microsoft Copilot Studio, leveraging documents stored in SharePoint and utilizing manual authentication for secure access.
 
 ## Why Use SharePoint with Copilot Studio?
 SharePoint is a powerful platform for storing and managing documents, making it an ideal choice for hosting project-related information. By integrating SharePoint with Microsoft Copilot Studio, you can create a bot that can access and interpret these documents to provide precise answers to user queries. This integration ensures that users have quick, reliable access to up-to-date project information directly through the copilot. Moreover, any updates to the document can be made directly in SharePoint and the updated contents will be used for grounding and providing contextual answers back to the Copilot resulting in lesser maintenance going forward.
@@ -64,7 +65,7 @@ This will take us to the page where we can:
 2. Once done, click on **Create** to provision the copilot.
 ![5](\images\03_CopilotUsingSharePointDocuments\5.png)
 
-### Step 3: Enable Generative Selection of Topics (Dynamic Chaining)
+### Step 3: Enable Generative Selection of Topics 
 The copilot is now created. We can then make the needed configuration changes:
 1. Click on **Edit**, edit the copilot details like name, icon, and description.
 2. Click on **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto-selected based on user conversation resulting in a much smoother user experience.
