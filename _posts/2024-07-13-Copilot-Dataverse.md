@@ -239,7 +239,7 @@ Let’s publish the Copilot and select the embed code from **Channels** -> **Cus
 
 ![Publish Copilot](\images\04_CopilotUsingDataverse\40.png)
 
-Head over to the Power Pages site and add the above copied embed code to the HTML of the site.
+1. Head over to the Power Pages site and add the above copied embed code to the HTML of the site.
 
 ```html
 <!DOCTYPE html>
@@ -252,32 +252,42 @@ Head over to the Power Pages site and add the above copied embed code to the HTM
   <!-- Copilot embed code here -->
 </body>
 </html>
+```
 
-The CSS used for the site is also given below in case you want to try it out.
+2. The CSS used for the site is also given below in case you want to try it out.
 
 ```css
 /* Add your CSS here */
+```
 
-You can open the page in VSCode using the **Edit Code** option.
+3. You can open the page in VSCode using the **Edit Code** option.
 ![Edit VS Code](\images\04_CopilotUsingDataverse\41.png)
-Add the above HTML and CSS to the VS Code and save it.
+
+4. Add the above HTML and CSS to the VS Code and save it.
 ![Add in VS Code](\images\04_CopilotUsingDataverse\42.png)
-Now head back to the Power Pages site and sync it for the changes to be reflected.
+
+5. Now head back to the Power Pages site and sync it for the changes to be reflected.
 ![Sync Changes](\images\04_CopilotUsingDataverse\43.png)
 ## Step 8: Test the Copilot
 
 1. Click on **Preview** -> **Desktop** to test the added copilot in the Power Pages site.
 ![Preview Page](\images\04_CopilotUsingDataverse\44.png)
+
 2. This will open up the page and you will see that the Copilot component has come up on the page.
 ![Copilot View](\images\04_CopilotUsingDataverse\47.png)
+
 3. Lets Log in first which will invoke the manual authentication where we will copy the token generated
 ![Token](\images\04_CopilotUsingDataverse\48.png)
+
 4. We will paste the token and press "Enter"
 ![Add Token](\images\04_CopilotUsingDataverse\49.png)
-5. Let’s initiate the conversation and ask a few pharmacy-related questions. First lets ask which medicines have the **generic name** as **Aspirin**. It will fetch the 2 medicines that matches this query from dataverse. 
+
+5. Let’s initiate the conversation and ask a few pharmacy-related questions. First lets ask which medicines have the **generic name** as **Aspirin**. It will fetch the 2 medicines that matches this query from dataverse and it will also provides the citation link to the view of the table where we can see the medicine details 
 ![Generic Name](\images\04_CopilotUsingDataverse\50.png)
+
 6. Now lets ask the unit price for these medicines and we can see that the respective contextual answers are fetched from the back end table and shown to us
 ![Generic Name](\images\04_CopilotUsingDataverse\51.png)
+
 7. Finally , lets check if the medicine has an FDA approval and we get the related answer back in a conversational way. 
 ![Generic Name](\images\04_CopilotUsingDataverse\52.png)
 
