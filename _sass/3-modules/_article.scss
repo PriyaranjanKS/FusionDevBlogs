@@ -113,9 +113,9 @@
 }
 
 .article__title {
-  margin-bottom: 12px;
-  font-size: 22px;
-  line-height: 1.46;
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 1.4;
 
   a {
     text-decoration: underline;
@@ -134,8 +134,8 @@
 .article__excerpt {
   display: -webkit-box;
   margin-bottom: 15px;
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.4;
   overflow-y: hidden;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;

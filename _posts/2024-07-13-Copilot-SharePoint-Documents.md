@@ -49,8 +49,8 @@ In our case, we have a software development project document which contains the 
 ![1](\images\03_CopilotUsingSharePointDocuments\1.jpg)
 
 #### Upload Documents to SharePoint:
-1. Create a dedicated document library in SharePoint for your project files.
-2. Upload the collected documents to this library.
+1. **Create** a dedicated document library in SharePoint for your project files.
+2. **Upload** the collected documents to this library.
 ![2](\images\03_CopilotUsingSharePointDocuments\2.jpg)
 
 ### Step 2: Create the Custom Copilot
