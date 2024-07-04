@@ -259,19 +259,19 @@ The CSS used for the site is also given below in case you want to try it out.
 /* Add your CSS here */
 
 You can open the page in VSCode using the **Edit Code** option.
-
+![Edit VS Code](\images\04_CopilotUsingDataverse\41.png)
 Add the above HTML and CSS to the VS Code and save it.
-
+![Add in VS Code](\images\04_CopilotUsingDataverse\42.png)
 Now head back to the Power Pages site and sync it for the changes to be reflected.
-
+![Sync Changes](\images\04_CopilotUsingDataverse\43.png)
 ## Step 8: Test the Copilot
 
-Click on **Preview** -> **Desktop** to test the added copilot in the Power Pages site.
-
-This will open up the page and you will see that the Copilot component has come up on the page.
-
-Let’s initiate the conversation and ask a few pharmacy-related questions.
-
+1. Click on **Preview** -> **Desktop** to test the added copilot in the Power Pages site.
+![Preview Page](\images\04_CopilotUsingDataverse\44.png)
+2. This will open up the page and you will see that the Copilot component has come up on the page.
+![Copilot View](\images\04_CopilotUsingDataverse\45.png)
+3. Let’s initiate the conversation and ask a few pharmacy-related questions.
+![Ask Questions](\images\04_CopilotUsingDataverse\46.png)
 ## Conclusion
 
 By following these steps, we’ve successfully built a robust Pharmacy Assistant Copilot that seamlessly integrates with Dataverse and delivers accurate, real-time medication information. Using Power Pages, we can easily embed this Copilot into a user-friendly website, making it accessible to healthcare professionals. This integration showcases the potential of combining generative AI with enterprise data and web platforms, enhancing decision-making and improving patient outcomes in the rapidly evolving healthcare industry.
