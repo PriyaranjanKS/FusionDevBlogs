@@ -280,6 +280,7 @@ Now head back to the Power Pages site and sync it for the changes to be reflecte
 ![Generic Name](\images\04_CopilotUsingDataverse\51.png)
 7. Finally , lets check if the medicine has an FDA approval and we get the related answer back in a conversational way. 
 ![Generic Name](\images\04_CopilotUsingDataverse\52.png)
+
 ## Conclusion
 
 By following these steps, we’ve successfully built a robust Pharmacy Assistant Copilot that seamlessly integrates with Dataverse and delivers accurate, real-time medication information. Using Power Pages, we can easily embed this Copilot into a user-friendly website, making it accessible to healthcare professionals. This integration showcases the potential of combining generative AI with enterprise data and web platforms, enhancing decision-making and improving patient outcomes in the rapidly evolving healthcare industry.
