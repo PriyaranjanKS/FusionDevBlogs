@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tags</title>
-  <style>
-    .is-hidden { display: none; }
-    .tags__inner { margin: 20px 0; }
-    .tag__title { font-size: 24px; margin-bottom: 10px; }
-    .tag__counter { font-size: 18px; color: grey; }
-    .tag__content { padding: 10px; border: 1px solid #ccc; }
-  </style>
-</head>
-<body>
-
-<!-- Jekyll front matter -->
 ---
 layout: default
 title: Tags
@@ -28,17 +11,17 @@ permalink: /tags/
 <div class="tags">
 
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-  {% capture this_word %}{{ tag_words[item] | strip_newlines | downcase | replace: " ", "-" }}{% endcapture %}
+  {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
   <div class="tags__inner is-hidden" id="{{ this_word | cgi_escape }}">
     <div class="tags__box">
       <div class="tag__info">
-        <h1 class="tag__title">{{ tag_words[item] }} <span class="tag__counter">{{ site.tags[tag_words[item]].size }}</span></h1>
+        <h1 class="tag__title">{{ this_word }} <span class="tag__counter">{{ site.tags[this_word].size }}</span></h1>
       </div>
     </div>
     <div class="tag__content animate">
       <div class="container">
         <div class="row">
-          {% for post in site.tags[tag_words[item]] %}
+          {% for post in site.tags[this_word] %}
             {% if post.title != null %}
               {% include article.html %}
             {% endif %}
@@ -54,18 +37,9 @@ permalink: /tags/
 <!-- end tags -->
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var tag_name = window.location.search.replace("?tag=", "#").toLowerCase().replace(/ /g, "-");
-    if (tag_name) {
-      var el = document.querySelector(tag_name);
-      if (el) {
-        el.classList.remove("is-hidden");
-      } else {
-        console.error("Element not found for tag:", tag_name);
-      }
-    }
-  });
+  var tag_name = window.location.search.replace("?tag=", "#");
+  if (tag_name) {
+    var el = document.querySelector(tag_name);
+    el.classList.remove("is-hidden");
+  }
 </script>
-
-</body>
-</html>
