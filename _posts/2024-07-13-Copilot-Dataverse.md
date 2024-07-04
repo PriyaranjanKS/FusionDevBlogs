@@ -576,6 +576,7 @@ body {
 7. Finally , lets check if the medicine has an FDA approval and we get the related answer back in a conversational way. 
 ![Generic Name](\images\04_CopilotUsingDataverse\52.png)
 
+
 ## Conclusion
 
 By following these steps, we’ve successfully built a robust Pharmacy Assistant Copilot that seamlessly integrates with Dataverse and delivers accurate, real-time medication information. Using Power Pages, we can easily embed this Copilot into a user-friendly website, making it accessible to healthcare professionals.
