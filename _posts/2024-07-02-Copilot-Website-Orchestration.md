@@ -4,7 +4,7 @@ title: Building a Farming Copilot Assistant using Generative Answers and Generat
 description: In this guide, we will walk through the steps to create a Farming Assistant Copilot using Microsoft Copilot Studio.
 date: 2024-07-09 15:01:35 +0300
 image: '/images/01_CopilotUsingWebsites/00.png'
-tags: [Copilot Studio]
+tags: [CopilotStudio]
 ---
 
 This Copilot assistant will **help farmers by providing information across three scenarios where specific information resides on three different websites.**
