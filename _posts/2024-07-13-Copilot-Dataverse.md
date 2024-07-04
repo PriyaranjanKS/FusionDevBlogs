@@ -269,9 +269,17 @@ Now head back to the Power Pages site and sync it for the changes to be reflecte
 1. Click on **Preview** -> **Desktop** to test the added copilot in the Power Pages site.
 ![Preview Page](\images\04_CopilotUsingDataverse\44.png)
 2. This will open up the page and you will see that the Copilot component has come up on the page.
-![Copilot View](\images\04_CopilotUsingDataverse\45.png)
-3. Let’s initiate the conversation and ask a few pharmacy-related questions.
-![Ask Questions](\images\04_CopilotUsingDataverse\46.png)
+![Copilot View](\images\04_CopilotUsingDataverse\47.png)
+3. Lets Log in first which will invoke the manual authentication where we will copy the token generated
+![Token](\images\04_CopilotUsingDataverse\48.png)
+4. We will paste the token and press "Enter"
+![Add Token](\images\04_CopilotUsingDataverse\49.png)
+5. Let’s initiate the conversation and ask a few pharmacy-related questions. First lets ask which medicines have the **generic name** as **Aspirin**. It will fetch the 2 medicines that matches this query from dataverse. 
+![Generic Name](\images\04_CopilotUsingDataverse\50.png)
+6. Now lets ask the unit price for these medicines and we can see that the respective contextual answers are fetched from the back end table and shown to us
+![Generic Name](\images\04_CopilotUsingDataverse\51.png)
+7. Finally , lets check if the medicine has an FDA approval and we get the related answer back in a conversational way. 
+![Generic Name](\images\04_CopilotUsingDataverse\52.png)
 ## Conclusion
 
 By following these steps, we’ve successfully built a robust Pharmacy Assistant Copilot that seamlessly integrates with Dataverse and delivers accurate, real-time medication information. Using Power Pages, we can easily embed this Copilot into a user-friendly website, making it accessible to healthcare professionals. This integration showcases the potential of combining generative AI with enterprise data and web platforms, enhancing decision-making and improving patient outcomes in the rapidly evolving healthcare industry.
