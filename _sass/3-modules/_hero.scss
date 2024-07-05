@@ -1,4 +1,12 @@
 /* Hero */
+
+.hero__description span{
+    color: var(--brand-color);
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+	}
+	
 .hero {
   padding: 60px 0 70px;
   margin-bottom: 70px;
