@@ -77,7 +77,7 @@ links__item:
 hero:
   hero__title: Hi, I'm <span>Priyan</span>.
   hero__job: An Independent Consultant and Solution Architect
-  hero__description: I spend a lot of my time working with Azure, Microsoft 365 and Power Platform.Welcome to my blog roll ! Here, I jot down my learnings and share what I've discovered along that journey.
+  hero__description: I spend a lot of my time working with Azure, Microsoft 365 and Power Platform.<span>Welcome to my blog roll!</span>  Here, I jot down my learnings and with detailed use case explnations wherever possible.
   hero__button__text: Read More
   hero__button__link: "#previous-posts"
   hero__image: "/images/PriyanPhoto.png"
