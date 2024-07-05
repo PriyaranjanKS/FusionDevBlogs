@@ -1,0 +1,24 @@
+---
+layout: default
+image: '/images/PriyanPhoto.png'
+---
+
+{% include hero.html %}
+ 
+<div id="previous-posts" class="container animate">
+  {% if page.url == "/" %}
+  <div class="section__head">
+    <h3 class="section__title">Recent Posts</h3>
+  </div>
+  {% endif %}
+  <div class="row">
+    {% if site.posts.size > 0 %}
+      {% for post in paginator.posts %}
+        {% include article.html %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% include pagination.html %}
+

@@ -5,6 +5,51 @@ image: '/images/PriyanPhoto.png'
 
 {% include hero.html %}
  
+<style>
+  /* Container holding the recent posts */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  /* Individual post container */
+  .recent-post {
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  /* Default for large screens (4 posts per row) */
+  @media (min-width: 1200px) {
+    .recent-post {
+      flex: 0 0 25%; /* 25% width for 4 posts per row */
+    }
+  }
+
+  /* Medium screens (3 posts per row) */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .recent-post {
+      flex: 0 0 33.33%; /* 33.33% width for 3 posts per row */
+    }
+  }
+
+  /* Small screens (2 posts per row) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .recent-post {
+      flex: 0 0 50%; /* 50% width for 2 posts per row */
+    }
+  }
+
+  /* Extra small screens (1 post per row) */
+  @media (max-width: 767px) {
+    .recent-post {
+      flex: 0 0 100%; /* 100% width for 1 post per row */
+    }
+  }
+</style>
+
 <div id="previous-posts" class="container animate">
   {% if page.url == "/" %}
   <div class="section__head">
@@ -14,11 +59,12 @@ image: '/images/PriyanPhoto.png'
   <div class="row">
     {% if site.posts.size > 0 %}
       {% for post in paginator.posts %}
-        {% include article.html %}
+        <div class="recent-post">
+          {% include article.html %}
+        </div>
       {% endfor %}
     {% endif %}
   </div>
 </div>
 
 {% include pagination.html %}
-
