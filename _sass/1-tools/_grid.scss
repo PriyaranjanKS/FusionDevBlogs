@@ -138,9 +138,11 @@ $mq: ($mobile: $columns, $tablet: $columns, $desktop: $columns);
   }
 }
 
-/* Ensure 4 columns per row on desktop */
-@media (min-width: $desktop + 1) {
-  .col {
-    width: calc(3 / 12 * 100%);
+/* Ensure 4 columns per row in blog section on desktop */
+.blog-section {
+  @media (min-width: $desktop + 1) {
+    .col {
+      width: calc(3 / 12 * 100%);
+    }
   }
 }
