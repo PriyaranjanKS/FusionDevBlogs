@@ -1,5 +1,10 @@
 <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
+    <div class="article__tags">
+      {% for tag in post.tags %}
+      <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="article__tag">{{ tag }}</a>
+      {% endfor %}
+    </div>
 
     <div class="article__head">
       {% if post.image and post.video_embed %}
@@ -19,7 +24,6 @@
     </div>
 
     <div class="article__content">
-
       <div class="article__meta">
         <a class="article__author__link" href="{{site.baseurl}}/about/">{{site.data.settings.author.author__name}}</a> –
         <time class="article__date" datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%-d %B, %Y" %}{{ post.date | date: date_format }}</time>
@@ -30,15 +34,18 @@
       </h2>
 
       <p class="article__excerpt">{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncate: 150 }}{% endif %}</p>
-
-      {% if post.tags.size >= 1 %}
-      <div class="article__tags">
-        {% for tag in post.tags %}
-        <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="article__tag">{{ tag }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
-
     </div>
   </div>
 </div>
+
+<style>
+  .article__tags {
+    margin-bottom: 1rem; /* Adjust as needed for spacing */
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .article__tag {
+    margin-right: 0.5rem; /* Adjust as needed for spacing */
+  }
+</style>
