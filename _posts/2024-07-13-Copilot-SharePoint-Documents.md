@@ -4,7 +4,7 @@ title: Working with SharePoint
 description: Lets see how to work with sharepoint.
 date: 2022-04-03 18:05:55 +0300
 image: '/images/24.jpg'
-tags: [kitchen, picnic, recipes]
+tags: [copilot]
 ---
 
 ## Table of Contents
