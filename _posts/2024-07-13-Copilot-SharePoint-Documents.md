@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with SharePoint
-description: Lets see how to work with sharepoint.
+title: Creating a Project Document Querying Copilot Using SharePoint and Microsoft Copilot Studio
+description: We will see the steps needed to create a Project Assistant Copilot with SharePoint.
 date: 2022-04-03 18:05:55 +0300
 image: '/images/24.jpg'
 tags: [copilot]
