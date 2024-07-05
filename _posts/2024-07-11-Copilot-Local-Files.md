@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building an Organizational and Insurance Policy Copoilot using Policy Documents as Datasource
+title: Creating an Insurance and Organizational Policy Copilot Using Policy Documents
 description: We will see the steps needed to create a Policy Hub Copilot using Microsoft Copilot Studio.
 date: 2024-07-12 15:01:35 +0300
 image: '/images/FrontImage/02.png'
