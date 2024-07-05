@@ -2,8 +2,8 @@
 layout: post
 title: Creating a Project Document Querying Copilot Using SharePoint and Microsoft Copilot Studio
 description: We will see the steps needed to create a Project Assistant Copilot with SharePoint.
-date: 2022-04-03 18:05:55 +0300
-image: '/images/24.jpg'
+date: 2024-07-15 15:01:35 +0300
+image: '/images/FrontImage/00.png'
 tags: [copilot]
 ---
 
