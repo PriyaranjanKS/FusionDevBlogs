@@ -1,67 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Posts</title>
-    <style>
-        .article__image {
-            position: relative;
-            display: block;
-        }
+<div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
 
-        .article__tags {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 5px 10px;
-            border-radius: 3px;
-            z-index: 10;
-        }
+    <div class="article__head">
+      {% if post.image and post.video_embed %}
+      <div class="video-icon">
+        <div class="circle pulse"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <polygon points="40,30 65,50 40,70"></polygon>
+        </svg>
+      </div>
+      {% endif %}
 
-        .article__tag {
-            color: white;
-            text-decoration: none;
-            margin-right: 5px;
-        }
-
-        .article__tag:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="article col Newcol col-4 col-d-6 col-t-12">
-                <div class="article__inner">
-                    <div class="article__head">
-                        <a class="article__image" href="{{post.url | prepend: site.baseurl}}">
-                            <img class="lazy" data-src="{{site.baseurl}}{{post.image}}" alt="{{post.title}}">
-                            {% if post.tags.size >= 1 %}
-                            <div class="article__tags">
-                                {% for tag in post.tags %}
-                                <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="article__tag">{{ tag }}</a>
-                                {% endfor %}
-                            </div>
-                            {% endif %}
-                        </a>
-                    </div>
-                    <div class="article__content">
-                        <div class="article__meta">
-                            <a class="article__author__link" href="{{site.baseurl}}/about/">{{site.data.settings.author.author__name}}</a> –
-                            <time class="article__date" datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%-d %B, %Y" %}{{ post.date | date: date_format }}</time>
-                        </div>
-                        <h2 class="article__title">
-                            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                        </h2>
-                        <p class="article__excerpt">{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncate: 150 }}{% endif %}</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more articles here -->
-        </div>
+      {% if post.image %}
+      <a class="article__image" href="{{post.url | prepend: site.baseurl}}">
+        <img class="lazy" data-src="{{site.baseurl}}{{post.image}}" alt="{{post.title}}">
+      </a>
+      {% endif %}
     </div>
-</body>
-</html>
+
+    <div class="article__content">
+
+      <div class="article__meta">
+        <a class="article__author__link" href="{{site.baseurl}}/about/">{{site.data.settings.author.author__name}}</a> –
+        <time class="article__date" datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%-d %B, %Y" %}{{ post.date | date: date_format }}</time>
+      </div>
+
+      <h2 class="article__title">
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+
+      <p class="article__excerpt">{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncate: 150 }}{% endif %}</p>
+
+      {% if post.tags.size >= 1 %}
+      <div class="article__tags">
+        {% for tag in post.tags %}
+        <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="article__tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
