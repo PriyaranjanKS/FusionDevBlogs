@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a Farming Copilot Assistant using Generative Answers and Generative Topic Orchestration
-description: In this guide, we will walk through the steps to create a Farming Assistant Copilot using Microsoft Copilot Studio.
+description: We will see the steps needed to create a Farming Assistant Copilot using Microsoft Copilot Studio.
 date: 2024-07-09 15:01:35 +0300
 image: '/images/01_CopilotUsingWebsites/00.png'
 tags: [copilot]
