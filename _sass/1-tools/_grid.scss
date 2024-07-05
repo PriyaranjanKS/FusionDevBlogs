@@ -149,6 +149,6 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
 /* Ensure 4 columns per row on desktop */
 @media (min-width: $desktop + 1) {
   .Newcol {
-    width: calc(3 / 12 * 100%);
+    width: calc(3 / 12 * 100%)!important;
   }
 }
