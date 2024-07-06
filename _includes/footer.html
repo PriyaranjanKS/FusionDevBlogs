@@ -8,7 +8,7 @@
             <div class="row">
               {% include footer-widgets/widget-recent-posts.html %}
              <!--  {% include footer-widgets/widget-gallery.html %} -->
-              {% include footer-widgets/widget-subscribe.html %}  
+              {% include footer-widgets/widget-subscribe.html %} 
             </div>
           </div>
         </div>
@@ -29,4 +29,26 @@
 </footer>
 <!-- end footer -->
 
- 
+<!-- Add this script before the closing body tag -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    function applyStyles() {
+      const element = document.querySelector('[data-form="b40086aa-36b1-11ef-89c3-3b6e42ca06b5"]');
+      if (element) {
+        element.style.backgroundColor = '#e0efef';
+        element.style.borderRadius = '10px';
+      }
+    }
+
+    applyStyles(); // Apply styles initially
+
+    // MutationObserver to apply styles if the plugin overwrites them
+    const observer = new MutationObserver(applyStyles);
+    const config = { attributes: true, childList: true, subtree: true };
+
+    const targetNode = document.querySelector('body'); // Observe changes in the entire body
+    if (targetNode) {
+      observer.observe(targetNode, config);
+    }
+  });
+</script>
