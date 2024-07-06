@@ -21,7 +21,7 @@
 	
 .hero {
   padding: 60px 0 70px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   background-color: var(--background-alt-color);
 
   &.hero-video {
@@ -47,7 +47,7 @@
 
   @media (max-width: $tablet) {
     padding: 60px 0;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 
     &.hero-video {
       .hero__left {
