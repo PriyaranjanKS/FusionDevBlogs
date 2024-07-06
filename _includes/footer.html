@@ -7,7 +7,7 @@
           <div class="footer__head">
             <div class="row">
               {% include footer-widgets/widget-recent-posts.html %}
-             <!--  {% include footer-widgets/widget-gallery.html %} -->
+              <!--  {% include footer-widgets/widget-gallery.html %} -->
               {% include footer-widgets/widget-subscribe.html %} 
             </div>
           </div>
@@ -35,8 +35,8 @@
     function applyStyles() {
       const element = document.querySelector('[data-form="b40086aa-36b1-11ef-89c3-3b6e42ca06b5"]');
       if (element) {
-        element.style.backgroundColor = '#e0efef';
-        element.style.borderRadius = '10px';
+        element.style.setProperty('background-color', '#e0efef', 'important');
+        element.style.setProperty('border-radius', '10px', 'important');
       }
     }
 
