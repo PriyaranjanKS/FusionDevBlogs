@@ -14,7 +14,20 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
   background-color: var(--background-alt-color);
   min-height : 360px ;
-  max-height : 360px ;
+ 
+}
+@media (max-width: 768px) {
+  .article__inner {
+    min-height: auto;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .article__inner {
+    min-height: auto;
+    height: auto;
+  }
 }
 
 .article__head {
