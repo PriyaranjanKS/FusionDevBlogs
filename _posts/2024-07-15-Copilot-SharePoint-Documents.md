@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating a Project Document Querying Copilot Using SharePoint
+title: Creating a Project Document Querying Copilot with SharePoint and Manual Authentication
 description: We will see the steps needed to create a Project Assistant Copilot with SharePoint.
 date: 2024-07-15 15:01:35 +0300
 image: '/images/FrontImage/03.png'
