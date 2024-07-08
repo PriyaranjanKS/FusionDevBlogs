@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enhancing User Interaction with Adaptive Cards in Copilot
-description: We will see the steps needed to create a Pharmacy Assistant Copilot with Dataverse.
+description: We will see the steps needed to create a Rewards and Recognition Copilot with Dataverse.
 date: 2024-07-18 15:01:35 +0300
 image: '/images/FrontImage/05.png'
 tags: [copilot]
@@ -33,7 +33,14 @@ Adaptive Cards are a platform-agnostic way to present and interact with informat
 
 ## Use Case: Reward and Recognition Program
 
-Let's delve into a practical scenario: implementing a Reward and Recognition Program where employees can select and order a reward based on their eligibility. We'll explore how to integrate Adaptive Cards with Copilot and utilize Office 365 and Dataverse actions to build an end-to-end bot without the use of Power Automate.
+Let’s delve into a practical scenario: implementing a Reward and Recognition Program where employees can select and order a reward based on their eligibility. We’ll explore how to integrate Adaptive Cards with Copilot and utilize Office 365 and Dataverse actions to build an end-to-end bot without the use of Power Automate.
+
+### Overview of the Process:
+
+- **Use the Office 365 mail connector** to get the current user's email ID.
+- **Query the Dataverse table** to check if the user has already claimed a reward.
+- If the user has not claimed a reward, **provide an Adaptive Card** for selecting a product and entering the shipping address.
+- **Send the user's selection and address via email** to the concerned team to process the order.
 
 ## Step-by-Step Guide to Building the Rewards and Recognition Copilot
 
