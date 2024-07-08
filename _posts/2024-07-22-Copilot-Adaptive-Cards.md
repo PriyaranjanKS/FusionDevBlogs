@@ -7,7 +7,7 @@ image: '/images/FrontImage/05.png'
 tags: [copilot]
 ---
 
-Enhancing user interaction is key to boosting engagement and productivity. Adaptive Cards provide a versatile and dynamic way to present rich content in a structured format. When integrated with Copilot and Office 365 connectors, they can significantly enrich the user experience. This blog post explores how to leverage Adaptive Cards within Copilot to create a seamless and engaging reward and recognition program for your organization.
+Enhancing user interaction is key to boosting engagement and productivity. Adaptive Cards provide a versatile and dynamic way to present rich content in a structured format. When integrated with Copilot and Office 365 connectors, they can significantly enrich the user experience. This blog post explores how to leverage Adaptive Cards within Copilot to create a seamless and engaging **Rewards and Recognition Program**  for your organization.
 
 ## Table of Contents
 - [Understanding Adaptive Cards](#understanding-adaptive-cards)
