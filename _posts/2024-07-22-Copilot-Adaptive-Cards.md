@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enhancing User Interaction with Adaptive Cards in Copilot
+title: Enhancing User Interaction with Adaptive Cards in a Rewards & Recognition Copilot
 description: We will see the steps needed to create a Rewards and Recognition Copilot with Dataverse.
 date: 2024-07-18 15:01:35 +0300
 image: '/images/FrontImage/05.png'
