@@ -7,9 +7,6 @@ image: '/images/FrontImage/06.png'
 tags: [copilot]
 ---
 
-
-# 
-
 Efficiently managing the creation of new Teams using a Teams hosted solution can significantly enhance productivity and collaboration. Leveraging the power of Microsoft Copilot combined with Power Automate and Graph API, you can automate this process with ease. This blog will guide you through creating a Copilot in Teams that validates whether a user is a manager and, if so, provisions a new Team based on user input.
 
 ## Table of Contents
@@ -219,7 +216,7 @@ We will then configure the **HTTP** action with the below parameters:
 2. Method will be **POST**.
 3. In the **Body** add the below payload.
 
-<Add body>
+**Add body**
 
 In the **Authentication** section, mention the authentication type as **Raw** and value as **Bearer <Token Passed from Copilot>**.
 
