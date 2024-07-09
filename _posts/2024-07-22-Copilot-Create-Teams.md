@@ -216,7 +216,31 @@ We will then configure the **HTTP** action with the below parameters:
 2. Method will be **POST**.
 3. In the **Body** add the below payload.
 
-**Add body**
+```
+{
+  "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
+  "displayName": "@{triggerBody()?['text']}",
+  "description": "@{triggerBody()?['text_1']}",
+  "members": [
+    {
+      "@@odata.type": "#microsoft.graph.aadUserConversationMember",
+      "roles": [
+        "owner"
+      ],
+      "user@odata.bind": "https://graph.microsoft.com/v1.0/users('@{triggerBody()?['text_2']}')"
+    }
+  ],
+  "memberSettings": {
+    "allowCreateUpdateChannels": true,
+    "allowDeleteChannels": true,
+    "allowAddRemoveApps": true,
+    "allowCreateUpdateRemoveTabs": true,
+    "allowCreateUpdateRemoveConnectors": true
+  }
+}
+
+```
+
 
 In the **Authentication** section, mention the authentication type as **Raw** and value as **Bearer <Token Passed from Copilot>**.
 
