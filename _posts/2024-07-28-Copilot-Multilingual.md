@@ -6,7 +6,6 @@ date: 2024-07-22 15:01:35 +0300
 image: '/images/FrontImage/09.png'
 tags: [copilot]
 ---
-
 Microsoft Copilot Studio allows us to create conversational agents, or "copilots," that can interact with users in their preferred language. In this blog, we will walk you through building a multilingual copilot that helps users book doctor appointments for different departments in their preferred language. The copilot will also save these appointments in a Dataverse table for easy management and follow-up.
 
 ## Overview
