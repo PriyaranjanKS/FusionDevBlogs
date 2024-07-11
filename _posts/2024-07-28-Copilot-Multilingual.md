@@ -33,23 +33,23 @@ Create a new Dataverse table named `DoctorAppointments` with the following colum
 - **AppointmentDate**
 - **Department**
 
-![Create Dataverse Table](\images\08_CopilotApplicationInsights\1_1.png)
+![Create Dataverse Table](\images\09_CopilotMultiLingual\1_1.png)
 
 ### Step 2: Creating the Copilot in Copilot Studio
 
 Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and click on **Create**.
 
-![Create Copilot](\images\08_CopilotApplicationInsights\1_3.png)
+![Create Copilot](\images\09_CopilotMultiLingual\1_3.png)
 
 This will provide us the option to create a copilot based on an existing template or create a blank copilot from scratch. Let's select **New copilot**.
 
-![New Copilot](\images\08_CopilotApplicationInsights\1_4.png)
+![New Copilot](\images\09_CopilotMultiLingual\1_4.png)
 
 This will take us to the page where we can:
 1. **Describe the copilot functionality** and provide any specific instructions to the copilot.
 2. Once done, click on **Create** to provision the copilot.
 
-![Describe Copilot](\images\08_CopilotApplicationInsights\1.png)
+![Describe Copilot](\images\09_CopilotMultiLingual\1.png)
 
 ### Step 3: Enable Generative Selection of Topics
 
@@ -57,7 +57,7 @@ The copilot is now created. We can then make the needed configuration changes:
 1. Click on **Edit**, edit the copilot details like name, icon, and description.
 2. Click on **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto-selected based on user conversation resulting in a much smoother user experience.
 
-![Edit Copilot](\images\08_CopilotApplicationInsights\2.png)
+![Edit Copilot](\images\09_CopilotMultiLingual\2.png)
 
 To enable the automatic detection of topics from user interaction:
 1. Click on **Generative AI**.
@@ -65,7 +65,7 @@ To enable the automatic detection of topics from user interaction:
 3. Click on **Save** to update the settings.
 4. Click on **Close** icon to go back to the home page of this custom copilot.
 
-![Generative AI Settings](\images\08_CopilotApplicationInsights\3_1.png)
+![Generative AI Settings](\images\09_CopilotMultiLingual\3_1.png)
 
 ### Step 4: Create Topics
 
@@ -74,28 +74,28 @@ Now let’s go ahead and create the topics that will automatically redirect the 
 2. To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with an initial set of prepopulated conversation nodes based on the topic description that we provide.
 3. Click on **Add a Topic** and select **Create from description with Copilot**.
 
-![Add a Topic](\images\08_CopilotApplicationInsights\3.png)
+![Add a Topic](\images\09_CopilotMultiLingual\3.png)
 
 Provide the below topic description details in the pop-up that opened when we clicked the Add topic button previously. Then, click on **Create**, which will provision the topic skeleton based on the provided description.
 
-![Topic Description](\images\08_CopilotApplicationInsights\4.png)
+![Topic Description](\images\09_CopilotMultiLingual\4.png)
 
 Copilot studio has auto-generated the trigger as well as the conversational questions that will ask for the patient's name, appointment date, and the doctor department for which booking is needed.
 
-![Auto-generated Trigger](\images\08_CopilotApplicationInsights\5.png)
-![Conversation Nodes](\images\08_CopilotApplicationInsights\5_1.png)
+![Auto-generated Trigger](\images\09_CopilotMultiLingual\5.png)
+![Conversation Nodes](\images\09_CopilotMultiLingual\5_1.png)
 
 As we can see for each node, the user input is being stored in respective variables. Now let’s save these details which the user inputs to Dataverse. For this, we will add the **Dataverse Connector** action.
 
-![Dataverse Connector](\images\08_CopilotApplicationInsights\6.png)
+![Dataverse Connector](\images\09_CopilotMultiLingual\6.png)
 
 Let's configure the connector by mentioning the environment name and Dataverse table along with the **PatientName**, **AppointmentDate**, and **Department**.
 
-![Configure Connector](\images\08_CopilotApplicationInsights\7.png)
+![Configure Connector](\images\09_CopilotMultiLingual\7.png)
 
 We have also added a basic card that indicates the success of the booking. Thus, we have completed the copilot creation. Let’s save and publish it.
 
-![Success Card](\images\08_CopilotApplicationInsights\8.png)
+![Success Card](\images\09_CopilotMultiLingual\8.png)
 
 ### Step 5: Enable Multilingual Capability
 
@@ -103,44 +103,44 @@ Now that the topic and conversation nodes are created, it’s time to make the c
 
 This should ideally allow us to add the different languages that the copilot should support. However, as we had previously enabled Generative Topic selection capability, we will not be able to proceed.
 
-![Language Settings](\images\08_CopilotApplicationInsights\9.png)
+![Language Settings](\images\09_CopilotMultiLingual\9.png)
 
 Hence, we will have to switch back to **Classic Mode**. So, let's do this from the same settings page:
 1. Select **Generative AI**.
 2. Select **Classic** option.
 3. Save the settings.
 
-![Switch to Classic Mode](\images\08_CopilotApplicationInsights\10.png)
+![Switch to Classic Mode](\images\09_CopilotMultiLingual\10.png)
 
 Now if we head to the previously created topic, we can see that the Generative nature of the trigger where the topic is automatically triggered by copilot is replaced with trigger phrases and hence we will have to ensure that all the potential phrases for triggering the topic are added in here.
 
-![Trigger Phrases](\images\08_CopilotApplicationInsights\11.png)
+![Trigger Phrases](\images\09_CopilotMultiLingual\11.png)
 
 Heading back to the Language Settings, we will again try to add the additional language and we can now see that we are able to add new languages. Let's select French and click on **Add Languages**.
 
-![Add French Language](\images\08_CopilotApplicationInsights\12.png)
+![Add French Language](\images\09_CopilotMultiLingual\12.png)
 
 We can now see a new section called **Secondary language** has come up and it shows the newly added French Language. Click on the **Upload** button which will open up a right side pane. It contains the localization files for the French Language. Click on **Download localization file as JSON**. You can also try with ResX which is more of an XML-based resource file but since JSON is easier to edit, we will download the JSON file.
 
-![Download Localization File](\images\08_CopilotApplicationInsights\13.png)
+![Download Localization File](\images\09_CopilotMultiLingual\13.png)
 
 The downloaded initial JSON file will look like below which contains the English version of all the conversation nodes across all the existing system and custom topics in the copilot.
 
-![Initial JSON File](\images\08_CopilotApplicationInsights\14.png)
+![Initial JSON File](\images\09_CopilotMultiLingual\14.png)
 
 We can see that the data is stored as a key-value pair in JSON. To make the copilot multilingual, we have to translate each of the values of the key-value pair into French. We can either use the Google translate function or even copy and paste the entire content into ChatGPT and ask it to convert the values into French.
 
 The translated French localization file would look like below:
 
-![Translated JSON File](\images\08_CopilotApplicationInsights\15.png)
+![Translated JSON File](\images\09_CopilotMultiLingual\15.png)
 
 Now let’s upload the French translated JSON back to the copilot by clicking on the **Browse** button in the Localizations pane.
 
-![Browse JSON File](\images\08_CopilotApplicationInsights\16.png)
+![Browse JSON File](\images\09_CopilotMultiLingual\16.png)
 
 Click on **Upload translation updates** to make the French translation available to the copilot.
 
-![Upload Translation Updates](\images\08_CopilotApplicationInsights\17.png)
+![Upload Translation Updates](\images\09_CopilotMultiLingual\17.png)
 
 Click on **Update localizations** to overwrite all past localization that you have done for this copilot.
 
