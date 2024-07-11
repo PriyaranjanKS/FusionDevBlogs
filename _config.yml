@@ -16,7 +16,7 @@ plugins:
   - jekyll-reading-time
   - jekyll-toc
   - jekyll-syntax
-paginate: 10
+paginate: 30
 paginate_path: "/page/:num"
 
 # Pages Path
