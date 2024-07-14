@@ -7,6 +7,14 @@ image: '/images/FrontImage/01.png'
 tags: [copilot]
 ---
 
+## Table of Contents
+{: .no_toc}
+
+* TOC
+{: toc}
+
+## Introduction
+
 This Copilot assistant will **help farmers by providing information across three scenarios where specific information resides on three different websites.**
 The Copilot will :
 - Provide information on **farming queries** by searching the public website of the United States Department of Agriculture (USDA) and providing contextual answers to farmer queries.
@@ -17,11 +25,12 @@ We will be leveraging the Generative Answers and Generative Topic Orchestration 
 
 <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/50.svg" alt="Copilot Flow">
 
-## Table of Contents
-{: .no_toc}
+## Demo 
 
-* TOC
-{: toc}
+Watch the demo video below to see how the Copilot assistant helps farmers in real-time scenarios.
+
+[![Demo Video](https://img.youtube.com/vi/4U2gLoNqFo8/maxresdefault.jpg)](https://www.youtube.com/watch?v=4U2gLoNqFo8)
+
 
 ## Create the Copilot
 1. Head over to the Copilot Studio (https://copilotstudio.microsoft.com/) and **click on Create**.
