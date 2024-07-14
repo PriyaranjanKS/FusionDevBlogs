@@ -31,7 +31,7 @@ Watch the demo video below to see how the Copilot assistant helps farmers in rea
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4U2gLoNqFo8?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Create the Copilot
+## Step 1 : Create the Copilot
 1. Head over to the Copilot Studio (https://copilotstudio.microsoft.com/) and **click on Create**.
 ![Create]({{ site.baseurl }}/images/01_CopilotUsingWebsites/1.png)
 2. It provides the option to start with a pre-existing copilot template or **create a new Copilot from scratch**, which is what we will be doing.
@@ -50,7 +50,7 @@ In Microsoft Copilot Studio, topics are the fundamental building blocks that def
 - **Trigger Phrases**: These are phrases, keywords, or questions that a user is likely to use, which are related to the topic. When a user's input matches or is close to these trigger phrases, the corresponding topic is activated. For example, a topic about store hours might be triggered by the phrase check store hours or similar variations.
 - **Conversation Nodes**: These are the action steps within a topic that define what the copilot should do once the topic is triggered. Actions can include asking questions, sending messages, triggering cloud flows, setting variable values, or using conditions for branching logic.
 
-## Add Topic 1 - Farming Queries
+## Step 2 : Add Topic 1 - Farming Queries
 1. Let's add the first topic of our Copilot by **selecting Topics from the navigation bar**.
 ![Select Topics]({{ site.baseurl }}/images/01_CopilotUsingWebsites/7.png)
 2. This will open the Topics creation section, and we can either select **From blank to create the trigger phrase and subsequent actions manually** or use **Create from description with Copilot** to utilize the Copilot generative AI capabilities to create a Copilot bot for us.
@@ -114,7 +114,7 @@ To view the citations in detail, click on one of the links to be taken to the US
 
 This concludes the creation of the first topic.
 
-## Generative Conversation Orchestration
+## Step 3 : Generative Conversation Orchestration
 Before creating subsequent topics, let’s enable generative conversation orchestration to ensure the appropriate topic is auto-selected based on the query, and the conversation flow is routed dynamically.
 
 Before we make this change, if we go to the Topics section, we can see that the Trigger is Phrases that we defined at the beginning of the topic.
@@ -132,7 +132,7 @@ Within the Settings page:
 Now, if we head back to the Topics page, we can see that the Trigger is not the phrases rather it is automatically triggered by the copilot based on the description you will give during the topic creation.
 ![Auto Trigger]({{ site.baseurl }}/images/01_CopilotUsingWebsites/22_5.png)
 
-## Add Topic 2 – Farming Location Weather
+## Step 4 : Add Topic 2 – Farming Location Weather
 
 Now that we have received the information regarding the adequate conditions needed for Corn Farming through our first topic, we will create a second topic to understand the current weather of the farming location to decide if it matches the mandated conditions by USDA.
 
@@ -184,7 +184,7 @@ This time we will name the topic as **Farming Location Weather** and the descrip
        ![Save Data Source]({{ site.baseurl }}/images/01_CopilotUsingWebsites/33.png)
 
 
-## Add Topic 3 – Farming Loans
+## Step 5 : Add Topic 3 – Farming Loans
 
 Now that we have configured the topics for farming information and location weather, let’s add a final topic to explore loan assistance from Farmers.Gov site.
 
@@ -237,7 +237,7 @@ Now that we have configured the topics for farming information and location weat
 
 This completes the configuration of all three topics and enables dynamic routing of topics using Generative AI
 
-## Set Security to No Authentication
+## Step 6 : Set Security to No Authentication
 
 Before we test the Copilot, we need to ensure that the Copilot's security settings are configured correctly. For this demo, we will set the security to "No Authentication" to simplify the testing process.
 
@@ -252,7 +252,7 @@ Before we test the Copilot, we need to ensure that the Copilot's security settin
 
 By setting the security to "No Authentication," we ensure that users can access and interact with the Copilot without needing to log in. This is especially useful during the development and testing phases.
 
-## Add the Copilot to Power Pages
+## Step 7 : Add the Copilot to Power Pages
 
 To enhance our Farming Information Hub, we will integrate the Copilot Assistant into our Power Pages site. This integration allows users to interact with the Copilot directly from the web page, providing a seamless and interactive experience.
 We can 	get the URL that will be added to the IFrame of Power Pages by : 
@@ -481,7 +481,7 @@ body {
 }
 ```
 
-## Test the Copilot
+## Step 8 : Test the Copilot
 
 Now let's test the Copilot end to end.
 
