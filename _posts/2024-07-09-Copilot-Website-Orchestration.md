@@ -21,7 +21,7 @@ The Copilot will :
 - Generate the current **climate conditions** from Weather.com so that the farmer can plan his crop season.
 - Come up with additional details about **loan facilities** by querying the farmers.gov site.
 
-We will be leveraging the Generative Answers and Generative Topic Orchestration capabilities of Copilot to ensure a seamless and efficient user experience.
+We will be leveraging the **Generative Answers and Generative Topic Orchestration** capabilities of Copilot to ensure a seamless and efficient user experience.
 
 <img src="{{ site.baseurl }}/images/01_CopilotUsingWebsites/50.svg" alt="Copilot Flow">
 
@@ -516,7 +516,7 @@ In this guide, we've walked through the process of creating a powerful **Farming
 2. **Weather.com** for real-time weather updates pertinent to farming locations.
 3. **Farmers.gov** for information on available loan options and financial assistance.
 
-By enabling **dynamic topic orchestration** through **Generative AI** and configuring targeted data sources, we've created a robust and intelligent Copilot that can dynamically handle user queries and provide precise answers grounded in reliable information. This Farming Assistant not only simplifies the decision-making process for farmers but also demonstrates the potential of Microsoft Copilot Studio in creating sophisticated AI solutions.
+By enabling **dynamic topic orchestration** through **Generative AI** and configuring targeted data sources, we've created a robust and intelligent Copilot that can dynamically handle user queries and provide precise answers grounded in reliable information.
 
 
 
