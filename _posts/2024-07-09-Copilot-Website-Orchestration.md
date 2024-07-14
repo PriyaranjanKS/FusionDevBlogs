@@ -15,7 +15,7 @@ tags: [copilot]
 
 ## Introduction
 
-This Copilot assistant will **help farmers by providing information across three scenarios where specific information resides on three different websites.**
+This Copilot assistant will **help farmers by providing information across three scenarios where specific information resides on three different websites.**. The Copilot by itself is embedded within **Power Pages** for seamless external user access as part of a larger use case.
 The Copilot will :
 - Provide information on **farming queries** by searching the public website of the United States Department of Agriculture (USDA) and providing contextual answers to farmer queries.
 - Generate the current **climate conditions** from Weather.com so that the farmer can plan his crop season.
