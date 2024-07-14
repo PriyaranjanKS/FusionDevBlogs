@@ -29,7 +29,7 @@ We will be leveraging the Generative Answers and Generative Topic Orchestration 
 
 Watch the demo video below to see how the Copilot assistant helps farmers in real-time scenarios.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4U2gLoNqFo8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4U2gLoNqFo8?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Create the Copilot
 1. Head over to the Copilot Studio (https://copilotstudio.microsoft.com/) and **click on Create**.
