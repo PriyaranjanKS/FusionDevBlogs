@@ -34,7 +34,7 @@ Watch the demo video below to see how the Copilot assistant helps farmers in rea
 ## Step 1 : Create the Copilot
 1. Head over to the Copilot Studio (https://copilotstudio.microsoft.com/) and **click on Create**.
 ![Create]({{ site.baseurl }}/images/01_CopilotUsingWebsites/1.png)
-2. It provides the option to start with a pre-existing copilot template or **create a new Copilot from scratch**, which is what we will be doing.
+2. It provides the option to start with a pre-existing copilot template or **create a new Copilot from scratch**.
 ![Start from Scratch]({{ site.baseurl }}/images/01_CopilotUsingWebsites/2.png)
 3. **Specify the Copilot Description** on the next page.
 ![Specify Description]({{ site.baseurl }}/images/01_CopilotUsingWebsites/4.png)
@@ -239,7 +239,7 @@ This completes the configuration of all three topics and enables dynamic routing
 
 ## Step 6 : Set Security to No Authentication
 
-Before we test the Copilot, we need to ensure that the Copilot's security settings are configured correctly. For this demo, we will set the security to "No Authentication" to simplify the testing process.
+Before we test the Copilot, we need to ensure that the Copilot's security settings are configured correctly. For this demo, we will set the security to "No Authentication" as the Copilot will be embedded in a public facing Power Pages site.
 
 1. Navigate to the **Settings** of your Copilot.
 
@@ -250,7 +250,7 @@ Before we test the Copilot, we need to ensure that the Copilot's security settin
 4. Click on **Save** to apply the changes.
    ![Authentication]({{ site.baseurl }}/images/01_CopilotUsingWebsites/50.png)
 
-By setting the security to "No Authentication," we ensure that users can access and interact with the Copilot without needing to log in. This is especially useful during the development and testing phases.
+By setting the security to "No Authentication," we ensure that users can access and interact with the Copilot without needing to log in.
 
 ## Step 7 : Add the Copilot to Power Pages
 
