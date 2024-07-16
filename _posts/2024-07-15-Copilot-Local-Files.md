@@ -2,7 +2,7 @@
 layout: post
 title: Creating an Insurance and Organizational Policy Copilot Using Policy Documents
 description: We will see the steps needed to create a Policy Hub Copilot using Microsoft Copilot Studio.
-date: 2024-07-12 15:01:35 +0300
+date: 2024-07-15 15:01:35 +0300
 image: '/images/FrontImage/02.png'
 tags: [copilot]
 ---
@@ -23,7 +23,7 @@ In this blog, we will explore how to build a Copilot Studio bot that leverages g
 
 Watch the demo video below to see how the Copilot assistant helps with policy queries in real-time scenarios.
 
-<iframe width="560" height="315" src="https://youtu.be/hF4s1jSKTGU?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4U2gLoNqFo8?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Step-by-Step Guide to Creating the Copilot Studio Bot
