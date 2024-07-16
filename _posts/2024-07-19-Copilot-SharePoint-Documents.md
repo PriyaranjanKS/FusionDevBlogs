@@ -46,7 +46,7 @@ Watch the demo video below to see how the Copilot assistant helps with project r
 
 #### Collect and Organize Documents:
 1. Gather all relevant project documents, such as estimates, timelines, milestones, and other key details.
-2. Ensure that each document is well-structured, with clear sections and headings to facilitate easier parsing by the copilot.
+2. Ensure that the document is well-structured, with clear sections and headings to facilitate easier parsing by the copilot.
 
 In our case, we have a software development project document which contains the estimates and key timelines for the project.
 ![1](\images\03_CopilotUsingSharePointDocuments\1.jpg)
@@ -179,7 +179,7 @@ Next, let's add the permission for accessing the files within SharePoint:
 2. Search for **Files.Read**.
 3. Check the permission **Files.Read**.
 4. Click on **Add Permissions**.
-![28_5](\images\03_CopilotUsingSharePointDocuments\28_5.png)
+![28_5](\images\03_CopilotUsingSharePointDocuments\27.png)
 
 The added permissions need to be consented for use with the application. For this:
 1. Click on **Grant admin consent for <your tenant>** and
