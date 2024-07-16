@@ -166,6 +166,186 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
 3. Click on the adaptive card and paste the below JSON in the **Edit JSON** pane.
 
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/reward.png", 
+              "size": "Small",
+              "altText": "Company Logo"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Employee Rewards",
+              "weight": "Bolder",
+              "size": "Large",
+              "horizontalAlignment": "Left"
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        }
+      ],
+      "spacing": "Medium"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/Kindle.PNG",
+              "altText": "Kindle",
+              "size": "Medium"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Kindle",
+              "horizontalAlignment": "Center"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/Amazon Echo.PNG",
+              "altText": "Echo",
+              "size": "Medium"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Echo",
+              "horizontalAlignment": "Center"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/Fitbit.PNG",
+              "altText": "Versa",
+              "size": "Medium"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Versa",
+              "horizontalAlignment": "Center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/click.png",  
+              "altText": "Select Product",
+              "size": "Small"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.ChoiceSet",
+              "id": "productChoice",
+              "label": "Select a product:",
+              "choices": [
+                {
+                  "title": "Kindle",
+                  "value": "Kindle"
+                },
+                {
+                  "title": "Echo",
+                  "value": "Echo"
+                },
+                {
+                  "title": "Versa",
+                  "value": "Versa"
+                }
+              ],
+              "style": "expanded"
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/address.png", 
+              "altText": "Address",
+              "size": "Small"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.Text",
+              "id": "address",
+              "placeholder": "Enter your address",
+              "label": "Address",
+              "isMultiline": true
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit"
+    }
+  ]
+}
+
+```
+
     ![Step 9.3](\images\05_CopilotUsingAdaptiveCard\31.png)
 
 4. To use images in the adaptive card:
