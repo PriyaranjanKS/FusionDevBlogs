@@ -52,9 +52,10 @@ This will take us to the page where we can:
 2. Once done, click on **Create** to provision the copilot.
 ![Step 3 Image 3](\images\02_CopilotUsingLocalFiles\3.png)
 
-### Step 4: Enable Generative Selection of Topics (Dynamic Chaining)
+### Step 4: Enable Generative Selection of Topics
 
 The copilot is now created. We can then make the needed configuration changes.
+
 1. Click on **Edit**, edit the copilot details like name, icon, and description.
 2. Click on **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto-selected based on user conversation, resulting in a much smoother user experience.
 ![Step 4 Image 1](\images\02_CopilotUsingLocalFiles\4.png)
@@ -71,6 +72,9 @@ To enable the automatic detection of topics from user interaction:
 Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the user's question. To do this, we will create a topic with the below 2 documents as Knowledge Source:
 1. General Company Policy: This document will provide the user with information about general company policies.
 2. Insurance Policy: This document will provide contextual answers back to the user for insurance-related queries.
+
+Select **Topic** from the top bar navigation menu. 
+
 ![Step 5 Image 1](\images\02_CopilotUsingLocalFiles\6.png)
 
 To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with an initial set of prepopulated conversation nodes based on the topic description that we provide.
@@ -144,7 +148,7 @@ Now that the copilot development is completed, let's publish it so that it becom
 
 ### Step 8: Add to Power Apps
 
-Now let's add the copilot to Power Apps using the chatbot component which is currently in preview.
+Now let's add the copilot to Power Apps using the chatbot component which is *currently in preview at the time of writing of this blog*.
 Head over to your Power Apps and from the **Insert** menu, select the **Chatbot** component which will add it to the canvas.
 ![Step 8 Image 1](\images\02_CopilotUsingLocalFiles\24.png)
 
@@ -161,4 +165,4 @@ And we can now see that the copilot has been connected to the chatbot component 
 
 ## Conclusion
 
-Creating a Copilot Studio bot that utilizes generative AI to answer queries from uploaded policy documents offers a powerful solution for managing information in organizational documents. By enabling dynamic topic selection, the bot provides users with precise, context-aware responses without the need for predefined triggers. This streamlined approach not only enhances user experience but also ensures that employees and stakeholders have quick access to critical information, improving efficiency and decision-making across the organization. With Microsoft’s Copilot Studio and Azure OpenAI, transforming how we handle and retrieve policy information has never been easier.
+Creating a Copilot Studio bot that utilizes generative AI to answer queries from uploaded policy documents offers a powerful solution for managing information in organizational documents. By enabling dynamic topic selection, the bot provides users with precise, context-aware responses without the need for predefined triggers. This streamlined approach not only enhances user experience but also ensures that employees and stakeholders have quick access to critical information, improving efficiency and decision-making across the organization. 
