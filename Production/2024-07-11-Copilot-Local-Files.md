@@ -23,9 +23,8 @@ In this blog, we will explore how to build a Copilot Studio bot that leverages g
 
 Watch the demo video below to see how the Copilot assistant helps with policy queries in real-time scenarios.
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hF4s1jSKTGU?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 ## Step-by-Step Guide to Creating the Copilot Studio Bot
 
 ### Step 1: Setting Up Your Environment
