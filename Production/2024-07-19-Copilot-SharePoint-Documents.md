@@ -18,7 +18,7 @@ tags: [copilot]
 Having instant access to project information is crucial for effective project management and decision-making. Think of having a copilot that can fetch detailed project estimates, milestones, and other key details stored in documents on SharePoint, and provide contextual answers to user queries. This blog will guide you through the process of creating such a copilot using Microsoft Copilot Studio, leveraging documents stored in SharePoint and utilizing manual authentication for secure access. For ease of access, we will also be embedding the Copilot within a SharePoint page so that the employees can access it seamlessly. 
 ![1](\images\03_CopilotUsingSharePointDocuments\0_0.png)
 
-## Why Use SharePoint with Copilot Studio?
+## Why Use SharePoint with Copilot ?
 SharePoint is a powerful platform for storing and managing documents, making it an ideal choice for hosting project-related information. By integrating SharePoint with Microsoft Copilot Studio, we can create a bot that can access and interpret these documents to provide precise answers to user queries. This integration ensures that users have quick, reliable access to up-to-date project information directly through the copilot. Moreover, any updates to the document can be made directly in SharePoint and the updated contents will be used for grounding and providing contextual answers back to the Copilot resulting in lesser maintenance going forward.
 
 ## Demo
