@@ -346,7 +346,8 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
 ```
 
-    ![Step 9.3](\images\05_CopilotUsingAdaptiveCard\31.png)
+
+![Step 9.3](\images\05_CopilotUsingAdaptiveCard\31.png)
 
 4. To use images in the adaptive card:
     - Create a Storage Account.
