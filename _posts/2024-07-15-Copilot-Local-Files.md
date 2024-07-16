@@ -17,7 +17,7 @@ tags: [copilot]
 
 Instant access to information regarding organizational and insurance policies is of prime importance in any organization. Envision a chatbot that can fetch relevant information from policy documents directly uploaded during its build process and provide intelligent responses to users. Microsoft’s Copilot Studio, in conjunction with Generative AI, enables the creation of such a versatile bot.
 
-In this blog, we will explore how to build a Copilot Studio bot that leverages generative AI to answer user queries related to organizational and insurance policies. We will also demonstrate the dynamic topic orchestration capability, allowing the bot to automatically select the appropriate topic—whether general policies or insurance policies—based on the query context.
+In this blog, we will explore how to build a Copilot Studio bot that leverages generative AI to answer user queries related to organizational and insurance policies. 
 
 ## Demo
 
