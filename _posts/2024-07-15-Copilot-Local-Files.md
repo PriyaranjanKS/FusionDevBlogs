@@ -68,9 +68,9 @@ To enable the automatic detection of topics from user interaction:
 
 ### Step 5: Create Topics
 
-Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the user's question. To do this, we will create two topics:
-1. General Company Policy: This topic will provide the user with information about general company policies.
-2. Insurance Policy: This topic will provide contextual answers back to the user for insurance-related queries.
+Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the user's question. To do this, we will create a topic with the below 2 documents as Knowledge Source:
+1. General Company Policy: This document will provide the user with information about general company policies.
+2. Insurance Policy: This document will provide contextual answers back to the user for insurance-related queries.
 ![Step 5 Image 1](\images\02_CopilotUsingLocalFiles\6.png)
 
 To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with an initial set of prepopulated conversation nodes based on the topic description that we provide.
@@ -78,9 +78,7 @@ To add the topic, we can either go with the option to create a blank topic or us
 2. Select **Create from description with Copilot**.
 ![Step 5 Image 2](\images\02_CopilotUsingLocalFiles\7.png)
 
-#### Topic 1: General Company Policy
-
-When the user asks questions regarding the general company policy, we need a topic that will take the user query and ground the General Policy document to provide the contextual answer back to the user. To do this, provide the below topic description details in the pop-up that opened when we clicked the Add topic button previously.
+When the user asks questions regarding the policy, we need a topic that will take the user query and ground the Policy document to provide the contextual answer back to the user. To do this, provide the below topic description details in the pop-up that opened when we clicked the Add topic button previously.
 
 Click on **Create**, which will provision the topic skeleton based on the provided description.
 ![Step 5 Image 3](\images\02_CopilotUsingLocalFiles\8.png)
