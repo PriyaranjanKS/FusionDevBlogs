@@ -164,7 +164,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 9.2](\images\05_CopilotUsingAdaptiveCard\30.png)
 
-3. Click on the adaptive card and paste the below JSON in the **Edit JSON** pane.
+3. Lets add the adaptive card JSON : 
 
 ```json
 {
@@ -345,8 +345,9 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 }
 
 ```
+Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
 
-    ![Step 9.3](\images\05_CopilotUsingAdaptiveCard\31.png)
+![Step 9.3](\images\05_CopilotUsingAdaptiveCard\31.png)
 
 4. To use images in the adaptive card:
     - Create a Storage Account.
@@ -371,19 +372,74 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 10.2](\images\05_CopilotUsingAdaptiveCard\36.png)
 
-3. Configure the card by selecting it and clicking on **Formula**. Use the **Edit formula** option to dynamically fetch the user selections and show a confirmation message back to the user.
+3. Configure the card by selecting it and clicking on **Formula**. Use the **Edit formula** option to add the confirmation message back to the user.
 
     ![Step 10.3](\images\05_CopilotUsingAdaptiveCard\37.png)
+4. The formula schema used is : 
 
-4. Send a mail to the concerned team with the user selections:
+```json 
+{
+  '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+  type: "AdaptiveCard",
+  version: "1.4",
+  body: [
+    {
+      type: "TextBlock",
+      text: "Thank You !",
+      weight: "Bolder",
+      size: "Large",
+      wrap: true
+    },
+    {
+      type: "ColumnSet",
+      columns: [
+        {
+          type: "Column",
+          width: "auto",
+          items: [
+            {
+              type: "Image",
+              url: "https://adaptivecardsbot.blob.core.windows.net/imagestore/approval.png",
+              size: "Medium",
+              altText: "Thank You Image"
+            }
+          ]
+        },
+        {
+          type: "Column",
+          width: "stretch",
+          items: [
+            {
+              type: "TextBlock",
+              text: "Your response has been recorded and we will ship the reward to the mentioned address at the earliest.",
+              wrap: true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  msteams: {
+    width: "Full"
+  }
+}
+
+```
+Thus we have updated the Adaptive Card formula to show a confirmation message back to the user
+![Step 10.3](\images\05_CopilotUsingAdaptiveCard\38.png)
+
+5. As the final step , Send a mail to the concerned team with the user selections:
     - Select **Call an action** -> **Connector** -> **Send an email (V2)**.
+![Step 10.3](\images\05_CopilotUsingAdaptiveCard\39.png)
+
+6. We can configure the connector by :
     - Configure the Office 365 connector by mentioning the **To** and **Subject** fields.
     - Click on the right arrow of the **Body** to update the mail content.
     - Select the **Formula** tab.
     - Add the formula: `Concatenate("The reward selected by ", Topic.displayName, " is ", Topic.productChoice, ". The delivery address is: ", Topic.address)`.
     - Click on **Insert**.
 
-    ![Step 10.4](\images\05_CopilotUsingAdaptiveCard\39.png)
+![Step 10.4](\images\05_CopilotUsingAdaptiveCard\40.png)
 
 ### Step 11: Publishing to Teams
 
