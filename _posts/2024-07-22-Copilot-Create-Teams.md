@@ -7,20 +7,16 @@ image: '/images/FrontImage/06.png'
 tags: [copilot]
 ---
 
-Efficiently managing the creation of new Teams using a Teams hosted solution can significantly enhance productivity and collaboration. Leveraging the power of Microsoft Copilot combined with Power Automate and Graph API, you can automate this process with ease. This blog will guide you through creating a Copilot in Teams that validates whether a user is a manager and, if so, provisions a new Team based on user input.
-
 ## Table of Contents
-1. [Understanding the Workflow](#understanding-the-workflow)
-2. [Step-by-Step Guide to Building the Team Creation Copilot](#step-by-step-guide-to-building-the-team-creation-copilot)
-    - [Step 1: Creating the Copilot in Copilot Studio](#step-1-creating-the-copilot-in-copilot-studio)
-    - [Step 2: Enable Generative Selection of Topics (Dynamic Chaining)](#step-2-enable-generative-selection-of-topics-dynamic-chaining)
-    - [Step 3: Create Topics](#step-3-create-topics)
-    - [Step 4: Configure Manual Authentication](#step-4-configure-manual-authentication)
-    - [Step 5: Create Power Automate Flow](#step-5-create-power-automate-flow)
-    - [Step 6: Publish to Microsoft Teams](#step-6-publish-to-microsoft-teams)
-    - [Step 7: Test the Copilot](#step-7-test-the-copilot)
-3. [Conclusion](#conclusion)
+{: .no_toc}
 
+* TOC
+{: toc}
+
+## Introduction
+
+Efficiently managing the creation of new Teams using a Teams hosted solution can significantly enhance productivity and collaboration. Leveraging the power of Microsoft Copilot combined with Power Automate and Graph API, you can automate this process with ease. This blog will guide you through creating a Copilot in Teams that validates whether a user is a manager and, if so, provisions a new Team based on user input.
+ 
 ## Understanding the Workflow
 
 1. **User Interaction**: The user initiates the process by interacting with the Copilot in Microsoft Teams.
@@ -28,6 +24,8 @@ Efficiently managing the creation of new Teams using a Teams hosted solution can
 3. **Input Collection**: The user provides the desired Team name and description.
 4. **Automation**: If validated as a manager, Copilot triggers a Power Automate flow to create the Team using the Graph API.
 5. **Confirmation**: The user receives a confirmation message once the Team is created.
+
+![Provision Copilot](\images\06_CopilotCreateTeam\0_0.png)
 
 ## Step-by-Step Guide to Building the Team Creation Copilot
 
@@ -48,7 +46,7 @@ This will take us to the page where we can:
 
 ![Provision Copilot](\images\06_CopilotCreateTeam\1.png)
 
-### Step 2: Enable Generative Selection of Topics (Dynamic Chaining)
+### Step 2: Enable Generative Selection of Topics
 
 The copilot is now created. We can then make the needed configuration changes:
 
@@ -216,7 +214,7 @@ We will then configure the **HTTP** action with the below parameters:
 2. Method will be **POST**.
 3. In the **Body** add the below payload.
 
-```
+```json
 {
   "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
   "displayName": "@{triggerBody()?['text']}",
