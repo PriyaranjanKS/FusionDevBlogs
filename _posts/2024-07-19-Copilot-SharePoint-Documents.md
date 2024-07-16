@@ -179,7 +179,7 @@ Next, let's add the permission for accessing the files within SharePoint:
 2. Search for **Files.Read**.
 3. Check the permission **Files.Read**.
 4. Click on **Add Permissions**.
-![28_5](\images\03_CopilotUsingSharePointDocuments\27.png)
+![28_5](\images\03_CopilotUsingSharePointDocuments\27_1.png)
 
 The added permissions need to be consented for use with the application. For this:
 1. Click on **Grant admin consent for <your tenant>** and
