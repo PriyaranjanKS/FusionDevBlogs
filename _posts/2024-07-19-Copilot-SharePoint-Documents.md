@@ -182,7 +182,7 @@ Next, let's add the permission for accessing the files within SharePoint:
 ![28_5](\images\03_CopilotUsingSharePointDocuments\27_1.png)
 
 The added permissions need to be consented for use with the application. For this:
-1. Click on **Grant admin consent for <your tenant>** and
+1. Click on **Grant admin consent for** and
 2. Select **Yes**.
 ![29](\images\03_CopilotUsingSharePointDocuments\29.png)
 
