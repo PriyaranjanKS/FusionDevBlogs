@@ -37,11 +37,12 @@ Let’s delve into a practical scenario: implementing a Reward and Recognition P
 
 ### Overview of the Process:
 
+Lets take a look at the overall process that we are implementing with Copilot and Connector Actions
 - **Use the Office 365 mail connector** to get the current user's email ID.
-- **Query the Dataverse table** to check if the user has already claimed a reward.
+- **Query the Dataverse table** using connector action to check if the user has already claimed a reward.
 - If the user has not claimed a reward, **provide an Adaptive Card** for selecting a product and entering the shipping address.
-- **Send the user's selection and address via email** to the concerned team to process the order.
-
+- **Send the user's selection and address via email** using the Office 365 mail connector actionto the concerned team to process the order.
+![Step 2](\images\05_CopilotUsingAdaptiveCard\0_0.png)
 ## Step-by-Step Guide to Building the Rewards and Recognition Copilot
 
 ### Step 1: Setting Up Your Environment
