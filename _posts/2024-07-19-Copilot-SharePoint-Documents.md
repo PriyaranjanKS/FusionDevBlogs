@@ -8,22 +8,10 @@ tags: [copilot]
 ---
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Why Use SharePoint with Copilot Studio?](#why-use-sharepoint-with-copilot-studio)
-- [What to Expect in the Demo](#what-to-expect-in-the-demo)
-- [Step-by-Step to Create the Copilot](#step-by-step-to-create-the-copilot)
-  - [Step 1: Preparing Your Project Documents](#step-1-preparing-your-project-documents)
-    - [Collect and Organize Documents](#collect-and-organize-documents)
-    - [Upload Documents to SharePoint](#upload-documents-to-sharepoint)
-  - [Step 2: Create the Custom Copilot](#step-2-create-the-custom-copilot)
-  - [Step 3: Enable Generative Selection of Topics](#step-3-enable-generative-selection-of-topics)
-  - [Step 4: Create Topics](#step-4-create-topics)
-  - [Step 5: Configure Manual Authentication](#step-5-configure-manual-authentication)
-    - [Create App Registration](#create-app-registration)
-    - [Add Client Secret](#add-client-secret)
-  - [Step 6: Host the Copilot in SharePoint](#step-6-host-the-copilot-in-sharepoint)
-  - [Step 7: Test the Copilot](#step-7-test-the-copilot)
-- [Conclusion](#conclusion)
+{: .no_toc}
+
+* TOC
+{: toc}
 
 ## Introduction 
 
