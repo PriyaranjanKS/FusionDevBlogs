@@ -43,6 +43,7 @@ Lets take a look at the overall process that we are implementing with Copilot an
 - If the user has not claimed a reward, **provide an Adaptive Card** for selecting a product and entering the shipping address.
 - **Send the user's selection and address via email** using the Office 365 mail connector actionto the concerned team to process the order.
 ![Step 2](\images\05_CopilotUsingAdaptiveCard\0_0.png)
+
 ## Step-by-Step Guide to Building the Rewards and Recognition Copilot
 
 ### Step 1: Setting Up Your Environment
