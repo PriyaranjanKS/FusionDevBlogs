@@ -164,7 +164,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 9.2](\images\05_CopilotUsingAdaptiveCard\30.png)
 
-3. Click on the adaptive card and paste the below JSON in the **Edit JSON** pane.
+3. Lets add the adaptive card JSON : 
 
 ```json
 {
@@ -345,7 +345,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 }
 
 ```
-
+Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
 
 ![Step 9.3](\images\05_CopilotUsingAdaptiveCard\31.png)
 
