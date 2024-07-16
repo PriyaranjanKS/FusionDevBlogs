@@ -7,25 +7,15 @@ image: '/images/FrontImage/05.png'
 tags: [copilot]
 ---
 
-Enhancing user interaction is key to boosting engagement and productivity. Adaptive Cards provide a versatile and dynamic way to present rich content in a structured format. When integrated with Copilot and Office 365 connectors, they can significantly enrich the user experience. This blog post explores how to leverage Adaptive Cards within Copilot to create a seamless and engaging **Rewards and Recognition Program**  for your organization.
-
 ## Table of Contents
-- [Understanding Adaptive Cards](#understanding-adaptive-cards)
-- [Use Case: Reward and Recognition Program](#use-case-reward-and-recognition-program)
-- [Step-by-Step Guide to Building the Rewards and Recognition Copilot](#step-by-step-guide-to-building-the-rewards-and-recognition-copilot)
-  - [Step 1: Setting Up Your Environment](#step-1-setting-up-your-environment)
-  - [Step 2: Preparing Your Data in Dataverse](#step-2-preparing-your-data-in-dataverse)
-  - [Step 3: Creating the Copilot in Copilot Studio](#step-3-creating-the-copilot-in-copilot-studio)
-  - [Step 4: Enable Generative Selection of Topics](#step-4-enable-generative-selection-of-topics)
-  - [Step 5: Create Topics](#step-5-create-topics)
-  - [Step 6: Adding the Office 365 Mail Connector](#step-6-adding-the-office-365-mail-connector)
-  - [Step 7: Querying Dataverse](#step-7-querying-dataverse)
-  - [Step 8: Setting Variables](#step-8-setting-variables)
-  - [Step 9: Adding Conditions and Adaptive Cards](#step-9-adding-conditions-and-adaptive-cards)
-  - [Step 10: Sending Confirmation and Follow-Up Actions](#step-10-sending-confirmation-and-follow-up-actions)
-  - [Step 11: Publishing to Teams](#step-11-publishing-to-teams)
-  - [Step 12: Testing the Copilot](#step-12-testing-the-copilot)
-- [Conclusion](#conclusion)
+{: .no_toc}
+
+* TOC
+{: toc}
+
+## Introduction
+
+Enhancing user interaction is key to boosting engagement and productivity. Adaptive Cards provide a versatile and dynamic way to present rich content in a structured format. When integrated with Copilot and Office 365 connectors, they can significantly enrich the user experience. This blog post explores how to leverage Adaptive Cards within Copilot to create a seamless and engaging **Rewards and Recognition Program**  for your organization.
 
 ## Understanding Adaptive Cards
 
