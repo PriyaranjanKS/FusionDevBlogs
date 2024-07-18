@@ -53,6 +53,7 @@ This will take us to the page where we can:
 2. Click on **Create** to provision the copilot.
 ![Provision Copilot](\images\10_CopilotAIPrompt\2.png)
 
+
 ### Step 4: Enable Generative Selection of Topics
 
 The copilot is now created. We can then make the needed configuration changes:
