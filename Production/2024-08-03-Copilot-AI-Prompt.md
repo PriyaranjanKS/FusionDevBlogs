@@ -49,7 +49,7 @@ This will provide us the option to create a copilot based on an existing templat
 ![New Copilot](\images\10_CopilotAIPrompt\1_4.png)
 
 This will take us to the page where we can:
-1. **Describe the copilot functionality and provide any specific instructions**.
+1. **Describe** the copilot functionality and provide any specific instructions.
 2. **Click on Create** to provision the copilot.
 ![Provision Copilot](\images\10_CopilotAIPrompt\2.png)
 
@@ -90,7 +90,7 @@ We now need to fetch the vendor details from the Dataverse table for which we wi
 ![List Rows](\images\10_CopilotAIPrompt\36.png)
 
 This will add the Dataverse connector action to the Copilot canvas. Let’s configure the inputs for this action by:
-1. **Mentioning the Environment and Table name where Vendor Details Table is present**.
+1. **Mentioning** the Environment and Table name where Vendor Details Table is present.
 2. **Click on Advanced inputs** to filter the data that is returned from the table.
 ![Configure Inputs](\images\10_CopilotAIPrompt\37.png)
 
@@ -116,7 +116,6 @@ ForAll(
     }
 )
 ```
-![Initialize Variable](\images\10_CopilotAIPrompt\40.png)
 
 If we were to test and output this variable value in the test pane, we will get the output as:
 
@@ -131,28 +130,29 @@ If we were to test and output this variable value in the test pane, we will get 
 
 ```
 
-We will do one more formatting of this output to serialize this JSON into a readable format: **Material Name: Vendor Name: Lead Time Days: Quality Score: Unit Price Dollars**. To do this, let’s add another variable and set its formula to:
+We will do one more formatting of this output to serialize this JSON into a readable format: Material Name: Vendor Name: Lead Time Days: Quality Score: Unit Price Dollars. To do this, let’s add another variable and set its formula to:
 
 ```
 
 Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":" & UnitPrice, ", ")
 
+
 ```
 
 This way, from the previous filtered table, we will concat the Material Name and details in a readable format which can be shared as an input to the AI Prompt.
-![Create Prompt](\images\10_CopilotAIPrompt\41.png)
+
+This way, from the previous filtered table, we will concat the Material Name and details in a readable format which can be shared as an input to the AI Prompt.
 
 ### Adding the AI Prompt
-
 Now let's add the AI prompt using which we can find the best vendor for the product specified by the user. To do this:
 
-1. **Select Call an action** and 
+1. **Select Call an action** and
 2. From **Basic Actions**, select **Create a prompt**.
 ![Create Prompt](\images\10_CopilotAIPrompt\42.png)
 
 This will open up the Prompt AI Builder in a pop-up where we can:
-1. **Create the Product Variable** to which we will pass the user inputted product name for which they are finding the best vendor.
-2. **Create the Vendor Details variable** to which we will pass the Dataverse connector returned vendor details.
+1. **Create** the Product Variable to which we will pass the user inputted product name for which they are finding the best vendor.
+2. **Create** the Vendor Details variable to which we will pass the Dataverse connector returned vendor details.
 3. In the **Prompt section**, use the below prompt and add the variables dynamically using the **Insert** button which will allow us to add the Product and Vendor Details input variables into the prompt.
 4. **Click on Save custom prompt**, which will make the prompt available in the copilot designer.
 ![Prompt AI Builder](\images\10_CopilotAIPrompt\43.png)
@@ -177,7 +177,6 @@ Finally, we will show the best vendor output as a basic card back to the user fo
 ![Best Vendor Output](\images\10_CopilotAIPrompt\47.png)
 
 ### Publish the Copilot to Team
-
 We will finally publish the copilot and add it to the Teams Channel for which we will enable the teams channel by selecting the **Channels Tab** -> **Microsoft Teams** -> **Turn On Teams**.
 ![Enable Teams](\images\10_CopilotAIPrompt\28.png)
 
@@ -203,6 +202,4 @@ We can see that the copilot has picked the vendor details from Dataverse and usi
 ![Best Vendor Result](\images\10_CopilotAIPrompt\34.png)
 
 ### Conclusion
-
 In this blog, we've explored how to build a supply chain Copilot using Microsoft Power Platform and Dataverse to streamline the vendor selection process. By leveraging Dataverse for structured storage of vendor details and employing AI prompts for intelligent analysis, our Copilot provides an efficient solution for identifying the best vendor based on critical parameters like lead time, quality score, and unit price.
-
