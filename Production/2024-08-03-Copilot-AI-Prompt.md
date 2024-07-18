@@ -50,30 +50,30 @@ This will provide us the option to create a copilot based on an existing templat
 
 This will take us to the page where we can:
 1. **Describe** the copilot functionality and provide any specific instructions.
-2. **Click on Create** to provision the copilot.
+2. Click on **Create** to provision the copilot.
 ![Provision Copilot](\images\10_CopilotAIPrompt\2.png)
 
 ### Step 4: Enable Generative Selection of Topics
 
 The copilot is now created. We can then make the needed configuration changes:
-1. **Click on Edit**, edit the copilot details like name, icon, and description.
-2. **Click on Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto-selected based on user conversation resulting in a much smoother user experience.
+1. Click on **Edit**, edit the copilot details like name, icon, and description.
+2. Click on **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto-selected based on user conversation resulting in a much smoother user experience.
 ![Generative Settings](\images\10_CopilotAIPrompt\3.png)
 
 To enable the automatic detection of topics from user interaction:
-1. **Click on Generative AI**.
-2. **Select Generative (preview)**.
-3. **Click on Save** to update the settings.
-4. **Click on the Close icon** to go back to the home page of this custom copilot.
+1. Click on **Generative AI**.
+2. Select **Generative (preview)**.
+3. Click on **Save** to update the settings.
+4. Click on the **Close icon** to go back to the home page of this custom copilot.
 ![Save Settings](\images\10_CopilotAIPrompt\4_1.png)
 
 ### Step 5: Create Topics
 
 Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts.
-1. **Click on Topics** from the navigation menu.
+1. Click on **Topics** from the navigation menu.
 To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with an initial set of prepopulated conversation nodes based on the topic description that we provide.
-2. **Click on Add a Topic** and 
-3. **Select Create from description with Copilot**.
+2. Click on **Add a Topic** and 
+3. Select **Create from description with Copilot**.
 ![Add Topic](\images\10_CopilotAIPrompt\4.png)
 
 Let’s provide the below topic description details in the pop-up that opened when we clicked the Add topic button previously.
@@ -84,14 +84,14 @@ Thus we have the basic topic created with an automatic trigger as well as a ques
 ![Basic Topic](\images\10_CopilotAIPrompt\6.png)
 
 We now need to fetch the vendor details from the Dataverse table for which we will add the Dataverse connector action by:
-1. **Select Call an action**.
-2. **Select the Connector tab**.
-3. **Click on List rows from selected environment**.
+1. Select **Call an action**.
+2. Select the **Connector tab**.
+3. Click on **List rows from selected environment**.
 ![List Rows](\images\10_CopilotAIPrompt\36.png)
 
 This will add the Dataverse connector action to the Copilot canvas. Let’s configure the inputs for this action by:
 1. **Mentioning** the Environment and Table name where Vendor Details Table is present.
-2. **Click on Advanced inputs** to filter the data that is returned from the table.
+2. Click on **Advanced inputs** to filter the data that is returned from the table.
 ![Configure Inputs](\images\10_CopilotAIPrompt\37.png)
 
 Specify the Dataverse table columns which should be present in the returned output. We will specify the Material name, Vendor name, Lead time, Unit Price, and Quality Score columns.
@@ -141,9 +141,8 @@ Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime
 
 This way, from the previous filtered table, we will concat the Material Name and details in a readable format which can be shared as an input to the AI Prompt.
 
-This way, from the previous filtered table, we will concat the Material Name and details in a readable format which can be shared as an input to the AI Prompt.
 
-### Adding the AI Prompt
+### Step 6:Adding the AI Prompt
 Now let's add the AI prompt using which we can find the best vendor for the product specified by the user. To do this:
 
 1. **Select Call an action** and
@@ -176,7 +175,7 @@ Thus, we have configured the Prompt action with the required input, and it shoul
 Finally, we will show the best vendor output as a basic card back to the user for which we will select the **text** Property of the **varBestVendor** record, which will contain the generative AI output.
 ![Best Vendor Output](\images\10_CopilotAIPrompt\47.png)
 
-### Publish the Copilot to Team
+### Step 7: Publish the Copilot to Team
 We will finally publish the copilot and add it to the Teams Channel for which we will enable the teams channel by selecting the **Channels Tab** -> **Microsoft Teams** -> **Turn On Teams**.
 ![Enable Teams](\images\10_CopilotAIPrompt\28.png)
 
