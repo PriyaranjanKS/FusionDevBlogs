@@ -104,7 +104,7 @@ The output of the Dataverse Table Connector (varVendorTable) will contain lots o
 ![Initialize Variable](\images\10_CopilotAIPrompt\39.png)
 
 We will then add the below formula which will filter the output to create a subset of the table and store it in the variable. It does this by looping through the previous Dataverse connector output and fetching only the columns that we have mentioned in the expression:
-```plaintext
+```json
 ForAll(
     Topic.varVendorTable,
     {
@@ -132,7 +132,7 @@ If we were to test and output this variable value in the test pane, we will get 
 
 We will do one more formatting of this output to serialize this JSON into a readable format: Material Name: Vendor Name: Lead Time Days: Quality Score: Unit Price Dollars. To do this, let’s add another variable and set its formula to:
 
-```
+```json
 
 Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":" & UnitPrice, ", ")
 
