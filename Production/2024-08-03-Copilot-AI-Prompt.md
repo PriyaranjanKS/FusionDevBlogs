@@ -97,7 +97,7 @@ This will add the Dataverse connector action to the Copilot canvas. Let’s conf
 Specify the Dataverse table columns which should be present in the returned output. We will specify the Material name, Vendor name, Lead time, Unit Price, and Quality Score columns.
 ![Specify Columns](\images\10_CopilotAIPrompt\38.png)
 
-> **Note**: You can get the logical name of the columns used in the **Select columns** field from the Dataverse table by following the below path:
+ **Note**: You can get the logical name of the columns used in the **Select columns** field from the Dataverse table by following the below path:
 ![Logical Names](\images\10_CopilotAIPrompt\10.png)
 
 The output of the Dataverse Table Connector (varVendorTable) will contain lots of system columns as well. We will need to format the table to filter and ensure only the needed columns are present. To do this, let’s initialize a variable to hold the output of Dataverse connector:
