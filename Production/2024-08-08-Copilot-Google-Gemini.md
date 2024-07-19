@@ -17,6 +17,10 @@ tags: [copilot]
 ## Introduction
 In this blog, we will explore how to create a custom connector for the Google Gemini API in Microsoft Power Platform and use it within Copilot to build a dynamic Meal and Fitness Advisor. This process leverages advanced AI capabilities to generate personalized recommendations based on user inputs such as meal preferences and fitness goals.
 
+The user can ask personalized Meal and Fitness plan and the Copilot will use Google Gemini API connector to provide back the contextual plan back to the user
+
+![Get the Gemini API Key](\images\12_CopilotGemini\0_0.png)
+
 ## Process Overview
 We will follow these steps to achieve our goal:
 1. Obtain the API key from Google AI Studio.
@@ -32,6 +36,10 @@ We will follow these steps to achieve our goal:
 ## Prerequisites
 1. Access to the Google Gemini API and API keys.
 2. Access to Microsoft Power Automate and Copilot Studio.
+
+## Demo 
+
+Lets see the demo of the overall process before we get into the implementation : 
 
 ## Step 1: Get the Gemini API Key
 Head over to the Google AI Studio and get your API key by clicking on **Create API Key**, which can be used to authenticate the Google Gemini API.
@@ -55,7 +63,7 @@ Head over to the Google AI Studio and get your API key by clicking on **Create A
 
     ![Swagger Editor](\images\12_CopilotGemini\5.png)
 	
-```json
+```plaintext
 swagger: '2.0'
 info:
   title: Google Gemini
