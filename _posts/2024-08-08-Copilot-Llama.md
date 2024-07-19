@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Leveraging the LLaMA Model with Azure AI Studio and Microsoft Dataverse
+title:  Building a Sales Analyzer Copilot using Dataverse and Llama Model in Azure AI Studio
 description: We will see the steps needed to create a Llama powered sales analyzer than can fetch data from dataverse and provide business insights.
 date: 2024-07-22 15:01:35 +0300
 image: '/images/FrontImage/13.png'
@@ -208,7 +208,7 @@ ForAll(
 ```
 We will do one more formatting of this output to serialize this json into a readable format <Material Name>: <Vendor Name>:<Lead Time Days>:<Quality Score>:<Unit Price Dollars>
 
-```scss
+```
 January:AeroFusion Blender:7500, 
 January:SolarX PowerPack:6200, 
 January:QuantumLight Glasses:5600, 
@@ -220,7 +220,7 @@ February:QuantumLight Glasses:6300,
 ```
 To do this, lets add another variable and set its formula to
 
-```scss
+```
 Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":"& UnitPrice, ", ")
 
 ```
