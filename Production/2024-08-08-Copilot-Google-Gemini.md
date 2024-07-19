@@ -416,11 +416,12 @@ Admins can now publish this to the organization from the Teams admin center.
 
 ![Publish to Teams](\images\12_CopilotGemini\28.png)
 
-The Meal and Fitness Coach has now become available in the Teams app store which we can start using.
+The Meal and Fitness Coach has now become available in the Teams app store which we can start using.We have provided the basic information and preferences around the meal and fitness plan that we are looking at.
 
-We have provided the basic information and preferences around the meal and fitness plan that we are looking at.
+![Publish to Teams](\images\12_CopilotGemini\35.png)
 
 Google Gemini API is invoked through the custom connector, and we can see the detailed meal and fitness plan provided by the copilot.
+![Publish to Teams](\images\12_CopilotGemini\36.png)
 
 ## Conclusion
 In this blog, we explored how to create a custom connector for Google Gemini in Microsoft Power Platform and use it within Copilot to build a dynamic Meal and Fitness Advisor. By integrating advanced AI capabilities through this custom connector, we can generate personalized recommendations based on user inputs, such as meal preferences and fitness goals. This approach not only showcases the versatility of Power Platform and Copilot but also opens doors to innovative applications that deliver tailored, actionable insights.
