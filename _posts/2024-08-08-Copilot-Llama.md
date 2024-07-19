@@ -201,14 +201,14 @@ ForAll(
 
 11. If we were to test and output this variable value in the test pane, we will get the output as : 
 
-```json
+```
 [{“Month”:“January”,“Product”:“AeroFusion Blender”,“SalesAmount”:7500},
 {“Month”:“January”,“Product”:“SolarX PowerPack”,“SalesAmount”:6200},
 {“Month”:“January”,“Product”:“QuantumLight Glasses”,“SalesAmount”:5600}]
 ```
 We will do one more formatting of this output to serialize this json into a readable format <Material Name>: <Vendor Name>:<Lead Time Days>:<Quality Score>:<Unit Price Dollars>
 
-```
+```scss
 January:AeroFusion Blender:7500, 
 January:SolarX PowerPack:6200, 
 January:QuantumLight Glasses:5600, 
@@ -220,7 +220,7 @@ February:QuantumLight Glasses:6300,
 ```
 To do this, lets add another variable and set its formula to
 
-```
+```scss
 Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":"& UnitPrice, ", ")
 
 ```
