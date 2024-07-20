@@ -21,11 +21,11 @@ Having instant access to project information is crucial for effective project ma
 ## Prerequisites
 
 <div class="important-note">
- <p>Before you begin, ensure you have the following:</p>
- <p>- Access to Microsoft Copilot Studio</p>
- <p>- A SharePoint site to host project documents</p>
- <p>- Azure account for creating app registration</p>
- <p>- Project documents ready for upload</p>
+  <p>Before you begin, ensure you have the following:</p>
+  <p>- Access to <span class="highlight">Microsoft Copilot Studio</span></p>
+  <p>- A <span class="highlight">SharePoint site</span> to host project documents</p>
+  <p>- <span class="highlight">Azure account</span> for creating app registration</p>
+  <p>- <span class="highlight">Project documents</span> ready for upload</p>
 </div>
 
 ## Technologies Used
@@ -266,6 +266,17 @@ Integrating SharePoint with Microsoft Copilot Studio to create a project managem
   background-color: #f9f9f9;
   padding: 10px;
   margin: 20px 0;
+  position: relative;
+  padding-left: 40px;
+}
+
+.important-note::before {
+  content: "⚠️ Important";
+  font-weight: bold;
+  color: #8a2be2;
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
 
 .important-note p {
@@ -280,5 +291,10 @@ Integrating SharePoint with Microsoft Copilot Studio to create a project managem
 
 .important-note a:hover {
   text-decoration: underline;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #8a2be2;
 }
 </style>
