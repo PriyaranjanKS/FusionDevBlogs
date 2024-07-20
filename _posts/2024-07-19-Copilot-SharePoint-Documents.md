@@ -20,17 +20,18 @@ Having instant access to project information is crucial for effective project ma
 
 ## Prerequisites
 
-Before you begin, ensure you have the following:
-- Access to Microsoft Copilot Studio
-- A SharePoint site to host project documents
-- Azure account for creating app registration
-- Project documents ready for upload
+> [!IMPORTANT]
+>Before you begin, ensure you have the following:
+> - Access to Microsoft Copilot Studio
+> - A SharePoint site to host project documents
+> - Azure account for creating app registration
+> - Project documents ready for upload
 
 ## Technologies Used
 
-- **SharePoint**: Hosting project documents
-- **Microsoft Copilot Studio**: Creating the copilot
-- **Azure App Registration**: Manual authentication setup
+>- **SharePoint**: Hosting project documents
+>- **Microsoft Copilot Studio**: Creating the copilot
+>- **Azure App Registration**: Manual authentication setup
 
 ## Why Use SharePoint with Copilot ?
 SharePoint is a powerful platform for storing and managing documents, making it an ideal choice for hosting project-related information. By integrating SharePoint with Microsoft Copilot Studio, we can create a bot that can access and interpret these documents to provide precise answers to user queries. This integration ensures that users have quick, reliable access to up-to-date project information directly through the copilot. Moreover, any updates to the document can be made directly in SharePoint and the updated contents will be used for grounding and providing contextual answers back to the Copilot resulting in lesser maintenance going forward.
