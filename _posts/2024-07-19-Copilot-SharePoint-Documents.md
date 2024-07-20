@@ -20,18 +20,19 @@ Having instant access to project information is crucial for effective project ma
 
 ## Prerequisites
 
-> [!IMPORTANT]
-> Before you begin, ensure you have the following:
-> - Access to Microsoft Copilot Studio
-> - A SharePoint site to host project documents
-> - Azure account for creating app registration
-> - Project documents ready for upload
+<div class="important-note">
+ Before you begin, ensure you have the following:
+ - Access to Microsoft Copilot Studio
+ - A SharePoint site to host project documents
+ - Azure account for creating app registration
+ - Project documents ready for upload
+</div>
 
 ## Technologies Used
 
-> - **SharePoint**: Hosting project documents
-> - **Microsoft Copilot Studio**: Creating the copilot
-> - **Azure App Registration**: Manual authentication setup
+ - **SharePoint**: Hosting project documents
+ - **Microsoft Copilot Studio**: Creating the copilot
+ - **Azure App Registration**: Manual authentication setup
 
 ## Why Use SharePoint with Copilot ?
 SharePoint is a powerful platform for storing and managing documents, making it an ideal choice for hosting project-related information. By integrating SharePoint with Microsoft Copilot Studio, we can create a bot that can access and interpret these documents to provide precise answers to user queries. This integration ensures that users have quick, reliable access to up-to-date project information directly through the copilot. Moreover, any updates to the document can be made directly in SharePoint and the updated contents will be used for grounding and providing contextual answers back to the Copilot resulting in lesser maintenance going forward.
@@ -258,3 +259,26 @@ It will pick the information from the document hosted in SharePoint and provide 
 
 ## Conclusion
 Integrating SharePoint with Microsoft Copilot Studio to create a project management copilot can significantly enhance how project information is accessed and utilized. This setup allows for secure, real-time access to project documents, ensuring that stakeholders have the most up-to-date information at their fingertips. By following the steps outlined in this blog, you can create a powerful tool that streamlines project management and decision-making processes. Happy building!
+
+<style>
+.important-note {
+  border-left: 4px solid #8a2be2;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.important-note p {
+  margin: 0;
+  padding: 0;
+}
+
+.important-note a {
+  color: #8a2be2;
+  text-decoration: none;
+}
+
+.important-note a:hover {
+  text-decoration: underline;
+}
+</style>
