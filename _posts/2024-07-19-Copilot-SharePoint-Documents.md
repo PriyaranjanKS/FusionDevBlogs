@@ -43,7 +43,7 @@ Watch the demo video below to see how the Copilot assistant helps with project r
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/67IPt4hLBXU?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Step-by-Step to Create the Copilot
+## Step-by-Step Process to Create the Copilot
 
 ### Step 1: Preparing Your Project Documents
 
