@@ -260,11 +260,12 @@ It will pick the information from the document hosted in SharePoint and provide 
 ## Conclusion
 Integrating SharePoint with Microsoft Copilot Studio to create a project management copilot can significantly enhance how project information is accessed and utilized. This setup allows for secure, real-time access to project documents, ensuring that stakeholders have the most up-to-date information at their fingertips. By following the steps outlined in this blog, you can create a powerful tool that streamlines project management and decision-making processes. Happy building!
 
+
 <style>
 .important-note {
   border-left: 4px solid #8a2be2;
   background-color: #f9f9f9;
-  padding: 20px 10px 10px 60px;  
+  padding: 20px 10px 10px 60px; 
   margin: 20px 0;
   position: relative;
 }
@@ -275,10 +276,7 @@ Integrating SharePoint with Microsoft Copilot Studio to create a project managem
   color: #8a2be2;
   position: absolute;
   left: 10px;
-  top: 50%;
-  transform: translateY(-50%); 
-  background-color: #f9f9f9;
-  padding: 0 5px;
+  top: 10px; /* Adjusted top position */
 }
 
 .important-note p {
@@ -297,6 +295,6 @@ Integrating SharePoint with Microsoft Copilot Studio to create a project managem
 
 .emphasis {
   font-weight: bold;
-  color: #8a2be2;
+  color: #066;
 }
 </style>
