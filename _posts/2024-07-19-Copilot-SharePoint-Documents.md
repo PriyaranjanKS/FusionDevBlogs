@@ -241,18 +241,19 @@ Before we proceed with the testing, ensure that the documents have been processe
 ![36](\images\03_CopilotUsingSharePointDocuments\36.png)
 
 Now let’s test the bot by initiating a conversation with the copilot. As the first step, click on **Login** to perform the authentication.
-![49](\images\03_CopilotUsingSharePointDocuments\49.png)
+![49](\images\03_CopilotUsingSharePointDocuments\46_1.png)
 
 Authenticate with the user account.
-![50](\images\03_CopilotUsingSharePointDocuments\50.png)
+![50](\images\03_CopilotUsingSharePointDocuments\49.png)
 
 This will generate a bot framework token. Copy the validation code which we will paste into the copilot to complete the authentication handshake.
-![51](\images\03_CopilotUsingSharePointDocuments\51.png)
+![51](\images\03_CopilotUsingSharePointDocuments\50.png)
 
 After pasting the validation code, we can continue the conversation with the copilot and ask project-related questions.
-![52](\images\03_CopilotUsingSharePointDocuments\52.png)
+![52](\images\03_CopilotUsingSharePointDocuments\51.png)
 
 It will pick the information from the document hosted in SharePoint and provide us with contextual answers.
+![52](\images\03_CopilotUsingSharePointDocuments\52.png)
 
 ## Conclusion
 Integrating SharePoint with Microsoft Copilot Studio to create a project management copilot can significantly enhance how project information is accessed and utilized. This setup allows for secure, real-time access to project documents, ensuring that stakeholders have the most up-to-date information at their fingertips. By following the steps outlined in this blog, you can create a powerful tool that streamlines project management and decision-making processes. Happy building!
