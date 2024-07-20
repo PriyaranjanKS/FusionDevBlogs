@@ -275,8 +275,8 @@ Integrating SharePoint with Microsoft Copilot Studio to create a project managem
   font-weight: bold;
   color: #8a2be2;
   position: absolute;
-  left: 10px;
-  top: 10px; /* Adjusted top position */
+  left: 6px;
+  top: -4px; /* Adjusted top position */
 }
 
 .important-note p {
