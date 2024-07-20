@@ -21,11 +21,11 @@ Having instant access to project information is crucial for effective project ma
 ## Prerequisites
 
 <div class="important-note">
- Before you begin, ensure you have the following:
- - Access to Microsoft Copilot Studio
- - A SharePoint site to host project documents
- - Azure account for creating app registration
- - Project documents ready for upload
+ <p>Before you begin, ensure you have the following:</p>
+ <p>- Access to Microsoft Copilot Studio</p>
+ <p>- A SharePoint site to host project documents</p>
+ <p>- Azure account for creating app registration</p>
+ <p>- Project documents ready for upload</p>
 </div>
 
 ## Technologies Used
