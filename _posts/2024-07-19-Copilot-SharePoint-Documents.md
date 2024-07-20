@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Creating a Project Document Querying Copilot with SharePoint and Manual Authentication
-description: We will see the steps needed to create a Project Assistant Copilot with SharePoint.
+title: Building a Project Assistant Copilot using Generative AI & SharePoint as Knowledge Source
+description: We will see the steps needed to create a Project Assistant Copilot with SharePoint leveraging manual authentication.
 date: 2024-07-19 15:01:35 +0300
 image: '/images/FrontImage/03.png'
 tags: [copilot]
