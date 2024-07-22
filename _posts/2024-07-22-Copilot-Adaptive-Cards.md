@@ -27,7 +27,7 @@ Enhancing user experience is key to boosting engagement and productivity. Adapti
 
 Let’s delve into a practical scenario: implementing a Reward and Recognition Program where employees can select and order a reward based on their eligibility. We’ll explore how to integrate Adaptive Cards with Copilot and utilize Office 365 and Dataverse actions to build an end-to-end bot without the use of Power Automate.
 
-**Overview of the Process**
+<h2 style="color: #066 !important;">Overview of the Process</h2>
 
 Lets take a look at the overall process that we are implementing with Copilot and Connector Actions
 - **Use the Office 365 mail connector** to get the current user's email ID.
