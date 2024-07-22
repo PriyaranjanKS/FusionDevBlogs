@@ -7,13 +7,14 @@ image: '/images/FrontImage/05.png'
 tags: [copilot]
 ---
 
-## Table of Contents
-{: .no_toc}
-
 <div class="toc-container">
-* TOC
-{: toc}
+  <h2>Table of Contents</h2>
+  <div class="toc-content">
+    * TOC
+    {: toc}
+  </div>
 </div>
+
 
 ## Introduction
 
@@ -495,10 +496,14 @@ Integrating Adaptive Cards with Copilot and Office 365 connectors offers a power
 
 <style>
 .toc-container {
+  border: 1px solid #ddd; /* Adds a border around the TOC container */
+  padding: 10px; /* Adds some padding inside the TOC container */
+  margin-bottom: 20px; /* Adds space below the TOC container */
   max-height: 300px; /* Adjust the height as needed */
-  overflow-y: auto;
-  border: 1px solid #ddd; /* Optional: adds a border around the TOC */
-  padding: 10px; /* Optional: adds some padding inside the TOC */
-  margin-bottom: 20px; /* Optional: adds some space below the TOC */
+  overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
+}
+
+.toc-content {
+  /* Additional styling for the TOC content if needed */
 }
 </style>
