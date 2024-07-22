@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Enhancing User Interaction with Adaptive Cards in a Rewards & Recognition Copilot
-description: We will see the steps needed to create a Rewards and Recognition Copilot with Dataverse.
-date: 2024-07-18 15:01:35 +0300
+title: Enhancing User Experience with Adaptive Cards in a Rewards & Recognition Copilot
+description: We will see the steps needed to create a Rewards and Recognition Copilot with Dataverse and improve the user experience using Adaptive cards.
+date: 2024-07-22 15:01:35 +0300
 image: '/images/FrontImage/05.png'
 tags: [copilot]
 ---
@@ -15,11 +15,14 @@ tags: [copilot]
 
 ## Introduction
 
-Enhancing user interaction is key to boosting engagement and productivity. Adaptive Cards provide a versatile and dynamic way to present rich content in a structured format. When integrated with Copilot and Office 365 connectors, they can significantly enrich the user experience. This blog post explores how to leverage Adaptive Cards within Copilot to create a seamless and engaging **Rewards and Recognition Program**  for your organization.
+Enhancing user experience is key to boosting engagement and productivity. Adaptive Cards provide a versatile and dynamic way to present rich content in a structured format. When integrated with Copilot and Office 365 connectors, they can significantly enrich the user experience. This blog post explores how to leverage Adaptive Cards within Copilot to create a seamless and engaging **Rewards and Recognition Program**  for your organization.
 
 ## Understanding Adaptive Cards
 
-Adaptive Cards are a platform-agnostic way to present and interact with information in a consistent and visually appealing manner. They are JSON-based and can be rendered natively in a host application like Microsoft Teams, Outlook, or any other application that supports Adaptive Cards. We can leverage adaptive cards in Copilots as well to enable richer conversations with a better user experience. 
+Adaptive Cards are a platform-agnostic way to present and interact with information in a consistent and visually appealing manner. They are JSON-based and can be rendered natively in a host application like Microsoft Teams, Outlook, or any other application that supports Adaptive Cards. We can leverage adaptive cards in Copilots as well to enable richer conversations with a better user experience. The detailed schema explorer that documents the usage of various adaptive card elements is present [here](https://adaptivecards.io/explorer/). We can also give a try at building the adaptive cards using the online designer available [here](https://adaptivecards.io/designer/).
+
+![Step 2](\images\05_CopilotUsingAdaptiveCard\1_3.png)
+
 
 ## Use Case: Reward and Recognition Program
 
