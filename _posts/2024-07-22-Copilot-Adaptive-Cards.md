@@ -10,8 +10,10 @@ tags: [copilot]
 ## Table of Contents
 {: .no_toc}
 
+<div class="toc-container">
 * TOC
 {: toc}
+</div>
 
 ## Introduction
 
@@ -35,7 +37,14 @@ Lets take a look at the overall process that we are implementing with Copilot an
 - **Query the Dataverse table** using connector action to check if the user has already claimed a reward.
 - If the user has not claimed a reward, **provide an Adaptive Card** for selecting a product and entering the shipping address.
 - **Send the user's selection and address via email** using the Office 365 mail connector actionto the concerned team to process the order.
+
 ![Step 2](\images\05_CopilotUsingAdaptiveCard\0_0.png)
+
+## Demo
+
+Watch the demo video below to see how the Rewards and Recognition Copilot leveraging adaptive cards works. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=9z1Vxd14tjk?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Step-by-Step Guide to Building the Rewards and Recognition Copilot
 
@@ -90,9 +99,10 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 5.2](\images\05_CopilotUsingAdaptiveCard\6.png)
 
-3. Provide the topic description details and click on **Create**. This will provision the topic skeleton based on the provided description.
-
+3. Provide the topic description details and click on **Create**. 
     ![Step 5.3](\images\05_CopilotUsingAdaptiveCard\7.png)
+	
+4. This will provision the topic skeleton based on the provided description.
 
     ![Step 5.4](\images\05_CopilotUsingAdaptiveCard\8.png)
 
@@ -111,6 +121,8 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
 ### Step 7: Querying Dataverse
 
+Using the current user's email, lets try to check if the user has already claimed the reward by querying the dataverse table. 
+
 1. Click on the **+** Sign to add a new conversation node.
 2. Select **Call an action**.
 3. Click on the **Connector** tab and search for Dataverse.
@@ -124,9 +136,9 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
 6. Configure the **Advanced inputs** section to filter the rows and get only the necessary data:
     - Click on **Advanced inputs**.
-    - Mention the internal name of the Dataverse table’s field.
-    - Click on the right arrow to expand the filter columns field.
-    - Specify the OData filter query to fetch the records that match the condition (email ID = current user’s email and Reward claimed field = "No").
+    - Mention the **internal name** of the Dataverse table’s field.
+    - Click on the **right arrow** to expand the filter columns field.
+    - Specify the **OData filter query** to fetch the records that match the condition (email ID = current user’s email and Reward claimed field = "No").
     - Click on **Insert** to add the filter query to the action.
 
     ![Step 7.3](\images\05_CopilotUsingAdaptiveCard\21.png)
@@ -141,9 +153,11 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 8.2](\images\05_CopilotUsingAdaptiveCard\23.png)
 
-3. In the **Set variable value** node, select **Create a new variable** and use the `CountRows(Topic.varOutput)` expression in the **Formula** tab to get the table row count value into the variable `varRecordCount`.
+3. In the **Set variable value** node, select **Create a new variable** and name it as `varRecordCount` .
 
     ![Step 8.3](\images\05_CopilotUsingAdaptiveCard\24.png)
+	
+4.  Use the `CountRows(Topic.varOutput)` expression in the **Formula** tab to get the table row count value into the variable `varRecordCount`.
 
     ![Step 8.4](\images\05_CopilotUsingAdaptiveCard\28.png)
 
@@ -343,11 +357,12 @@ Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
 ![Step 9.3](\images\05_CopilotUsingAdaptiveCard\31.png)
 
 4. To use images in the adaptive card:
-    - Create a Storage Account.
-    - Within the Containers, create a new container.
-    - Upload the images and refer to the image URL in the adaptive card.
+    - Create a **Storage Account**.
+    - Within the Containers, create a **new container**.    
 
     ![Step 9.4](\images\05_CopilotUsingAdaptiveCard\32.png)
+	
+	- Upload the images and refer to the image URL in the adaptive card.
 
     ![Step 9.5](\images\05_CopilotUsingAdaptiveCard\33.png)
 
@@ -370,7 +385,7 @@ Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
     ![Step 10.3](\images\05_CopilotUsingAdaptiveCard\37.png)
 4. The formula schema used is : 
 
-```json 
+``` 
 {
   '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
   type: "AdaptiveCard",
@@ -419,17 +434,22 @@ Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
 
 ```
 Thus we have updated the Adaptive Card formula to show a confirmation message back to the user
+
 ![Step 10.3](\images\05_CopilotUsingAdaptiveCard\38.png)
 
 5. As the final step , Send a mail to the concerned team with the user selections:
     - Select **Call an action** -> **Connector** -> **Send an email (V2)**.
+	
 ![Step 10.3](\images\05_CopilotUsingAdaptiveCard\39.png)
 
 6. We can configure the connector by :
     - Configure the Office 365 connector by mentioning the **To** and **Subject** fields.
     - Click on the right arrow of the **Body** to update the mail content.
     - Select the **Formula** tab.
-    - Add the formula: `Concatenate("The reward selected by ", Topic.displayName, " is ", Topic.productChoice, ". The delivery address is: ", Topic.address)`.
+    - Add the below formula: 
+	  ```
+	  Concatenate("The reward selected by ", Topic.displayName, " is ", Topic.productChoice, ". The delivery address is: ", Topic.address)
+	  ```
     - Click on **Insert**.
 
 ![Step 10.4](\images\05_CopilotUsingAdaptiveCard\40.png)
@@ -472,3 +492,13 @@ Thus we have updated the Adaptive Card formula to show a confirmation message ba
 ## Conclusion
 
 Integrating Adaptive Cards with Copilot and Office 365 connectors offers a powerful way to enhance user interactions and streamline processes. By following the steps outlined in this blog, you can create a seamless and engaging Reward and Recognition Program that not only improves user experience but also boosts productivity within your organization.
+
+<style>
+.toc-container {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;
+  border: 1px solid #ddd; /* Optional: adds a border around the TOC */
+  padding: 10px; /* Optional: adds some padding inside the TOC */
+  margin-bottom: 20px; /* Optional: adds some space below the TOC */
+}
+</style>
