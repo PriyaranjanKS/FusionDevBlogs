@@ -366,9 +366,29 @@ This completes the configuration of the Omnichannel within the Customer Service 
 ### Step 11: Testing in Power Pages
 
 1. Embed the chat widget script obtained from the Omnichannel setup into a Power Pages site.
-2. Interact with the Copilot by submitting feedback and observe the escalation or saving process based on sentiment analysis.
-3. Verify that negative feedback is escalated to a human agent and positive feedback is saved in Dataverse.
-
+    ```
+	
+	```
+   ![44](\images\14_CopilotHandover\48_1.png)
+    
+   The complete HTML Code used in the Power Pages is shared below : 
+   
+   The complete CSS used in the Power Pages is shared below : 
+   
+   
+2. Lets preview the Power Pages Site and interact with the Copilot by submitting a negative feedback 
+   ![44](\images\14_CopilotHandover\49.png)
+   
+3. As we can see the negative feedback has been identified the Azure AI Language Service and has escalated and handed it over to the human agent 
+ ![44](\images\14_CopilotHandover\50.png)
+4. The human agent will receive the notification in the customer service workspace where he can accept the conversation that has come to his queue. 
+ ![44](\images\14_CopilotHandover\51.png)
+5. Human agent can now start conversing with the customer asking for the details of the incident
+ ![44](\images\14_CopilotHandover\52.png)
+6. The customer can now provide detailed feedback report which will be attended to by the customer executive 
+ ![44](\images\14_CopilotHandover\53.png)
+7. The customer service center receives all the conversations from the customer in real time and this helps in establishing a proper escalation process in the feedback system
+  ![44](\images\14_CopilotHandover\54.png)
 ## Conclusion
 
 By following this guide, you've successfully created a dynamic customer service Copilot that leverages AI to analyze user feedback and handle it efficiently. This Copilot not only improves customer satisfaction by quickly addressing negative feedback but also streamlines the process of storing positive feedback.
