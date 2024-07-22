@@ -15,7 +15,7 @@ tags: [copilot]
 
 ## Introduction
 
-Enhancing user experience is key to boosting engagement and productivity. Adaptive Cards provide a versatile and dynamic way to present rich content in a structured format. When integrated with Copilot and Office 365 connectors, they can significantly enrich the user experience. This blog post explores how to leverage Adaptive Cards within Copilot to create a seamless and engaging **Rewards and Recognition Program**  for your organization.
+Enhancing user experience is key to boosting engagement and productivity. Adaptive Cards provide a versatile and dynamic way to present rich content in a structured format. When integrated with Copilot and Office 365 connectors, they can significantly enrich the user experience. This blog post explores how to leverage Adaptive Cards within Copilot to create a seamless and engaging **Rewards and Recognition Program** for your organization.
 
 ## Understanding Adaptive Cards
 
@@ -29,11 +29,11 @@ Let’s delve into a practical scenario: implementing a Reward and Recognition P
 
 ### Overview of the Process:
 
-Lets take a look at the overall process that we are implementing with Copilot and Connector Actions
+Let's take a look at the overall process that we are implementing with Copilot and Connector Actions:
 - **Use the Office 365 mail connector** to get the current user's email ID.
 - **Query the Dataverse table** using connector action to check if the user has already claimed a reward.
 - If the user has not claimed a reward, **provide an Adaptive Card** for selecting a product and entering the shipping address.
-- **Send the user's selection and address via email** using the Office 365 mail connector actionto the concerned team to process the order.
+- **Send the user's selection and address via email** using the Office 365 mail connector action to the concerned team to process the order.
 
 ![Step 2](\images\05_CopilotUsingAdaptiveCard\0_0.png)
 
@@ -45,19 +45,19 @@ Watch the demo video below to see how the Rewards and Recognition Copilot levera
 
 ## Step-by-Step Guide to Building the Rewards and Recognition Copilot
 
-### Setting Up Your Environment
+### Step 1: Setting Up Your Environment
 
 Before you start creating the copilot, ensure you have the following prerequisites:
 - Microsoft Copilot Studio access.
 - Dataverse environment with your enterprise data.
 
-### Preparing Your Data in Dataverse
+### Step 2: Preparing Your Data in Dataverse
 
 Ensure your Dataverse instance contains all necessary information regarding who has already claimed the reward. We have created the table “Rewards” with the below columns. The table contains a record for each employee and the “Reward Claimed?” field will be used to keep track of whether he/she has claimed the reward.
 
 ![Step 2](\images\05_CopilotUsingAdaptiveCard\1.png)
 
-### Creating the Copilot in Copilot Studio
+### Step 3: Creating the Copilot in Copilot Studio
 
 1. Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and click on **Create**.
 
@@ -71,7 +71,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 3.3](\images\05_CopilotUsingAdaptiveCard\2.png)
 
-### Enable Generative Selection of Topics
+### Step 4: Enable Generative Selection of Topics
 
 1. Click on **Edit**, then edit the copilot details like name, icon, and description.
 2. Click on **Settings** to enable the Generative selection of topics so that topics will be auto-selected based on user conversation.
@@ -86,7 +86,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 4.2](\images\05_CopilotUsingAdaptiveCard\4.png)
 
-### Create Topics
+### Step 5: Create Topics
 
 1. Click on **Topics** from the navigation menu.
 
@@ -103,7 +103,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 5.4](\images\05_CopilotUsingAdaptiveCard\8.png)
 
-### Adding the Office 365 Mail Connector
+### Step 6: Adding the Office 365 Mail Connector
 
 1. Click on the **+** sign to add a new node.
 2. Select **Call an action**.
@@ -116,11 +116,11 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 6.2](\images\05_CopilotUsingAdaptiveCard\18.png)
 
-### Querying Dataverse
+### Step 7: Querying Dataverse
 
-Using the current user's email, lets try to check if the user has already claimed the reward by querying the dataverse table. 
+Using the current user's email, let's try to check if the user has already claimed the reward by querying the Dataverse table. 
 
-1. Click on the **+** Sign to add a new conversation node.
+1. Click on the **+** sign to add a new conversation node.
 2. Select **Call an action**.
 3. Click on the **Connector** tab and search for Dataverse.
 4. Select the action **List rows from selected environment**.
@@ -150,11 +150,11 @@ Using the current user's email, lets try to check if the user has already claime
 
     ![Step 8.2](\images\05_CopilotUsingAdaptiveCard\23.png)
 
-3. In the **Set variable value** node, select **Create a new variable** and name it as `varRecordCount` .
+3. In the **Set variable value** node, select **Create a new variable** and name it as `varRecordCount`.
 
     ![Step 8.3](\images\05_CopilotUsingAdaptiveCard\24.png)
 	
-4.  Use the `CountRows(Topic.varOutput)` expression in the **Formula** tab to get the table row count value into the variable `varRecordCount`.
+4. Use the `CountRows(Topic.varOutput)` expression in the **Formula** tab to get the table row count value into the variable `varRecordCount`.
 
     ![Step 8.4](\images\05_CopilotUsingAdaptiveCard\28.png)
 
@@ -168,9 +168,9 @@ Using the current user's email, lets try to check if the user has already claime
 
     ![Step 9.2](\images\05_CopilotUsingAdaptiveCard\30.png)
 
-3. Lets add the adaptive card JSON : 
+3. Let's add the adaptive card JSON:
 
-priyan1 
+priyan1
 
 Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
 
@@ -203,27 +203,28 @@ Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
 3. Configure the card by selecting it and clicking on **Formula**. Use the **Edit formula** option to add the confirmation message back to the user.
 
     ![Step 10.3](\images\05_CopilotUsingAdaptiveCard\37.png)
-4. The formula schema used is : 
+
+4. The formula schema used is:
 
 priyan 2
-Thus we have updated the Adaptive Card formula to show a confirmation message back to the user
+Thus we have updated the Adaptive Card formula to show a confirmation message back to the user.
 
 ![Step 10.3](\images\05_CopilotUsingAdaptiveCard\38.png)
 
-5. As the final step , Send a mail to the concerned team with the user selections:
+5. As the final step, send a mail to the concerned team with the user selections:
     - Select **Call an action** -> **Connector** -> **Send an email (V2)**.
-	
-![Step 10.3](\images\05_CopilotUsingAdaptiveCard\39.png)
 
-6. We can configure the connector by :
+    ![Step 10.3](\images\05_CopilotUsingAdaptiveCard\39.png)
+
+6. We can configure the connector by:
     - Configure the Office 365 connector by mentioning the **To** and **Subject** fields.
     - Click on the right arrow of the **Body** to update the mail content.
     - Select the **Formula** tab.
     - Add the below formula: 
-	 priyan3
+    priyan3
     - Click on **Insert**.
 
-![Step 10.4](\images\05_CopilotUsingAdaptiveCard\40.png)
+    ![Step 10.4](\images\05_CopilotUsingAdaptiveCard\40.png)
 
 ### Publishing to Teams
 
