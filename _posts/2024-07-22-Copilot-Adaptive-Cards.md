@@ -41,7 +41,7 @@ Lets take a look at the overall process that we are implementing with Copilot an
 
 Watch the demo video below to see how the Rewards and Recognition Copilot leveraging adaptive cards works. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/67IPt4hLBXU?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9z1Vxd14tjk?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Step-by-Step Guide to Building the Rewards and Recognition Copilot
 
