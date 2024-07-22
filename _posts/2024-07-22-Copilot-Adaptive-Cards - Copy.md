@@ -23,6 +23,7 @@ Adaptive Cards are a platform-agnostic way to present and interact with informat
 
 ![Step 2](\images\05_CopilotUsingAdaptiveCard\1_3.png)
 
+
 ## Use Case: Reward and Recognition Program
 
 Let’s delve into a practical scenario: implementing a Reward and Recognition Program where employees can select and order a reward based on their eligibility. We’ll explore how to integrate Adaptive Cards with Copilot and utilize Office 365 and Dataverse actions to build an end-to-end bot without the use of Power Automate.
@@ -45,19 +46,19 @@ Watch the demo video below to see how the Rewards and Recognition Copilot levera
 
 ## Step-by-Step Guide to Building the Rewards and Recognition Copilot
 
-### Setting Up Your Environment
+### Step 1: Setting Up Your Environment
 
 Before you start creating the copilot, ensure you have the following prerequisites:
 - Microsoft Copilot Studio access.
 - Dataverse environment with your enterprise data.
 
-### Preparing Your Data in Dataverse
+### Step 2: Preparing Your Data in Dataverse
 
 Ensure your Dataverse instance contains all necessary information regarding who has already claimed the reward. We have created the table “Rewards” with the below columns. The table contains a record for each employee and the “Reward Claimed?” field will be used to keep track of whether he/she has claimed the reward.
 
 ![Step 2](\images\05_CopilotUsingAdaptiveCard\1.png)
 
-### Creating the Copilot in Copilot Studio
+### Step 3: Creating the Copilot in Copilot Studio
 
 1. Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and click on **Create**.
 
@@ -71,7 +72,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 3.3](\images\05_CopilotUsingAdaptiveCard\2.png)
 
-### Enable Generative Selection of Topics
+### Step 4: Enable Generative Selection of Topics
 
 1. Click on **Edit**, then edit the copilot details like name, icon, and description.
 2. Click on **Settings** to enable the Generative selection of topics so that topics will be auto-selected based on user conversation.
@@ -86,7 +87,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 4.2](\images\05_CopilotUsingAdaptiveCard\4.png)
 
-### Create Topics
+### Step 5: Create Topics
 
 1. Click on **Topics** from the navigation menu.
 
@@ -103,7 +104,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 5.4](\images\05_CopilotUsingAdaptiveCard\8.png)
 
-### Adding the Office 365 Mail Connector
+### Step 6: Adding the Office 365 Mail Connector
 
 1. Click on the **+** sign to add a new node.
 2. Select **Call an action**.
@@ -116,7 +117,7 @@ Ensure your Dataverse instance contains all necessary information regarding who 
 
     ![Step 6.2](\images\05_CopilotUsingAdaptiveCard\18.png)
 
-### Querying Dataverse
+### Step 7: Querying Dataverse
 
 Using the current user's email, lets try to check if the user has already claimed the reward by querying the dataverse table. 
 
@@ -140,7 +141,7 @@ Using the current user's email, lets try to check if the user has already claime
 
     ![Step 7.3](\images\05_CopilotUsingAdaptiveCard\21.png)
 
-### Setting Variables
+### Step 8: Setting Variables
 
 1. Assign the output of the Dataverse action to a variable by clicking on **Create new**.
 
@@ -158,7 +159,7 @@ Using the current user's email, lets try to check if the user has already claime
 
     ![Step 8.4](\images\05_CopilotUsingAdaptiveCard\28.png)
 
-### Adding Conditions and Adaptive Cards
+### Step 9: Adding Conditions and Adaptive Cards
 
 1. Add a condition to check if the current user is eligible for reward selection. If the record count is greater than 0, it means the reward was not claimed previously.
 
@@ -170,8 +171,185 @@ Using the current user's email, lets try to check if the user has already claime
 
 3. Lets add the adaptive card JSON : 
 
-priyan1 
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/reward.png", 
+              "size": "Small",
+              "altText": "Company Logo"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Employee Rewards",
+              "weight": "Bolder",
+              "size": "Large",
+              "horizontalAlignment": "Left"
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        }
+      ],
+      "spacing": "Medium"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/Kindle.PNG",
+              "altText": "Kindle",
+              "size": "Medium"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Kindle",
+              "horizontalAlignment": "Center"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/Amazon Echo.PNG",
+              "altText": "Echo",
+              "size": "Medium"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Echo",
+              "horizontalAlignment": "Center"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/Fitbit.PNG",
+              "altText": "Versa",
+              "size": "Medium"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Versa",
+              "horizontalAlignment": "Center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/click.png",  
+              "altText": "Select Product",
+              "size": "Small"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.ChoiceSet",
+              "id": "productChoice",
+              "label": "Select a product:",
+              "choices": [
+                {
+                  "title": "Kindle",
+                  "value": "Kindle"
+                },
+                {
+                  "title": "Echo",
+                  "value": "Echo"
+                },
+                {
+                  "title": "Versa",
+                  "value": "Versa"
+                }
+              ],
+              "style": "expanded"
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/address.png", 
+              "altText": "Address",
+              "size": "Small"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.Text",
+              "id": "address",
+              "placeholder": "Enter your address",
+              "label": "Address",
+              "isMultiline": true
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit"
+    }
+  ]
+}
 
+```
 Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
 
 ![Step 9.3](\images\05_CopilotUsingAdaptiveCard\31.png)
@@ -190,7 +368,7 @@ Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
 
     ![Step 9.6](\images\05_CopilotUsingAdaptiveCard\34.png)
 
-### Sending Confirmation and Follow-Up Actions
+### Step 10: Sending Confirmation and Follow-Up Actions
 
 1. Show a confirmation message back to the user as another adaptive card. Click on **Send a message**.
 
@@ -205,7 +383,54 @@ Click on the adaptive card and paste the above JSON in the **Edit JSON** pane.
     ![Step 10.3](\images\05_CopilotUsingAdaptiveCard\37.png)
 4. The formula schema used is : 
 
-priyan 2
+``` 
+{
+  '$schema': "http://adaptivecards.io/schemas/adaptive-card.json",
+  type: "AdaptiveCard",
+  version: "1.4",
+  body: [
+    {
+      type: "TextBlock",
+      text: "Thank You !",
+      weight: "Bolder",
+      size: "Large",
+      wrap: true
+    },
+    {
+      type: "ColumnSet",
+      columns: [
+        {
+          type: "Column",
+          width: "auto",
+          items: [
+            {
+              type: "Image",
+              url: "https://adaptivecardsbot.blob.core.windows.net/imagestore/approval.png",
+              size: "Medium",
+              altText: "Thank You Image"
+            }
+          ]
+        },
+        {
+          type: "Column",
+          width: "stretch",
+          items: [
+            {
+              type: "TextBlock",
+              text: "Your response has been recorded and we will ship the reward to the mentioned address at the earliest.",
+              wrap: true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  msteams: {
+    width: "Full"
+  }
+}
+
+```
 Thus we have updated the Adaptive Card formula to show a confirmation message back to the user
 
 ![Step 10.3](\images\05_CopilotUsingAdaptiveCard\38.png)
@@ -220,12 +445,14 @@ Thus we have updated the Adaptive Card formula to show a confirmation message ba
     - Click on the right arrow of the **Body** to update the mail content.
     - Select the **Formula** tab.
     - Add the below formula: 
-	 priyan3
+	  ```
+	  Concatenate("The reward selected by ", Topic.displayName, " is ", Topic.productChoice, ". The delivery address is: ", Topic.address)
+	  ```
     - Click on **Insert**.
 
 ![Step 10.4](\images\05_CopilotUsingAdaptiveCard\40.png)
 
-### Publishing to Teams
+### Step 11: Publishing to Teams
 
 1. To complete the integration, deploy the copilot to Microsoft Teams after publishing it:
     - Select **Channels**.
@@ -250,7 +477,7 @@ Thus we have updated the Adaptive Card formula to show a confirmation message ba
 
     ![Step 11.5](\images\05_CopilotUsingAdaptiveCard\45.png)
 
-### Testing the Copilot
+### Step 12: Testing the Copilot
 
 1. Test the copilot by initiating a conversation. The copilot checks Dataverse and finds that the user is claiming the reward for the first time, showing the adaptive card options to select the reward and shipment address.
 
@@ -263,3 +490,5 @@ Thus we have updated the Adaptive Card formula to show a confirmation message ba
 ## Conclusion
 
 Integrating Adaptive Cards with Copilot and Office 365 connectors offers a powerful way to enhance user interactions and streamline processes. By following the steps outlined in this blog, you can create a seamless and engaging Reward and Recognition Program that not only improves user experience but also boosts productivity within your organization.
+
+ 
