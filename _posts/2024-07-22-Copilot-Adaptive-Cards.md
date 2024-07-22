@@ -28,7 +28,7 @@ Adaptive Cards are a platform-agnostic way to present and interact with informat
 
 Let’s delve into a practical scenario: implementing a Reward and Recognition Program where employees can select and order a reward based on their eligibility. We’ll explore how to integrate Adaptive Cards with Copilot and utilize Office 365 and Dataverse actions to build an end-to-end bot without the use of Power Automate.
 
-### Overview of the Process:
+**Overview of the Process**
 
 Lets take a look at the overall process that we are implementing with Copilot and Connector Actions
 - **Use the Office 365 mail connector** to get the current user's email ID.
