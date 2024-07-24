@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Automating Team Creation in Microsoft Teams using Copilot, Power Automate, and Graph API
-description: We will see the steps needed to create a Microsfot Teams using Copilot, Power Automate and Graph API.
+title: Automating Team Creation in Microsoft Teams using Copilot, Power Automate, and Microsoft Graph
+description: We will see the steps needed to create a Microsfot Teams by accepting inputs through Copilot and leveraging Graph API.
 date: 2024-07-22 15:01:35 +0300
 image: '/images/FrontImage/06.png'
 tags: [copilot]
