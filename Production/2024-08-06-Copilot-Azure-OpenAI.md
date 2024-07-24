@@ -7,20 +7,11 @@ image: '/images/FrontImage/11.png'
 tags: [copilot]
 ---
 
-Microsoft Copilot Studio stands out by providing seamless integration with Azure OpenAI Service. This powerful combination allows developers to create intelligent copilots that can fetch, process, and generate responses based on your data, while adhering to organizational policies and security protocols. This blog provides a detailed walkthrough on how to connect your data through Azure OpenAI Service in Microsoft Copilot Studio.
-
 ## Table of Contents
-- [Introduction](#introduction)
-- [Important Notice](#important-notice)
-- [Prerequisites](#prerequisites)
-- [Step-by-Step Implementation](#step-by-step-implementation)
-  - [Step 1: Download the Power Apps Documentation](#step-1-download-the-power-apps-documentation)
-  - [Step 2: Create an Azure AI Search Instance](#step-2-create-an-azure-ai-search-instance)
-  - [Step 3: Add Blob Storage and Create an Indexer](#step-3-add-blob-storage-and-create-an-indexer)
-  - [Step 4: Create Azure OpenAI Instance](#step-4-create-azure-openai-instance)
-  - [Step 5: Integrate Copilot with Azure OpenAI Instance](#step-5-integrate-copilot-with-azure-openai-instance)
-  - [Step 6: Publish the Bot](#step-6-publish-the-bot)
-- [Conclusion](#conclusion)
+{: .no_toc}
+
+* TOC
+{: toc}
 
 ## Introduction
 Connecting data through Azure OpenAI Service within Microsoft Copilot Studio enables your copilots to utilize Azure resources effectively via the Generative Answers node. Leveraging the robust capabilities of Azure AI Search and Azure OpenAI, these copilots can deliver responses that are both contextually relevant and compliant with your organization's guidelines.
