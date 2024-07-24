@@ -112,9 +112,13 @@ Just after the Office 365 connector, let's add a condition to check if the **job
 
 ![Add Condition](\images\06_CopilotCreateTeam\10.png)
 
-In the condition variable check, select the **jobTitle** output from the Office 365 action and compare it against the value **Manager**. If it evaluates to true, we will provide the option for the user to enter the **Team Name** and **Description**.
+In the condition variable check, select the **jobTitle** output from the Office 365 action
 
 ![Check Job Title](\images\06_CopilotCreateTeam\11.png)
+
+Compare it against the value **Manager**, If it evaluates to true, we will provide the option for the user to enter the team name and team description
+
+![Check Job Title](\images\06_CopilotCreateTeam\12.png)
 
 ### Step 4: Configure Manual Authentication
 
@@ -246,7 +250,7 @@ We will then configure the **HTTP** action with the below parameters:
 ```
 
 
-In the **Authentication** section, mention the authentication type as **Raw** and value as **Bearer <Token Passed from Copilot>**.
+In the **Authentication** section, mention the authentication type as **Raw** and value as **Bearer <<Token Passed from Copilot>> **.
 
 With this, we are done with the Power Automate. Click on **Publish**.
 
