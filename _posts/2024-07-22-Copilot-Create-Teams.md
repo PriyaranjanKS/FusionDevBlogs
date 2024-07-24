@@ -27,6 +27,12 @@ Efficiently managing the creation of new Teams using a Teams hosted solution can
 
 ![Provision Copilot](\images\06_CopilotCreateTeam\0_0.png)
 
+## Demo
+
+Watch the demo video below to see how the Teams creation copilot works. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/40WnwpMGX9I?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Step-by-Step Guide to Building the Team Creation Copilot
 
 ### Step 1: Creating the Copilot in Copilot Studio
