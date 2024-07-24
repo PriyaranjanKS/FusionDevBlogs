@@ -250,7 +250,7 @@ We will then configure the **HTTP** action with the below parameters:
 ```
 
 
-In the **Authentication** section, mention the authentication type as **Raw** and value as **Bearer <<Token Passed from Copilot>> **.
+In the **Authentication** section, mention the authentication type as **Raw** and value as **Bearer <<Token Passed from Copilot>>**.
 
 With this, we are done with the Power Automate. Click on **Publish**.
 
