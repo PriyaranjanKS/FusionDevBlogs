@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building an End to End Interactive Ticketing System with Microsoft Copilot
+title: Building a Generative AI powererd Interactive Issue Resolution Copilot using SharePoint and Dataverse
 description: We will see the steps needed to create a Microsfot Teams integrated Ticketing system using Copilot, SharePoint and Dataverse.
 date: 2024-07-22 15:01:35 +0300
 image: '/images/FrontImage/07.png'
@@ -27,9 +27,16 @@ In this ticketing system, the process flow is designed to be intuitive and user-
 2. **Knowledge Base Lookup:** Copilot suggests possible solutions from a SharePoint knowledge base using Generative AI.
 3. **Ticket Creation:** If the suggested solutions do not resolve the issue, users can create a ticket.
 4. **Dataverse Storage:** The created tickets are stored in Dataverse for technicians to access and resolve.
-5. **Single Sign-On (SSO):** Ensures seamless user authentication and authorization.
+5. **Single Sign-On (SSO):** Ensures seamless user authentication and authorization in Microsoft Teams.
 
 ![Create](\images\07_CopilotTickets\0_0.png)
+
+## Demo
+
+Watch the demo video below to see how the Issue Resolution copilot works. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TgqhVUhfPgc?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Step 1: Creating the Copilot in Copilot Studio
 Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and click on **Create**
@@ -351,11 +358,11 @@ The app has become available, let's publish it.
 
 ![Publish App](\images\07_CopilotTickets\52.png)
 
-Once published, we can access it from the Teams App Store.
+Once published, we can access it from the Teams App Store. Lets start the conversation with the copilot and mention the issue we are facing. 
 
 ![Teams App Store](\images\07_CopilotTickets\54.png)
 
-It has provided us with a possible resolution. But since we found that as an inadequate solution, we will go ahead and raise a ticket using the adaptive card where we will provide further details to create the ticket.
+It has provided us with a possible resolution by checking the SharePoint knowledge base using Generative Answers. But since we found that as an inadequate solution, we will go ahead and raise a ticket using the adaptive card where we will provide further details to create the ticket.
 
 ![Raise Ticket](\images\07_CopilotTickets\55.png)
 
@@ -368,4 +375,4 @@ When we check the Dataverse back end, we can see the ticket entry has been creat
 ![Dataverse](\images\07_CopilotTickets\57.png)
 
 ## Conclusion
-Implementing an end-to-end ticketing solution with Microsoft Copilot, SharePoint, and Dataverse offers a streamlined and user-friendly way to manage issue reporting and resolution. This integration leverages the strengths of Copilot’s conversational capabilities, SharePoint’s robust knowledge base, and Dataverse’s powerful data management features. By following the steps outlined in this guide, you can create a seamless process where users can describe their issues, receive potential solutions, and create tickets if necessary—all within the familiar Microsoft Teams environment.
+Implementing an end-to-end ticketing solution with Microsoft Copilot, SharePoint, and Dataverse offers a streamlined and user-friendly way to manage issue reporting and resolution. This integration leverages the strengths of Copilot’s Generative AI powered conversational capabilities, SharePoint’s robust knowledge base, and Dataverse’s powerful data management features. By following the steps outlined in this guide, you can create a seamless process where users can describe their issues, receive potential solutions, and create tickets if necessary—all within the familiar Microsoft Teams environment.
