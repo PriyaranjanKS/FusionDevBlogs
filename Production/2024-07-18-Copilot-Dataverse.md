@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Building a Pharmacy Assistant Copilot with Microsoft Copilot Studio and Dataverse
-description: We will see the steps needed to create a Pharmacy Assistant Copilot with Dataverse.
+title: Building a Generative AI powered Pharmacy Assistant Copilot with Microsoft Copilot Studio and Dataverse
+description: We will see the steps needed to create an intelligent Pharmacy Assistant Copilot with Dataverse back end that will provide contextual answers to Pharmacist queries.
 date: 2024-07-29 15:01:35 +0300
 image: '/images/FrontImage/04.png'
 tags: [copilot]
@@ -68,7 +68,7 @@ This will take you to the page where you can:
 <img src="\images\04_CopilotUsingDataverse\2.png" alt="Creating Copilot" width="80%">
 
 
-## Step 4: Enable Generative Selection of Topics (Dynamic Chaining)
+## Step 4: Enable Generative Selection of Topics
 
 The copilot is now created. You can then make the needed configuration changes.
 1. Click on **Edit** to edit the copilot details like name, icon, and description.
