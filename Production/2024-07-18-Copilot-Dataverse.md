@@ -2,7 +2,7 @@
 layout: post
 title: Building a Pharmacy Assistant Copilot with Microsoft Copilot Studio and Dataverse
 description: We will see the steps needed to create a Pharmacy Assistant Copilot with Dataverse.
-date: 2024-07-18 15:01:35 +0300
+date: 2024-07-29 15:01:35 +0300
 image: '/images/FrontImage/04.png'
 tags: [copilot]
 ---
