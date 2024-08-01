@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Building a Multilingual Copilot with Microsoft Copilot Studio
+title:  Building a Multilingual Doctor Appointment Copilot with Microsoft Copilot Studio
 description: We will see the steps needed to create a Multilingual Copilot with which we can converse in language of user choice with Microsoft Copilot Studio.
 date: 2024-07-22 15:01:35 +0300
 image: '/images/FrontImage/09.png'
@@ -14,11 +14,12 @@ tags: [copilot]
 {: toc}
 
 ## Introduction
-Microsoft Copilot Studio allows us to create conversational agents, or "copilots," that can interact with users in their preferred language. In this blog, we will walk you through building a multilingual copilot that helps users book doctor appointments for different departments in their preferred language. The copilot will also save these appointments in a Dataverse table for easy management and follow-up.
+Microsoft Copilot Studio allows us to create conversational agents, or "copilots," that can interact with users in their preferred language. In this blog, we will walk you through building a multilingual copilot that helps users book doctor appointments for different departments in their preferred language of English or French. The copilot will also save these appointments in a Dataverse table for easy management and follow-up.
 
 ## Process Overview
 
 Our multilingual copilot will:
+
 1. Interact with users in multiple languages (e.g., English and French).
 2. Facilitate booking appointments for different medical specialties: Cardiology, Orthopedics, and Dentistry.
 3. Save appointment details to a Dataverse table for tracking and management.
