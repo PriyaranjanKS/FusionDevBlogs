@@ -39,7 +39,9 @@ We will follow these steps to achieve our goal:
 
 ## Demo 
 
-Lets see the demo of the overall process before we get into the implementation : 
+Watch the demo video below to see how the Meal and Fitness Plan Advisor Copilot works. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UfM7ooLRb5M?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Step 1: Get the Gemini API Key
 Head over to the Google AI Studio and get your API key by clicking on **Create API Key**, which can be used to authenticate the Google Gemini API.

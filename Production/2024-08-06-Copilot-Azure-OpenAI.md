@@ -34,7 +34,7 @@ This integration allows users to get precise answers to their queries by leverag
 
 ## Demo
 
-Watch the demo video below to see how the Teams creation copilot works. 
+Watch the demo video below to see how the Power Apps FAQ Copilot works. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ukmZUNxCeIs?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
