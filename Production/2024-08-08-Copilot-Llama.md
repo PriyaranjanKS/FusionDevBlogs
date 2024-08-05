@@ -227,7 +227,7 @@ ForAll(
 {“Month”:“January”,“Product”:“SolarX PowerPack”,“SalesAmount”:6200},
 {“Month”:“January”,“Product”:“QuantumLight Glasses”,“SalesAmount”:5600}]
 ```
-We will do one more formatting of this output to serialize this json into a readable format <Material Name>: <Vendor Name>:<Lead Time Days>:<Quality Score>:<Unit Price Dollars>
+We will do one more formatting of this output to serialize this json into a readable format { Material Name }: { Vendor Name }: { Lead Time Days }:{ Quality Score }:{ Unit Price Dollars }
 
 ```
 January:AeroFusion Blender:7500, 
@@ -266,7 +266,7 @@ Now let’s add an HTTP Request so that we can call the Llama deployment endpoin
 
 1. This will open up the HTTP Request Properties pane where : 
     1. We will **click on** **Add** so that it adds a Key Value Pair field section 
-    2. Add the **Authorization** text to the Key and **Bearer <Key copied from Azure AI Studio>** to the value field
+    2. Add the **Authorization** text to the Key and **Bearer {Key copied from Azure AI Studio}** to the value field
 
 ![Add Authorization](\images\13_CopilotLlama\31.png)
 
