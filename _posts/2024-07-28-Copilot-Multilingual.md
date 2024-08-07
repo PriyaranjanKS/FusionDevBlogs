@@ -60,7 +60,7 @@ This will take us to the page where we can:
 
 ![Describe Copilot](\images\09_CopilotMultiLingual\1.png)
 
-*Enable Generative Selection of Topics*
+**Enable Generative Selection of Topics**
 
 The copilot is now created. We can then make the needed configuration changes:
 1. Click on **Edit**, edit the copilot details like name, icon, and description.
@@ -110,7 +110,14 @@ We have also added a basic card that indicates the success of the booking. Thus,
 
 Now that the topic and conversation nodes are created, it’s time to make the copilot multilingual. For this, click on **Copilot Settings**. Within the settings page, select **Language** and click on **Add languages**.
 
-This should ideally allow us to add the different languages that the copilot should support. However, as we had previously enabled Generative Topic selection capability, we will not be able to proceed.
+<div class="important-note">
+  <p>This should ideally allow us to add the different languages that the Copilot should support. However, as we had previously enabled Generative Topic selection capability, we will not be able to proceed.
+</p>
+ <p> As of writing of this blog,  <span class="emphasis">Generative Topic Selection does not work hand in hand with the Multilingual Copilot capability</span></p>
+  
+  
+</div>
+
 
 ![Language Settings](\images\09_CopilotMultiLingual\9.png)
 
@@ -188,3 +195,42 @@ Now we are able to switch the conversation completely to French as shown below:
 ## Conclusion
 
 Creating a multilingual copilot with Microsoft Copilot Studio empowers you to provide a seamless and personalized experience for users across different languages. By following the steps outlined, you can efficiently set up a copilot that not only facilitates booking appointments in various medical departments but also integrates with Dataverse to manage these appointments effectively. This approach not only enhances user engagement by catering to language preferences but also streamlines backend operations, ensuring all relevant data is systematically stored and accessible.
+
+
+<style>
+.important-note {
+  border-left: 4px solid #8a2be2;
+  background-color: #f9f9f9;
+  padding: 20px 10px 10px 60px; 
+  margin: 20px 0;
+  position: relative;
+}
+
+.important-note::before {
+  content: "⚠️ Important";
+  font-weight: bold;
+  color: #8a2be2;
+  position: absolute;
+  left: 6px;
+  top: -4px; /* Adjusted top position */
+}
+
+.important-note p {
+  margin: 0;
+  padding: 5px 0; 
+}
+
+.important-note a {
+  color: #8a2be2;
+  text-decoration: none;
+}
+
+.important-note a:hover {
+  text-decoration: underline;
+}
+
+.emphasis {
+  font-weight: bold;
+  color: #066;
+}
+</style>
