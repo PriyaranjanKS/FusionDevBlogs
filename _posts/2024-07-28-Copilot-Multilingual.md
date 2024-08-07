@@ -14,11 +14,11 @@ tags: [copilot]
 {: toc}
 
 ## Introduction
-Microsoft Copilot Studio allows us to create conversational agents, or "copilots," that can interact with users in their preferred language. In this blog, we will walk you through building a multilingual copilot that helps users book doctor appointments for different departments in their preferred language of English or French. The copilot will also save these appointments in a Dataverse table for easy management and follow-up.
+Microsoft Copilot Studio allows us to create Copilots that can interact with users in their preferred language. In this blog, we will walk you through building a multilingual copilot that helps users book doctor appointments for different departments in their preferred language of English or French. The Copilot will also save these appointments in a Dataverse table for easy management and follow-up.
 
 ## Process Overview
 
-Our multilingual copilot will:
+Our multilingual Copilot will:
 
 1. Interact with users in multiple languages (e.g., English and French).
 2. Facilitate booking appointments for different medical specialties: Cardiology, Orthopedics, and Dentistry.
@@ -60,7 +60,7 @@ This will take us to the page where we can:
 
 ![Describe Copilot](\images\09_CopilotMultiLingual\1.png)
 
-### Step 3: Enable Generative Selection of Topics
+*Enable Generative Selection of Topics*
 
 The copilot is now created. We can then make the needed configuration changes:
 1. Click on **Edit**, edit the copilot details like name, icon, and description.
@@ -76,7 +76,7 @@ To enable the automatic detection of topics from user interaction:
 
 ![Generative AI Settings](\images\09_CopilotMultiLingual\3_1.png)
 
-### Step 4: Create Topics
+### Step 3: Create Topics
 
 Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the user's questions:
 1. Click on **Topics** from the navigation menu.
@@ -106,7 +106,7 @@ We have also added a basic card that indicates the success of the booking. Thus,
 
 ![Success Card](\images\09_CopilotMultiLingual\8.png)
 
-### Step 5: Enable Multilingual Capability
+### Step 4: Enable Multilingual Capability
 
 Now that the topic and conversation nodes are created, it’s time to make the copilot multilingual. For this, click on **Copilot Settings**. Within the settings page, select **Language** and click on **Add languages**.
 
@@ -187,5 +187,4 @@ Now we are able to switch the conversation completely to French as shown below:
 
 ## Conclusion
 
-Creating a multilingual copilot with Microsoft Copilot Studio empowers you to provide a seamless and personalized experience for users across different languages. By following the steps outlined, you can efficiently set up a copilot that not only facilitates booking appointments in various medical departments but also integrates with Dataverse to manage these appointments effectively. This approach not only enhances user engagement by catering to language preferences but also streamlines backend operations, ensuring all relevant data is systematically stored and accessible. Embrace the capabilities of Copilot Studio to build versatile and multilingual conversational agents that meet diverse user needs with ease and efficiency.
-
+Creating a multilingual copilot with Microsoft Copilot Studio empowers you to provide a seamless and personalized experience for users across different languages. By following the steps outlined, you can efficiently set up a copilot that not only facilitates booking appointments in various medical departments but also integrates with Dataverse to manage these appointments effectively. This approach not only enhances user engagement by catering to language preferences but also streamlines backend operations, ensuring all relevant data is systematically stored and accessible.
