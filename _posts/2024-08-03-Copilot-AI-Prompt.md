@@ -126,7 +126,7 @@ ForAll(
 ```
 ![Initialize Variable](\images\10_CopilotAIPrompt\40.png)
 
-If we were to test and output this variable value in the test pane, we will get the output as:
+If we were to test and output this variable value(varFilteredTable) in the test pane, we will get the output as:
 
 ```json
 [
@@ -139,7 +139,7 @@ If we were to test and output this variable value in the test pane, we will get 
 
 ```
 
-We will do one more formatting of this output to serialize this JSON into a readable format: Material Name: Vendor Name: Lead Time Days: Quality Score: Unit Price Dollars. To do this, let’s add another variable and set its formula to:
+We will do one more formatting of this output to serialize this JSON into a readable format: **Material Name: Vendor Name: Lead Time Days: Quality Score: Unit Price Dollars ** . To do this, let’s add another variable and set its formula to:
 
 ```
 
