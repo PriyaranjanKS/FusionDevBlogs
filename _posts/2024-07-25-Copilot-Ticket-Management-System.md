@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building a Generative AI powered Interactive Issue Resolution Copilot using SharePoint and Dataverse
+title: Building a Generative AI powered Issue Resolution Copilot using SharePoint and Dataverse
 description: We will see the steps needed to create a Microsfot Teams integrated Ticketing system using Copilot, SharePoint and Dataverse.
 date: 2024-07-22 15:01:35 +0300
 image: '/images/FrontImage/07.png'
