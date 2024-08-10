@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Creating a Smart Supply Chain Copilot with AI Prompt
+title:  Creating a Smart Supply Chain Vendor Selection Copilot with AI Prompt Actions
 description: We will see the steps needed to create an intelligent Supply Chain Copilot that will be used to select the best vendor based on quality score.
 date: 2024-07-22 15:01:35 +0300
 image: '/images/FrontImage/10.png'
