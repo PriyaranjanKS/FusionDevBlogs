@@ -124,6 +124,7 @@ ForAll(
     }
 )
 ```
+![Initialize Variable](\images\10_CopilotAIPrompt\40.png)
 
 If we were to test and output this variable value in the test pane, we will get the output as:
 
@@ -149,6 +150,7 @@ Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime
 
 This way, from the previous filtered table, we will concat the Material Name and details in a readable format which can be shared as an input to the AI Prompt.
 
+![Initialize Variable](\images\10_CopilotAIPrompt\41.png)
 
 ### Step 6:Adding the AI Prompt
 Now let's add the AI prompt using which we can find the best vendor for the product specified by the user. To do this:
