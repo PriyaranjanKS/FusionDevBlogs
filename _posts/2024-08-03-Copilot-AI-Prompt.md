@@ -139,7 +139,7 @@ If we were to test and output this variable value(*varFilteredTable*) in the tes
 
 ```
 
-We will do one more formatting of this output to serialize this JSON into a readable format: **Material Name: Vendor Name: Lead Time Days: Quality Score: Unit Price Dollars ** . To do this, let’s add another variable(*varSerializedVendorDetails*) and set its formula to:
+We will do one more formatting of this output to serialize this JSON into a readable format: **Material Name: Vendor Name: Lead Time Days: Quality Score: Unit Price Dollars** . To do this, let’s add another variable(*varSerializedVendorDetails*) and set its formula to:
 
 ```
 
