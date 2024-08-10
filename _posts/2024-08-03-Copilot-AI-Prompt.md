@@ -145,7 +145,6 @@ We will do one more formatting of this output to serialize this JSON into a read
 
 Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":" & UnitPrice, ", ")
 
-
 ```
 
 This way, from the previous filtered table, we will concat the Material Name and details in a readable format which can be shared as an input to the AI Prompt.
