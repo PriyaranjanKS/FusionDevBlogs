@@ -108,7 +108,7 @@ Specify the Dataverse table columns which should be present in the returned outp
  **Note**: You can get the logical name of the columns used in the **Select columns** field from the Dataverse table by following the below path:
 ![Logical Names](\images\10_CopilotAIPrompt\10.png)
 
-The output of the Dataverse Table Connector (varVendorTable) will contain lots of system columns as well. We will need to format the table to filter and ensure only the needed columns are present. To do this, let’s initialize a variable to hold the output of Dataverse connector:
+The output of the Dataverse Table Connector (*varVendorTable*) will contain lots of system columns as well. We will need to format the table to filter and ensure only the needed columns are present. To do this, let’s initialize a variable to hold the output of Dataverse connector:
 ![Initialize Variable](\images\10_CopilotAIPrompt\39.png)
 
 We will then add the below formula which will filter the output to create a subset of the table and store it in the variable. It does this by looping through the previous Dataverse connector output and fetching only the columns that we have mentioned in the expression:
@@ -126,7 +126,7 @@ ForAll(
 ```
 ![Initialize Variable](\images\10_CopilotAIPrompt\40.png)
 
-If we were to test and output this variable value(varFilteredTable) in the test pane, we will get the output as:
+If we were to test and output this variable value(*varFilteredTable*) in the test pane, we will get the output as:
 
 ```json
 [
@@ -139,7 +139,7 @@ If we were to test and output this variable value(varFilteredTable) in the test 
 
 ```
 
-We will do one more formatting of this output to serialize this JSON into a readable format: **Material Name: Vendor Name: Lead Time Days: Quality Score: Unit Price Dollars ** . To do this, let’s add another variable and set its formula to:
+We will do one more formatting of this output to serialize this JSON into a readable format: **Material Name: Vendor Name: Lead Time Days: Quality Score: Unit Price Dollars ** . To do this, let’s add another variable(*varSerializedVendorDetails*) and set its formula to:
 
 ```
 
