@@ -2,7 +2,7 @@
 layout: post
 title:  Building a Multilingual Doctor Appointment Copilot with Microsoft Copilot Studio
 description: We will see the steps needed to create a Multilingual Copilot with which we can converse in language of user choice with Microsoft Copilot Studio.
-date: 2024-07-22 15:01:35 +0300
+date: 2024-08-02 15:01:35 +0300
 image: '/images/FrontImage/09.png'
 tags: [copilot]
 ---
