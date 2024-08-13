@@ -21,12 +21,12 @@ In this blog we will see how to create a Power Apps FAQ copilot utilizing the of
 
 The overall process flow that we will see in this explanation is as follows : 
 
-1. **Power Apps Documentation** : PDF is uploaded to Azure Storage account
-2. **Index the Document** : Azure AI Search indexes the document for easy retrieval
-3. **User Interaction**: A user initiates a query related to Power Apps via the Copilot interface.
-4. **Copilot Processing**: The Copilot captures the user's query and passes it as a prompt to the Azure OpenAI, which is configured as a datasource.
-5. **Grounding** :  Azure OpenAI processes the query using its generative capabilities, accessing the indexed Power Apps documentation stored in Azure AI Search.
-6. **User Display**: The Copilot displays the contextual response to the user, providing accurate and detailed answers to their Power Apps-related queries.
+1. **Power Apps Documentation** : **PDF** is uploaded to **Azure Storage account**
+2. **Index the Document** : **Azure AI Search** indexes the document for easy retrieval
+3. **User Interaction**: A **user** initiates a **query** related to Power Apps via the Copilot interface.
+4. **Copilot Processing**: The Copilot captures the user's query and passes it as a **prompt** to the **Azure OpenAI**, which is configured as a datasource.
+5. **Grounding** :  **Azure OpenAI** processes the query using its generative capabilities, accessing the **indexed Power Apps documentation** stored in Azure AI Search.
+6. **User Display**: The **Copilot** displays the **contextual response to the user**, providing accurate and detailed answers to their Power Apps-related queries.
 
 This integration allows users to get precise answers to their queries by leveraging the power of Azure's AI services, making it a valuable tool for enhancing productivity and knowledge access.
 
@@ -166,12 +166,12 @@ We can now create a new Topic and add the **Generative Answers** node and connec
 We can test the Copilot's ability to use the local knowledge source by initiating a conversation and asking questions and we can see that we are getting back the contextual response along with citations. 
 ![Access App in Teams](\images\11_CopilotOpenAI\49.png)
 
-### High Level Comparison : Azure AI Search vs SharePoint Vs Local File
+### High Level Data Source Comparison : Azure AI Search vs SharePoint Vs Local File
 
 | **Data Source**                     | **When to Use**                                                                                                                                          | **Pros**                                                                                                                                                  | **Cons**                                                                                                                                                                |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Local File Upload**               | - Quick, simple setups                                                            | - **Simplicity**: Easy setup<br>- **Flexibility**: User uploads as needed when creating a personal Copilot                                           | - **Limited Scope**: Best for small-scale operations<br>- **Size**: - 512 MB per file limitation<br>- **Manual Process**: Requires user intervention every time the document has to be updated    |
-| **SharePoint Documents**            | - Enterprise applications<br>- Collaboration and document management<br>- Regularly updated, accessible content                                           |- **Centralized Management**: Easy to update and manage<br>- **Version Control**: Tracks document changes | - **Complexity**: As of writing, Manual authentication with App registration is required for authentication configuration  |
+| **SharePoint Documents**            | - Enterprise applications<br>- Collaboration and document management<br>- Regularly updated, accessible content                                           |- **Centralized Management**: Easy to update the document from SharePoint<br>- **Version Control**: Tracks document changes | - **Complexity**: As of writing, Manual authentication with App registration is required for authentication configuration  |
 | **Azure OpenAI with Azure AI Search** | - Complex searches across large datasets<br>- Aggregation and analysis of unstructured data<br>- Enterprise-level applications requiring AI-driven insights | - **Powerful AI Capabilities**: Combines NLU with robust search<br>- **Scalability**: Handles large datasets<br>- **Advanced Features**: Semantic and cognitive search | - **Complex Setup**: Requires more configuration<br>- **Cost**: Different tiers have different storage limitations. Higher the tier, higher the cost  |
 
 
