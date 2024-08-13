@@ -150,5 +150,31 @@ Head over to the Power Apps Documentation and download the PDF. We will index it
 6. Access the app from the Teams App Store and start a conversation. Ask anything about Power Apps, and the copilot will fetch contextual answers from the grounded Power Apps Documentation PDF and provide responses.
    ![Access App in Teams](\images\11_CopilotOpenAI\45.png)
 
+Thus we have completed the implementation and demo of a scalable Copilot that can leverage Azure AI search and Azure Open AI to provide us with contextual answers for our questions. 
+
+### Alternate Approach : Power Apps Documentation as Local Datasource 
+
+So far we explored how we can build a scalable Copilot that using Azure AI search Index as the primary data source. Now lets see how we can implement the same using the native local datasource approach in Copilot. FOr this we can upload the same Power Platform PDF documentation as a Local File Knowledge base : 
+![Access App in Teams](\images\11_CopilotOpenAI\46.png)
+
+Once uploaded, depending on the size, the processing time varies and once ready we can see the status in the Knowledge section 
+![Access App in Teams](\images\11_CopilotOpenAI\47.png)
+
+We can now create a new Topic and add the **Generative Answers** node and connect to this knowledge source that we have uploaded. 
+![Access App in Teams](\images\11_CopilotOpenAI\48.png)
+
+We can test the Copilot's ability to use the local knowledge source by initiating a conversation and asking questions and we can see that we are getting back the contextual response along with citations. 
+![Access App in Teams](\images\11_CopilotOpenAI\49.png)
+
+### High Level Comparison : Azure AI Search vs SharePoint Vs Local File
+
+| **Data Source**                     | **When to Use**                                                                                                                                          | **Pros**                                                                                                                                                  | **Cons**                                                                                                                                                                |
+|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Local File Upload**               | - Quick, simple setups                                                            | - **Simplicity**: Easy setup<br>- **Flexibility**: User uploads as needed when creating a personal Copilot                                           | - **Limited Scope**: Best for small-scale operations<br>- **Size**: - 512 MB per file limitation<br>- **Manual Process**: Requires user intervention every time the document has to be updated    |
+| **SharePoint Documents**            | - Enterprise applications<br>- Collaboration and document management<br>- Regularly updated, accessible content                                           | - **Integration with Microsoft 365**: Seamless with other Microsoft tools<br>- **Centralized Management**: Easy to update and manage<br>- **Version Control**: Tracks document changes | - **Complexity**: As of writing, Manual authentication with App registration is required for authentication configuration  |
+| **Azure OpenAI with Azure AI Search** | - Complex searches across large datasets<br>- Aggregation and analysis of unstructured data<br>- Enterprise-level applications requiring AI-driven insights | - **Powerful AI Capabilities**: Combines NLU with robust search<br>- **Scalability**: Handles large datasets<br>- **Advanced Features**: Semantic and cognitive search | - **Complex Setup**: Requires more configuration<br>- **Cost**: Different tiers have different storage limitations. Higher the tier, higher the cost  |
+
+
 ## Conclusion
-Integrating Azure OpenAI Service with Microsoft Copilot Studio opens up a realm of possibilities for creating intelligent, data-driven copilots. This guide has walked you through the process of setting up Azure AI Search, configuring Azure OpenAI, and seamlessly connecting these services in Copilot Studio. By harnessing the power of Azure's AI capabilities, you can build copilots that provide rich, contextual responses tailored to your organizational needs.
+Integrating Azure OpenAI Service with Microsoft Copilot Studio opens up a lot of possibilities for creating intelligent, data-driven copilots. This guide has walked you through the process of setting up Azure AI Search, configuring Azure OpenAI, and seamlessly connecting these services in Copilot Studio. By harnessing the power of Azure's AI capabilities, you can build copilots that provide rich, contextual responses tailored to your organizational needs. We also saw how the same Power Apps PDF documentation can be used as a Local Source Knowledge Data Source. Depending on the use case and complexity of search involved, we can use either of them as a source of generative answers. 
+ 
