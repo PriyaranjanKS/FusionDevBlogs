@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Building a Power Apps FAQ Copilot using Azure AI Search , Azure Open AI and Microsoft Official Documentation
+title:  Power Apps FAQ Copilot built using Azure AI Search , Azure Open AI and Microsoft Official Documentation
 description: Learn how to build a Power Apps FAQ Copilot by integrating Azure AI Search and Azure OpenAI within Microsoft Copilot Studio. This guide walks you through connecting and configuring these services to create intelligent, context-driven copilots that provide accurate answers from official Power Apps documentation
 date: 2024-08-13 15:01:35 +0300
 image: '/images/FrontImage/11.png'
