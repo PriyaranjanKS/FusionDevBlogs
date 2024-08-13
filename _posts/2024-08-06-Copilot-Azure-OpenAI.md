@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Power Apps FAQ Copilot built using Azure AI Search , Azure Open AI and Microsoft Official Documentation
+title:  Power Apps FAQ Copilot built using Azure AI Search and Azure Open AI
 description: Learn how to build a Power Apps FAQ Copilot by integrating Azure AI Search and Azure OpenAI within Microsoft Copilot Studio. This guide walks you through connecting and configuring these services to create intelligent, context-driven copilots that provide accurate answers from official Power Apps documentation
 date: 2024-08-13 15:01:35 +0300
 image: '/images/FrontImage/11.png'
@@ -154,7 +154,7 @@ Thus we have completed the implementation and demo of a scalable Copilot that ca
 
 ### Alternate Approach : Power Apps Documentation as Local Datasource 
 
-So far we explored how we can build a scalable Copilot that using Azure AI search Index as the primary data source. Now lets see how we can implement the same using the native local datasource approach in Copilot. FOr this we can upload the same Power Platform PDF documentation as a Local File Knowledge base : 
+So far we explored how we can build a scalable Copilot using Azure AI search Index as the primary data source. Now lets see how we can implement the same using the native local datasource approach in Copilot. For this we can upload the same Power Apps PDF documentation as a Local File Knowledge base : 
 ![Access App in Teams](\images\11_CopilotOpenAI\46.png)
 
 Once uploaded, depending on the size, the processing time varies and once ready we can see the status in the Knowledge section 
@@ -171,7 +171,7 @@ We can test the Copilot's ability to use the local knowledge source by initiatin
 | **Data Source**                     | **When to Use**                                                                                                                                          | **Pros**                                                                                                                                                  | **Cons**                                                                                                                                                                |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Local File Upload**               | - Quick, simple setups                                                            | - **Simplicity**: Easy setup<br>- **Flexibility**: User uploads as needed when creating a personal Copilot                                           | - **Limited Scope**: Best for small-scale operations<br>- **Size**: - 512 MB per file limitation<br>- **Manual Process**: Requires user intervention every time the document has to be updated    |
-| **SharePoint Documents**            | - Enterprise applications<br>- Collaboration and document management<br>- Regularly updated, accessible content                                           | - **Integration with Microsoft 365**: Seamless with other Microsoft tools<br>- **Centralized Management**: Easy to update and manage<br>- **Version Control**: Tracks document changes | - **Complexity**: As of writing, Manual authentication with App registration is required for authentication configuration  |
+| **SharePoint Documents**            | - Enterprise applications<br>- Collaboration and document management<br>- Regularly updated, accessible content                                           |- **Centralized Management**: Easy to update and manage<br>- **Version Control**: Tracks document changes | - **Complexity**: As of writing, Manual authentication with App registration is required for authentication configuration  |
 | **Azure OpenAI with Azure AI Search** | - Complex searches across large datasets<br>- Aggregation and analysis of unstructured data<br>- Enterprise-level applications requiring AI-driven insights | - **Powerful AI Capabilities**: Combines NLU with robust search<br>- **Scalability**: Handles large datasets<br>- **Advanced Features**: Semantic and cognitive search | - **Complex Setup**: Requires more configuration<br>- **Cost**: Different tiers have different storage limitations. Higher the tier, higher the cost  |
 
 
