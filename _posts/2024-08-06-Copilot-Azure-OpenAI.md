@@ -21,11 +21,11 @@ In this blog we will see how to create a Power Apps FAQ copilot utilizing the of
 
 The overall process flow that we will see in this explanation is as follows : 
 
-1. **User Interaction**: A user initiates a query related to Power Apps via the Copilot interface.
-2. **Copilot Processing**: The Copilot captures the user's query and passes it as a prompt to the Azure OpenAI, which is configured as a datasource.
-3. **Azure OpenAI Processing**: Azure OpenAI processes the query using its generative capabilities, accessing the indexed Power Apps documentation stored in Azure AI Search.
-4. **Azure AI Search Integration**: Azure AI Search retrieves relevant information from the uploaded Power Apps documentation PDF, stored in a storage account.
-5. **Contextual Response**: The Azure OpenAI generates a contextual response based on the retrieved information and sends it back to the Copilot.
+1. **Power Apps Documentation** : PDF is uploaded to Azure Storage account
+2. **Index the Document** : Azure AI Search indexes the document for easy retrieval
+3. **User Interaction**: A user initiates a query related to Power Apps via the Copilot interface.
+4. **Copilot Processing**: The Copilot captures the user's query and passes it as a prompt to the Azure OpenAI, which is configured as a datasource.
+5. **Grounding** :  Azure OpenAI processes the query using its generative capabilities, accessing the indexed Power Apps documentation stored in Azure AI Search.
 6. **User Display**: The Copilot displays the contextual response to the user, providing accurate and detailed answers to their Power Apps-related queries.
 
 This integration allows users to get precise answers to their queries by leveraging the power of Azure's AI services, making it a valuable tool for enhancing productivity and knowledge access.
@@ -40,9 +40,9 @@ Watch the demo video below to see how the Power Apps FAQ Copilot works.
 
 ## Prerequisites
 Before diving into the implementation, ensure you have the following:
-- An active Azure subscription.
-- Access to Microsoft Copilot Studio.
-- Power Apps Documentation PDF.
+- An active **Azure subscription**.
+- Access to **Microsoft Copilot Studio**.
+- **Power Apps Documentation PDF** from Microsoft Learn site.
 
 ## Step-by-Step Implementation
 
