@@ -39,7 +39,7 @@ Watch the demo video below to see how the Power Apps FAQ Copilot works.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ukmZUNxCeIs?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Prerequisites
-Before diving into the implementation, ensure you have the following:
+If you are intending to implement, ensure you have the following:
 - An active **Azure subscription**.
 - Access to **Microsoft Copilot Studio**.
 - **Power Apps Documentation PDF** from Microsoft Learn site.
@@ -47,7 +47,7 @@ Before diving into the implementation, ensure you have the following:
 ## Step-by-Step Implementation
 
 ### Step 1: Download the Power Apps Documentation
-Head over to the Power Apps Documentation and download the PDF. We will index it using the Azure search service and use it to generate contextual answers to user queries around Power Apps. 
+Head over to the **Power Apps Documentation** and download the **PDF**. We will index it using the Azure search service and use it to generate contextual answers to user queries around Power Apps. 
 
 ![Download Power Apps Documentation](\images\11_CopilotOpenAI\0.png)
 
