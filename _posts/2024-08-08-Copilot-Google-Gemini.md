@@ -19,19 +19,29 @@ In this blog, we will explore how to create a custom connector for the Google Ge
 
 The user can ask personalized Meal and Fitness plan and the Copilot will use Google Gemini API connector to provide back the contextual plan back to the user
 
-![Get the Gemini API Key](\images\12_CopilotGemini\0_0.gif)
+## User Interaction Process Flow
 
-## Process Overview
-We will follow these steps to achieve our goal:
-1. Obtain the API key from Google AI Studio.
-2. Create a custom connector in Power Automate to interact with the Google Gemini API.
-3. Develop a Copilot in Copilot Studio that utilizes this custom connector to get the personalize Meal and Fitness Plan.
+The overall process flow will be as follows :
+
+- **User Query**: User asks the Copilot for a personalized meal and fitness plan.
+- **Query Formatting**: Copilot formats the user's query and sends it to the Google Gemini Custom Connector.
+- **Response Generation**: Google Gemini API generates a contextual meal and fitness plan based on the user's inputs.
+- **Response Handling**: The response is sent back to the Copilot.
+- **User Interaction**: User views the personalized meal and fitness plan and continues the conversation.
+
+
+![Get the Gemini API Key](\images\12_CopilotGemini\0_0.gif)
 
 ## Technologies Involved
 - **Google Gemini API**: Used for generating personalized content based on user inputs.
 - **Microsoft Power Automate**: To create a custom connector that interacts with the Google Gemini API.
 - **Copilot Studio**: To create and manage the Copilot bot.
 - **Microsoft Teams**: The platform where the Copilot will be deployed and used.
+
+We will follow these steps to achieve our goal:
+1. Obtain the API key from Google AI Studio.
+2. Create a custom connector to interact with the Google Gemini API.
+3. Develop a Copilot in Copilot Studio that utilizes this custom connector to get the personalized Meal and Fitness Plan.
 
 ## Prerequisites
 1. Access to the Google Gemini API and API keys.
