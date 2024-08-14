@@ -2,7 +2,7 @@
 layout: post
 title:  Creating a Meal and Fitness Advisor Using Google Gemini API and Copilot
 description: We will see the steps needed to create a Google Gemini Connector and use that within Copilot to create a Meal and Fitness Advisor.
-date: 2024-07-22 15:01:35 +0300
+date: 2024-08-15 15:01:35 +0300
 image: '/images/FrontImage/12.png'
 tags: [copilot]
 ---
