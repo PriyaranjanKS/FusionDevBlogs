@@ -19,7 +19,7 @@ In this blog, we will explore how to create a custom connector for the Google Ge
 
 The user can ask personalized Meal and Fitness plan and the Copilot will use Google Gemini API connector to provide back the contextual plan back to the user
 
-![Get the Gemini API Key](\images\12_CopilotGemini\0_0.png)
+![Get the Gemini API Key](\images\12_CopilotGemini\0_0.gif)
 
 ## Process Overview
 We will follow these steps to achieve our goal:
