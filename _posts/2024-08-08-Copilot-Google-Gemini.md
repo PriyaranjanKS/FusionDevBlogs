@@ -436,4 +436,4 @@ Google Gemini API is invoked through the custom connector, and we can see the de
 ![Publish to Teams](\images\12_CopilotGemini\36.png)
 
 ## Conclusion
-In this blog, we explored how to create a custom connector for Google Gemini in Microsoft Power Platform and use it within Copilot to build a dynamic Meal and Fitness Advisor. By integrating advanced AI capabilities through this custom connector, we can generate personalized recommendations based on user inputs, such as meal preferences and fitness goals. This approach not only showcases the versatility of Power Platform and Copilot but also opens doors to innovative applications that deliver tailored, actionable insights.
+In this blog, we explored how to create a custom connector for Google Gemini in Microsoft Power Platform and use it within Copilot to build a dynamic Meal and Fitness Advisor. By integrating advanced AI capabilities through this custom connector, we can generate personalized recommendations based on user inputs, such as meal preferences and fitness goals. 
