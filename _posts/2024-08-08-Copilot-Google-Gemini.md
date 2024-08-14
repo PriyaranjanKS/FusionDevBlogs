@@ -17,7 +17,7 @@ tags: [copilot]
 ## Introduction
 In this blog, we will explore how to create a custom connector for the Google Gemini API in Microsoft Power Platform and use it within Copilot to build a dynamic Meal and Fitness Advisor. This process leverages advanced AI capabilities to generate personalized recommendations based on user inputs such as meal preferences and fitness goals.
 
-The user can ask personalized Meal and Fitness plan and the Copilot will use Google Gemini API connector to provide back the contextual plan back to the user
+The user can ask personalized Meal and Fitness plan and the Copilot will use Google Gemini API connector to provide back the contextual plan back to the user.
 
 ## User Interaction Process Flow
 
