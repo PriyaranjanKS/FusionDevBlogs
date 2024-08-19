@@ -143,11 +143,11 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 
 ## Step 3: Create the Copilot in Copilot Studio
 
-1- Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and 
-  1. **Click on** **Create**.
-  2. This will provide us the option to create a copilot based on an existing template on create a blank copilot from scratch, Lets select **New copilot**.
+1. Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and 
+   1. **Click on** **Create**.
+   2. This will provide us the option to create a copilot based on an existing template on create a blank copilot from scratch, Lets select **New copilot**.
 
-   ![Create Copilot](\images\13_CopilotLlama\13.png)
+    ![Create Copilot](\images\13_CopilotLlama\13.png)
 
 2. This will take us to the page where we can
   1. Describe the copilot functionality and provide any specific instructions to the copilot. 
