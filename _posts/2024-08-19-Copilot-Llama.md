@@ -62,25 +62,25 @@ Start by ensuring your sales data is well-structured and available in Dataverse.
 
 Azure AI Studio will be used to develop, train, and manage the Llama model. So as to work with the AI studio, we need to first create an instance of AI Services which we can do by navigating to the Azure AI Services in the azure portal . 
 
-1. **Click on** **Create**. 
+1- **Click on** **Create**. 
 
 
   ![Create AI Services](\images\13_CopilotLlama\2.png)
 
 
-2. Specify the Resource Group, Name  and other details for the AI Services instance . **Click on** **Review+Create** which will run the validation and create the AI Services instance for us.
+2- Specify the Resource Group, Name  and other details for the AI Services instance . **Click on** **Review+Create** which will run the validation and create the AI Services instance for us.
 
 
   ![Review and Create](\images\13_CopilotLlama\3.png)
 
 
-3. Head over to the newly created Azure AI Services instance and **click on** **Goto Azure AI Studio**.
+3- Head over to the newly created Azure AI Services instance and **click on** **Goto Azure AI Studio**.
 
 
   ![Goto Azure AI Studio](\images\13_CopilotLlama\4.png)
 
 
-4. Once we are in Azure AI Studio , we can create an AI Hub which will act as a top level container for all resources created in the AI Studio. **Click on** **New hub**.
+4- Once we are in Azure AI Studio , we can create an AI Hub which will act as a top level container for all resources created in the AI Studio. **Click on** **New hub**.
 
 
   ![New Hub](\images\13_CopilotLlama\4_1.png)
