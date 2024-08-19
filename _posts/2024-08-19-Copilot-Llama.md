@@ -208,12 +208,12 @@ Then, **Click on** **Create**, which will provision the topic skeleton based on 
 
 8. We can see that the output of the Dataverse connector action is a table, and we need to define a variable to hold the table data. For this we will 
    1. Select the right arrow against the value field and 
-   2. **Click on** **Create a new variable** and name it as varSalesTable.
+   2. **Click on** **Create a new variable** and name it as *varSalesTable*.
 
    ![Create Variable](\images\13_CopilotLlama\22.png)
 
-9. The output of the Dataverse Table Connector(varSalesTable) will contain lots of system columns as well . We will need to format the table to filter and ensure only the needed columns are present. 
-To do this let’s initialize a variable to hold the new filtered output of the Dataverse connector.
+9. The output of the Dataverse Table Connector(*varSalesTable*) will contain lots of system columns as well . We will need to format the table to filter and ensure only the needed columns are present. 
+To do this let’s initialize a variable(*varSalesDetails*) to hold the new filtered output of the Dataverse connector.
 
     ![Initialize Variable](\images\13_CopilotLlama\39.png)
 
@@ -231,7 +231,7 @@ To do this let’s initialize a variable to hold the new filtered output of the 
 	```
      ![Filtered Output](\images\13_CopilotLlama\40.png)
 
-11. If we were to test and output this variable value in the test pane, we will get the table output as : 
+11. If we were to test and output this variable(*varSalesDetails*) value in the test pane, we will get the table output as : 
 
 	```
 	[{“Month”:“January”,“Product”:“AeroFusion Blender”,“SalesAmount”:7500},
@@ -250,7 +250,7 @@ We will do one more formatting of this output to serialize this json into a stri
 	February:QuantumLight Glasses:6300,
 
 	```
-To do this, lets add another variable and set its formula to
+To do this, lets add another variable(*varSerializedSalesData*) and set its formula to
 
 	```
 	Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":"& UnitPrice, ", ")
