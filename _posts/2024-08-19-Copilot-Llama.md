@@ -94,12 +94,12 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 6. **Click on** **Create** to provision the AI Hub.
 
 
-  ![Create Hub](\images\13_CopilotLlama\4_3.png)
+   ![Create Hub](\images\13_CopilotLlama\4_3.png)
 
 
 7. We can see that the AI hub is created, Within the hub lets create a project as well so that we can compartmentalize different model deployments to different projects. **Click on** **New Project**.
 
-  ![New Project](\images\13_CopilotLlama\4_4.png)
+   ![New Project](\images\13_CopilotLlama\4_4.png)
 
 8. Let’s provide a Project Name and **click on** **Create a Project**.
 
