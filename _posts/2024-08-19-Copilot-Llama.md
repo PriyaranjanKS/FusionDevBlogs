@@ -62,85 +62,84 @@ Start by ensuring your sales data is well-structured and available in Dataverse.
 
 Azure AI Studio will be used to develop, train, and manage the Llama model. So as to work with the AI studio, we need to first create an instance of AI Services which we can do by navigating to the Azure AI Services in the azure portal . 
 
-1- **Click on** **Create**. 
+1. **Click on** **Create**. 
 
 
-  ![Create AI Services](\images\13_CopilotLlama\2.png)
+   ![Create AI Services](\images\13_CopilotLlama\2.png)
 
 
-2- Specify the Resource Group, Name  and other details for the AI Services instance . **Click on** **Review+Create** which will run the validation and create the AI Services instance for us.
+2. Specify the Resource Group, Name  and other details for the AI Services instance . **Click on** **Review+Create** which will run the validation and create the AI Services instance for us.
 
 
-  ![Review and Create](\images\13_CopilotLlama\3.png)
+   ![Review and Create](\images\13_CopilotLlama\3.png)
 
 
-3- Head over to the newly created Azure AI Services instance and **click on** **Goto Azure AI Studio**.
+3. Head over to the newly created Azure AI Services instance and **click on** **Goto Azure AI Studio**.
+ 
+   ![Goto Azure AI Studio](\images\13_CopilotLlama\4.png)
 
 
-  ![Goto Azure AI Studio](\images\13_CopilotLlama\4.png)
+4. Once we are in Azure AI Studio , we can create an AI Hub which will act as a top level container for all resources created in the AI Studio. **Click on** **New hub**.
 
 
-4- Once we are in Azure AI Studio , we can create an AI Hub which will act as a top level container for all resources created in the AI Studio. **Click on** **New hub**.
+   ![New Hub](\images\13_CopilotLlama\4_1.png)
 
 
-  ![New Hub](\images\13_CopilotLlama\4_1.png)
+5. Specify the details like Name, Subscription, Resource group, Location and the AI Service Instance name. **Click on** **Next**. 
 
 
-5- Specify the details like Name, Subscription, Resource group, Location and the AI Service Instance name. **Click on** **Next**. 
+   ![Hub Details](\images\13_CopilotLlama\4_2.png)
 
 
-  ![Hub Details](\images\13_CopilotLlama\4_2.png)
+6. **Click on** **Create** to provision the AI Hub.
 
 
-6- **Click on** **Create** to provision the AI Hub.
+  ![Create Hub](\images\13_CopilotLlama\4_3.png)
 
 
- ![Create Hub](\images\13_CopilotLlama\4_3.png)
+7. We can see that the AI hub is created, Within the hub lets create a project as well so that we can compartmentalize different model deployments to different projects. **Click on** **New Project**.
 
+  ![New Project](\images\13_CopilotLlama\4_4.png)
 
-7- We can see that the AI hub is created, Within the hub lets create a project as well so that we can compartmentalize different model deployments to different projects. **Click on** **New Project**.
+8. Let’s provide a Project Name and **click on** **Create a Project**.
 
- ![New Project](\images\13_CopilotLlama\4_4.png)
+    ![Project Name](\images\13_CopilotLlama\4_5.png)
 
-8- Let’s provide a Project Name and **click on** **Create a Project**.
-
-![Project Name](\images\13_CopilotLlama\4_5.png)
-
-9- Now that the AI Hub and Project is created , lets select the  Model catalog from the left pane. Azure AI Studio offers a diverse range of AI models tailored to meet various business needs and enhance data analysis capabilities. 
+9. Now that the AI Hub and Project is created , lets select the  Model catalog from the left pane. Azure AI Studio offers a diverse range of AI models tailored to meet various business needs and enhance data analysis capabilities. 
 
    For this demo, we will be deploying an instance of the Meta Llama 3 - 8 B model where 3 stands for the version number of the model and 8 B refers to the number of parameters in the model, which is 8 billion. Parameters are the components of the model that get adjusted during training to learn patterns from the data.
    Let’s select this model.
 
-![Select Model](\images\13_CopilotLlama\5.png)
+    ![Select Model](\images\13_CopilotLlama\5.png)
 
-10- **Click on** **Deploy** to create the instance of the selected Llama model. 
+10. **Click on** **Deploy** to create the instance of the selected Llama model. 
 
-![Deploy Model](\images\13_CopilotLlama\6.png)
+     ![Deploy Model](\images\13_CopilotLlama\6.png)
 
-11- We can choose to have Azure AI Content safety filters along with the model which would incur charges through Azure AI Content Safety services. However, this is optional. 
+11. We can choose to have Azure AI Content safety filters along with the model which would incur charges through Azure AI Content Safety services. However, this is optional. 
 
-![Content Safety](\images\13_CopilotLlama\7.png)
+     ![Content Safety](\images\13_CopilotLlama\7.png)
 
-12- Ensure that you have selected the recently created project , Select **Subscribe and Deploy**. 
+12. Ensure that you have selected the recently created project , Select **Subscribe and Deploy**. 
 
-![Subscribe and Deploy](\images\13_CopilotLlama\8.png)
+     ![Subscribe and Deploy](\images\13_CopilotLlama\8.png)
 
-13- Specify the Deployment name and **click on** **Deploy** to finalize the deployment of the model. 
+13. Specify the Deployment name and **click on** **Deploy** to finalize the deployment of the model. 
 
-![Deployment Name](\images\13_CopilotLlama\9.png)
+     ![Deployment Name](\images\13_CopilotLlama\9.png)
 
-14- It would take some time for the model deployment to complete. Once done, 
- - In the deployments left side pane, we can see that the Provisioning State is succeeded. 
- - We will copy the Key value as it is needed for authentication from copilot
- - We will now **click on** **consume** tab so as to copy the REST endpoint for this model. 
+14. It would take some time for the model deployment to complete. Once done, 
+    1. In the deployments left side pane, we can see that the Provisioning State is succeeded. 
+    2. We will copy the Key value as it is needed for authentication from copilot
+    3. We will now **click on** **consume** tab so as to copy the REST endpoint for this model. 
 
-![Provisioning State](\images\13_CopilotLlama\11.png)
+     ![Provisioning State](\images\13_CopilotLlama\11.png)
 
-15- In the consume tab, 
- - Copy the REST endpoint which we will use for invoking the model from the copilot.
- - There is also samples of how the input prompt for Llama model looks like which we can follow while creating the prompt in copilot. 
+15. In the consume tab, 
+    1. Copy the REST endpoint which we will use for invoking the model from the copilot.
+    2. There is also samples of how the input prompt for Llama model looks like which we can follow while creating the prompt in copilot. 
 
-![Consume Tab](\images\13_CopilotLlama\12.png)
+     ![Consume Tab](\images\13_CopilotLlama\12.png)
 
 ## Step 3: Create the Copilot in Copilot Studio
 
