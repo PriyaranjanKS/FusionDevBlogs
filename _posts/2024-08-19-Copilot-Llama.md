@@ -276,15 +276,15 @@ Now let’s add an HTTP Request so that we can call the Llama deployment endpoin
 
 ## Step 8: Add Header Properties
 
-1- This will open up the HTTP Request Properties pane where : 
-    1. We will **click on** **Add** so that it adds a Key Value Pair field section 
-    2. Add the **Authorization** text to the Key and **Bearer {Key copied from Azure AI Studio}** to the value field
+1. This will open up the HTTP Request Properties pane where : 
+   1. We will **click on** **Add** so that it adds a Key Value Pair field section 
+   2. Add the **Authorization** text to the Key and **Bearer {Key copied from Azure AI Studio}** to the value field
 
 ![Add Authorization](\images\13_CopilotLlama\31.png)
 
-2- We have to add one more header property 
-    1. **Click on** **Add** once again so that we can add the next Key Value Pair
-    2. Add the **Content-Type** text to the Key and **application/json** to the value field
+2. We have to add one more header property 
+   1. **Click on** **Add** once again so that we can add the next Key Value Pair
+   2. Add the **Content-Type** text to the Key and **application/json** to the value field
 
 ![Add Content-Type](\images\13_CopilotLlama\32.png)
 
