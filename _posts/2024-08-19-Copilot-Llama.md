@@ -130,6 +130,7 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 ![Deployment Name](\images\13_CopilotLlama\9.png)
 
 14- It would take some time for the model deployment to complete. Once done, 
+
     1. In the deployments left side pane, we can see that the Provisioning State is succeeded. 
     2. We will copy the Key value as it is needed for authentication from copilot
     3. We will now **click on** **consume** tab so as to copy the REST endpoint for this model. 
@@ -137,6 +138,7 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 ![Provisioning State](\images\13_CopilotLlama\11.png)
 
 15- In the consume tab, 
+
     1. Copy the REST endpoint which we will use for invoking the model from the copilot.
     2. There is also samples of how the input prompt for Llama model looks like which we can follow while creating the prompt in copilot. 
 
