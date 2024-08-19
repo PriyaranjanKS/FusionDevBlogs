@@ -130,9 +130,9 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 ![Deployment Name](\images\13_CopilotLlama\9.png)
 
 14- It would take some time for the model deployment to complete. Once done, 
- 1. In the deployments left side pane, we can see that the Provisioning State is succeeded. 
- 2. We will copy the Key value as it is needed for authentication from copilot
- 3. We will now **click on** **consume** tab so as to copy the REST endpoint for this model. 
+ - In the deployments left side pane, we can see that the Provisioning State is succeeded. 
+ - We will copy the Key value as it is needed for authentication from copilot
+ - We will now **click on** **consume** tab so as to copy the REST endpoint for this model. 
 
 ![Provisioning State](\images\13_CopilotLlama\11.png)
 
@@ -145,40 +145,40 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 ## Step 3: Create the Copilot in Copilot Studio
 
 1- Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and 
-    1. **Click on** **Create**.
-    2. This will provide us the option to create a copilot based on an existing template on create a blank copilot from scratch, Lets select **New copilot**.
+- **Click on** **Create**.
+- This will provide us the option to create a copilot based on an existing template on create a blank copilot from scratch, Lets select **New copilot**.
 
 ![Create Copilot](\images\13_CopilotLlama\13.png)
 
 2- This will take us to the page where we can
-    1. Describe the copilot functionality and provide any specific instructions to the copilot. 
-    2. Once done, **click on** **Create** to provision the copilot. 
+- Describe the copilot functionality and provide any specific instructions to the copilot. 
+- Once done, **click on** **Create** to provision the copilot. 
 
 ![Describe Copilot](\images\13_CopilotLlama\14.png)
 
 ## Step 4: Enable Generative selection of topics
 
 1- The copilot is now created. We can then make the needed configuration changes
-    1. **Click on** **Edit**, edit the copilot details like name, icon and description. 
-    2. **Click on** **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto selected based on user conversation resulting in a much smoother user experience.
+- **Click on** **Edit**, edit the copilot details like name, icon and description. 
+- **Click on** **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto selected based on user conversation resulting in a much smoother user experience.
 
 ![Enable Generative Selection](\images\13_CopilotLlama\15.png)
 
 2- To enable the automatic detection of topics from user interaction:
-    1. **Click on** **Generative AI**.
-    2. Select **Generative(preview)**.
-    3. **Click on** **Save** to update the settings.
-    4. **Click on** Close icon to go back to the home page of this custom copilot.
+- **Click on** **Generative AI**.
+- Select **Generative(preview)**.
+- **Click on** **Save** to update the settings.
+- **Click on** Close icon to go back to the home page of this custom copilot.
 
 ![Generative AI Settings](\images\13_CopilotLlama\15_1.png)
 
 ## Step 5 : Create Topics
 
 1- Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts. 
-    1. **Click on** **Topics** from the navigation menu. 
+- **Click on** **Topics** from the navigation menu. 
 2- To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with initial set of prepopulated conversation nodes based on the topic description that we provide. 
-    1. Let’s **Click on** **Add a Topic** and 
-    2. Select **Create from description with Copilot**. 
+-  Let’s **Click on** **Add a Topic** and 
+-  Select **Create from description with Copilot**. 
 
 ![Add Topic](\images\13_CopilotLlama\16.png)
 
@@ -192,8 +192,8 @@ Then, **Click on** **Create**, which will provision the topic skeleton based on 
 ![Topic Created](\images\13_CopilotLlama\18.png)
 
 5- Now lets add the dataverse connector action which will fetch the Q1 Sales data information from the table. 
-    1. Select **Call an action**.
-    2. From the Connector tab, select **List rows from selected environment**.
+- Select **Call an action**.
+- From the Connector tab, select **List rows from selected environment**.
 
 ![List Rows](\images\13_CopilotLlama\19.png)
 
@@ -202,14 +202,14 @@ Then, **Click on** **Create**, which will provision the topic skeleton based on 
 ![Create Connection](\images\13_CopilotLlama\20.png)
 
 7- We can now configure the Dataverse connection by 
-    1. Selecting the Environment and Table.
-    2. Mention the logical name of the columns to be retrieved.
+- Selecting the Environment and Table.
+- Mention the logical name of the columns to be retrieved.
 
 ![Configure Dataverse](\images\13_CopilotLlama\21.png)
 
 8- We can see that the output of the Dataverse connector action is a table, and we need to define a variable to hold the table data. For this we will 
-    1. Select the right arrow against the value field and 
-    2. **Click on** **Create a new variable** and name it as varSalesTable.
+- Select the right arrow against the value field and 
+- **Click on** **Create a new variable** and name it as varSalesTable.
 
 ![Create Variable](\images\13_CopilotLlama\22.png)
 
@@ -239,7 +239,7 @@ ForAll(
 {“Month”:“January”,“Product”:“SolarX PowerPack”,“SalesAmount”:6200},
 {“Month”:“January”,“Product”:“QuantumLight Glasses”,“SalesAmount”:5600}]
 ```
-We will do one more formatting of this output to serialize this json into a string readable format as shown below ** < Month >: < Product >: < Sales Amount >** . The reason for doing this is because the LLM input should be a string and hence the table has to be serialized to the string format. 
+We will do one more formatting of this output to serialize this json into a string readable format as shown below **< Month >: < Product >: < Sales Amount >** . The reason for doing this is because the LLM input should be a string and hence the table has to be serialized to the string format. 
 
 ```
 January:AeroFusion Blender:7500, 
