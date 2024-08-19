@@ -64,31 +64,43 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 
 1. **Click on** **Create**. 
 
-![Create AI Services](\images\13_CopilotLlama\2.png)
+
+  ![Create AI Services](\images\13_CopilotLlama\2.png)
+
 
 2. Specify the Resource Group, Name  and other details for the AI Services instance . **Click on** **Review+Create** which will run the validation and create the AI Services instance for us.
 
-![Review and Create](\images\13_CopilotLlama\3.png)
+
+  ![Review and Create](\images\13_CopilotLlama\3.png)
+
 
 3. Head over to the newly created Azure AI Services instance and **click on** **Goto Azure AI Studio**.
 
-![Goto Azure AI Studio](\images\13_CopilotLlama\4.png)
+
+  ![Goto Azure AI Studio](\images\13_CopilotLlama\4.png)
+
 
 4. Once we are in Azure AI Studio , we can create an AI Hub which will act as a top level container for all resources created in the AI Studio. **Click on** **New hub**.
 
-![New Hub](\images\13_CopilotLlama\4_1.png)
+
+  ![New Hub](\images\13_CopilotLlama\4_1.png)
+
 
 5. Specify the details like Name, Subscription, Resource group, Location and the AI Service Instance name. **Click on** **Next**. 
 
-![Hub Details](\images\13_CopilotLlama\4_2.png)
+
+  ![Hub Details](\images\13_CopilotLlama\4_2.png)
+
 
 6. **Click on** **Create** to provision the AI Hub.
 
-![Create Hub](\images\13_CopilotLlama\4_3.png)
+
+ ![Create Hub](\images\13_CopilotLlama\4_3.png)
+
 
 7. We can see that the AI hub is created, Within the hub lets create a project as well so that we can compartmentalize different model deployments to different projects. **Click on** **New Project**.
 
-![New Project](\images\13_CopilotLlama\4_4.png)
+ ![New Project](\images\13_CopilotLlama\4_4.png)
 
 8. Let’s provide a Project Name and **click on** **Create a Project**.
 
@@ -245,7 +257,7 @@ To do this, lets add another variable and set its formula to
 Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":"& UnitPrice, ", ")
 
 ```
-This way, from the previous filtered table, we will concat the Material Name and details in the readable format which can be shared as an input to the Llama Prompt
+This way, from the previous filtered table, we will concat the Material Name and details in the readable string format which can be shared as an input to the Llama Prompt
 ![Filtered Output](\images\13_CopilotLlama\41.png)
 
 ## Step 6: Add an HTTP Request for Llama Model
