@@ -253,7 +253,7 @@ We will do one more formatting of this output to serialize this json into a stri
 To do this, lets add another variable(*varSerializedSalesData*) and set its formula to
 
 	```
-	Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":"& UnitPrice, ", ")
+	Concat(Topic.varSalesDetails, Month & ":" & Product & ":" & SalesAmount, ", ")
 
 	```
 This way, from the previous filtered table, we will concat the Material Name and details in the readable string format which can be shared as an input to the Llama Prompt
@@ -351,9 +351,9 @@ Thus we have created the prompt as expected by Llama. Now lets head back to the 
 
 Finally lets show the generative answer result from the Llama model as a basic card. As we can see in the output schema, the generative answer will be present in the content key value pair which is nested within the choice and message parent . We will get this output using the Power Fx formula:
 
-	```
+```
 	First(Topic.varLlamaOutput.choices).message.content
-	```
+```
 	
      ![Response Data Type](\images\13_CopilotLlama\37.png)
 
