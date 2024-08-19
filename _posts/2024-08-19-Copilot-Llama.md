@@ -202,7 +202,7 @@ Then, **Click on** **Create**, which will provision the topic skeleton based on 
 ![Create Variable](\images\13_CopilotLlama\22.png)
 
 9. The output of the Dataverse Table Connector(varSalesTable) will contain lots of system columns as well . We will need to format the table to filter and ensure only the needed columns are present. 
-To do this let’s initialize a variable to hold the output of Dataverse connector.
+To do this let’s initialize a variable to hold the new filtered output of the Dataverse connector.
 
 ![Initialize Variable](\images\13_CopilotLlama\39.png)
 
@@ -220,14 +220,14 @@ ForAll(
 ```
 ![Filtered Output](\images\13_CopilotLlama\40.png)
 
-11. If we were to test and output this variable value in the test pane, we will get the output as : 
+11. If we were to test and output this variable value in the test pane, we will get the table output as : 
 
 ```
 [{“Month”:“January”,“Product”:“AeroFusion Blender”,“SalesAmount”:7500},
 {“Month”:“January”,“Product”:“SolarX PowerPack”,“SalesAmount”:6200},
 {“Month”:“January”,“Product”:“QuantumLight Glasses”,“SalesAmount”:5600}]
 ```
-We will do one more formatting of this output to serialize this json into a readable format { Material Name }: { Vendor Name }: { Lead Time Days }:{ Quality Score }:{ Unit Price Dollars }
+We will do one more formatting of this output to serialize this json into a string readable format as shown below *< Material Name >: < Vendor Name >: < Lead Time Days >: < Quality Score >: <Unit Price Dollars >* . The reason for doing this is because the LLM input should be a string and hence the table has to be serialized to the string format. 
 
 ```
 January:AeroFusion Blender:7500, 
