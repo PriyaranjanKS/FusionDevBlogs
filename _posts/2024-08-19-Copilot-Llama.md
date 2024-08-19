@@ -311,32 +311,33 @@ Thus we have created the prompt as expected by Llama. Now lets head back to the 
 
     ![Response Data Type](\images\13_CopilotLlama\35.png)
 
-In general the output of Llama 3 would look like below:
+   In general the output of Llama 3 would look like below:
+
 	```json
-	{
-		"choices": [
-			{
-				"finish_reason": "stop",
-				"index": 0,
-				"logprobs": null,
-				"message": {
-					"content": "Output Text",
-					"role": "assistant",
-					"tool_calls": null
-				},
-				"stop_reason": 128009
+		{
+			"choices": [
+				{
+					"finish_reason": "stop",
+					"index": 0,
+					"logprobs": null,
+					"message": {
+						"content": "Output Text",
+						"role": "assistant",
+						"tool_calls": null
+					},
+					"stop_reason": 128009
+				}
+			],
+			"created": 1718285835,
+			"id": "cmpl-7443f01686d24a52924850b34655bf22",
+			"model": "Meta-Llama-3-8B-Instruct",
+			"object": "chat.completion",
+			"usage": {
+				"completion_tokens": 108,
+				"prompt_tokens": 51,
+				"total_tokens": 159
 			}
-		],
-		"created": 1718285835,
-		"id": "cmpl-7443f01686d24a52924850b34655bf22",
-		"model": "Meta-Llama-3-8B-Instruct",
-		"object": "chat.completion",
-		"usage": {
-			"completion_tokens": 108,
-			"prompt_tokens": 51,
-			"total_tokens": 159
 		}
-	}
 	```
 
 5. **Lets add this sample output data by clicking on** **Getting schema from sample JSON**.
