@@ -108,35 +108,35 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 
 9- Now that the AI Hub and Project is created , lets select the  Model catalog from the left pane. Azure AI Studio offers a diverse range of AI models tailored to meet various business needs and enhance data analysis capabilities. 
 
-10- For this demo, we will be deploying an instance of the Meta Llama 3 - 8 B model where 3 stands for the version number of the model and 8 B refers to the number of parameters in the model, which is 8 billion. Parameters are the components of the model that get adjusted during training to learn patterns from the data.
-Let’s select this model.
+   For this demo, we will be deploying an instance of the Meta Llama 3 - 8 B model where 3 stands for the version number of the model and 8 B refers to the number of parameters in the model, which is 8 billion. Parameters are the components of the model that get adjusted during training to learn patterns from the data.
+   Let’s select this model.
 
 ![Select Model](\images\13_CopilotLlama\5.png)
 
-11- **Click on** **Deploy** to create the instance of the selected Llama model. 
+10- **Click on** **Deploy** to create the instance of the selected Llama model. 
 
 ![Deploy Model](\images\13_CopilotLlama\6.png)
 
-12- We can choose to have Azure AI Content safety filters along with the model which would incur charges through Azure AI Content Safety services. However, this is optional. 
+11- We can choose to have Azure AI Content safety filters along with the model which would incur charges through Azure AI Content Safety services. However, this is optional. 
 
 ![Content Safety](\images\13_CopilotLlama\7.png)
 
-13- Ensure that you have selected the recently created project , Select **Subscribe and Deploy**. 
+12- Ensure that you have selected the recently created project , Select **Subscribe and Deploy**. 
 
 ![Subscribe and Deploy](\images\13_CopilotLlama\8.png)
 
-14- Specify the Deployment name and **click on** **Deploy** to finalize the deployment of the model. 
+13- Specify the Deployment name and **click on** **Deploy** to finalize the deployment of the model. 
 
 ![Deployment Name](\images\13_CopilotLlama\9.png)
 
-15- It would take some time for the model deployment to complete. Once done, 
+14- It would take some time for the model deployment to complete. Once done, 
     1. In the deployments left side pane, we can see that the Provisioning State is succeeded. 
     2. We will copy the Key value as it is needed for authentication from copilot
     3. We will now **click on** **consume** tab so as to copy the REST endpoint for this model. 
 
 ![Provisioning State](\images\13_CopilotLlama\11.png)
 
-16- In the consume tab, 
+15- In the consume tab, 
     1. Copy the REST endpoint which we will use for invoking the model from the copilot.
     2. There is also samples of how the input prompt for Llama model looks like which we can follow while creating the prompt in copilot. 
 
