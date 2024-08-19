@@ -86,57 +86,57 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
   ![New Hub](\images\13_CopilotLlama\4_1.png)
 
 
-5. Specify the details like Name, Subscription, Resource group, Location and the AI Service Instance name. **Click on** **Next**. 
+5- Specify the details like Name, Subscription, Resource group, Location and the AI Service Instance name. **Click on** **Next**. 
 
 
   ![Hub Details](\images\13_CopilotLlama\4_2.png)
 
 
-6. **Click on** **Create** to provision the AI Hub.
+6- **Click on** **Create** to provision the AI Hub.
 
 
  ![Create Hub](\images\13_CopilotLlama\4_3.png)
 
 
-7. We can see that the AI hub is created, Within the hub lets create a project as well so that we can compartmentalize different model deployments to different projects. **Click on** **New Project**.
+7- We can see that the AI hub is created, Within the hub lets create a project as well so that we can compartmentalize different model deployments to different projects. **Click on** **New Project**.
 
  ![New Project](\images\13_CopilotLlama\4_4.png)
 
-8. Let’s provide a Project Name and **click on** **Create a Project**.
+8- Let’s provide a Project Name and **click on** **Create a Project**.
 
 ![Project Name](\images\13_CopilotLlama\4_5.png)
 
-9. Now that the AI Hub and Project is created , lets select the  Model catalog from the left pane. Azure AI Studio offers a diverse range of AI models tailored to meet various business needs and enhance data analysis capabilities. 
+9- Now that the AI Hub and Project is created , lets select the  Model catalog from the left pane. Azure AI Studio offers a diverse range of AI models tailored to meet various business needs and enhance data analysis capabilities. 
 
-10. For this demo, we will be deploying an instance of the Meta Llama 3 - 8 B model where 3 stands for the version number of the model and 8 B refers to the number of parameters in the model, which is 8 billion. Parameters are the components of the model that get adjusted during training to learn patterns from the data.
+10- For this demo, we will be deploying an instance of the Meta Llama 3 - 8 B model where 3 stands for the version number of the model and 8 B refers to the number of parameters in the model, which is 8 billion. Parameters are the components of the model that get adjusted during training to learn patterns from the data.
 Let’s select this model.
 
 ![Select Model](\images\13_CopilotLlama\5.png)
 
-11. **Click on** **Deploy** to create the instance of the selected Llama model. 
+11- **Click on** **Deploy** to create the instance of the selected Llama model. 
 
 ![Deploy Model](\images\13_CopilotLlama\6.png)
 
-12. We can choose to have Azure AI Content safety filters along with the model which would incur charges through Azure AI Content Safety services. However, this is optional. 
+12- We can choose to have Azure AI Content safety filters along with the model which would incur charges through Azure AI Content Safety services. However, this is optional. 
 
 ![Content Safety](\images\13_CopilotLlama\7.png)
 
-13. Ensure that you have selected the recently created project , Select **Subscribe and Deploy**. 
+13- Ensure that you have selected the recently created project , Select **Subscribe and Deploy**. 
 
 ![Subscribe and Deploy](\images\13_CopilotLlama\8.png)
 
-14. Specify the Deployment name and **click on** **Deploy** to finalize the deployment of the model. 
+14- Specify the Deployment name and **click on** **Deploy** to finalize the deployment of the model. 
 
 ![Deployment Name](\images\13_CopilotLlama\9.png)
 
-15. It would take some time for the model deployment to complete. Once done, 
+15- It would take some time for the model deployment to complete. Once done, 
     1. In the deployments left side pane, we can see that the Provisioning State is succeeded. 
     2. We will copy the Key value as it is needed for authentication from copilot
     3. We will now **click on** **consume** tab so as to copy the REST endpoint for this model. 
 
 ![Provisioning State](\images\13_CopilotLlama\11.png)
 
-16. In the consume tab, 
+16- In the consume tab, 
     1. Copy the REST endpoint which we will use for invoking the model from the copilot.
     2. There is also samples of how the input prompt for Llama model looks like which we can follow while creating the prompt in copilot. 
 
@@ -144,13 +144,13 @@ Let’s select this model.
 
 ## Step 3: Create the Copilot in Copilot Studio
 
-1. Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and 
+1- Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and 
     1. **Click on** **Create**.
     2. This will provide us the option to create a copilot based on an existing template on create a blank copilot from scratch, Lets select **New copilot**.
 
 ![Create Copilot](\images\13_CopilotLlama\13.png)
 
-2. This will take us to the page where we can
+2- This will take us to the page where we can
     1. Describe the copilot functionality and provide any specific instructions to the copilot. 
     2. Once done, **click on** **Create** to provision the copilot. 
 
@@ -158,13 +158,13 @@ Let’s select this model.
 
 ## Step 4: Enable Generative selection of topics
 
-1. The copilot is now created. We can then make the needed configuration changes
+1- The copilot is now created. We can then make the needed configuration changes
     1. **Click on** **Edit**, edit the copilot details like name, icon and description. 
     2. **Click on** **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto selected based on user conversation resulting in a much smoother user experience.
 
 ![Enable Generative Selection](\images\13_CopilotLlama\15.png)
 
-2. To enable the automatic detection of topics from user interaction:
+2- To enable the automatic detection of topics from user interaction:
     1. **Click on** **Generative AI**.
     2. Select **Generative(preview)**.
     3. **Click on** **Save** to update the settings.
@@ -174,51 +174,51 @@ Let’s select this model.
 
 ## Step 5 : Create Topics
 
-1. Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts. 
+1- Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts. 
     1. **Click on** **Topics** from the navigation menu. 
-2. To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with initial set of prepopulated conversation nodes based on the topic description that we provide. 
+2- To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with initial set of prepopulated conversation nodes based on the topic description that we provide. 
     1. Let’s **Click on** **Add a Topic** and 
     2. Select **Create from description with Copilot**. 
 
 ![Add Topic](\images\13_CopilotLlama\16.png)
 
-3. Let’s provide the below topic description details in the pop up that opened when we clicked the Add topic button previously.
+3- Let’s provide the below topic description details in the pop up that opened when we clicked the Add topic button previously.
 Then, **Click on** **Create**, which will provision the topic skeleton based on the provided description. 
 
 ![Topic Description](\images\13_CopilotLlama\17.png)
 
-4. Thus, we have the basic topic created with an automatic trigger as well as a question to the user which are generated using the description provided.
+4- Thus, we have the basic topic created with an automatic trigger as well as a question to the user which are generated using the description provided.
 
 ![Topic Created](\images\13_CopilotLlama\18.png)
 
-5. Now lets add the dataverse connector action which will fetch the Q1 Sales data information from the table. 
+5- Now lets add the dataverse connector action which will fetch the Q1 Sales data information from the table. 
     1. Select **Call an action**.
     2. From the Connector tab, select **List rows from selected environment**.
 
 ![List Rows](\images\13_CopilotLlama\19.png)
 
-6. Create the connection and **Click on** **Submit**.
+6- Create the connection and **Click on** **Submit**.
 
 ![Create Connection](\images\13_CopilotLlama\20.png)
 
-7. We can now configure the Dataverse connection by 
+7- We can now configure the Dataverse connection by 
     1. Selecting the Environment and Table.
     2. Mention the logical name of the columns to be retrieved.
 
 ![Configure Dataverse](\images\13_CopilotLlama\21.png)
 
-8. We can see that the output of the Dataverse connector action is a table, and we need to define a variable to hold the table data. For this we will 
+8- We can see that the output of the Dataverse connector action is a table, and we need to define a variable to hold the table data. For this we will 
     1. Select the right arrow against the value field and 
     2. **Click on** **Create a new variable** and name it as varSalesTable.
 
 ![Create Variable](\images\13_CopilotLlama\22.png)
 
-9. The output of the Dataverse Table Connector(varSalesTable) will contain lots of system columns as well . We will need to format the table to filter and ensure only the needed columns are present. 
+9- The output of the Dataverse Table Connector(varSalesTable) will contain lots of system columns as well . We will need to format the table to filter and ensure only the needed columns are present. 
 To do this let’s initialize a variable to hold the new filtered output of the Dataverse connector.
 
 ![Initialize Variable](\images\13_CopilotLlama\39.png)
 
-10. We will then add the below formula which will filter the output to create a subset of the table and store it in the variable. It does this by looping through the previous Dataverse connector output and fetching only the columns that we have mentioned in the expression.
+10- We will then add the below formula which will filter the output to create a subset of the table and store it in the variable. It does this by looping through the previous Dataverse connector output and fetching only the columns that we have mentioned in the expression.
 
 ```
 ForAll(
@@ -232,14 +232,14 @@ ForAll(
 ```
 ![Filtered Output](\images\13_CopilotLlama\40.png)
 
-11. If we were to test and output this variable value in the test pane, we will get the table output as : 
+11- If we were to test and output this variable value in the test pane, we will get the table output as : 
 
 ```
 [{“Month”:“January”,“Product”:“AeroFusion Blender”,“SalesAmount”:7500},
 {“Month”:“January”,“Product”:“SolarX PowerPack”,“SalesAmount”:6200},
 {“Month”:“January”,“Product”:“QuantumLight Glasses”,“SalesAmount”:5600}]
 ```
-We will do one more formatting of this output to serialize this json into a string readable format as shown below *< Material Name >: < Vendor Name >: < Lead Time Days >: < Quality Score >: <Unit Price Dollars >* . The reason for doing this is because the LLM input should be a string and hence the table has to be serialized to the string format. 
+We will do one more formatting of this output to serialize this json into a string readable format as shown below ** < Month >: < Product >: < Sales Amount >** . The reason for doing this is because the LLM input should be a string and hence the table has to be serialized to the string format. 
 
 ```
 January:AeroFusion Blender:7500, 
@@ -276,13 +276,13 @@ Now let’s add an HTTP Request so that we can call the Llama deployment endpoin
 
 ## Step 8: Add Header Properties
 
-1. This will open up the HTTP Request Properties pane where : 
+1- This will open up the HTTP Request Properties pane where : 
     1. We will **click on** **Add** so that it adds a Key Value Pair field section 
     2. Add the **Authorization** text to the Key and **Bearer {Key copied from Azure AI Studio}** to the value field
 
 ![Add Authorization](\images\13_CopilotLlama\31.png)
 
-2. We have to add one more header property 
+2- We have to add one more header property 
     1. **Click on** **Add** once again so that we can add the next Key Value Pair
     2. Add the **Content-Type** text to the Key and **application/json** to the value field
 
@@ -290,22 +290,22 @@ Now let’s add an HTTP Request so that we can call the Llama deployment endpoin
 
 ## Step 9: Add the Body to the Request 
 
-1. Now we have to add the Body which is the Llama prompt to the Request for which we will 
+1- Now we have to add the Body which is the Llama prompt to the Request for which we will 
     1. **Click on** the Body field and 
     2. Select **JSON Content**.
 
 ![Body Content](\images\13_CopilotLlama\32_2.png)
 
-2. This will open up the JSON/Formula box just below the body field. If we were sending a static text as body, we could have selected JSON. But since, we need to dynamically pass the user query as well into the prompt,we will select Formula.
+2- This will open up the JSON/Formula box just below the body field. If we were sending a static text as body, we could have selected JSON. But since, we need to dynamically pass the user query as well into the prompt,we will select Formula.
 
 ![Formula](\images\13_CopilotLlama\33.png)
 
-3. We can now add the prompt by concatenating the User query along with the Dataverse table sales data and passing it to the content attribute of the prompt. The role attribute indicates that  this message is an input from the user. 
+3- We can now add the prompt by concatenating the User query along with the Dataverse table sales data and passing it to the content attribute of the prompt. The role attribute indicates that  this message is an input from the user. 
 Thus we have created the prompt as expected by Llama. Now lets head back to the copilot designer and define the response data type. 
 
 ![Configure Prompt](\images\13_CopilotLlama\34.png)
 
-4. We will now configure the response data type field by : 
+4- We will now configure the response data type field by : 
     1. **Clicking the** right arrow and
     2. Select **From sample data**.
 
@@ -339,11 +339,13 @@ In general the output of Llama 3 would look like below:
 }
 ```
 
-1. **Lets add this sample output data by clicking on** **Getting schema from sample JSON**.
-2. Paste the above JSON Output content and
-3. **Click on** **Confirm**.
-4. We will add a variable named varLlamaOutput to hold the returned output value which is of record datatype.
-![Response Data Type](\images\13_CopilotLlama\36.png)
+5- **Lets add this sample output data by clicking on** **Getting schema from sample JSON**.
+	1. Paste the above JSON Output content and
+	2. **Click on** **Confirm**.
+	3. We will add a variable named varLlamaOutput to hold the returned output value which is of record datatype.
+  
+   ![Response Data Type](\images\13_CopilotLlama\36.png)
+
 ## Step 10: Display the Generative Answer
 
 Finally lets show the generative answer result from the Llama model as a basic card. As we can see in the output schema, the generative answer will be present in the content key value pair which is nested within the choice and message parent . We will get this output using the Power Fx formula:
