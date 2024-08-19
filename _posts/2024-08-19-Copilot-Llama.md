@@ -355,7 +355,7 @@ Finally lets show the generative answer result from the Llama model as a basic c
 	First(Topic.varLlamaOutput.choices).message.content
 ```
 	
-     ![Response Data Type](\images\13_CopilotLlama\37.png)
+![Response Data Type](\images\13_CopilotLlama\37.png)
 
 Thus we have completed the creation of the copilot which will invoke Llama model to helps us derive meaningful insights from the Q1 Sales Data present in the dataverse table.
 
