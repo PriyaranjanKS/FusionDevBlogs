@@ -2,7 +2,7 @@
 layout: post
 title:  Building a Sales Analyzer Copilot using Dataverse and Llama Model in Azure AI Studio
 description: We will see the steps needed to create a Llama powered sales analyzer than can fetch data from dataverse and provide business insights.
-date: 2024-07-22 15:01:35 +0300
+date: 2024-08-19 15:01:35 +0300
 image: '/images/FrontImage/13.png'
 tags: [copilot]
 ---
@@ -41,7 +41,7 @@ The control flow is as follows :
 ## Prerequisites
 
 To successfully implement this solution, you will need:
-1. Azure Subscription: Access to Azure services, including Azure AI Studio and Dataverse.
+1. Azure Subscription: Access to Azure AI for configuring the Llama model.
 2. Copilot Studio: Access to copilot studio to build custom copilots.
 3. Dataverse Environment: Structured and accessible sales data within Dataverse.
 
