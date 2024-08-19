@@ -351,10 +351,11 @@ Thus we have created the prompt as expected by Llama. Now lets head back to the 
 
 Finally lets show the generative answer result from the Llama model as a basic card. As we can see in the output schema, the generative answer will be present in the content key value pair which is nested within the choice and message parent . We will get this output using the Power Fx formula:
 
-	```scss
+	```
 	First(Topic.varLlamaOutput.choices).message.content
 	```
-    ![Response Data Type](\images\13_CopilotLlama\37.png)
+	
+     ![Response Data Type](\images\13_CopilotLlama\37.png)
 
 Thus we have completed the creation of the copilot which will invoke Llama model to helps us derive meaningful insights from the Q1 Sales Data present in the dataverse table.
 
