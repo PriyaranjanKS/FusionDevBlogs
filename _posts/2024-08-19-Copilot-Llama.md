@@ -157,67 +157,67 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 
 ## Step 4: Enable Generative selection of topics
 
-1- The copilot is now created. We can then make the needed configuration changes
-- **Click on** **Edit**, edit the copilot details like name, icon and description. 
-- **Click on** **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto selected based on user conversation resulting in a much smoother user experience.
+1. The copilot is now created. We can then make the needed configuration changes
+   1. **Click on** **Edit**, edit the copilot details like name, icon and description. 
+   2. **Click on** **Settings** to enable the Generative selection of topics so that without relying on triggers, the topics will be auto selected based on user conversation resulting in a much smoother user experience.
 
-![Enable Generative Selection](\images\13_CopilotLlama\15.png)
+    ![Enable Generative Selection](\images\13_CopilotLlama\15.png)   
 
-2- To enable the automatic detection of topics from user interaction:
-- **Click on** **Generative AI**.
-- Select **Generative(preview)**.
-- **Click on** **Save** to update the settings.
-- **Click on** Close icon to go back to the home page of this custom copilot.
+2. To enable the automatic detection of topics from user interaction:
+   1. **Click on** **Generative AI**.
+   2. Select **Generative(preview)**.
+   3. **Click on** **Save** to update the settings.
+   4. **Click on** Close icon to go back to the home page of this custom copilot.
 
-![Generative AI Settings](\images\13_CopilotLlama\15_1.png)
+    ![Generative AI Settings](\images\13_CopilotLlama\15_1.png)
 
 ## Step 5 : Create Topics
 
-1- Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts. 
-- **Click on** **Topics** from the navigation menu. 
-2- To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with initial set of prepopulated conversation nodes based on the topic description that we provide. 
--  Let’s **Click on** **Add a Topic** and 
--  Select **Create from description with Copilot**. 
+1. Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts. 
+   - **Click on** **Topics** from the navigation menu. 
+2. To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with initial set of prepopulated conversation nodes based on the topic description that we provide. 
+   1.  Let’s **Click on** **Add a Topic** and 
+   2.  Select **Create from description with Copilot**. 
 
-![Add Topic](\images\13_CopilotLlama\16.png)
+    ![Add Topic](\images\13_CopilotLlama\16.png)
 
-3- Let’s provide the below topic description details in the pop up that opened when we clicked the Add topic button previously.
+3. Let’s provide the below topic description details in the pop up that opened when we clicked the Add topic button previously.
 Then, **Click on** **Create**, which will provision the topic skeleton based on the provided description. 
 
-![Topic Description](\images\13_CopilotLlama\17.png)
+    ![Topic Description](\images\13_CopilotLlama\17.png)
 
-4- Thus, we have the basic topic created with an automatic trigger as well as a question to the user which are generated using the description provided.
+4. Thus, we have the basic topic created with an automatic trigger as well as a question to the user which are generated using the description provided.
 
-![Topic Created](\images\13_CopilotLlama\18.png)
+    ![Topic Created](\images\13_CopilotLlama\18.png)
 
-5- Now lets add the dataverse connector action which will fetch the Q1 Sales data information from the table. 
-- Select **Call an action**.
-- From the Connector tab, select **List rows from selected environment**.
+5. Now lets add the dataverse connector action which will fetch the Q1 Sales data information from the table. 
+   1. Select **Call an action**.
+   2. From the Connector tab, select **List rows from selected environment**.
 
-![List Rows](\images\13_CopilotLlama\19.png)
+    ![List Rows](\images\13_CopilotLlama\19.png)
 
-6- Create the connection and **Click on** **Submit**.
+6. Create the connection and **Click on** **Submit**.
 
-![Create Connection](\images\13_CopilotLlama\20.png)
+    ![Create Connection](\images\13_CopilotLlama\20.png)
 
-7- We can now configure the Dataverse connection by 
-- Selecting the Environment and Table.
-- Mention the logical name of the columns to be retrieved.
+7. We can now configure the Dataverse connection by 
+   1. Selecting the Environment and Table.
+   2. Mention the logical name of the columns to be retrieved.
 
-![Configure Dataverse](\images\13_CopilotLlama\21.png)
+    ![Configure Dataverse](\images\13_CopilotLlama\21.png)
 
-8- We can see that the output of the Dataverse connector action is a table, and we need to define a variable to hold the table data. For this we will 
-- Select the right arrow against the value field and 
-- **Click on** **Create a new variable** and name it as varSalesTable.
+8. We can see that the output of the Dataverse connector action is a table, and we need to define a variable to hold the table data. For this we will 
+   1. Select the right arrow against the value field and 
+   2. **Click on** **Create a new variable** and name it as varSalesTable.
 
-![Create Variable](\images\13_CopilotLlama\22.png)
+   ![Create Variable](\images\13_CopilotLlama\22.png)
 
-9- The output of the Dataverse Table Connector(varSalesTable) will contain lots of system columns as well . We will need to format the table to filter and ensure only the needed columns are present. 
+9. The output of the Dataverse Table Connector(varSalesTable) will contain lots of system columns as well . We will need to format the table to filter and ensure only the needed columns are present. 
 To do this let’s initialize a variable to hold the new filtered output of the Dataverse connector.
 
-![Initialize Variable](\images\13_CopilotLlama\39.png)
+    ![Initialize Variable](\images\13_CopilotLlama\39.png)
 
-10- We will then add the below formula which will filter the output to create a subset of the table and store it in the variable. It does this by looping through the previous Dataverse connector output and fetching only the columns that we have mentioned in the expression.
+10. We will then add the below formula which will filter the output to create a subset of the table and store it in the variable. It does this by looping through the previous Dataverse connector output and fetching only the columns that we have mentioned in the expression.
 
 ```
 ForAll(
@@ -229,9 +229,9 @@ ForAll(
 	}
 	)
 ```
-![Filtered Output](\images\13_CopilotLlama\40.png)
+   ![Filtered Output](\images\13_CopilotLlama\40.png)
 
-11- If we were to test and output this variable value in the test pane, we will get the table output as : 
+11. If we were to test and output this variable value in the test pane, we will get the table output as : 
 
 ```
 [{“Month”:“January”,“Product”:“AeroFusion Blender”,“SalesAmount”:7500},
@@ -257,7 +257,8 @@ Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime
 
 ```
 This way, from the previous filtered table, we will concat the Material Name and details in the readable string format which can be shared as an input to the Llama Prompt
-![Filtered Output](\images\13_CopilotLlama\41.png)
+   
+   ![Filtered Output](\images\13_CopilotLlama\41.png)
 
 ## Step 6: Add an HTTP Request for Llama Model
 
