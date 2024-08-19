@@ -150,10 +150,10 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
     ![Create Copilot](\images\13_CopilotLlama\13.png)
 
 2. This will take us to the page where we can
-  1. Describe the copilot functionality and provide any specific instructions to the copilot. 
-  2. Once done, **click on** **Create** to provision the copilot. 
+   1. Describe the copilot functionality and provide any specific instructions to the copilot. 
+   2. Once done, **click on** **Create** to provision the copilot. 
 
-   ![Describe Copilot](\images\13_CopilotLlama\14.png)
+    ![Describe Copilot](\images\13_CopilotLlama\14.png)
 
 ## Step 4: Enable Generative selection of topics
 
