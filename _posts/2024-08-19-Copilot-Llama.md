@@ -280,7 +280,7 @@ Now let’s add an HTTP Request so that we can call the Llama deployment endpoin
    1. We will **click on** **Add** so that it adds a Key Value Pair field section 
    2. Add the **Authorization** text to the Key and **Bearer {Key copied from Azure AI Studio}** to the value field
 
-![Add Authorization](\images\13_CopilotLlama\31.png)
+    ![Add Authorization](\images\13_CopilotLlama\31.png)
 
 2. We have to add one more header property 
    1. **Click on** **Add** once again so that we can add the next Key Value Pair
