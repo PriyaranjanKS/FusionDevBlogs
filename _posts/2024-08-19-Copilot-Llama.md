@@ -144,16 +144,16 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 ## Step 3: Create the Copilot in Copilot Studio
 
 1- Head over to [Copilot Studio](https://copilotstudio.microsoft.com/) and 
-- **Click on** **Create**.
-- This will provide us the option to create a copilot based on an existing template on create a blank copilot from scratch, Lets select **New copilot**.
+  1. **Click on** **Create**.
+  2. This will provide us the option to create a copilot based on an existing template on create a blank copilot from scratch, Lets select **New copilot**.
 
-![Create Copilot](\images\13_CopilotLlama\13.png)
+   ![Create Copilot](\images\13_CopilotLlama\13.png)
 
-2- This will take us to the page where we can
-- Describe the copilot functionality and provide any specific instructions to the copilot. 
-- Once done, **click on** **Create** to provision the copilot. 
+2. This will take us to the page where we can
+  1. Describe the copilot functionality and provide any specific instructions to the copilot. 
+  2. Once done, **click on** **Create** to provision the copilot. 
 
-![Describe Copilot](\images\13_CopilotLlama\14.png)
+   ![Describe Copilot](\images\13_CopilotLlama\14.png)
 
 ## Step 4: Enable Generative selection of topics
 
@@ -176,8 +176,8 @@ Azure AI Studio will be used to develop, train, and manage the Llama model. So a
 1. Now let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the question user posts. 
    - **Click on** **Topics** from the navigation menu. 
 2. To add the topic, we can either go with the option to create a blank topic or use Copilot to create the topic with initial set of prepopulated conversation nodes based on the topic description that we provide. 
-   1.  Let’s **Click on** **Add a Topic** and 
-   2.  Select **Create from description with Copilot**. 
+   - Let’s **Click on** **Add a Topic** and 
+   - Select **Create from description with Copilot**. 
 
     ![Add Topic](\images\13_CopilotLlama\16.png)
 
@@ -219,43 +219,43 @@ To do this let’s initialize a variable to hold the new filtered output of the 
 
 10. We will then add the below formula which will filter the output to create a subset of the table and store it in the variable. It does this by looping through the previous Dataverse connector output and fetching only the columns that we have mentioned in the expression.
 
-```
-ForAll(
-	Topic.varSalesTable,
-	{
-		Month: ThisRecord.cr06f_month,
-		Product: ThisRecord.cr06f_product,
-		SalesAmount: ThisRecord.cr06f_salesamount
-	}
-	)
-```
-   ![Filtered Output](\images\13_CopilotLlama\40.png)
+	```
+	ForAll(
+		Topic.varSalesTable,
+		{
+			Month: ThisRecord.cr06f_month,
+			Product: ThisRecord.cr06f_product,
+			SalesAmount: ThisRecord.cr06f_salesamount
+		}
+		)
+	```
+     ![Filtered Output](\images\13_CopilotLlama\40.png)
 
 11. If we were to test and output this variable value in the test pane, we will get the table output as : 
 
-```
-[{“Month”:“January”,“Product”:“AeroFusion Blender”,“SalesAmount”:7500},
-{“Month”:“January”,“Product”:“SolarX PowerPack”,“SalesAmount”:6200},
-{“Month”:“January”,“Product”:“QuantumLight Glasses”,“SalesAmount”:5600}]
-```
+	```
+	[{“Month”:“January”,“Product”:“AeroFusion Blender”,“SalesAmount”:7500},
+	{“Month”:“January”,“Product”:“SolarX PowerPack”,“SalesAmount”:6200},
+	{“Month”:“January”,“Product”:“QuantumLight Glasses”,“SalesAmount”:5600}]
+	```
 We will do one more formatting of this output to serialize this json into a string readable format as shown below **< Month >: < Product >: < Sales Amount >** . The reason for doing this is because the LLM input should be a string and hence the table has to be serialized to the string format. 
 
-```
-January:AeroFusion Blender:7500, 
-January:SolarX PowerPack:6200, 
-January:QuantumLight Glasses:5600, 
-January:EcoWave Cleanser:4300, 
-February:AeroFusion Blender:8100, 
-February:SolarX PowerPack:5900, 
-February:QuantumLight Glasses:6300,
+	```
+	January:AeroFusion Blender:7500, 
+	January:SolarX PowerPack:6200, 
+	January:QuantumLight Glasses:5600, 
+	January:EcoWave Cleanser:4300, 
+	February:AeroFusion Blender:8100, 
+	February:SolarX PowerPack:5900, 
+	February:QuantumLight Glasses:6300,
 
-```
+	```
 To do this, lets add another variable and set its formula to
 
-```
-Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":"& UnitPrice, ", ")
+	```
+	Concat(Topic.varFormattedTable, MaterialName & ":" & VendorName & ":" & LeadTime & ":" & Quality & ":"& UnitPrice, ", ")
 
-```
+	```
 This way, from the previous filtered table, we will concat the Material Name and details in the readable string format which can be shared as an input to the Llama Prompt
    
    ![Filtered Output](\images\13_CopilotLlama\41.png)
@@ -290,70 +290,70 @@ Now let’s add an HTTP Request so that we can call the Llama deployment endpoin
 
 ## Step 9: Add the Body to the Request 
 
-1- Now we have to add the Body which is the Llama prompt to the Request for which we will 
-    1. **Click on** the Body field and 
-    2. Select **JSON Content**.
+1. Now we have to add the Body which is the Llama prompt to the Request for which we will 
+   1. **Click on** the Body field and 
+   2. Select **JSON Content**.
 
-![Body Content](\images\13_CopilotLlama\32_2.png)
+    ![Body Content](\images\13_CopilotLlama\32_2.png)
 
-2- This will open up the JSON/Formula box just below the body field. If we were sending a static text as body, we could have selected JSON. But since, we need to dynamically pass the user query as well into the prompt,we will select Formula.
+2. This will open up the JSON/Formula box just below the body field. If we were sending a static text as body, we could have selected JSON. But since, we need to dynamically pass the user query as well into the prompt,we will select Formula.
 
-![Formula](\images\13_CopilotLlama\33.png)
+    ![Formula](\images\13_CopilotLlama\33.png)
 
-3- We can now add the prompt by concatenating the User query along with the Dataverse table sales data and passing it to the content attribute of the prompt. The role attribute indicates that  this message is an input from the user. 
+3. We can now add the prompt by concatenating the User query along with the Dataverse table sales data and passing it to the content attribute of the prompt. The role attribute indicates that  this message is an input from the user. 
 Thus we have created the prompt as expected by Llama. Now lets head back to the copilot designer and define the response data type. 
 
-![Configure Prompt](\images\13_CopilotLlama\34.png)
+    ![Configure Prompt](\images\13_CopilotLlama\34.png)
 
-4- We will now configure the response data type field by : 
-    1. **Clicking the** right arrow and
-    2. Select **From sample data**.
+4. We will now configure the response data type field by : 
+   1. **Clicking the** right arrow and
+   2. Select **From sample data**.
 
-![Response Data Type](\images\13_CopilotLlama\35.png)
+    ![Response Data Type](\images\13_CopilotLlama\35.png)
 
 In general the output of Llama 3 would look like below:
-```json
-{
-    "choices": [
-        {
-            "finish_reason": "stop",
-            "index": 0,
-            "logprobs": null,
-            "message": {
-                "content": "Output Text",
-                "role": "assistant",
-                "tool_calls": null
-            },
-            "stop_reason": 128009
-        }
-    ],
-    "created": 1718285835,
-    "id": "cmpl-7443f01686d24a52924850b34655bf22",
-    "model": "Meta-Llama-3-8B-Instruct",
-    "object": "chat.completion",
-    "usage": {
-        "completion_tokens": 108,
-        "prompt_tokens": 51,
-        "total_tokens": 159
-    }
-}
-```
+	```json
+	{
+		"choices": [
+			{
+				"finish_reason": "stop",
+				"index": 0,
+				"logprobs": null,
+				"message": {
+					"content": "Output Text",
+					"role": "assistant",
+					"tool_calls": null
+				},
+				"stop_reason": 128009
+			}
+		],
+		"created": 1718285835,
+		"id": "cmpl-7443f01686d24a52924850b34655bf22",
+		"model": "Meta-Llama-3-8B-Instruct",
+		"object": "chat.completion",
+		"usage": {
+			"completion_tokens": 108,
+			"prompt_tokens": 51,
+			"total_tokens": 159
+		}
+	}
+	```
 
-5- **Lets add this sample output data by clicking on** **Getting schema from sample JSON**.
+5. **Lets add this sample output data by clicking on** **Getting schema from sample JSON**.
 	1. Paste the above JSON Output content and
 	2. **Click on** **Confirm**.
 	3. We will add a variable named varLlamaOutput to hold the returned output value which is of record datatype.
   
-   ![Response Data Type](\images\13_CopilotLlama\36.png)
+    ![Response Data Type](\images\13_CopilotLlama\36.png)
 
 ## Step 10: Display the Generative Answer
 
 Finally lets show the generative answer result from the Llama model as a basic card. As we can see in the output schema, the generative answer will be present in the content key value pair which is nested within the choice and message parent . We will get this output using the Power Fx formula:
 
-```scss
-First(Topic.varLlamaOutput.choices).message.content
-```
-![Response Data Type](\images\13_CopilotLlama\37.png)
+	```scss
+	First(Topic.varLlamaOutput.choices).message.content
+	```
+    ![Response Data Type](\images\13_CopilotLlama\37.png)
 
 Thus we have completed the creation of the copilot which will invoke Llama model to helps us derive meaningful insights from the Q1 Sales Data present in the dataverse table.
 
