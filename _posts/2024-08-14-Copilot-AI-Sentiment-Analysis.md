@@ -3,7 +3,7 @@ layout: post
 title:  Cafeteria Feedback Copilot that uses AI Prompt Action for Sentiment Analysis
 description: We will see the steps needed to create an intelligent Feedback Analyzer Copilot that uses AI prompt action to analyze the user sentiments and escalate it if needed
 date: 2024-08-21 15:01:35 +0300
-image: '/images/FrontImage/15.png'
+image: '/images/FrontImage/15.jpg'
 tags: [copilot]
 ---
 
