@@ -77,7 +77,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 ### Step 4: Create Topics
 
 1. Now, let’s go ahead and create the topics that will automatically redirect the conversation flow to appropriate topics based on the user's questions.
-
    1. **Click** on **Topics** from the navigation menu.
    2. **Click** on **Add a Topic**.
    3. You can either create a blank topic or use Copilot to create the topic with an initial set of prepopulated conversation nodes based on the topic description.**Select** **Create from description with Copilot**.
@@ -204,7 +203,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 ### Step 5: Add AI Prompt Action
 
 1. Now, let's add the AI Prompt action:
-
    1. **Select** **Call an action**.
    2. **Click** on **Basic Actions**.
    3. **Select** **Create a prompt**.
