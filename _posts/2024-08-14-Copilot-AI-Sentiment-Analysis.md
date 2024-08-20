@@ -196,7 +196,7 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 	```
      ![Step 4 Image 5](\images\17_CopilotFeedbackAnalyzer\10.png)
 
-4. As we can see, the user inputted values for date and feedback are stored in the `feedbackDate` and `feedbackText` variables, which we will use later.
+4. As we can see, the user inputted values for date and feedback are stored in the *`feedbackDate`* and *`feedbackText`* variables, which we will use later.
 
     ![Step 4 Image 6](\images\17_CopilotFeedbackAnalyzer\11.png)
 
@@ -218,7 +218,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
     ![Step 5 Image 3](\images\17_CopilotFeedbackAnalyzer\13.png)
 
 3. Now we can add the prompt to the conversation flow by selecting its name:
-
    1. **Select** **Call an action**.
    2. From **Basic Actions**, search for the recently created prompt by its name.
    3. **Select** the **Cafeteria Feedback Analyzer** prompt.
@@ -251,7 +250,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
     ![Step 6 Image 3](\images\17_CopilotFeedbackAnalyzer\19.png)
 
 4. Now, configure the Office 365 Mail connector:
-
    1. Set the **To** and **Escalation Subject** fields.
    2. In the **Body**, add the mail content and concatenate it with the user feedback present in the `feedbackText` variable using the **Concatenate** expression.
    3. Add an output variable to the Connector action.
@@ -260,7 +258,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 
 ### Step 7: Save Feedback to Dataverse
 1. Once escalated, let's save the negative feedback to the Dataverse backend using the Connector action:
-
    1. **Select** **Call an action**.
    2. From the **Connector actions** tab, search for the **Dataverse** connector.
    3. **Select** the **Add a new row to the selected environment** connector.
@@ -268,7 +265,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
      ![Step 7 Image 1](\images\17_CopilotFeedbackAnalyzer\21.png)
 
 2. Now, configure the Dataverse connector action:
-
    1. Set the environment and table name.
    2. Select the `feedbackText` variable, which contains the User Feedback.
    3. **Select** **Advanced inputs** to add the remaining data that needs to be saved.
@@ -284,7 +280,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
     ![Step 7 Image 4](\images\17_CopilotFeedbackAnalyzer\23_5.png)
 
 5. In the positive branch of the condition, let's repeat the same steps to save the positive feedback to Dataverse:
-
    1. **Select** **Call an action**.
    2. From the **Connector actions** tab, search for the **Dataverse** connector.
    3. **Select** the **Add a new row to the selected environment** connector.
@@ -292,7 +287,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
     ![Step 7 Image 5](\images\17_CopilotFeedbackAnalyzer\24.png)
 
 6. Now, configure the Dataverse connector action:
-
    1. Set the environment and table name.
    2. Select the `feedbackText` variable, which contains the User Feedback.
    3. **Select** **Advanced inputs** to add the remaining data that needs to be saved.
@@ -309,7 +303,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 
 ### Step 8: Publish the Copilot
 1. We have now completed the Copilot development. Let's deploy this in Teams so that employees can start using it.
-
    1. **Select** **Channels** and select **Microsoft Teams**.
    2. **Select** **Turn on Teams** to enable Teams publishing channel.
 
