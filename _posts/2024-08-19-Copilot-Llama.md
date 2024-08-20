@@ -36,7 +36,7 @@ The control flow is as follows :
 - **Generate Response:** Llama model analyzes the data and generates a contextual response.
 - **Display Answer:** Copilot displays the generated response to the user.
 
-![Q1 Sales Data](\images\13_CopilotLlama\0_0.png)
+![Q1 Sales Data](\images\13_CopilotLlama\0.gif)
 
 ## Prerequisites
 
