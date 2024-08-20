@@ -54,7 +54,7 @@ Watch the demo video below to see how the Sales Analysis Copilot works.
 
 ## Step 1: Preparing Your Dataverse Environment
 
-Start by ensuring your sales data is well-structured and available in Dataverse. We have created a table named “Q1 Sales Data” which contains the First quarter sales details for 2 companies in different regions. 
+Start by ensuring your sales data is well-structured and available in Dataverse. We have created a table named “Q1 Sales Data” which contains the First quarter sales details for 4 companies . 
 
 ![Q1 Sales Data](\images\13_CopilotLlama\1.png)
 
@@ -238,7 +238,7 @@ To do this let’s initialize a variable(*varSalesDetails*) to hold the new filt
 	{“Month”:“January”,“Product”:“SolarX PowerPack”,“SalesAmount”:6200},
 	{“Month”:“January”,“Product”:“QuantumLight Glasses”,“SalesAmount”:5600}]
 	```
-We will do one more formatting of this output to serialize this json into a string readable format as shown below **< Month >: < Product >: < Sales Amount >** . The reason for doing this is because the LLM input should be a string and hence the table has to be serialized to the string format. 
+We will do one more formatting of this output to serialize this table into a string readable format as shown below **< Month >: < Product >: < Sales Amount >** . The reason for doing this is because the LLM input should be a string and hence the table has to be serialized to the string format. 
 
 	```
 	January:AeroFusion Blender:7500, 
@@ -256,7 +256,7 @@ To do this, lets add another variable(*varSerializedSalesData*) and set its form
 	Concat(Topic.varSalesDetails, Month & ":" & Product & ":" & SalesAmount, ", ")
 
 	```
-This way, from the previous filtered table, we will concat the Material Name and details in the readable string format which can be shared as an input to the Llama Prompt
+This way, from the previous filtered table, we will concat the Product and sales details in the readable string format which can be shared as an input to the Llama Prompt
    
    ![Filtered Output](\images\13_CopilotLlama\41.png)
 
@@ -341,9 +341,9 @@ Thus we have created the prompt as expected by Llama. Now lets head back to the 
 	```
 
 5. **Lets add this sample output data by clicking on** **Getting schema from sample JSON**.
-	1. Paste the above JSON Output content and
+	1. **Paste** the above JSON Output content and
 	2. **Click on** **Confirm**.
-	3. We will add a variable named varLlamaOutput to hold the returned output value which is of record datatype.
+	3. We will add a variable named *varLlamaOutput* to hold the returned output value which is of record datatype.
   
     ![Response Data Type](\images\13_CopilotLlama\36.png)
 
