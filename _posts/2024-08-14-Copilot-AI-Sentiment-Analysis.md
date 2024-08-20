@@ -212,7 +212,7 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 2. This will open a pop-up window where we can define the prompt. We will:
    1. Provide a name for the prompt (e.g., **Cafeteria Feedback Analyzer**) so that we can later select it by this name.
    2. Create an input with the name **Feedback** so that we can dynamically pass the user input to this variable.
-   3. Add the prompt that will analyze the feedback in the **Prompt** section and **click** on **Insert** to add the `Feedback` variable to the prompt.
+   3. Add the prompt that will analyze the feedback in the **Prompt** section and **click** on **Insert** to add the *`Feedback`* variable to the prompt.
    4. **Click** on **Save custom prompt** to make it available in the Copilot canvas.
 
     ![Step 5 Image 3](\images\17_CopilotFeedbackAnalyzer\13.png)
@@ -224,11 +224,11 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 
     ![Step 5 Image 4](\images\17_CopilotFeedbackAnalyzer\14.png)
 
-4. Select the `feedbackText` variable, which contains the user inputted feedback, and assign it as the input to the Prompt action.
+4. Select the *`feedbackText`* variable, which contains the user inputted feedback, and assign it as the input to the Prompt action.
 
     ![Step 5 Image 5](\images\17_CopilotFeedbackAnalyzer\15.png)
 
-5. We will also define a variable (`feedbackSentiment`) to hold the output of the AI Prompt action so that we can check the sentiment of the user feedback and take action on it.
+5. We will also define a variable (*`feedbackSentiment`*) to hold the output of the AI Prompt action so that we can check the sentiment of the user feedback and take action on it.
 
     ![Step 5 Image 6](\images\17_CopilotFeedbackAnalyzer\16.png)
 
@@ -237,7 +237,7 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 
     ![Step 6 Image 1](\images\17_CopilotFeedbackAnalyzer\17.png)
 
-2. Since `feedbackSentiment` is a record variable, we need to get the `feedbackSentiment.text` property, which contains the feedback analysis value. We will then check if it is negative and, if so, escalate the feedback to the concerned users.
+2. Since *`feedbackSentiment`* is a record variable, we need to get the *`feedbackSentiment.text`* property, which contains the feedback analysis value. We will then check if it is negative and, if so, escalate the feedback to the concerned users.
 
     ![Step 6 Image 2](\images\17_CopilotFeedbackAnalyzer\18.png)
 
@@ -251,7 +251,7 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 
 4. Now, configure the Office 365 Mail connector:
    1. Set the **To** and **Escalation Subject** fields.
-   2. In the **Body**, add the mail content and concatenate it with the user feedback present in the `feedbackText` variable using the **Concatenate** expression.
+   2. In the **Body**, add the mail content and concatenate it with the user feedback present in the *`feedbackText`* variable using the **Concatenate** expression.
    3. Add an output variable to the Connector action.
 
     ![Step 6 Image 4](\images\17_CopilotFeedbackAnalyzer\20.png)
