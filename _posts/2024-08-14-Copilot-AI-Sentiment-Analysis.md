@@ -40,7 +40,7 @@ Watch the demo video below to see how the Smart Feedback Analyzer works.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RgXZJWqQg5E?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Step 1 : Create the Dataverse Table
-We will be storing the positive and negative feedbacks in the dataverse table named RestaurantFeedbacks which contains the columns *Feedback*,*Feedback Date*,*Sentiment*
+We will be storing the positive and negative feedbacks in the dataverse table named *`RestaurantFeedbacks`* which contains the columns *`Feedback`*,*`Feedback Date`*,*`Sentiment`*
 ![Step 2 Image 1](\images\17_CopilotFeedbackAnalyzer\3.png)
 
 ### Step 2: Create the Custom Copilot
