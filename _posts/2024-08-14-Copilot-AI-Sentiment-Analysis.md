@@ -32,7 +32,7 @@ This process ensures a seamless and responsive interaction where the user’s fe
 - Access to [Copilot Studio](https://copilotstudio.microsoft.com/).
 - Dataverse configured for storing feedback.
 - AI Builder Credits for using AI Prompt Action
-- Images stores in a location like Azure Blob Storage which can be used in Adaptive Cards
+- Images stored in a location like Azure Blob Storage which can be used in Adaptive Cards
 
 ## Demo
 Watch the demo video below to see how the Smart Feedback Analyzer works. 
@@ -61,7 +61,6 @@ We will be storing the positive and negative feedbacks in the dataverse table na
 ### Step 3: Enable Generative Selection of Topics
 
 1. The copilot is now created. Next, we need to make some configuration changes.
-
    1. **Click** on **Edit** to update the copilot's name, icon, and description.
    2. **Click** on **Settings** to enable the **Generative selection of topics** so that topics are auto-selected based on user conversations, resulting in a smoother user experience.
 
