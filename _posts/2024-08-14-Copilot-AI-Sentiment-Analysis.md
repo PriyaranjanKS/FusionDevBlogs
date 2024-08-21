@@ -28,6 +28,8 @@ In this blog, we will walk through the process of creating a custom Cafeteria Fe
 
 This process ensures a seamless and responsive interaction where the user’s feedback is promptly analyzed and acted upon.
 
+![Step 2 Image 1](\images\17_CopilotFeedbackAnalyzer\0.gif)
+
 ## Prerequisites
 - Access to [Copilot Studio](https://copilotstudio.microsoft.com/).
 - Dataverse configured for storing feedback.
@@ -37,7 +39,7 @@ This process ensures a seamless and responsive interaction where the user’s fe
 ## Demo
 Watch the demo video below to see how the Smart Feedback Analyzer works. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RgXZJWqQg5E?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XiTWd3eG12E?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Step 1 : Create the Dataverse Table
 We will be storing the positive and negative feedbacks in the dataverse table named *`RestaurantFeedbacks`* which contains the columns *`Feedback`*,*`Feedback Date`*,*`Sentiment`*
