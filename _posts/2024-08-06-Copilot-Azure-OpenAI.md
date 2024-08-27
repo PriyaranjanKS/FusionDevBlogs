@@ -30,7 +30,7 @@ The overall process flow that we will see in this explanation is as follows :
 
 This integration allows users to get precise answers to their queries by leveraging the power of Azure's AI services, making it a valuable tool for enhancing productivity and knowledge access.
 
-![Download Power Apps Documentation](\images\11_CopilotOpenAI\0_0.png)
+![Download Power Apps Documentation](\images\11_CopilotOpenAI\0_0.gif)
 
 ## Demo
 

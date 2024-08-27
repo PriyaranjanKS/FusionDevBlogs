@@ -24,7 +24,7 @@ Our multilingual Copilot will:
 2. Facilitate booking appointments for different medical specialties: Cardiology, Orthopedics, and Dentistry.
 3. Save appointment details to a Dataverse table for tracking and management.
 
-![Create Dataverse Table](\images\09_CopilotMultiLingual\0_0.png)
+![Create Dataverse Table](\images\09_CopilotMultiLingual\0_0.gif)
 
 ## Demo
 

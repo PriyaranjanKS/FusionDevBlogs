@@ -22,7 +22,7 @@ Leveraging advanced technologies like Microsoft Power Platform can significantly
 Our supply chain Copilot will:
 1. **Fetch Vendor Details from Dataverse**: Retrieve data for multiple vendors, each providing the same product with different parameters.
 2. **Use AI to Identify the Best Vendor**: Implement AI-powered analysis using the AI Prompt to find the most suitable vendor based on the retrieved data and parameters like lead time, quality score, and unit price.
-![Vendor Details](\images\10_CopilotAIPrompt\0_0.png)
+![Vendor Details](\images\10_CopilotAIPrompt\0_0.gif)
 
 ## Demo
 
