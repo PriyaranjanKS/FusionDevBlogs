@@ -381,15 +381,16 @@ This completes the configuration of the Omnichannel within the Customer Service 
 ### Step 11: Testing in Power Pages
 
 1. Embed the chat widget script obtained from the Omnichannel setup into a Power Pages site.
-    ```
+
+```
 	 <script v2 id="Microsoft_Omnichannel_LCWidget" src="https://oc-cdn-public-ind.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" data-app-id="4bf2da1c-da35-4f74-a4e1-6ad14fcd38" data-lcw-version="prod" data-org-id="2c7dff01-f845-e1-8e4c-002248d5c5d3" data-org-url="https://m-2c7dff01-f845-ef11-8e4c-002248d5c5d3.in.omnichannelengagementhub.com"></script>
 
-	```
+```
    ![44](\images\14_CopilotHandover\48_1.png)
     
    The complete HTML Code used in the Power Pages is shared below : 
    
-   ```
+```
    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>US Farming Information Hub</title><link rel="stylesheet" href="styles.css">
 <div class="container">
   <div class="main-column">
@@ -438,11 +439,10 @@ This completes the configuration of the Omnichannel within the Customer Service 
 <div class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"><div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"></div></div>
 </div>
-
 ```
 
    The complete CSS used in the Power Pages is shared below : 
-   ```
+```
    body {
     background-color: #f0f0f3;
     font-family: 'Arial', sans-serif;
