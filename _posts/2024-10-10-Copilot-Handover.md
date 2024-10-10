@@ -609,4 +609,4 @@ This completes the configuration of the Omnichannel within the Customer Service 
   ![44](\images\14_CopilotHandover\54.png)
 ## Conclusion
 
-By following this guide, you've successfully created a dynamic customer service Copilot that leverages AI to analyze user feedback and handle it efficiently. This Copilot not only improves customer satisfaction by quickly addressing negative feedback but also streamlines the process of storing positive feedback.
+Thus we have successfully created a dynamic customer service Copilot that leverages AI to analyze user feedback and handle it efficiently. This Copilot not only improves customer satisfaction by quickly addressing negative feedback but also streamlines the process of storing positive feedback.
