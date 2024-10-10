@@ -383,10 +383,10 @@ This completes the configuration of the Omnichannel within the Customer Service 
 1. Embed the chat widget script obtained from the Omnichannel setup into a Power Pages site.
 
 ```
-	 <script v2 id="Microsoft_Omnichannel_LCWidget" src="https://oc-cdn-public-ind.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" data-app-id="4bf2da1c-da35-4f74-a4e1-6ad14fcd38" data-lcw-version="prod" data-org-id="2c7dff01-f845-e1-8e4c-002248d5c5d3" data-org-url="https://m-2c7dff01-f845-ef11-8e4c-002248d5c5d3.in.omnichannelengagementhub.com"></script>
+	 <script v2 id="Microsoft_Omnichannel_LCWidget" src="https://oc-cdn-public-ind.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" data-app-id="4bf2da1c-da35-4f74-a4e1-6ad1cd38" data-lcw-version="prod" data-org-id="2c7dff01-f845-e1-8e4c-002248d5c5d3" data-org-url="https://m-2c7dff01-f845-ef11-8e4c-002248d5c5d3.in.omnichannelengagementhub.com"></script>
 
 ```
-   ![44](\images\14_CopilotHandover\48_1.png)
+   
     
    The complete HTML Code used in the Power Pages is shared below : 
    
