@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Building a Smart Sentiment Analysis Customer Service Copilot that can handover to live agent using Omnichannel and Azure AI Studio 
-description: We will see the steps needed to create a Llama powered sales analyzer than can fetch data from dataverse and provide business insights.
+description: We will see the steps needed to create a Copilot embedded in Power Pages that can accept the user feedback and use Azure AI Language Service to check the sentiment of the feedback. If found negative, the conversation is handed over to human agent using Omnichannel.
 date: 2024-10-10 15:01:35 +0300
 image: '/images/FrontImage/14.png'
 tags: [copilot]
@@ -382,14 +382,217 @@ This completes the configuration of the Omnichannel within the Customer Service 
 
 1. Embed the chat widget script obtained from the Omnichannel setup into a Power Pages site.
     ```
-	
+	 <script v2 id="Microsoft_Omnichannel_LCWidget" src="https://oc-cdn-public-ind.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" data-app-id="4bf2da1c-da35-4f74-a4e1-6ad14fcd38" data-lcw-version="prod" data-org-id="2c7dff01-f845-e1-8e4c-002248d5c5d3" data-org-url="https://m-2c7dff01-f845-ef11-8e4c-002248d5c5d3.in.omnichannelengagementhub.com"></script>
+
 	```
    ![44](\images\14_CopilotHandover\48_1.png)
     
    The complete HTML Code used in the Power Pages is shared below : 
    
+   ```
+   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>US Farming Information Hub</title><link rel="stylesheet" href="styles.css">
+<div class="container">
+  <div class="main-column">
+    <header class="header">
+      <div class="header-content">
+        <img src="/restaurant.png" alt="Header Image" class="header-img">
+        <div class="header-text">
+          <h1>Gourmet Dining Hub</h1>
+          <p>Your one-stop destination for all gourmet dining experiences</p>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="card-row">
+        <section id="farming-queries" class="card">
+          <h2>Our Menu</h2>
+          <p>Explore our extensive menu with a variety of dishes curated by our top chefs. Find the best meals to satisfy your cravings.</p>
+          <img src="/menu.png" alt="Farming Queries" class="responsive-img">
+        </section>
+        <section id="weather" class="card">
+          <h2>Reservations</h2>
+          <p>Book a table at our restaurant easily through our online reservation system. Ensure you have a spot at our popular dining times.</p>
+          <img src="/booking.png" alt="Weather" class="responsive-img">
+        </section>
+      </section>
+      <section class="card-row single-card">
+        <section id="loans" class="card">
+          <h2>Special Offers</h2>
+          <p>Discover our special offers and discounts. Enjoy gourmet dining at the best prices with our exclusive deals.</p>
+          <img src="/offer.png" alt="Loans" class="responsive-img">
+        </section>
+      </section>
+    </main>
+  </div>
+  
+  <div class="sidebar">
+    <div class="farmerAssistant">
+      <h2 class="farmerAssistant-title"></h2>
+      <div>
+        <script v2 id="Microsoft_Omnichannel_LCWidget" src="https://oc-cdn-public-ind.azureedge.net/livechatwidget/scripts/LiveChatBootstrapper.js" data-app-id="4bf2da1c-da35-4f74-a1-6adfcd38" data-lcw-version="prod" data-org-id="2c7dff01-f845-ef11-8e4c-002248d5c5d3" data-org-url="https://m-2c7dff01-f845-ef11-8e4c-002248d5c5d3.in.omnichannelengagementhub.com"></script>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"><div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"></div></div>
+</div>
+
+```
+
    The complete CSS used in the Power Pages is shared below : 
-   
+   ```
+   body {
+    background-color: #f0f0f3;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Stretch to fill the full height */
+    min-height: 100vh;
+    height: 100vh; /* Ensure the body takes full height */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.main-column {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #e0e0e0;
+    padding: 20px;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: inset 10px 10px 20px #bebebe, inset -10px -10px 20px #ffffff;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-text {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.header-img {
+    width: 110px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.main-content {
+    width: 100%;
+    flex-grow: 1; /* Make sure the content takes the remaining space */
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.single-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    background: #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 15px;
+    width: 48%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.single-card .card {
+    width: 50%;
+}
+
+.card h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.responsive-img {
+    margin: auto;
+    width: 110px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.footer {
+    display: none;
+}
+
+.copilot-container {
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjust height to fit within the sidebar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.farmerAssistant-title {
+    font-size: 26px;
+    text-align: center;
+}
+
+.navbar {
+    display: none !important;
+}
+
+```
    
 2. Lets preview the Power Pages Site and interact with the Copilot by submitting a negative feedback 
    ![44](\images\14_CopilotHandover\49.png)
