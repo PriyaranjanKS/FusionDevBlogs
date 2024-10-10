@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Building a Power Page embedded Intelligent Customer Service Copilot: Automating Sentiment Analysis and Live Agent Escalation with Azure AI and Omnichannel for Dynamics 365 Customer Service
+title:  Building a Power Page embedded Intelligent Customer Service Copilot that Automates Sentiment Analysis and Live Agent Escalation with Azure AI and Omnichannel for Dynamics 365 Customer Servicee
 description: We will see the steps needed to create a Copilot embedded in Power Pages that can accept the user feedback and use Azure AI Language Service to check the sentiment of the feedback. If found negative, the conversation is handed over to human agent using Omnichannel.
 date: 2024-10-10 15:01:35 +0300
 image: '/images/FrontImage/14.png'
