@@ -2,7 +2,7 @@
 layout: post
 title:  Building a Smart Sentiment Analysis Customer Service Copilot that can handover to live agent using Omnichannel and Azure AI Studio 
 description: We will see the steps needed to create a Llama powered sales analyzer than can fetch data from dataverse and provide business insights.
-date: 2024-07-22 15:01:35 +0300
+date: 2024-10-10 15:01:35 +0300
 image: '/images/FrontImage/14.png'
 tags: [copilot]
 ---
