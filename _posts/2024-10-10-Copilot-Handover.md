@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Building an Intelligent Customer Service Copilot using Sentiment Analysis and Live Agent Escalation with Azure AI and Omnichannel
+title:  Customer Service Copilot using Sentiment Analysis and Live Agent Escalation
 description: We will see the steps needed to create a Copilot embedded in Power Pages that can accept the user feedback and use Azure AI Language Service to check the sentiment of the feedback. If found negative, the conversation is handed over to human agent using Omnichannel.
 date: 2024-10-10 15:01:35 +0300
 image: '/images/FrontImage/14.png'
