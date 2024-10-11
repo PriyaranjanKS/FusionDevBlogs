@@ -17,6 +17,25 @@ tags: [copilot]
 
 Keeping invoices accurate is crucial to avoid financial mistakes. This blog will show you how to build an Invoice Anomaly Detection system using Copilot Studio. You'll learn how to input invoice details using an Adaptive Card and compare them with previous month’s data stored in Dataverse. The system will automatically check for any irregularities using AI prompt actions, helping you ensure accuracy and streamline your invoice process.
 
+## Process Flow
+
+**Invoice Anomaly Detection System** involves several key steps to ensure accurate and efficient anomaly detection. Here's an overview of the process:
+
+1. **Data Storage:** Invoice details are stored in Dataverse, allowing us to easily access and compare previous month's data.
+2. **Copilot Setup:** Using Copilot Studio, we build a bot that captures the current month's invoice details through an Adaptive Card and stores them as variables.
+3. **Data Retrieval:** The system fetches invoice data from Dataverse and formats it for comparison.
+4. **Anomaly Detection:** By leveraging AI prompt actions, the bot compares the current month’s invoice details with the historical data. If discrepancies are detected, the bot highlights them for review.
+5. **Results Display:** Finally, the system presents the analysis results in a user-friendly format, allowing you to take any necessary actions to maintain financial accuracy.
+
+![Create Dataverse Table](\images\17_CopilotInvoiceAnalyzer\0_0.gif)
+
+## Demo 
+
+Watch the demo video below to see how the **Invoice Anomaly Detection System** works. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h3NpkP2dCLk?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Steps to Create the Invoice Anomaly Detection System 
 
 ## Create the Dataverse Table
 
@@ -24,7 +43,7 @@ We will be storing the invoice details in the **Dataverse table**, which will co
 
 ![Create Dataverse Table](\images\17_CopilotInvoiceAnalyzer\1.png)
 
----
+ 
 
 ## Step 3: Creating the Copilot in Copilot Studio
 
@@ -68,7 +87,112 @@ To activate topic auto-selection from user interactions:
 
 4. Add an **Adaptive Card** for user invoice input. Enter the JSON schema for the Adaptive Card in the **Node properties**.
 
-To be added later
+```
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/InvoiceProcess.png",
+                            "size": "Small",
+                            "style": "Person"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Invoice Entry Form",
+                            "weight": "Bolder",
+                            "size": "Large",
+                            "wrap": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Please fill in the details below to submit your invoice.",
+            "wrap": true,
+            "weight": "Bolder",
+            "color": "Good", 
+            "spacing": "Medium"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Invoice Month",
+            "weight": "Bolder",
+            "wrap": true,
+            "spacing": "Small"
+        },
+        {
+            "type": "Input.Text",
+            "id": "invoiceMonth",
+            "placeholder": "Enter Invoice Month (e.g., January)"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Product Name",
+            "weight": "Bolder",
+            "wrap": true,
+            "spacing": "Small"
+        },
+        {
+            "type": "Input.Text",
+            "id": "productName",
+            "placeholder": "Enter Product Name"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Quantity",
+            "weight": "Bolder",
+            "wrap": true,
+            "spacing": "Small"
+        },
+        {
+            "type": "Input.Number",
+            "id": "quantity",
+            "placeholder": "Enter Quantity"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Invoice Total",
+            "weight": "Bolder",
+            "wrap": true,
+            "spacing": "Small"
+        },
+        {
+            "type": "Input.Number",
+            "id": "invoiceTotal",
+            "placeholder": "Enter Invoice Total"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit"
+        }
+    ],
+    "style": "default",
+    "backgroundImage": {
+        "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/background.jpg"
+    }
+}
+
+```
 
 
 ![Add Adaptive Card](\images\17_CopilotInvoiceAnalyzer\8.png)
@@ -90,8 +214,9 @@ Copper Wires: March: 1900 (15 kg)
 
 ![Adaptive Card Output](\images\17_CopilotInvoiceAnalyzer\10.png)
 
-To be added later
-
+```
+Concat(Topic.varFormattedTable, Product & ": " & Month & ":" & Amount & " (" & Quantity & " kg)", ", ")
+```
 
 ---
 
@@ -157,10 +282,32 @@ To be added later
 
 ![Display Results](\images\17_CopilotInvoiceAnalyzer\24.png)
 
----
+## Testing the Invoice Anomaly Detection Copilot
+
+Let’s put the **Invoice Anomaly Detection Copilot** to the test by entering the invoice details for the month of March using the Adaptive Card.
+
+![Enter Invoice Details](\images\17_CopilotInvoiceAnalyzer\25.png)
+
+1. **Enter Invoice Details:**  
+   On the Adaptive Card, we fill out the necessary details such as:
+   - **Invoice Month:** March
+   - **Product Name:** Copper Wires
+   - **Quantity:** 15
+   - **Invoice Total:** 3000
+   
+2. **Submit and Analyze:**  
+   After submitting the details, the Copilot fetches the relevant historical invoice data from **Dataverse** for comparison.
+
+3. **Anomaly Detection:**  
+   Using an **AI Prompt Action**, the Copilot checks for any significant variations between the current and previous month’s invoices. It then identifies any potential discrepancies and shares the results back with the user.
+
+![Anomaly Detection Result](\images\17_CopilotInvoiceAnalyzer\26.png)
+
+In this example, the AI identifies that the March invoice total of $3000 is significantly higher than previous months' totals, such as $1100 in February, flagging it as a potential anomaly for further review. This automatic detection ensures financial accuracy and highlights unusual patterns for timely investigation.
+
 
 ## Conclusion
 
-By following these steps, you have successfully built a Smart Invoice Anomaly Analyzer in Copilot Studio. This system can detect irregularities between current and previous invoice records, allowing you to catch potential errors before they impact your financial records. Now, you can streamline your invoicing process with automated AI checks, ensuring greater accuracy and reliability.
+By following these steps, we have successfully built a Smart Invoice Anomaly Analyzer in Copilot Studio. This system can detect irregularities between current and previous invoice records, allowing you to catch potential errors before they impact your financial records. Now, you can streamline your invoicing process with automated AI checks, ensuring greater accuracy and reliability.
 
 ---
