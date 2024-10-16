@@ -3,7 +3,7 @@ layout: post
 title:  Build a Responsible AI Copilot with Azure Content Safety Service
 description: We will see the steps needed to create a Copilot with Azure Content Safety and United Nations Website Integration
 date: 2024-10-16 15:01:35 +0300
-image: '/images/FrontImage/11.png'
+image: '/images/FrontImage/ResponsibleAICover.png'
 tags: [copilot]
 ---
 
