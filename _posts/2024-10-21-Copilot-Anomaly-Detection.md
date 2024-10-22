@@ -56,7 +56,7 @@ We will be storing the invoice details in the **Dataverse table**, which will co
 
 ![Provide Copilot Description](\images\17_CopilotInvoiceAnalyzer\3.png)
 
----
+
 
 ## Step 4: Enable Generative Selection of Topics
 
@@ -75,7 +75,7 @@ To activate topic auto-selection from user interactions:
 
 ![Generative AI Preview](\images\17_CopilotInvoiceAnalyzer\5.png)
 
----
+
 
 ## Step 5: Create Topics
 
@@ -197,7 +197,7 @@ To activate topic auto-selection from user interactions:
 
 ![Add Adaptive Card](\images\17_CopilotInvoiceAnalyzer\8.png)
 
----
+
 
 ## Adding Invoice Data using an Adaptive Card
 
@@ -218,7 +218,7 @@ Copper Wires: March: 1900 (15 kg)
 Concat(Topic.varFormattedTable, Product & ": " & Month & ":" & Amount & " (" & Quantity & " kg)", ", ")
 ```
 
----
+
 
 ## Fetching Previous Month Data
 
@@ -229,7 +229,7 @@ To retrieve the previous month's invoice details:
 
 ![Fetch Data from Dataverse](\images\17_CopilotInvoiceAnalyzer\12.png)
 
----
+
 
 ## Configuring the Dataverse Connector
 
@@ -252,7 +252,7 @@ To retrieve the previous month's invoice details:
 To be added later
 
 
----
+
 
 ## Creating the AI Prompt Action
 
@@ -273,7 +273,7 @@ To be added later
 To be added later
 
 
----
+
 
 ## Displaying Anomaly Detection Results
 
@@ -310,4 +310,4 @@ In this example, the AI identifies that the March invoice total of $3000 is sign
 
 By following these steps, we have successfully built a Smart Invoice Anomaly Analyzer in Copilot Studio. This system can detect irregularities between current and previous invoice records, allowing you to catch potential errors before they impact your financial records. Now, you can streamline your invoicing process with automated AI checks, ensuring greater accuracy and reliability.
 
----
+
