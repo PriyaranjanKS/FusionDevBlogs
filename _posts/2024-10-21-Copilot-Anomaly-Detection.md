@@ -48,7 +48,7 @@ We will be storing the invoice details in the **Dataverse** table, which will co
 
 ![Create Dataverse Table](\images\17_CopilotInvoiceAnalyzer\1.png)
 
----
+
 
 ## Creating the Copilot in Copilot Studio
 
@@ -63,7 +63,7 @@ We will be storing the invoice details in the **Dataverse** table, which will co
 
 ![Copilot Description](\images\17_CopilotInvoiceAnalyzer\3.png)
 
----
+
 
 ## Enable Generative Selection of Topics
 
@@ -84,7 +84,7 @@ To enable the automatic detection of topics from user interaction:
 
 ![Generative AI Settings](\images\17_CopilotInvoiceAnalyzer\5.png)
 
----
+
 
 ## Create Topics
 
@@ -221,7 +221,7 @@ The user-entered values in the adaptive card will be available as output variabl
 
 ![Output Variables](\images\17_CopilotInvoiceAnalyzer\10.png)
 
----
+
 
 **Step 3:** Add a variable using **Power Fx** to concatenate user input into the format: **ProductName: Month: InvoiceTotal (Quantity kg)**.
 
@@ -235,7 +235,7 @@ Concat(Topic.varFormattedTable, Product & ": " & Month & ":" & Amount & " (" & Q
 ```
 
 
----
+
 
 **Step 4:** Now, add the **Dataverse connector action** to fetch the previous month’s invoice details from the **Monthly Invoices** table.
 
@@ -258,7 +258,7 @@ Add the necessary logical names for **Product Name**, **Month**, **Quantity**, a
 
 ![Logical Names](\images\17_CopilotInvoiceAnalyzer\15.png)
 
----
+
 
 **Step 5:** Add an output variable **varInvoiceTable** to store the Dataverse returned data in a table format.
 
@@ -285,7 +285,7 @@ ForAll(
 )
 ```
 
----
+
 
 **Step 6:** Serialize the table data for the AI prompt action, as it cannot accept tables directly. Use the below format:
 
@@ -298,7 +298,7 @@ Concat(Topic.varFormattedTable, Product & ": " & Month & ":" & Amount & " (" & Q
 ```
 
 
----
+
 
 **Step 7:** Add an **AI Prompt action** by selecting **Call an action**, and from the **Basic actions** tab, select **Create a prompt**.
 
@@ -311,7 +311,7 @@ This opens a pop-up where you can:
 
 ![AI Prompt](\images\17_CopilotInvoiceAnalyzer\19.png)
 
----
+
 
 **Step 8:** Add the prompt by selecting **Call an action**, and from the **Basic actions** tab, choose the **Invoice Anomaly Checker** prompt.
 
@@ -326,7 +326,7 @@ We will store the AI-prompt output in **varPredictionOutput**.
 
 ![Output Variable](\images\17_CopilotInvoiceAnalyzer\23.png)
 
----
+
 
 **Step 9:** Finally, add a **basic card** and populate it with details from the **varPredictionOutput**.
 
@@ -334,7 +334,7 @@ The **text** property will contain the AI-generated output, which we will displa
 
 ![Basic Card](\images\17_CopilotInvoiceAnalyzer\24.png)
 
----
+
 
 ## Test the Copilot
 
@@ -346,7 +346,7 @@ Upon submission, previous month’s invoice details are fetched from **Dataverse
 
 ![AI Prompt Output](\images\17_CopilotInvoiceAnalyzer\26.png)
 
----
+
 
 ## Conclusion
 
