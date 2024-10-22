@@ -37,55 +37,78 @@ Watch the demo video below to see how the **Invoice Anomaly Detection System** w
 
 ## Steps to Create the Invoice Anomaly Detection System 
 
-## Step 1: Create the Dataverse Table
+## Create the Dataverse Table
 
-We will be storing the invoice details in the **Dataverse table**, which will contain the previous month’s invoices that will be used for spotting any irregularities. The table will include the following columns: **Product Name**, **Invoice Amount**, **Month**, and **Quantity**.
+We will be storing the invoice details in the **Dataverse** table, which will contain the previous month’s invoices that we will be using to spot any irregularities. The table will contain the following columns:
+
+- **Product Name**
+- **Invoice Amount**
+- **Month**
+- **Quantity**
 
 ![Create Dataverse Table](\images\17_CopilotInvoiceAnalyzer\1.png)
 
+---
 
+## Creating the Copilot in Copilot Studio
 
-## Step 2: Creating the Copilot in Copilot Studio
+**Step 1:** Head over to [Copilot Studio](https://copilotstudio.microsoft.com) and **click** on **Create**. This will provide the option to create a copilot based on an existing template or create a blank copilot from scratch. Let's select **New Copilot**.
 
-1. Navigate to [Copilot Studio](https://copilotstudio.microsoft.com/) and **click on** **Create**.
-2. Choose **New Copilot** to start from scratch.
+![Creating New Copilot](\images\17_CopilotInvoiceAnalyzer\2.png)
 
-![Create New Copilot](\images\17_CopilotInvoiceAnalyzer\2.png)
+**Step 2:** You will now see a page where you can:
 
-3. Provide a description of the copilot's functionality, then **click on** **Create**.
+- **Describe the copilot functionality** and provide any specific instructions.
+- **Click** on **Create** to provision the copilot.
 
-![Provide Copilot Description](\images\17_CopilotInvoiceAnalyzer\3.png)
+![Copilot Description](\images\17_CopilotInvoiceAnalyzer\3.png)
 
+---
 
+## Enable Generative Selection of Topics
 
-## Step 3: Enable Generative Selection of Topics
+Now that the copilot is created, we can configure it further.
 
-After creating the copilot:
+**Step 1:** **Click** on **Edit** to modify details like the copilot's name, icon, and description.
 
-1. **Click on** **Edit** to update details like **Name**, **Icon**, and **Description**.
-2. **Go to** **Settings** and enable the **Generative selection of topics** to allow the topics to be automatically selected based on user conversation.
+**Step 2:** **Click** on **Settings** and enable the **Generative selection of topics**, which allows topics to be automatically selected based on user conversations. This leads to a smoother user experience.
 
-![Enable Generative Selection](\images\17_CopilotInvoiceAnalyzer\4.png)
+![Edit Copilot Settings](\images\17_CopilotInvoiceAnalyzer\4.png)
 
-To activate topic auto-selection from user interactions:
+To enable the automatic detection of topics from user interaction:
 
-1. **Click on** **Generative AI**.
-2. Choose **Generative (preview)** and **click on** **Save**.
-3. **Close** the settings to return to the copilot home page.
+- **Click** on **Generative AI**.
+- Select **Generative (preview)**.
+- **Click** on **Save** to update the settings.
+- **Click** the close icon to return to the home page of this custom copilot.
 
-![Generative AI Preview](\images\17_CopilotInvoiceAnalyzer\5.png)
+![Generative AI Settings](\images\17_CopilotInvoiceAnalyzer\5.png)
 
+---
 
+## Create Topics
 
-## Step 4: Create Topics
+Let’s create topics that will automatically redirect the conversation flow based on the questions posed by users.
 
-1. **Click on** **Topics** in the navigation menu.
-2. **Add a Topic** and select **Create from description with Copilot**.
-3. Enter the topic description and **click on** **Create** to generate a topic skeleton.
+**Step 1:** **Click** on **Topics** from the navigation menu.
+
+To add a topic:
+
+- Either create a blank topic or use Copilot to generate a topic with prepopulated conversation nodes based on the description you provide.
+- **Click** on **Add a Topic**.
+- **Select** **Create from description with Copilot**.
 
 ![Create Topics](\images\17_CopilotInvoiceAnalyzer\6.png)
 
-4. Add an **Adaptive Card** for user invoice input. Enter the JSON schema for the Adaptive Card in the **Node properties**.
+In the pop-up, provide the necessary topic description and then **Click** on **Create**. This will provision the topic skeleton.
+
+![Topic Creation](\images\17_CopilotInvoiceAnalyzer\7.png)
+
+Now that the basic topic is created with an automatic trigger, we can add more conversation nodes. Let’s add an **Adaptive Card** so users can input invoice details.
+
+![Adaptive Card](\images\17_CopilotInvoiceAnalyzer\8.png)
+
+We will add the JSON schema for the adaptive card in the Node properties:
 
 ```
 {
@@ -194,51 +217,52 @@ To activate topic auto-selection from user interactions:
 
 ```
 
+The user-entered values in the adaptive card will be available as output variables.
 
-![Add Adaptive Card](\images\17_CopilotInvoiceAnalyzer\8.png)
+![Output Variables](\images\17_CopilotInvoiceAnalyzer\10.png)
 
+---
 
+**Step 3:** Add a variable using **Power Fx** to concatenate user input into the format: **ProductName: Month: InvoiceTotal (Quantity kg)**.
 
-## Adding Invoice Data using an Adaptive Card
+For example:  
+`Copper Wires: March: 1900 (15 kg)`
 
-The values entered in the adaptive card are available as output variables within Copilot.
-
-1. **Create a variable** named **varCurrentMonthInvoiceDetails** to concatenate the user-inputted values. Use the format:  
-   **ProductName: Month: InvoiceTotal (Quantity kg)**  
-   
-   Example:
-   
-```
-Copper Wires: March: 1900 (15 kg)
-```
-
-![Adaptive Card Output](\images\17_CopilotInvoiceAnalyzer\10.png)
+We will add the below expression to the variable **varCurrentMonthInvoiceDetails**:
 
 ```
 Concat(Topic.varFormattedTable, Product & ": " & Month & ":" & Amount & " (" & Quantity & " kg)", ", ")
 ```
 
 
+---
 
-## Fetching Previous Month Data
+**Step 4:** Now, add the **Dataverse connector action** to fetch the previous month’s invoice details from the **Monthly Invoices** table.
 
-To retrieve the previous month's invoice details:
+To do this:
 
-1. **Select** **Call an action**.
-2. From the **Connector tab**, **search for** **Dataverse** and select **List rows**.
+- **Select** **Call an action**.
+- From the **connector** tab, search for **Dataverse**.
+- **Select** **List rows** from the selected environment.
 
-![Fetch Data from Dataverse](\images\17_CopilotInvoiceAnalyzer\12.png)
+![Dataverse Connector](\images\17_CopilotInvoiceAnalyzer\12.png)
 
+Configure the connector by:
 
+- Mentioning the **Environment** and **table name**.
+- **Click** on **Advanced Inputs** to filter the columns returned.
 
-## Configuring the Dataverse Connector
+![Dataverse Columns](\images\17_CopilotInvoiceAnalyzer\13.png)
 
-1. Set the **Environment** and **Table Name**.
-2. **Click on** **Advanced Inputs** to specify the columns to retrieve. Add **Product Name**, **Month**, **Quantity**, and **Invoice Amount**.
+Add the necessary logical names for **Product Name**, **Month**, **Quantity**, and **Invoice Amount** to the **Select columns** field.
 
-![Configure Connector Columns](\images\17_CopilotInvoiceAnalyzer\13.png)
+![Logical Names](\images\17_CopilotInvoiceAnalyzer\15.png)
 
-3. Add an output variable, **varInvoiceTable**, to store the retrieved data in table format. Use Power Fx to filter the output table into the format:
+---
+
+**Step 5:** Add an output variable **varInvoiceTable** to store the Dataverse returned data in a table format.
+
+Since there are system columns in the data, we’ll filter it using the following format:
 
 ```
 [
@@ -247,67 +271,84 @@ To retrieve the previous month's invoice details:
 ]
 ```
 
-![Filtered Output Table](\images\17_CopilotInvoiceAnalyzer\16.png)
+We will store the filtered table in a new variable **varFormattedTable** using the below **Power Fx** expression:
 
-To be added later
+```
+ForAll(
+    Topic.varInvoiceTable,
+    {
+        Product: ThisRecord.crfeb_productname,
+        Month: ThisRecord.crfeb_month,
+        Amount: ThisRecord.crfeb_invoiceamount,
+        Quantity: ThisRecord.crfeb_quantitykg
+    }
+)
+```
+
+---
+
+**Step 6:** Serialize the table data for the AI prompt action, as it cannot accept tables directly. Use the below format:
+
+**Eg:** Copper Wires: January: 1000 (15 kg), Copper Wires: February: 1100 (15 kg)
+
+Store the serialized data in a variable **varSerializedInvoiceDetails** and concatenate the table data using the below expression.
+
+```
+Concat(Topic.varFormattedTable, Product & ": " & Month & ":" & Amount & " (" & Quantity & " kg)", ", ")
+```
 
 
+---
 
+**Step 7:** Add an **AI Prompt action** by selecting **Call an action**, and from the **Basic actions** tab, select **Create a prompt**.
 
-## Creating the AI Prompt Action
+This opens a pop-up where you can:
 
-1. **Select** **Call an action** and choose **Create a prompt** from the **Basic actions tab**.
-2. **Name the prompt** and **add** variables like **Current Month Invoice** and **Previous Month Details**.
-3. Use the dynamic variables in the **Prompt** field to populate the content at runtime.
+- Enter a name for the prompt.
+- Create variables for **Current Month Invoice** and **Previous Month Details**.
+- Add dynamic variables to the prompt using the **Insert** button.
+- **Click** on **Save custom prompt** to make it available in the Copilot designer.
 
-![Create Prompt Action](\images\17_CopilotInvoiceAnalyzer\18.png)
+![AI Prompt](\images\17_CopilotInvoiceAnalyzer\19.png)
 
-4. Add the prompt action by selecting **Invoice Anomaly Checker**.
+---
 
-![Add Prompt Action](\images\17_CopilotInvoiceAnalyzer\21.png)
+**Step 8:** Add the prompt by selecting **Call an action**, and from the **Basic actions** tab, choose the **Invoice Anomaly Checker** prompt.
 
-5. Configure it with the **Serialized Invoice Data** for previous month’s data and **Current Month Invoice Details** for user-input data.
+![Prompt Configuration](\images\17_CopilotInvoiceAnalyzer\21.png)
 
-![Configure Prompt Input](\images\17_CopilotInvoiceAnalyzer\22.png)
+Configure the prompt by adding the previously created variables:
 
-To be added later
+- **varSerializedInvoiceDetails**: Previous month’s data.
+- **varCurrentMonthInvoiceDetails**: Current user input.
 
+We will store the AI-prompt output in **varPredictionOutput**.
 
+![Output Variable](\images\17_CopilotInvoiceAnalyzer\23.png)
 
+---
 
-## Displaying Anomaly Detection Results
+**Step 9:** Finally, add a **basic card** and populate it with details from the **varPredictionOutput**.
 
-1. Store the AI output in **varPredictionOutput** and **display** the results back to the user using a **Basic Card**.
-2. The **text** property of **varPredictionOutput** will contain the AI-generated output.
+The **text** property will contain the AI-generated output, which we will display in the Adaptive Card.
 
-![Display Results](\images\17_CopilotInvoiceAnalyzer\24.png)
+![Basic Card](\images\17_CopilotInvoiceAnalyzer\24.png)
 
-## Step 5: Testing the Invoice Anomaly Detection Copilot
+---
 
-Let’s put the **Invoice Anomaly Detection Copilot** to the test by entering the invoice details for the month of March using the Adaptive Card.
+## Test the Copilot
 
-![Enter Invoice Details](\images\17_CopilotInvoiceAnalyzer\25.png)
+Let’s test the copilot by specifying invoice details for the month of **March** using the **Adaptive Card**.
 
-1. **Enter Invoice Details:**  
-   On the Adaptive Card, we fill out the necessary details such as:
-   - **Invoice Month:** March
-   - **Product Name:** Copper Wires
-   - **Quantity:** 15
-   - **Invoice Total:** 3000
-   
-2. **Submit and Analyze:**  
-   After submitting the details, the Copilot fetches the relevant historical invoice data from **Dataverse** for comparison.
+![Test Copilot](\images\17_CopilotInvoiceAnalyzer\25.png)
 
-3. **Anomaly Detection:**  
-   Using an **AI Prompt Action**, the Copilot checks for any significant variations between the current and previous month’s invoices. It then identifies any potential discrepancies and shares the results back with the user.
+Upon submission, previous month’s invoice details are fetched from **Dataverse**, and using the **AI Prompt action**, the copilot identifies any potential variations in the invoice and shares them back with the user.
 
-![Anomaly Detection Result](\images\17_CopilotInvoiceAnalyzer\26.png)
+![AI Prompt Output](\images\17_CopilotInvoiceAnalyzer\26.png)
 
-In this example, the AI identifies that the March invoice total of $3000 is significantly higher than previous months' totals, such as $1100 in February, flagging it as a potential anomaly for further review. This automatic detection ensures financial accuracy and highlights unusual patterns for timely investigation.
-
+---
 
 ## Conclusion
 
-By following these steps, we have successfully built a Smart Invoice Anomaly Analyzer in Copilot Studio. This system can detect irregularities between current and previous invoice records, allowing you to catch potential errors before they impact your financial records. Now, you can streamline your invoicing process with automated AI checks, ensuring greater accuracy and reliability.
-
+In this blog, we successfully built an **Invoice Anomaly Detection** system using **Copilot Studio**. By leveraging **Adaptive Cards** for user inputs, **Dataverse** for storing historical data, and **AI prompt actions** for detecting anomalies, we created a seamless and accurate invoice-checking process. This helps in identifying potential mistakes and ensures better financial accuracy. The same approach can be extended to various other data anomaly detection scenarios, streamlining business processes efficiently.
 
