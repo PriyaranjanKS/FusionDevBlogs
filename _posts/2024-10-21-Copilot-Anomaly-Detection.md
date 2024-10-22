@@ -33,7 +33,7 @@ Keeping invoices accurate is crucial to avoid financial mistakes. This blog will
 
 Watch the demo video below to see how the **Invoice Anomaly Detection System** works. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h3NpkP2dCLk?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Dw5uSJEini4?vq=hd1080" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Steps to Create the Invoice Anomaly Detection System 
 
@@ -43,7 +43,7 @@ We will be storing the invoice details in the **Dataverse table**, which will co
 
 ![Create Dataverse Table](\images\17_CopilotInvoiceAnalyzer\1.png)
 
- 
+
 
 ## Step 3: Creating the Copilot in Copilot Studio
 
