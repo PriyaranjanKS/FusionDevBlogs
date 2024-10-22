@@ -301,7 +301,7 @@ Concat(Topic.varFormattedTable, Product & ": " & Month & ":" & Amount & " (" & Q
 
 
 **Step 7:** Add an **AI Prompt action** by selecting **Call an action**, and from the **Basic actions** tab, select **Create a prompt**.
-
+![AI Prompt](\images\17_CopilotInvoiceAnalyzer\19.png)
 This opens a pop-up where you can:
 
 - Enter a name for the prompt.
@@ -309,7 +309,7 @@ This opens a pop-up where you can:
 - Add dynamic variables to the prompt using the **Insert** button.
 - **Click** on **Save custom prompt** to make it available in the Copilot designer.
 
-![AI Prompt](\images\17_CopilotInvoiceAnalyzer\19.png)
+![AI Prompt](\images\17_CopilotInvoiceAnalyzer\20.png)
 
 
 
@@ -321,6 +321,8 @@ Configure the prompt by adding the previously created variables:
 
 - **varSerializedInvoiceDetails**: Previous month’s data.
 - **varCurrentMonthInvoiceDetails**: Current user input.
+
+![AI Prompt](\images\17_CopilotInvoiceAnalyzer\22.png)
 
 We will store the AI-prompt output in **varPredictionOutput**.
 
