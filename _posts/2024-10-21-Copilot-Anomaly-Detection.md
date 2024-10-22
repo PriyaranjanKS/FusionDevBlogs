@@ -3,7 +3,7 @@ layout: post
 title: Smart Invoice Anomaly Detection using AI prompt Action and Dataverse data
 description: We will see the steps needed to create an intelligent invoice anomaly checker that leverages AI prompt so that we can easily cross check current invoices for potential discrepencies by checking it against previous month's data
 date: 2024-10-22 15:01:35 +0300
-image: '/images/FrontImage/Invoiceanomaly.png'
+image: '/images/FrontImage/InvoiceAnomaly.png'
 tags: [copilot]
 ---
 
