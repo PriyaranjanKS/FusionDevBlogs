@@ -261,7 +261,7 @@ Add the necessary logical names for **Product Name**, **Month**, **Quantity**, a
 
 
 **Step 5:** Add an output variable **varInvoiceTable** to store the Dataverse returned data in a table format.
-
+![Logical Names](\images\17_CopilotInvoiceAnalyzer\16.png)
 Since there are system columns in the data, we’ll filter it using the following format:
 
 ```
@@ -284,7 +284,7 @@ ForAll(
     }
 )
 ```
-
+![Logical Names](\images\17_CopilotInvoiceAnalyzer\17.png)
 
 
 **Step 6:** Serialize the table data for the AI prompt action, as it cannot accept tables directly. Use the below format:
@@ -297,7 +297,7 @@ Store the serialized data in a variable **varSerializedInvoiceDetails** and conc
 Concat(Topic.varFormattedTable, Product & ": " & Month & ":" & Amount & " (" & Quantity & " kg)", ", ")
 ```
 
-
+![Logical Names](\images\17_CopilotInvoiceAnalyzer\18.png)
 
 
 **Step 7:** Add an **AI Prompt action** by selecting **Call an action**, and from the **Basic actions** tab, select **Create a prompt**.
