@@ -306,6 +306,7 @@ Now that the **Prompt action** is added, populate the:
 
 The output of the **Prompt action** will be stored in the **varPrediction** variable, which we will be using for displaying the final output.
 ![Step 7 - Image 5](\images\18_CopilotPII\18.png)
+
 Finally, we will show the **PII detection output** as a **basic card** back to the user, for which we will select the **text** property of the **varPrediction** record, which will contain the **Generative AI output**.
 ```
 Topic.varPrediction.text
