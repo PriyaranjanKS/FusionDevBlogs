@@ -27,7 +27,7 @@ Businesses can now automatically scan and detect sensitive PII within their cust
 - **Fetch Data**: Retrieves customer registration data from Dataverse.
 - **AI-Powered PII Identification**: Detects PII using **Azure OpenAI** prompt actions, including sensitive data like names, SSNs, credit card details, and medical information.
 
-
+![Step 3 - Image 1](\images\18_CopilotPII\0_0.gif)
 
 ## Step-by-Step Guide to Building the Supply Chain Copilot <a name="step-by-step-guide"></a>
 
