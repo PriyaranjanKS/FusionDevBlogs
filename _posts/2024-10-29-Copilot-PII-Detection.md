@@ -213,7 +213,6 @@ Add the below adaptive card schema to the node properties so that it will provid
 
 ```
 
-
 ![Step 5 - Image 4](\images\18_CopilotPII\8.png)
 
 The user input details can be found in the output variables of the adaptive card, which we will be using down the line.
