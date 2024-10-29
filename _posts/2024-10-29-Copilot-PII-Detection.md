@@ -101,6 +101,119 @@ As the first step, let's add an **adaptive card** to accept details from the use
 
 Add the below adaptive card schema to the node properties so that it will provide the user with the option to enter the medical ID that we need to search for and also the specific PII information to search for.
 
+```
+{
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "backgroundImage": {
+        "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/GDPRBG.jpg"
+    },
+    "body": [
+        {
+            "type": "Image",
+            "url": "https://adaptivecardsbot.blob.core.windows.net/imagestore/GDPR.png",
+            "size": "Medium",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "GDPR PII Checker",
+            "weight": "Bolder",
+            "size": "Large",
+            "color": "Accent",
+            "spacing": "Medium",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Enter the Medical ID and select the personal information you want to check for.",
+            "wrap": true,
+            "spacing": "Small",
+            "size": "Medium",
+            "horizontalAlignment": "Center",
+            "weight": "Default"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Medical ID",
+            "weight": "Bolder",
+            "size": "Medium",
+            "color": "Good",
+            "spacing": "Medium"
+        },
+        {
+            "type": "Input.Text",
+            "id": "medicalId",
+            "placeholder": "Enter Medical ID",
+            "style": "text",
+            "spacing": "Small"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Select Information to Check",
+            "weight": "Bolder",
+            "size": "Medium",
+            "color": "Good",
+            "spacing": "Medium"
+        },
+        {
+            "type": "Input.Toggle",
+            "id": "checkName",
+            "title": "Name",
+            "valueOn": "true",
+            "valueOff": "false",
+            "wrap": true,
+            "spacing": "Small",
+            "weight": "Default",
+            "size": "Medium"
+        },
+        {
+            "type": "Input.Toggle",
+            "id": "checkCreditCard",
+            "title": "Credit Card",
+            "valueOn": "true",
+            "valueOff": "false",
+            "wrap": true,
+            "spacing": "Small",
+            "weight": "Default",
+            "size": "Medium"
+        },
+        {
+            "type": "Input.Toggle",
+            "id": "checkSSN",
+            "title": "Social Security Number (SSN)",
+            "valueOn": "true",
+            "valueOff": "false",
+            "wrap": true,
+            "spacing": "Small",
+            "weight": "Default",
+            "size": "Medium"
+        },
+        {
+            "type": "Input.Toggle",
+            "id": "checkConditions",
+            "title": "Preexisting Conditions",
+            "valueOn": "true",
+            "valueOff": "false",
+            "wrap": true,
+            "spacing": "Small",
+            "weight": "Default",
+            "size": "Medium"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Check GDPR Compliance",
+            "style": "positive",
+            "spacing": "Medium"
+        }
+    ]
+}
+
+```
+
+
 ![Step 5 - Image 4](\images\18_CopilotPII\8.png)
 
 The user input details can be found in the output variables of the adaptive card, which we will be using down the line.
