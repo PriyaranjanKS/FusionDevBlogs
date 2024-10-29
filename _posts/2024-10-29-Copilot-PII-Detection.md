@@ -15,7 +15,7 @@ tags: [copilot]
 
 ## Introduction
 
-Businesses can now automatically scan and detect sensitive PII within their customer registration Dataverse tables. This capability empowers organizations to flag records containing personal information and take appropriate actions, such as masking sensitive fields, notifying compliance teams.
+Businesses can now automatically scan and detect sensitive PII within their customer registration Dataverse tables.This capability empowers organizations to flag records containing personal information and take appropriate actions, such as masking sensitive fields, notifying compliance teams.
 
 ---
 
