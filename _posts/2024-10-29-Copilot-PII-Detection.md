@@ -245,6 +245,7 @@ This will add the **Dataverse connector action** to the Copilot canvas, and let'
 ![Step 6 - Image 2](\images\18_CopilotPII\11.png)
 
 The output of the **Dataverse connector** will be stored in the **varCustomerDetails** variable, which we will use for further processing in the subsequent steps.
+![Step 6 - Image 2](\images\18_CopilotPII\12.png)
 
 ### Step 7: Adding AI-Prompt for PII Detection <a name="step-7"></a>
 
