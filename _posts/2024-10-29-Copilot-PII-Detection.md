@@ -1,9 +1,9 @@
 ---
 layout: post
-title: PII Detection Copilot: Leveraging Microsoft Copilot and Azure OpenAI's Prompt Actions
-description: We will see the steps needed to create a Copilot that can detect patient's PII from the Dataverse table using Prompt Action 
+title: PII Detection Copilot powered with AI Prompt Action
+description: We will see the steps needed to create a Copilot that can detect patient's PII from the Dataverse table using AI Prompt Action 
 date: 2024-10-29 15:01:35 +0300
-image: '/images/FrontImage/04.png'
+image: '/images/FrontImage/11.png'
 tags: [copilot]
 ---
 
@@ -17,7 +17,7 @@ tags: [copilot]
 
 Businesses can now automatically scan and detect sensitive PII within their customer registration Dataverse tables.This capability empowers organizations to flag records containing personal information and take appropriate actions, such as masking sensitive fields, notifying compliance teams.
 
----
+
 
 ## Overview <a name="overview"></a>
 
@@ -27,7 +27,7 @@ Businesses can now automatically scan and detect sensitive PII within their cust
 - **Fetch Data**: Retrieves customer registration data from Dataverse.
 - **AI-Powered PII Identification**: Detects PII using **Azure OpenAI** prompt actions, including sensitive data like names, SSNs, credit card details, and medical information.
 
----
+
 
 ## Step-by-Step Guide to Building the Supply Chain Copilot <a name="step-by-step-guide"></a>
 
@@ -206,7 +206,7 @@ It fetches the details from the **Dataverse table** and passes them to the **Pro
 
 ![Step 7 - Image 8](\images\18_CopilotPII\21.png)
 
----
+
 
 ## Conclusion <a name="conclusion"></a>
 
