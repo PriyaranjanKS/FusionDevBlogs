@@ -33,7 +33,7 @@ Businesses can now automatically scan and detect sensitive PII within their cust
 
 ### Step 1: Set Up Dataverse for Customer Registration Data <a name="step-1"></a>
 
-To begin, we need to organize our vendor details in Dataverse. Create a table named **Vendor Details** with the following columns:
+To begin, we need to organize our customer details in Dataverse. Create a table named **Customer Registration** with the following columns:
 - Name
 - MedicalID
 - Preexisting Conditions
@@ -42,7 +42,8 @@ To begin, we need to organize our vendor details in Dataverse. Create a table na
 
 ### Step 2: Populate the Dataverse Table <a name="step-2"></a>
 
-Enter the vendor details into the Dataverse table. We have the below data for the demo.
+Enter the customer details into the Dataverse table. We have the below data for the demo.
+![Step 3 - Image 1](\images\18_CopilotPII\0.png)
 
 ### Step 3: Creating the Copilot in Copilot Studio <a name="step-3"></a>
 
