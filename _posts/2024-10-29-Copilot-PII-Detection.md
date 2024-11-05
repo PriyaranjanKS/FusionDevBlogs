@@ -3,7 +3,7 @@ layout: post
 title: PII Detection Copilot powered with AI Prompt Action
 description: We will see the steps needed to create a Copilot that can detect patient's PII from the Dataverse table using AI Prompt Action 
 date: 2024-10-29 15:01:35 +0300
-image: '/images/FrontImage/18.png'
+image: '/images/FrontImage/18.jpg'
 tags: [copilot]
 ---
 
