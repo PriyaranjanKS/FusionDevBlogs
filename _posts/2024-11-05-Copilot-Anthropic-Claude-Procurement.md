@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Material Procurement Analyzer Copilot built leveraging Anthropic Claude & Dataverse
+title: Material Procurement Copilot built using Anthropic Claude & Dataverse
 description: This blog will guide you through the steps to create a Copilot that analyzes inventory levels from Dataverse and identifies materials needing procurement using Anthropic Claude.
 date: 2024-11-05 12:00:00 +0300
 image: '/images/FrontImage/22.jpg'
