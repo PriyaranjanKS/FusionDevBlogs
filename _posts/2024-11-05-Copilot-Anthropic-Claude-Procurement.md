@@ -215,26 +215,18 @@ security:
 
 ## Step 4: Creating the Agent in Copilot Studio
 
-1. Go to [Copilot Studio](https://copilotstudio.microsoft.com/) and **Click on Create**.
+1. Go to [Copilot Studio](https://copilotstudio.microsoft.com/) and **Click on Create**. Select **New Agent** to create one from scratch.
    ![Create Copilot](\images\22_AnthropicProcurement\8.png)
 
-2. Select **New Agent** to create one from scratch.
+2. **Describe the Agent functionality** and provide any specific instructions, then **Click on Create** to provision the Agent.
    ![New Copilot](\images\22_AnthropicProcurement\9.png)
-
-3. **Describe the Agent functionality** and provide any specific instructions, then **Click on Create** to provision the Agent.
-
- 
 
 ### Enable Generative Selection of Topics
 
-1. **Click on Edit** to update the Agent details like **name**, **icon**, and **description**.
-2. **Click on Settings**, enable **Generative selection of topics**, and choose **High - More precise** for **Content moderation**.
+1. **Click on Edit** to update the Agent details like **name**, **icon**, and **description**. Then **Click on Settings**, to enable **Generative selection of topics**
    ![Generative Settings](\images\22_AnthropicProcurement\10.png)
-
-3. **Save** the settings and **Close** to return to the Agent’s main page.
-   ![Close Settings](\images\22_AnthropicProcurement\11.png)
-
- 
+2. Choose **High - More precise** for **Content moderation**.**Save** the settings and **Close** to return to the Agent’s main page.
+   ![Close Settings](\images\22_AnthropicProcurement\11.png) 
 
 ## Step 5: Create Topics
 
