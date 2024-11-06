@@ -338,7 +338,7 @@ security:
 3. Store the fetched data in the **rawMaterials** variable for further processing.
    ![Stored Data](\images\22_AnthropicProcurement\19.png)
 
-4. **Initialize a variable (filteredStockDetails)** to hold filtered data with only necessary columns.
+4. The returned data from dataverse will contain additional system columns. Lets **Initialize a variable (filteredStockDetails)** to hold filtered data with only necessary columns. For this we will use the below Power Fx expression to loop through the Dataverse returned data and filter it. 
    ```
    ForAll(
     Topic.rawMaterials.value,
@@ -351,12 +351,12 @@ security:
    ```
    ![Filtered Data](\images\22_AnthropicProcurement\20.png)
 
-5. **Test the variable** to verify that only relevant information is retrieved.
+5. We will **Test the filteredStockDetails variable** to verify that only relevant information is retrieved by outputting in a message node. 
    ![Test Variable](\images\22_AnthropicProcurement\21.png)
 
 ### Formatting Data for Analysis
 
-1. Format the JSON output for readability as **<Material Name>: <Current Stock Levels>:<Reorder Levels>**.
+1. We will further format the above JSON output of the filteredStockDetails variable for better understanding by the Claude model by formatting it as ** <Material Name> : <Current Stock Levels> : <Reorder Levels> **.
    ```
    Concat(Topic.filteredStockDetails, "Material Name : "&MaterialName & " - " & " Current Stock Levels : " & CurrentStockLevels & "-" & "Reorder Levels : "&ReorderLevels," , " )
    ```
@@ -364,13 +364,13 @@ security:
 
 ### Adding the Anthropic Claude Connector
 
-1. Add the **Anthropic Claude custom connector** to the copilot canvas.
+1. Now lets add the **Anthropic Claude custom connector** to the copilot canvas.
    ![Add Claude Connector](\images\22_AnthropicProcurement\24.png)
 
 2. Provide the **API key** saved earlier for authentication.
    ![API Key](\images\22_AnthropicProcurement\25.png)
 
-3. Configure the connector fields with:
+3. Configure the connector fields with the below parameters:
    - **Anthropic-version**: `2023-06-01`
    - **Model**: `claude-3-5-sonnet-20240620`
 
@@ -407,6 +407,7 @@ security:
    ![Material Selection](\images\22_AnthropicProcurement\27.png)
 
 2. **Click on Check Stock Levels**. This action invokes **Anthropic Claude** to analyze the data and provide recommendations.
+
    ![Material Selection Output](\images\22_AnthropicProcurement\28.png)
  
 
