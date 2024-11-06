@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Material Procurement Agent built using Anthropic Claude & Dataverse
+title: Material Procurement Copilot Agent built using Anthropic Claude & Dataverse
 description: This blog will guide you through the steps to create a Agent that analyzes inventory levels from Dataverse and identifies materials needing procurement using Anthropic Claude.
 date: 2024-11-05 12:00:00 +0300
 image: '/images/FrontImage/22.jpg'
@@ -348,7 +348,7 @@ security:
 
 ### Formatting Data for Analysis
 
-1. We will further format the above JSON output of the filteredStockDetails variable for better understanding by the Claude model by formatting it as ** <Material Name> : <Current Stock Levels> : <Reorder Levels> **.
+1. We will further format the above JSON output of the **filteredStockDetails** variable for better understanding by the Claude model by formatting it as ** < Material Name > : < Current Stock Levels > : < Reorder Levels > **.
    ```
    Concat(Topic.filteredStockDetails, "Material Name : "&MaterialName & " - " & " Current Stock Levels : " & CurrentStockLevels & "-" & "Reorder Levels : "&ReorderLevels," , " )
    ```
