@@ -356,7 +356,7 @@ security:
 
 ### Adding the Anthropic Claude Connector
 
-1. Now lets add the **Anthropic Claude custom connector** to the copilot canvas.
+1. Now lets add the **Anthropic Claude custom connector** to the copilot canvas using the **Call an action** option. Select the **Anthropic Claude Custom Connector** that we had previously created.
    ![Add Claude Connector](\images\22_AnthropicProcurement\24.png)
 
 2. Provide the **API key** saved earlier for authentication.
