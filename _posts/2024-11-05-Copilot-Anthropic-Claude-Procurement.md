@@ -36,7 +36,7 @@ In manufacturing and supply chain environments, maintaining optimal stock levels
 - **Claude Analysis**: Using **Anthropic Claude**, the Agent analyzes the material data. The model reviews current stock levels against reorder thresholds to determine if procurement is necessary.
 - **Results Displayed**: The Agent displays a list of materials that need replenishment. Users receive clear recommendations on which items to prioritize for procurement.
 
- 
+    ![Message Node](\images\22_AnthropicProcurement\0_0.gif)
 
 ## Step 1: Get the Anthropic Claude Keys
 
@@ -366,7 +366,7 @@ security:
    - **Anthropic-version**: `2023-06-01`
    - **Model**: `claude-3-5-sonnet-20240620`
 
-4. In the **message field**, add the prompt formula to be sent to Claude.
+4. In the **message field**, add the prompt formula to be sent to Claude. Here we sent the dataverse data as well as the instruction to identify low stock from the data. 
    ```
    Table(
     {
@@ -385,7 +385,7 @@ security:
    ```
    ![Prompt Formula](\images\22_AnthropicProcurement\25_1.png)
 
-5. Store the output response from **Anthropic Claude** in the variable **OutputResponse** and configure a **Message node** to display the response back to the user.
+5. Store the output response from **Anthropic Claude** in the variable **OutputResponse** and configure a **Message node** to display the response back to the user using the below formula.
    ```
    First(Topic.OutputResponse.content).text
    ```
