@@ -348,7 +348,7 @@ security:
 
 ### Formatting Data for Analysis
 
-1. We will further format the above JSON output of the **filteredStockDetails** variable for better understanding by the Claude model by formatting it as ** < Material Name > : < Current Stock Levels > : < Reorder Levels > **.
+1. We will further format the above JSON output of the **filteredStockDetails** variable for better understanding by the Claude model by formatting it as **< Material Name > : < Current Stock Levels > : < Reorder Levels >**.
    ```
    Concat(Topic.filteredStockDetails, "Material Name : "&MaterialName & " - " & " Current Stock Levels : " & CurrentStockLevels & "-" & "Reorder Levels : "&ReorderLevels," , " )
    ```
